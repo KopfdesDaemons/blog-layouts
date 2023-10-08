@@ -1,0 +1,162 @@
+/*
+Theme Name: Clean Space
+Author: Rico
+Author URI: https://ricoswebsite.com/
+Text Domain: clean-space
+Description: 
+Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+Version: 1.0.0
+Requires at least: 5.0
+Requires PHP: 7.0
+Tested up to: 6.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+body {
+  margin: 0;
+  background-color: rgb(22, 22, 24);
+  font-family: monospace;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "landingpagesection landingpagesection" "main sidebar" "footer footer";
+}
+@media only screen and (max-width: 800px) {
+  body {
+    grid-template-areas: "landingpagesection" "main" "sidebar" "footer";
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: main;
+  padding: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  margin: 0.2em 0;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+table,
+label,
+div,
+button {
+  color: rgb(238, 238, 238);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.clean_space_content_spacer {
+  max-width: 70em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.clean_space_feed {
+  padding: 0.5em;
+}
+
+.clean_space_landing_page_section {
+  grid-area: landingpagesection;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2em;
+  background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
+}
+.clean_space_landing_page_section img {
+  border: 6px solid blue;
+  animation: wobble 5s linear infinite;
+}
+
+@keyframes wobble {
+  0%, 100% {
+    border-radius: 36% 64% 61% 39%/53% 47% 53% 47%;
+  }
+  50% {
+    border-radius: 48% 52% 70% 30%/42% 56% 44% 58%;
+  }
+}
+@keyframes UpAndDown {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  34% {
+    transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  67% {
+    transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
+}
+.clean_space_h2_latest_posts {
+  font-size: 2em;
+}
+
+#clean_space_blog_footer {
+  background-color: rgb(26, 25, 46);
+  padding: 8vw;
+  grid-area: footer;
+}
+#clean_space_blog_footer ul {
+  padding-left: 0.5em;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+#clean_space_blog_footer ul ul {
+  display: block;
+}
+#clean_space_blog_footer ul li {
+  list-style: none;
+}
+#clean_space_blog_footer ul li a {
+  font-size: 1.3em;
+  color: #cef5f5;
+  text-decoration: none;
+}
+#clean_space_blog_footer ul li li {
+  margin-top: 0.5em;
+}
+#clean_space_blog_footer ul li li a {
+  font-size: 1.5em;
+  color: whitesmoke;
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

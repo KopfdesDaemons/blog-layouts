@@ -1,0 +1,10 @@
+#clean_space_sidebar {
+    width: 20em;
+    overflow: hidden;
+    padding: 2em;
+    grid-area: sidebar;
+
+    @media only screen and (max-width: 800px) {
+        width: unset;
+    }
+}

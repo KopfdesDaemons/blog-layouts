@@ -1,0 +1,39 @@
+#clean_space_sidebar .widget {
+    background-color: #303030;
+    border: 1px solid rgb(95, 95, 95);
+    margin-bottom: 1em;
+    padding: 1em;
+
+    a {
+        color: whitesmoke;
+    }
+
+    ul {
+        padding-left: 2em;
+
+        li {
+            margin: 0.2em;
+        }
+    }
+
+    max-height: 60em;
+    overflow-y: auto;
+
+    .wp-block-latest-posts__list,
+    .wp-block-rss,
+    .wp-block-social-links,
+    .wp-block-latest-comments {
+        padding: 0;
+    }
+
+    p {
+        overflow-wrap: anywhere;
+    }
+
+    .wp-block-latest-posts__list {
+        li {
+            background-color: black;
+            padding: 1em;
+        }
+    }
+}

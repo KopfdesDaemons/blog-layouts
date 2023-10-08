@@ -1,0 +1,79 @@
+.clean_space_post_headline_section{
+    background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
+    grid-area: landingpagesection;
+    min-height: 20vh;
+    padding-top: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    header {
+        max-width: 80em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3em;
+        padding: 5em;
+
+        h1 {
+            flex: 1 0 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .clean_space_post_thumbnail{
+            position: relative;
+            flex: 1 0 40%;
+        }
+        img {
+            height: auto;
+            max-height: 20vh;
+            object-fit: contain;
+            animation: UpAndDown 8s linear infinite;
+        }
+        
+        .clean_space_post_thumbnail::before {
+            content: " ";
+            position: absolute;
+            display: inline-block;
+            height: 50%;
+            width: 50%;
+            background-color: green;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            border: 1px solid;
+            box-shadow: #768fff 0 -1px 140px,#3639db 0 -2px 10px,#361da7 0 -10px 20px,#200b58 0 -18px 40px,5px 5px 15px 5px #0000;
+        }
+    }
+
+}
+
+.clean_space_post_categories {
+    ul {
+        padding: 0;
+        display: flex;
+        gap: 0.5em;
+
+        li {
+            border: 1px solid rgb(95,95,95);
+            padding: 0.8em;
+            border-radius: 4px;
+            background-color: #303030;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+                color: whitesmoke;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.clean_space_content_container {
+    line-height: 1.5em;
+    font-size: 1.3em;
+    padding-top: 1em;
+}

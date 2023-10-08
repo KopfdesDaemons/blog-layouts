@@ -1,0 +1,42 @@
+#clean_space_header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#clean_space_header .clean_space_header_content {
+  height: 3.5em;
+  padding: 1em;
+  max-width: 50em;
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+#clean_space_header .clean_space_header_content .clean_space_header_logo {
+  display: flex;
+}
+#clean_space_header .clean_space_header_content .search-form {
+  display: flex;
+  gap: 0.5em;
+}
+#clean_space_header .clean_space_header_content .search-form label {
+  display: flex;
+}
+#clean_space_header .clean_space_header_content .search-field {
+  border-radius: 2em;
+  border: 1px solid rgb(56, 56, 56);
+  padding: 1em;
+  width: 30vw;
+  max-width: 30em;
+  min-width: 20em;
+  background-color: rgb(22, 22, 24);
+  color: whitesmoke;
+}
+#clean_space_header .clean_space_header_content .search-submit {
+  border-radius: 2em;
+  border: none;
+  padding: 0 2em;
+  color: whitesmoke;
+  background-color: blue;
+  cursor: pointer;
+}/*# sourceMappingURL=header.css.map */
