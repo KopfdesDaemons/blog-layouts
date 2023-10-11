@@ -11,8 +11,8 @@
         max-width: 80em;
         display: flex;
         flex-wrap: wrap;
-        gap: 3em;
-        padding: 5em;
+        gap: 2vw;
+        padding: 5%;
 
         h1 {
             flex: 1 0 50%;
@@ -20,9 +20,13 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            font-size: clamp(16px, 5vw, 34px);
+            min-width: 15em;
         }
         .clean_space_post_thumbnail{
             position: relative;
+            display: flex;
+            align-items: center;
             flex: 1 0 40%;
         }
         img {
@@ -38,7 +42,6 @@
             display: inline-block;
             height: 50%;
             width: 50%;
-            background-color: green;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%); 
@@ -49,31 +52,30 @@
 
 }
 
-.clean_space_post_categories {
-    ul {
-        padding: 0;
-        display: flex;
-        gap: 0.5em;
+.clean_space_post_row_1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
 
-        li {
-            border: 1px solid rgb(95,95,95);
-            padding: 0.8em;
-            border-radius: 4px;
-            background-color: #303030;
-            cursor: pointer;
+    .clean_space_post_date {
+        white-space: nowrap;
+    }
+    
+    .clean_space_post_categories {
+        ul {
+            padding: 0;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            a {
-                color: whitesmoke;
-                text-decoration: none;
-            }
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            margin: 0;
+            list-style: none;
         }
     }
 }
 
+
 .clean_space_content_container {
     line-height: 1.5em;
     font-size: 1.3em;
-    padding-top: 1em;
 }

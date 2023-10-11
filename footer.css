@@ -1,0 +1,30 @@
+#clean_space_blog_footer {
+  background-color: rgb(26, 25, 46);
+  padding: 8vw;
+  grid-area: footer;
+}
+#clean_space_blog_footer ul {
+  padding-left: 0.5em;
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+#clean_space_blog_footer ul ul {
+  display: block;
+}
+#clean_space_blog_footer ul li {
+  list-style: none;
+}
+#clean_space_blog_footer ul li a {
+  font-size: 1.3em;
+  color: #cef5f5;
+  text-decoration: none;
+}
+#clean_space_blog_footer ul li li {
+  margin-top: 0.5em;
+}
+#clean_space_blog_footer ul li li a {
+  font-size: 1.5em;
+  color: whitesmoke;
+  text-decoration: underline;
+}/*# sourceMappingURL=footer.css.map */

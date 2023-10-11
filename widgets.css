@@ -3,8 +3,6 @@
   border: 1px solid rgb(95, 95, 95);
   margin-bottom: 1em;
   padding: 1em;
-  max-height: 60em;
-  overflow-y: auto;
 }
 #clean_space_sidebar .widget a {
   color: whitesmoke;

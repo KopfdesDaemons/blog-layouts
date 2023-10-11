@@ -33,6 +33,10 @@
             min-width: 20em;
             background-color: rgb(22, 22, 24);
             color: whitesmoke;
+
+            @media only screen and (max-width: 800px) {
+                min-width: 40vw;
+            }
         }
 
         .search-submit {
@@ -43,7 +47,5 @@
             background-color: blue;
             cursor: pointer;
         }
-
-
     }
 }

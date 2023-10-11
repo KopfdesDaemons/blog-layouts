@@ -6,13 +6,14 @@ function enqueue_custom_styles()
     $styles = array(
         'post-card' => '/template-parts/post-card.css',
         'widgets-styles' => '/widgets.css',
+        'animations' => "/animations.css",
         // 'custom-font' => '/fonts/fonts.css',
         'custom-styles' => '/style.css',
         // 'searchform-styles' => '/searchform.css',
         'header-styles' => '/header.css',
-        // 'footer-styles' => '/footer.css',
+        'footer-styles' => '/footer.css',
         'sidebar-styles' => '/sidebar.css',
-        // 'comments-styles' => '/comments.css',
+        'comments-styles' => '/comments.css',
         // 'archive-styles' => '/archive.css',
         'single-styles' => '/single.css',
         // '404-styles' => '/404.css',
@@ -106,14 +107,14 @@ function clean_space_register_landigpage_widget_area()
 add_action('widgets_init', 'clean_space_register_landigpage_widget_area');
 
 // Number of words previewed in the feed
-function clean_space_custom_excerpt_length($length)
+function clean_space_custom_excerpt_length()
 {
     return get_theme_mod('words_in_snippet', 30);
 }
 add_filter('excerpt_length', 'clean_space_custom_excerpt_length', 999);
 
 // Characters after snippet
-function clean_space_custom_excerpt_more($more)
+function clean_space_custom_excerpt_more()
 {
     return ' ...';
 }

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 65em;
-  border: 1px solid rgb(0, 0, 117);
+  border: 2px solid rgb(0, 0, 117);
   background-color: black;
   border-radius: 12px;
   margin: 3em 0;
@@ -73,24 +73,11 @@
 }
 .clean_space_post_card .clean_space_post_card_tags_div ul {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   list-style: none;
   margin: 0.5em;
   gap: 0.4em;
-}
-.clean_space_post_card .clean_space_post_card_tags_div ul li {
-  border: 1px solid rgb(95, 95, 95);
-  padding: 0.8em;
-  border-radius: 4px;
-  background-color: #303030;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.clean_space_post_card .clean_space_post_card_tags_div ul li a {
-  color: whitesmoke;
-  text-decoration: none;
 }
 
 .clean_space_post_card:hover {
