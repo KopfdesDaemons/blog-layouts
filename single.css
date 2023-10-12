@@ -19,24 +19,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   font-size: clamp(16px, 5vw, 34px);
   min-width: 15em;
 }
 .clean_space_post_headline_section header .clean_space_post_thumbnail {
-  position: relative;
   display: flex;
   align-items: center;
-  flex: 1 0 40%;
+  justify-content: center;
+  flex: 1 0 30%;
+}
+.clean_space_post_headline_section header .clean_space_post_thumbnail div {
+  position: relative;
 }
 .clean_space_post_headline_section header img {
   height: auto;
+  width: auto;
   max-height: 20vh;
   -o-object-fit: contain;
      object-fit: contain;
   animation: UpAndDown 8s linear infinite;
 }
-.clean_space_post_headline_section header .clean_space_post_thumbnail::before {
+.clean_space_post_headline_section header .clean_space_post_thumbnail div::before {
   content: " ";
   position: absolute;
   display: inline-block;
@@ -45,7 +48,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid;
   box-shadow: #768fff 0 -1px 140px, #3639db 0 -2px 10px, #361da7 0 -10px 20px, #200b58 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
@@ -70,4 +72,52 @@
 .clean_space_content_container {
   line-height: 1.5em;
   font-size: 1.3em;
+}
+
+.clean_space_post_tags ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5em;
+}
+
+.clean_space_author_card {
+  padding: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3em 0;
+}
+.clean_space_author_card .clean_space_author_avatar {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clean_space_author_card .clean_space_author_avatar img {
+  border-radius: 5em;
+  width: auto;
+  margin: 2em 2em 2em 0;
+  box-shadow: #768fff 0 0 10px;
+}
+.clean_space_author_card .clean_space_author_details {
+  flex: 1 0 70%;
+}
+.clean_space_author_card .clean_space_author_details .clean_space_author_name_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clean_space_post_pagination {
+  display: flex;
+  justify-content: space-between;
+}
+.clean_space_post_pagination a {
+  border-radius: 4px;
+  padding: 0.8em 1.2em;
+  background: black;
+  border: solid 1px gray;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=single.css.map */

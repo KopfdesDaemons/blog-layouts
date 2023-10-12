@@ -1,3 +1,67 @@
-textarea {
-    max-width: 90vw;
+.clean_space_comments_area {
+    margin-top: 3em;
+
+    .clean_space_comment_list {
+        padding-left: 0;
+    }
+
+    a {
+        color: rgb(177, 177, 177);
+    }
+
+    ul, ol {
+        list-style: none;
+
+        li {
+            border-radius: 4px;
+            padding: 2%;
+
+            ol {
+                padding-left: 0.5em;
+            }
+        }
+    }
+
+    .comment-content {
+        background-color: rgb(15, 15, 15);
+        padding: 1em;
+        margin: 1em 0.5em;
+        border-radius: 4px;
+    }
+    .reply {
+        margin: 0.5em;
+        display: flex;
+        a{
+            border-radius: 4px;
+            padding: 0.8em 1.2em;
+            background: black;
+            border: solid 1px gray;
+            white-space: nowrap;
+            user-select: none;
+            text-decoration: none;
+        }
+    }
+
+    .says {
+        display: none;
+    }
+
+    .vcard {
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+        font-size: 1.3em;
+        img {
+            border-radius: 3em;
+        }
+
+        .url {
+            text-decoration: none;
+        }
+    }
+
+    .comment-metadata {
+        display: flex;
+        justify-content: space-between;
+    }
 }

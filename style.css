@@ -139,8 +139,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.3em;
+  font-size: clamp(12px, 3vw, 16px);
   max-width: 100%;
+}
+.clean_space_pagination ::-webkit-scrollbar {
+  height: 1px;
 }
 .clean_space_pagination .clean_space_pagination_controls a {
   background-color: #361da7;
