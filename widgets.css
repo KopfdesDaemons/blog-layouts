@@ -1,28 +1,33 @@
-#clean_space_sidebar .widget {
-  background-color: #303030;
-  border: 1px solid rgb(95, 95, 95);
+.widget {
   margin-bottom: 1em;
   padding: 1em;
 }
-#clean_space_sidebar .widget a {
+.widget a {
   color: whitesmoke;
 }
-#clean_space_sidebar .widget ul {
+.widget ul {
   padding-left: 2em;
 }
-#clean_space_sidebar .widget ul li {
+.widget ul li {
   margin: 0.2em;
 }
-#clean_space_sidebar .widget .wp-block-latest-posts__list,
-#clean_space_sidebar .widget .wp-block-rss,
-#clean_space_sidebar .widget .wp-block-social-links,
-#clean_space_sidebar .widget .wp-block-latest-comments {
-  padding: 0;
-}
-#clean_space_sidebar .widget p {
+.widget p {
   overflow-wrap: anywhere;
 }
-#clean_space_sidebar .widget .wp-block-latest-posts__list li {
+
+.wp-block-latest-posts__list,
+.wp-block-rss,
+.wp-block-social-links,
+.wp-block-latest-comments {
+  padding: 0;
+}
+
+.wp-block-latest-posts__list li {
   background-color: black;
   padding: 1em;
+}
+
+.wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
+  max-height: 300px;
+  overflow-y: auto;
 }/*# sourceMappingURL=widgets.css.map */

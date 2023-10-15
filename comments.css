@@ -56,4 +56,54 @@
 .clean_space_comments_area .comment-metadata {
   display: flex;
   justify-content: space-between;
+  padding: 0.8em 1em 0.3em 1em;
+}
+.clean_space_comments_area .comment-form {
+  padding: 3%;
+}
+.clean_space_comments_area .comment-form .comment-form-comment {
+  display: flex;
+  flex-direction: column;
+}
+.clean_space_comments_area .comment-form .comment-form-comment textarea {
+  resize: vertical;
+  max-width: 90vw;
+}
+.clean_space_comments_area .comment-form .submit {
+  border-radius: 4px;
+  padding: 0.8em 1.2em;
+  background: black;
+  border: solid 1px gray;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-decoration: none;
+  color: rgb(177, 177, 177);
+  cursor: pointer;
+}
+.clean_space_comments_area .comment-form .comment-form-author, .clean_space_comments_area .comment-form .comment-form-email, .clean_space_comments_area .comment-form .comment-form-url {
+  display: flex;
+  flex-direction: column;
+}
+.clean_space_comments_area .comment-form input, .clean_space_comments_area .comment-form textarea {
+  background-color: rgb(224, 224, 224);
+  border-radius: 4px;
+  border: none;
+  padding: 0.5em;
+  margin-top: 3px;
+}
+.clean_space_comments_area .clean_space_comment_reply_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wp-block-latest-comments__comment {
+  background-color: black;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+.wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt {
+  overflow-wrap: anywhere;
+  word-wrap: break-all;
 }/*# sourceMappingURL=comments.css.map */

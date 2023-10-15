@@ -8,4 +8,8 @@
   #clean_space_sidebar {
     width: unset;
   }
+}
+#clean_space_sidebar .widget {
+  background-color: #303030;
+  border: 1px solid rgb(95, 95, 95);
 }/*# sourceMappingURL=sidebar.css.map */

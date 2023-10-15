@@ -14,7 +14,7 @@ function enqueue_custom_styles()
         'footer-styles' => '/footer.css',
         'sidebar-styles' => '/sidebar.css',
         'comments-styles' => '/comments.css',
-        // 'archive-styles' => '/archive.css',
+        'archive-styles' => '/archive.css',
         'single-styles' => '/single.css',
         // '404-styles' => '/404.css',
         // 'fontawesome' => '/fonts/fontawesome/css/all.min.css',
@@ -40,6 +40,13 @@ add_theme_support('html5', array(
 ));
 add_theme_support('align-wide');
 add_theme_support('responsive-embeds');
+
+// Author Script
+function clean_space_author_script()
+{
+    wp_enqueue_script('clean_space_author_script', get_template_directory_uri() . '/js/author_page.js', null, '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'clean_space_author_script');
 
 // Load the wordpress comment script from the “\wordpress\wp-includes\js” directory.
 // This allows the comment response form to be located below the corresponding comment

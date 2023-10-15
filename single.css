@@ -78,6 +78,7 @@
   list-style: none;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5em;
 }
 
@@ -86,6 +87,8 @@
   display: flex;
   flex-wrap: wrap;
   margin: 3em 0;
+  border-radius: 0.3em;
+  background-color: black;
 }
 .clean_space_author_card .clean_space_author_avatar {
   flex: 1 0 auto;
@@ -94,10 +97,10 @@
   justify-content: center;
 }
 .clean_space_author_card .clean_space_author_avatar img {
-  border-radius: 5em;
   width: auto;
-  margin: 2em 2em 2em 0;
-  box-shadow: #768fff 0 0 10px;
+  margin: 1.5em;
+  border: 2px solid blue;
+  box-shadow: #768fff 0 0 30px;
 }
 .clean_space_author_card .clean_space_author_details {
   flex: 1 0 70%;
