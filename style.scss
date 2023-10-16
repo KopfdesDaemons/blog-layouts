@@ -25,6 +25,8 @@ body {
     }
 
     grid-template-areas: "landingpagesection landingpagesection" "main sidebar" "footer footer";
+
+    --clean_space_margin_to_header: 4em;
 }
 
 main {
@@ -34,7 +36,7 @@ main {
     grid-area: main;
     padding: 2vw;
     padding-top: 2em;
-    
+
     @media only screen and (min-width: 1300px) {
         padding-left: 20em;
     }
@@ -91,10 +93,6 @@ button {
     align-items: center;
 }
 
-.clean_space_content_spacer_main{
-    max-width: 100%;
-}
-
 img {
     max-width: 100%;
 }
@@ -119,17 +117,28 @@ img {
     }
 }
 
+// .paged {
+//     .clean_space_landing_page_section {
+//         display: none;
+//     }
+
+//     main,
+//     #clean_space_sidebar {
+//         margin-top: var(--clean_space_margin_to_header);
+//     }
+// }
+
 .clean_space_h2_latest_posts {
     font-size: 2em;
 }
 
 .clean_space_tag {
-    border: 1px solid rgb(95,95,95);
+    border: 1px solid rgb(95, 95, 95);
     padding: 0.8em;
     border-radius: 4px;
     background-color: #303030;
     cursor: pointer;
-    
+
     a {
         color: whitesmoke;
         text-decoration: none;
@@ -148,21 +157,22 @@ img {
         height: 1px;
     }
 
-    .clean_space_pagination_controls a{
+    .clean_space_pagination_controls a {
         background-color: #361da7;
         margin: 0 0.5em;
         padding: 0.8em 2em;
         display: flex;
     }
-    
+
     .clean_space_pagination_content {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         gap: 1em;
         max-width: 100%;
-        
-        a, span {
+
+        a,
+        span {
             border-radius: 4px;
             padding: 0.8em 1.2em;
             background: black;

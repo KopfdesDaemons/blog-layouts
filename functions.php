@@ -9,13 +9,14 @@ function enqueue_custom_styles()
         'animations' => "/animations.css",
         // 'custom-font' => '/fonts/fonts.css',
         'custom-styles' => '/style.css',
-        // 'searchform-styles' => '/searchform.css',
         'header-styles' => '/header.css',
         'footer-styles' => '/footer.css',
         'sidebar-styles' => '/sidebar.css',
         'comments-styles' => '/comments.css',
         'archive-styles' => '/archive.css',
         'single-styles' => '/single.css',
+        'page-style' => '/page.css',
+        'search-style' => '/search.css'
         // '404-styles' => '/404.css',
         // 'fontawesome' => '/fonts/fontawesome/css/all.min.css',
     );

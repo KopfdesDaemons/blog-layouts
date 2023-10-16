@@ -1,0 +1,40 @@
+.search main, .search #clean_space_sidebar {
+  margin-top: var(--clean_space_margin_to_header);
+}
+.search .clean_space_searchresults {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+.search h1 {
+  text-align: center;
+}
+.search .clean_space_searchresult {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  background: rgb(0, 0, 0);
+  padding: 1em 1.5em;
+  border-radius: 4px;
+  border: 1px solid blue;
+}
+.search .clean_space_searchresult .clean_space_searchresult_image_a {
+  margin: 1em 1em 1em 0;
+}
+.search .clean_space_searchresult .clean_space_searchresult_image_a img {
+  aspect-ratio: 1/1;
+  border-radius: 4px;
+  max-height: 8em;
+}
+.search .clean_space_searchresult .clean_space_searchresult_content {
+  flex: 1;
+}
+.search .clean_space_searchresult .clean_space_searchresult_content a {
+  text-decoration: none;
+}
+.search .clean_space_searchresult .clean_space_searchresult_content h2 {
+  color: rgb(0, 0, 138);
+}
+.search .clean_space_searchresult:hover {
+  background-color: rgb(12, 12, 12);
+}/*# sourceMappingURL=search.css.map */
