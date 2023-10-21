@@ -11,20 +11,20 @@
                 while (have_posts()) {
                     the_post(); ?>
 
-            <div class="clean_space_searchresult">
-                <?php if (has_post_thumbnail()) : ?>
-                <a href="<?php the_permalink(); ?>" class="clean_space_searchresult_image_a">
-                    <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
-                </a>
-                <?php endif; ?>
-                <div class="clean_space_searchresult_content">
-                    <a href="<?php the_permalink(); ?>">
-                        <h2><?php the_title(); ?></h2>
-                    </a>
-                    <span><?php the_date(); ?></span>
-                    <?php the_excerpt(); ?>
-                </div>
-            </div>
+                    <div class="clean_space_searchresult">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <a href="<?php the_permalink(); ?>" class="clean_space_searchresult_image_a">
+                                <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                            </a>
+                        <?php endif; ?>
+                        <div class="clean_space_searchresult_content">
+                            <a href="<?php the_permalink(); ?>">
+                                <h2><?php the_title(); ?></h2>
+                            </a>
+                            <span><?php the_date(); ?></span>
+                            <?php the_excerpt(); ?>
+                        </div>
+                    </div>
             <?php
                 }
 

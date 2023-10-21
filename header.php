@@ -27,6 +27,13 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <header id="clean_space_header">
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'header-menu',
+            'menu_class' => 'clean_space_header_menu',
+            'container'      => false,
+        ));
+        ?>
         <div class="clean_space_header_content">
             <?php
             $favicon_url = get_site_icon_url();

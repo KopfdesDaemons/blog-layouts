@@ -2,7 +2,7 @@
     background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
     grid-area: landingpagesection;
     min-height: 20vh;
-    padding-top: 4em;
+    padding-top: 6em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +12,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 2vw;
-        padding: 5%;
+        padding: 5em 5%;
 
         h1 {
             flex: 1 0 50%;

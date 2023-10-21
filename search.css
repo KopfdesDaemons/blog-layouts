@@ -4,7 +4,6 @@
 .search .clean_space_searchresults {
   display: flex;
   flex-direction: column;
-  gap: 3em;
 }
 .search h1 {
   text-align: center;
@@ -12,11 +11,10 @@
 .search .clean_space_searchresult {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
   gap: 1em;
-  background: rgb(0, 0, 0);
-  padding: 1em 1.5em;
-  border-radius: 4px;
-  border: 1px solid blue;
+  padding: 2em 1.5em;
 }
 .search .clean_space_searchresult .clean_space_searchresult_image_a {
   margin: 1em 1em 1em 0;
@@ -25,6 +23,8 @@
   aspect-ratio: 1/1;
   border-radius: 4px;
   max-height: 8em;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .search .clean_space_searchresult .clean_space_searchresult_content {
   flex: 1;
@@ -35,6 +35,18 @@
 .search .clean_space_searchresult .clean_space_searchresult_content h2 {
   color: rgb(0, 0, 138);
 }
-.search .clean_space_searchresult:hover {
-  background-color: rgb(12, 12, 12);
+.search .clean_space_searchresult .clean_space_searchresult_content p {
+  line-height: 1.5em;
+}
+.search .clean_space_searchresult::after {
+  content: " ";
+  position: absolute;
+  border-bottom: 1px solid;
+  height: 20px;
+  width: 90%;
+  bottom: 0;
+  color: gray;
+}
+.search .clean_space_pagination {
+  margin-top: 1em;
 }/*# sourceMappingURL=search.css.map */

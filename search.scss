@@ -2,11 +2,10 @@
     main, #clean_space_sidebar {
         margin-top: var(--clean_space_margin_to_header);
     }
-
+    
     .clean_space_searchresults {
         display: flex;
         flex-direction: column;
-        gap: 3em;
     }
 
     h1 {
@@ -16,11 +15,10 @@
     .clean_space_searchresult {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
         gap: 1em;
-        background: rgb(0, 0, 0);
-        padding: 1em 1.5em;
-        border-radius: 4px;
-        border: 1px solid blue;
+        padding: 2em 1.5em;
 
         .clean_space_searchresult_image_a {
             margin: 1em 1em 1em 0;
@@ -28,6 +26,7 @@
                 aspect-ratio: 1 / 1;
                 border-radius: 4px;
                 max-height: 8em;
+                object-fit: cover;
             }
         }
 
@@ -40,10 +39,24 @@
             h2 {
                 color: rgb(0, 0, 138);
             }
-        }
 
-        &:hover {
-            background-color: rgb(12, 12, 12);
+            p {
+                line-height: 1.5em;
+            }
         }
+    }
+
+    .clean_space_searchresult::after {
+        content: ' ';
+        position: absolute;
+        border-bottom: 1px solid;
+        height: 20px;
+        width: 90%;
+        bottom: 0;
+        color: gray;
+    }
+
+    .clean_space_pagination {
+        margin-top: 1em;
     }
 }
