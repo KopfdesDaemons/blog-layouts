@@ -3,13 +3,11 @@
   padding: 1em;
 }
 .widget a {
-  color: whitesmoke;
+  color: #b7b7b7;
 }
-.widget ul {
-  padding-left: 2em;
-}
-.widget ul li {
-  margin: 0.2em;
+.widget a:hover {
+  color: rgb(17, 17, 165);
+  transition: all 400ms;
 }
 .widget p {
   overflow-wrap: anywhere;
@@ -22,12 +20,174 @@
   padding: 0;
 }
 
-.wp-block-latest-posts__list li {
-  background-color: black;
-  padding: 1em;
+.wp-block-latest-comments .avatar {
+  margin: 0.2em;
 }
-
+.wp-block-latest-comments .wp-block-latest-comments__comment-meta {
+  line-height: 1.2em;
+  background-color: rgb(85, 86, 90);
+  border-radius: 4px;
+  transition: background-color 400ms;
+}
+.wp-block-latest-comments .wp-block-latest-comments__comment-meta:hover {
+  background-color: rgb(144, 151, 255);
+}
 .wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
   max-height: 300px;
   overflow-y: auto;
+  margin: 1em 0;
+  padding: 0 0.2em;
+}
+.wp-block-latest-comments .wp-block-latest-comments__comment-link {
+  color: rgb(8, 8, 136);
+  font-weight: bold;
+}
+
+.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt, .has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta {
+  margin-left: 0;
+  min-height: 50px;
+}
+
+.wp-block-social-links {
+  padding: 0;
+}
+
+.wp-block-loginout {
+  display: flex;
+  justify-content: center;
+  margin: 0.5em 0;
+}
+.wp-block-loginout a {
+  padding: 0.8em;
+  border-radius: 6px;
+  border: 1px solid blue;
+  background-color: black;
+  text-decoration: none;
+}
+.wp-block-loginout a:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+.wp-block-calendar {
+  background-color: black;
+  border-radius: 8px;
+}
+.wp-block-calendar table:where(:not(.has-text-color)) {
+  color: whitesmoke;
+}
+.wp-block-calendar th, .wp-block-calendar td {
+  border: none;
+}
+.wp-block-calendar th a, .wp-block-calendar td a {
+  padding: 0.2em;
+  background-color: rgb(32, 32, 121);
+  border-radius: 4px;
+}
+.wp-block-calendar thead th {
+  background-color: rgb(24, 24, 129);
+}
+.wp-block-calendar:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+.wp-block-archives-list, .wp-block-categories-list {
+  padding-left: 1em;
+}
+.wp-block-archives-list li, .wp-block-categories-list li {
+  position: relative;
+  list-style: none;
+  padding-left: 2em;
+  margin: 0.2em;
+}
+.wp-block-archives-list li::before, .wp-block-categories-list li::before {
+  content: "\f07b";
+  font-family: "Font Awesome Solid";
+  position: absolute;
+  left: 0;
+  transition: all 400ms;
+}
+.wp-block-archives-list li:hover::before, .wp-block-categories-list li:hover::before {
+  color: blue;
+}
+
+.wp-block-archives-dropdown, .wp-block-categories-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+.wp-block-archives-dropdown select, .wp-block-categories-dropdown select {
+  margin: 0.2em;
+}
+
+.wp-block-page-list {
+  padding-left: 2em;
+}
+
+.wp-block-latest-posts__list img {
+  border-radius: 2px;
+}
+.wp-block-latest-posts__list li {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border-radius: 4px;
+  margin: 1em 0;
+}
+.wp-block-latest-posts__list .wp-block-latest-posts__post-title {
+  background-color: rgb(85, 86, 90);
+  border-radius: 2px;
+  transition: background-color 400ms;
+  padding: 0.2em;
+  margin: 0.2em 0;
+  color: rgb(238, 238, 238);
+}
+.wp-block-latest-posts__list .wp-block-latest-posts__post-title:hover {
+  background-color: rgb(144, 151, 255);
+}
+.wp-block-latest-posts__list .wp-block-latest-posts__post-excerpt {
+  display: flex;
+  flex-direction: column;
+}
+.wp-block-latest-posts__list .wp-block-latest-posts__post-excerpt a {
+  padding: 0.8em;
+  border-radius: 6px;
+  border: 1px solid blue;
+  background-color: black;
+  text-decoration: none;
+  margin-top: 0.5em;
+}
+.wp-block-latest-posts__list .wp-block-latest-posts__post-excerpt a:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+.wp-block-search__button {
+  padding: 0 0.8em;
+  border-radius: 6px;
+  border: 1px solid blue;
+  background-color: black;
+  min-height: 2.5em;
+}
+.wp-block-search__button:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+.wp-block-search__inside-wrapper {
+  border: none;
+}
+
+.wp-block-search__input {
+  border-radius: 2em;
+  border: 1px solid rgb(56, 56, 56);
+  padding: 1em;
+  background-color: rgb(22, 22, 24);
+  color: whitesmoke;
+}
+
+.wp-block-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wp-block-search .wp-block-search__label {
+  text-align: center;
 }/*# sourceMappingURL=widgets.css.map */

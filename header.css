@@ -50,10 +50,10 @@
   left: 100%;
   top: 0;
 }
-#clean_space_header .clean_space_header_menu ul li:hover {
+#clean_space_header .clean_space_header_menu ul li:hover, #clean_space_header .clean_space_header_menu ul li:focus-within {
   background-color: rgb(0, 0, 136);
 }
-#clean_space_header .clean_space_header_menu ul li:hover > ul {
+#clean_space_header .clean_space_header_menu ul li:hover > ul, #clean_space_header .clean_space_header_menu ul li:focus-within > ul {
   display: flex;
 }
 #clean_space_header .clean_space_header_menu ::-webkit-scrollbar {

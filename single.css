@@ -2,7 +2,7 @@
   background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
   grid-area: landingpagesection;
   min-height: 20vh;
-  padding-top: 6em;
+  padding-top: var(--clean_space_margin_to_header);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2vw;
-  padding: 5em 5%;
+  padding: 3em 5%;
 }
 .clean_space_post_headline_section header h1 {
   flex: 1 0 50%;

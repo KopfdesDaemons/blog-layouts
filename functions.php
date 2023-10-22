@@ -7,7 +7,7 @@ function enqueue_custom_styles()
         'post-card' => '/template-parts/post-card.css',
         'widgets-styles' => '/widgets.css',
         'animations' => "/animations.css",
-        // 'custom-font' => '/fonts/fonts.css',
+        'custom-font' => '/fonts/fonts.css',
         'custom-styles' => '/style.css',
         'header-styles' => '/header.css',
         'footer-styles' => '/footer.css',

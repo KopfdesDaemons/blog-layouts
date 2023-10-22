@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 5em;
+  padding-top: var(--clean_space_margin_to_header);
   background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
 }
 .author .clean_space_post_author_headline_section header {
