@@ -13,6 +13,9 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+@use 'mixins' as *; 
+
+
 body {
     margin: 0;
     background-color: rgb(22, 22, 24);
@@ -91,6 +94,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 img {
@@ -117,89 +121,12 @@ img {
     }
 }
 
-// .paged {
-//     .clean_space_landing_page_section {
-//         display: none;
-//     }
-
-//     main,
-//     #clean_space_sidebar {
-        // margin-top: var(--clean_space_margin_to_header);
-//     }
-// }
-
 .clean_space_h2_latest_posts {
     font-size: 2em;
 }
 
 .clean_space_tag {
-    border: 1px solid rgb(95, 95, 95);
-    padding: 0.8em;
-    border-radius: 4px;
-    background-color: #303030;
-    cursor: pointer;
-
-    a {
-        color: whitesmoke;
-        text-decoration: none;
-        white-space: nowrap;
-    }
-}
-
-.clean_space_pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: clamp(12px, 3vw, 16px);
-    max-width: 100%;
-
-    ::-webkit-scrollbar {
-        height: 1px;
-    }
-
-    .clean_space_pagination_controls a {
-        background-color: #361da7;
-        margin: 0 0.5em;
-        padding: 0.8em 2em;
-        display: flex;
-    }
-
-    .clean_space_pagination_content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 1em;
-        max-width: 100%;
-
-        a,
-        span {
-            border-radius: 4px;
-            padding: 0.8em 1.2em;
-            background: black;
-            border: solid 1px gray;
-            white-space: nowrap;
-            user-select: none;
-        }
-
-        .current {
-            background-color: rgb(0, 0, 68);
-        }
-
-        a:hover {
-            background-color: rgb(54, 54, 54);
-        }
-
-        .dots {
-            background-color: transparent;
-        }
-    }
-
-    .clean_space_pagination_pages {
-        display: flex;
-        overflow-x: auto;
-        gap: 0.5em;
-        padding: 0 0.1em;
-    }
+    @include tag;
 }
 
 select {

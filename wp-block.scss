@@ -1,0 +1,60 @@
+@use 'mixins' as *;
+
+.wp-block-post-author {
+    background-color: black;
+}
+
+// tags and categories
+.wp-block-post-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+
+    .wp-block-post-terms__separator {
+        display: none;
+    }
+
+    a {
+        @include tag;
+    }
+}
+
+.wp-block-post-navigation-link {
+    @include navigation_link;
+}
+
+.wp-block-read-more {
+    @include color_button;
+}
+
+.wp-block-navigation__responsive-container-content{
+    li {
+        border: 1px solid rgb(85, 85, 85);
+        border-radius: 2px;
+        &>a {
+            padding: 0.5em;
+            background-color: black;
+        }
+
+        ul a {
+            background-color: unset;
+        }
+    }
+}
+
+// mobile page list
+.wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open {
+    background-color: black;
+
+    a {
+        padding: 1em;
+    }
+}
+
+.wp-block-query-pagination {
+    margin: 0.5em 0;
+    .wp-block-query-pagination-numbers {
+        display: flex;
+        gap: 0.5em;
+    }
+}

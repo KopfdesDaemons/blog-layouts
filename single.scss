@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 .clean_space_post_headline_section {
     background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
     grid-area: landingpagesection;
@@ -54,7 +56,6 @@
             box-shadow: #768fff 0 -1px 140px, #3639db 0 -2px 10px, #361da7 0 -10px 20px, #200b58 0 -18px 40px, 5px 5px 15px 5px #0000;
         }
     }
-
 }
 
 .clean_space_post_row_1 {
@@ -81,7 +82,7 @@
 
 .clean_space_content_container {
     line-height: 1.5em;
-    font-size: 1.3em;
+    // font-size: 1.3em;
 }
 
 .clean_space_post_tags {
@@ -131,11 +132,19 @@
     justify-content: space-between;
 
     a {
-        border-radius: 4px;
-        padding: 0.8em 1.2em;
-        background: black;
-        border: solid 1px gray;
-        white-space: nowrap;
-        user-select: none;
+        @include navigation_link
     }
+}
+
+.page-links {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.figcaption {
+    font-style: italic;
 }

@@ -1,15 +1,8 @@
+@use 'mixins' as *;
+
 .widget {
     margin-bottom: 1em;
     padding: 1em;
-
-    a {
-        color: #b7b7b7;
-
-        &:hover {
-            color: rgb(17, 17, 165);
-            transition: all 400ms;
-        }
-    }
 
     p {
         overflow-wrap: anywhere;
@@ -66,15 +59,7 @@
     margin: 0.5em 0;
 
     a {
-        padding: 0.8em;
-        border-radius: 6px;
-        border: 1px solid blue;
-        background-color: black;
-        text-decoration: none;
-
-        &:hover {
-            background-color: rgb(41, 41, 41);
-        }
+        @include color_button;
     }
 }
 
@@ -125,6 +110,15 @@
         &:hover {
             &::before {
                 color: blue;
+            }
+        }
+
+        a {
+            color: #b7b7b7;
+    
+            &:hover {
+                color: rgb(17, 17, 165);
+                transition: all 400ms;
             }
         }
     }

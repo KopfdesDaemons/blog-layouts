@@ -1,0 +1,62 @@
+/*
+    Contains a uniform style for all pagination: feed, post, author page.
+*/
+.clean_space_pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(12px, 3vw, 16px);
+  max-width: 100%;
+}
+.clean_space_pagination ::-webkit-scrollbar {
+  height: 1px;
+}
+.clean_space_pagination .clean_space_pagination_controls a {
+  background-color: #361da7;
+  margin: 0 0.5em;
+  padding: 0.8em 2em;
+  display: flex;
+  color: rgb(211, 211, 211);
+}
+.clean_space_pagination .clean_space_pagination_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1em;
+  max-width: 100%;
+}
+.clean_space_pagination .clean_space_pagination_pages {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.5em;
+  padding: 0 0.1em;
+}
+
+.wp-block-query-pagination-next,
+.clean_space_pagination_controls a,
+.post-page-numbers,
+.page-numbers {
+  border-radius: 4px;
+  padding: 0.8em 1.2em;
+  background: black;
+  border: solid 1px gray;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.current {
+  background-color: rgb(0, 0, 68);
+}
+
+.wp-block-query-pagination-next:hover,
+.clean_space_pagination_controls a:hover,
+.page-numbers:not(.current):hover,
+.post-page-numbers:hover {
+  background-color: rgb(54, 54, 54);
+}
+
+.dots {
+  background-color: transparent;
+}/*# sourceMappingURL=pagination.css.map */
