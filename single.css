@@ -58,6 +58,7 @@
 }
 .clean_space_post_row_1 .clean_space_post_date {
   white-space: nowrap;
+  font-style: italic;
 }
 .clean_space_post_row_1 .clean_space_post_categories ul {
   padding: 0;
@@ -69,8 +70,8 @@
   list-style: none;
 }
 
-.clean_space_content_container {
-  line-height: 1.5em;
+.clean_space_article {
+  width: 100%;
 }
 
 .clean_space_post_tags ul {
@@ -79,6 +80,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
+}
+
+.clean_space_post_footer {
+  clear: both;
 }
 
 .clean_space_author_card {
@@ -137,4 +142,31 @@
 
 .figcaption {
   font-style: italic;
+}
+
+.post-password-form {
+  max-width: 30em;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 1em;
+  background-color: #19181b;
+  font-size: clamp(16px, 5vw, 25px);
+}
+.post-password-form p {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  color: rgb(209, 7, 7);
+}
+.post-password-form p:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+}
+.post-password-form p:nth-child(2) label {
+  gap: 0.5em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
 }/*# sourceMappingURL=single.css.map */

@@ -16,6 +16,8 @@ body {
   margin: 0;
   background-color: rgb(22, 22, 24);
   font-family: monospace;
+  font-family: Fragment Mono;
+  font-size: 14px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas: "landingpagesection landingpagesection" "main sidebar" "footer footer";
@@ -67,7 +69,7 @@ button {
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
-  height: 2px;
+  height: 5px;
 }
 
 /* Track */
@@ -91,6 +93,11 @@ button {
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+.clean_space_content_container {
+  min-height: 60vh;
+  margin: 2em 0;
 }
 
 img {
@@ -138,4 +145,169 @@ img {
 
 select {
   padding: 0.5em;
+}
+
+pre {
+  overflow-y: auto;
+  background-color: var(--neo_blog_element_background);
+  margin: 0;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+  color: var(--neo_blog_font_color);
+}
+
+code {
+  background-color: rgb(47, 45, 59);
+  padding: 1em;
+  color: rgb(240, 240, 240);
+  display: block;
+  margin: 1em 5%;
+  border-radius: 4px;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+dt {
+  color: rgb(10, 10, 196);
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+dd {
+  font-style: italic;
+}
+
+hr {
+  width: 70%;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 25px;
+  font-size: clamp(0.8rem, 4vw, 1rem);
+  display: block;
+  overflow-x: auto;
+  color: rgb(151, 151, 151);
+}
+
+table thead tr {
+  background-color: transparent;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  color: whitesmoke;
+  border-color: #555;
+  border: 1px solid;
+}
+
+th {
+  background-color: black;
+}
+
+tr {
+  background-color: rgb(66, 66, 66);
+  transition: all 400ms;
+}
+
+.widget {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+.widget p {
+  overflow-wrap: anywhere;
+}
+
+input,
+textarea,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: none;
+  padding: 0.5em;
+  margin-top: 3px;
+  background-color: black;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  color: rgb(177, 177, 177);
+  -webkit-text-fill-color: rgb(177, 177, 177);
+}
+
+input[type=submit] {
+  border-radius: 4px;
+  padding: 0.8em 1.2em;
+  border: solid 1px gray;
+  white-space: nowrap;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-text-fill-color: unset;
+  box-shadow: none;
+}
+input[type=submit]:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+.gallery {
+  display: grid;
+}
+.gallery .gallery-item {
+  font-size: 0.8em;
+  overflow: hidden;
+}
+.gallery .gallery-item img {
+  border-radius: 8px;
+  border: none !important;
+}
+.gallery .gallery-item img:hover {
+  transform: scale(0.95);
+  transition: all 300ms;
+}
+.gallery .landscape img {
+  width: 95%;
+  height: auto;
+}
+
+.gallery-columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.attachment img {
+  width: 95%;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */

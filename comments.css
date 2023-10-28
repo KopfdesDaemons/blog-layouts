@@ -7,14 +7,15 @@
 .clean_space_comments_area a {
   color: rgb(177, 177, 177);
 }
-.clean_space_comments_area ul, .clean_space_comments_area ol {
+.clean_space_comments_area .comment, .clean_space_comments_area .children, .clean_space_comments_area .pingback {
   list-style: none;
+  padding: 2%;
 }
-.clean_space_comments_area ul li, .clean_space_comments_area ol li {
+.clean_space_comments_area .comment li, .clean_space_comments_area .children li, .clean_space_comments_area .pingback li {
   border-radius: 4px;
   padding: 2%;
 }
-.clean_space_comments_area ul li ol, .clean_space_comments_area ol li ol {
+.clean_space_comments_area .comment li ol, .clean_space_comments_area .children li ol, .clean_space_comments_area .pingback li ol {
   padding-left: 0.5em;
 }
 .clean_space_comments_area .comment-content {
@@ -22,6 +23,9 @@
   padding: 1em;
   margin: 1em 0.5em;
   border-radius: 4px;
+  overflow-wrap: break-word;
+  max-height: 40em;
+  overflow-y: auto;
 }
 .clean_space_comments_area .reply {
   margin: 0.5em;
@@ -37,6 +41,9 @@
      -moz-user-select: none;
           user-select: none;
   text-decoration: none;
+}
+.clean_space_comments_area .reply a:hover {
+  background-color: rgb(41, 41, 41);
 }
 .clean_space_comments_area .says {
   display: none;
@@ -69,33 +76,22 @@
   resize: vertical;
   max-width: 90vw;
 }
-.clean_space_comments_area .comment-form .submit {
-  border-radius: 4px;
-  padding: 0.8em 1.2em;
-  background: black;
-  border: solid 1px gray;
-  white-space: nowrap;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  text-decoration: none;
-  color: rgb(177, 177, 177);
-  cursor: pointer;
-}
-.clean_space_comments_area .comment-form .comment-form-author, .clean_space_comments_area .comment-form .comment-form-email, .clean_space_comments_area .comment-form .comment-form-url {
+.clean_space_comments_area .comment-form .comment-form-author,
+.clean_space_comments_area .comment-form .comment-form-email,
+.clean_space_comments_area .comment-form .comment-form-url {
   display: flex;
   flex-direction: column;
 }
-.clean_space_comments_area .comment-form input, .clean_space_comments_area .comment-form textarea {
-  background-color: rgb(224, 224, 224);
-  border-radius: 4px;
-  border: none;
-  padding: 0.5em;
-  margin-top: 3px;
-}
 .clean_space_comments_area .clean_space_comment_reply_title {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.clean_space_comments_area .clean_space_comment_reply_title small {
+  margin-left: auto;
+}
+.clean_space_comments_area .clean_space_comment_reply_title small a {
+  color: rgb(117, 0, 0);
 }
 
 .wp-block-latest-comments__comment {

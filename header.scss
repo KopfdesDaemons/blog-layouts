@@ -112,6 +112,11 @@
             color: whitesmoke;
             background-color: blue;
             cursor: pointer;
+
+            &:hover {
+                background-color: rgb(54, 51, 63);
+                outline: 2px solid black;
+            }
         }
     }
 }

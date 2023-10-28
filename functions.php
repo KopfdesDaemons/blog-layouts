@@ -5,7 +5,6 @@ function enqueue_custom_styles()
 
     $styles = array(
         'post-card' => '/template-parts/post-card.css',
-        'widgets-styles' => '/widgets.css',
         'animations' => "/animations.css",
         'custom-font' => '/fonts/fonts.css',
         'custom-styles' => '/style.css',

@@ -1,5 +1,5 @@
 /*
-    Contains a uniform style for all pagination: feed, post, author page.
+    Contains a uniform style for all pagination: feed, post, author page, search.
 */
 .clean_space_pagination {
   display: flex;
@@ -22,7 +22,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1em;
   max-width: 100%;
 }
 .clean_space_pagination .clean_space_pagination_pages {

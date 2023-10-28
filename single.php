@@ -4,11 +4,11 @@
     <header>
         <h1 class="title"><?php the_title(); ?></h1>
         <?php if (has_post_thumbnail()) : ?>
-        <div class="clean_space_post_thumbnail">
-            <div>
-                <?php the_post_thumbnail(); ?>
+            <div class="clean_space_post_thumbnail">
+                <div>
+                    <?php the_post_thumbnail(); ?>
+                </div>
             </div>
-        </div>
         <?php endif; ?>
     </header>
 </section>
@@ -17,22 +17,22 @@
     while (have_posts()) :
         the_post();
     ?>
-    <section class="clean_space_content_spacer" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <div class="clean_space_article">
+        <section class="clean_space_content_spacer" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <div class="clean_space_article">
 
-            <div class="clean_space_post_row_1">
-                <!-- Date -->
-                <?php
+                <div class="clean_space_post_row_1">
+                    <!-- Date -->
+                    <?php
                     $post_date = get_theme_mod('post_date', true);
                     if ($post_date) { ?>
-                <span class="clean_space_post_date"><?php the_date(); ?></span>
+                        <span class="clean_space_post_date"><?php the_date(); ?></span>
 
-                <!-- Categories -->
-                <?php }
+                        <!-- Categories -->
+                    <?php }
                     $post_categories = get_theme_mod('post_categories', true);
                     if ($post_categories) { ?>
-                <div class="clean_space_post_categories">
-                    <?php
+                        <div class="clean_space_post_categories">
+                            <?php
                             $categories = get_the_category();
                             if (!empty($categories)) {
                                 echo '<ul>';
@@ -42,17 +42,17 @@
                                 echo '</ul>';
                             }
                             ?>
+                        </div>
+                    <?php } ?>
                 </div>
-                <?php } ?>
-            </div>
 
-            <article class="clean_space_content_container" id="clean_space_main_content">
-                <?php the_content(); ?>
-            </article>
+                <article class="clean_space_content_container" id="clean_space_main_content">
+                    <?php the_content(); ?>
+                </article>
 
-            <footer>
-                <!-- Pagination-->
-                <?php
+                <footer class="clean_space_post_footer">
+                    <!-- Pagination-->
+                    <?php
                     wp_link_pages(
                         array(
                             'before'      => '<div class="page-links"><span class="page-links-title">Seiten:</span>',
@@ -64,8 +64,8 @@
                     );
                     ?>
 
-                <!-- Tags -->
-                <?php
+                    <!-- Tags -->
+                    <?php
                     $tags_options = get_theme_mod('tags', true);
                     $tags = get_the_tags();
                     if ($tags_options & !empty($tags)) {
@@ -85,49 +85,48 @@
                         $author_website = esc_url(get_the_author_meta('user_url'));
                         $author_avatar = get_avatar($author_id, 100);
                     ?>
-                <div class="clean_space_author_card">
-                    <div class="clean_space_author_avatar">
-                        <a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>">
-                            <?php echo $author_avatar; ?>
-                        </a>
-                    </div>
-                    <div class="clean_space_author_details">
-                        <div class="clean_space_author_name_row">
-                            <h3><a
-                                    href="<?php echo esc_url(get_author_posts_url($author_id)); ?>"><?php echo $author_name; ?></a>
-                            </h3>
-                            <?php if ($author_website) : ?>
-                            <a href="<?php echo $author_website; ?>" target="_blank">🌐</a>
-                            <?php endif; ?>
+                        <div class="clean_space_author_card">
+                            <div class="clean_space_author_avatar">
+                                <a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>">
+                                    <?php echo $author_avatar; ?>
+                                </a>
+                            </div>
+                            <div class="clean_space_author_details">
+                                <div class="clean_space_author_name_row">
+                                    <h3><a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>"><?php echo $author_name; ?></a>
+                                    </h3>
+                                    <?php if ($author_website) : ?>
+                                        <a href="<?php echo $author_website; ?>" target="_blank">🌐</a>
+                                    <?php endif; ?>
+                                </div>
+                                <p><?php echo $author_description; ?></p>
+                            </div>
                         </div>
-                        <p><?php echo $author_description; ?></p>
-                    </div>
-                </div>
-                <?php } ?>
+                    <?php } ?>
 
-                <?php
+                    <?php
                     $post_pagination = get_theme_mod('post_pagination', true);
                     if ($post_pagination) { ?>
-                <div class="clean_space_post_pagination">
-                    <div class="clean_space_post_pagination_prev">
-                        <?php previous_post_link('%link', '&laquo; Vorheriger Beitrag'); ?>
-                    </div>
-                    <div class="clean_space_post_pagination_next">
-                        <?php next_post_link('%link', 'Nächster Beitrag &raquo;'); ?>
-                    </div>
-                </div>
-                <?php } ?>
+                        <div class="clean_space_post_pagination">
+                            <div class="clean_space_post_pagination_prev">
+                                <?php previous_post_link('%link', '&laquo; Vorheriger Beitrag'); ?>
+                            </div>
+                            <div class="clean_space_post_pagination_next">
+                                <?php next_post_link('%link', 'Nächster Beitrag &raquo;'); ?>
+                            </div>
+                        </div>
+                    <?php } ?>
 
-                <!-- Comments -->
+                    <!-- Comments -->
                 <?php
                 if (comments_open() || get_comments_number()) {
                     comments_template();
                 }
             endwhile;
                 ?>
-            </footer>
-        </div>
-    </section>
+                </footer>
+            </div>
+        </section>
 </main>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

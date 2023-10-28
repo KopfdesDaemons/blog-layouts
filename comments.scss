@@ -9,8 +9,9 @@
         color: rgb(177, 177, 177);
     }
 
-    ul, ol {
+    .comment, .children, .pingback  {
         list-style: none;
+        padding: 2%;
 
         li {
             border-radius: 4px;
@@ -27,12 +28,16 @@
         padding: 1em;
         margin: 1em 0.5em;
         border-radius: 4px;
+        overflow-wrap: break-word;
+        max-height: 40em;
+        overflow-y: auto;
     }
 
     .reply {
         margin: 0.5em;
         display: flex;
-        a{
+
+        a {
             border-radius: 4px;
             padding: 0.8em 1.2em;
             background: black;
@@ -40,6 +45,10 @@
             white-space: nowrap;
             user-select: none;
             text-decoration: none;
+
+            &:hover {
+                background-color: rgb(41, 41, 41);
+            }
         }
     }
 
@@ -52,6 +61,7 @@
         gap: 0.5em;
         align-items: center;
         font-size: 1.3em;
+
         img {
             border-radius: 3em;
         }
@@ -67,12 +77,12 @@
         padding: 0.8em 1em 0.3em 1em;
     }
 
-    .comment-form{
+    .comment-form {
         padding: 3%;
 
         .comment-form-comment {
-                display: flex;
-                flex-direction: column;
+            display: flex;
+            flex-direction: column;
 
             textarea {
                 resize: vertical;
@@ -80,35 +90,26 @@
             }
         }
 
-        .submit {
-            border-radius: 4px;
-            padding: 0.8em 1.2em;
-            background: black;
-            border: solid 1px gray;
-            white-space: nowrap;
-            user-select: none;
-            text-decoration: none;
-            color: rgb(177, 177, 177);
-            cursor: pointer;
-        }
-
-        .comment-form-author, .comment-form-email, .comment-form-url {
+        .comment-form-author,
+        .comment-form-email,
+        .comment-form-url {
             display: flex;
             flex-direction: column;
-        }
-
-        input, textarea {
-            background-color: rgb(224, 224, 224);
-            border-radius: 4px;
-            border: none;
-            padding: 0.5em;
-            margin-top: 3px;
         }
     }
 
     .clean_space_comment_reply_title {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5em;
+
+        small {
+            margin-left: auto;
+
+            a {
+                color: rgb(117, 0, 0);
+            }
+        }
     }
 }
 

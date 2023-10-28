@@ -65,6 +65,7 @@
 
     .clean_space_post_date {
         white-space: nowrap;
+        font-style: italic;
     }
 
     .clean_space_post_categories {
@@ -80,9 +81,8 @@
     }
 }
 
-.clean_space_content_container {
-    line-height: 1.5em;
-    // font-size: 1.3em;
+.clean_space_article {
+    width: 100%;
 }
 
 .clean_space_post_tags {
@@ -93,6 +93,10 @@
         flex-wrap: wrap;
         gap: 0.5em;
     }
+}
+
+.clean_space_post_footer {
+    clear: both;
 }
 
 .clean_space_author_card {
@@ -147,4 +151,34 @@
 
 .figcaption {
     font-style: italic;
+}
+
+.post-password-form {
+    max-width: 30em;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 1em;
+    background-color: #19181b;
+    font-size: clamp(16px, 5vw, 25px);
+    
+    p {
+        display: flex;
+        gap: 0.5em;
+        justify-content: center;
+        align-items: center;
+        color: rgb(209, 7, 7);
+    }
+    
+    p:nth-child(2) {
+        display: flex;
+        flex-wrap: wrap;
+        
+        label {
+            gap: 0.5em;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 100%;
+        }
+    }
 }
