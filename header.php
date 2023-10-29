@@ -18,7 +18,7 @@
     <meta name="description" content="<?php echo esc_attr(get_the_excerpt()); ?>">
 
     <?php if (is_singular() && pings_open()) { ?>
-        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php }
 
     wp_head(); ?>
@@ -27,11 +27,15 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <header id="clean_space_header">
+        <button id="clean_space_header_menu_button" onclick="clean_space_toggle_menu()"
+            aria-label="<?php echo esc_attr('open menu', 'clean-space') ?>"><i class="fa-solid fa-bars"></i></button>
+
         <?php
         wp_nav_menu(array(
             'theme_location' => 'header-menu',
             'menu_class' => 'clean_space_header_menu',
             'container'      => false,
+            'walker' => new clean_space_menu_walker(),
         ));
         ?>
         <div class="clean_space_header_content">

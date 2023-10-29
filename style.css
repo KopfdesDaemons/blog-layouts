@@ -118,7 +118,7 @@ img {
   padding-top: var(--clean_space_margin_to_header);
   background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
 }
-.clean_space_landing_page_section img {
+.clean_space_landing_page_section .wp-block-image img {
   border: 6px solid blue;
   animation: wobble 5s linear infinite;
 }
@@ -149,11 +149,9 @@ select {
 
 pre {
   overflow-y: auto;
-  background-color: var(--neo_blog_element_background);
   margin: 0;
   box-sizing: border-box;
   white-space: pre-wrap;
-  color: var(--neo_blog_font_color);
 }
 
 code {
@@ -253,6 +251,22 @@ input[type=submit] {
 }
 input[type=submit]:hover {
   background-color: rgb(41, 41, 41);
+}
+
+#clean_space_sidebar {
+  width: 20em;
+  overflow: hidden;
+  padding: 2em;
+  grid-area: sidebar;
+}
+@media only screen and (max-width: 800px) {
+  #clean_space_sidebar {
+    width: unset;
+  }
+}
+#clean_space_sidebar .widget {
+  background-color: #303030;
+  border: 1px solid rgb(95, 95, 95);
 }
 
 .gallery {

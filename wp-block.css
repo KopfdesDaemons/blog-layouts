@@ -141,7 +141,7 @@
   padding: 0 0.2em;
 }
 .wp-block-latest-comments .wp-block-latest-comments__comment-link {
-  color: rgb(8, 8, 136);
+  color: whitesmoke;
   font-weight: bold;
 }
 
@@ -304,4 +304,19 @@
 }
 .wp-block-search .wp-block-search__label {
   text-align: center;
+}
+
+.wp-block-post-template li {
+  max-width: 65em;
+  border: 2px solid rgb(0, 0, 117);
+  background-color: black;
+  border-radius: 12px;
+  margin-bottom: 3em;
+  padding: 1em;
+  box-shadow: 0 0 20px 0px rgba(87, 87, 255, 0.2941176471);
+}
+.wp-block-post-template li:hover {
+  transition: all 0.2s;
+  box-shadow: 0 0 40px 5px #5857ff;
+  outline: 2px solid rgb(0, 0, 117);
 }/*# sourceMappingURL=wp-block.css.map */

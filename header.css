@@ -5,7 +5,21 @@
   flex-direction: column;
   align-items: center;
   z-index: 20;
-  gap: 1em;
+}
+#clean_space_header #clean_space_header_menu_button {
+  border: none;
+  display: none;
+  margin: 0.5em;
+  font-size: 1.5em;
+  background-color: rgb(45, 42, 58);
+  padding: 0.5em 0.8em;
+  box-shadow: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  #clean_space_header #clean_space_header_menu_button {
+    display: block;
+  }
 }
 #clean_space_header .clean_space_header_menu {
   display: flex;
@@ -16,28 +30,36 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-#clean_space_header .clean_space_header_menu ul {
-  display: flex;
   list-style: none;
   overflow-x: clip;
   margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
 }
-#clean_space_header .clean_space_header_menu ul li {
+@media only screen and (max-width: 600px) {
+  #clean_space_header .clean_space_header_menu {
+    justify-content: flex-start;
+  }
+}
+#clean_space_header .clean_space_header_menu li {
   position: relative;
   display: flex;
   transition: background-color 400ms;
   border-radius: 8px;
 }
-#clean_space_header .clean_space_header_menu ul li a {
-  padding: 0.8em 0.5em;
+#clean_space_header .clean_space_header_menu li .clean_space_menuitem_container {
+  display: flex;
+  align-items: center;
+}
+#clean_space_header .clean_space_header_menu li .clean_space_menuitem_container a {
+  padding: 0.8em 0.2em 0.8em 0.5em;
   margin: 0.2em;
   text-decoration: none;
   color: rgba(238, 238, 238, 0.856);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8em;
 }
-#clean_space_header .clean_space_header_menu ul li ul {
+#clean_space_header .clean_space_header_menu li ul {
   display: none;
   position: absolute;
   flex-direction: column;
@@ -45,19 +67,59 @@
   background-color: rgb(31, 15, 75);
   top: 100%;
   padding: 0;
+  z-index: 5;
 }
-#clean_space_header .clean_space_header_menu ul li ul ul {
+#clean_space_header .clean_space_header_menu li ul li {
+  transition: all 100ms;
+}
+#clean_space_header .clean_space_header_menu li ul ul {
   left: 100%;
   top: 0;
 }
-#clean_space_header .clean_space_header_menu ul li:hover, #clean_space_header .clean_space_header_menu ul li:focus-within {
-  background-color: rgb(0, 0, 136);
-}
-#clean_space_header .clean_space_header_menu ul li:hover > ul, #clean_space_header .clean_space_header_menu ul li:focus-within > ul {
-  display: flex;
+@media only screen and (min-width: 600px) {
+  #clean_space_header .clean_space_header_menu li > ul .clean_space_submenu_toggle {
+    transform: rotate(-90deg);
+  }
+  #clean_space_header .clean_space_header_menu li:hover, #clean_space_header .clean_space_header_menu li:focus-within {
+    background-color: rgb(0, 0, 136);
+  }
+  #clean_space_header .clean_space_header_menu li:hover > ul, #clean_space_header .clean_space_header_menu li:focus-within > ul {
+    display: flex;
+  }
 }
 #clean_space_header .clean_space_header_menu ::-webkit-scrollbar {
   display: none;
+}
+@media only screen and (max-width: 600px) {
+  #clean_space_header .clean_space_header_menu {
+    max-height: 0;
+    overflow: hidden;
+  }
+  #clean_space_header.clean_space_header_menu_open {
+    background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
+  }
+  #clean_space_header.clean_space_header_menu_open .clean_space_header_menu {
+    transition: max-height 300ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+    background-color: transparent;
+    max-height: 100vh;
+    flex-wrap: nowrap;
+  }
+  #clean_space_header.clean_space_header_menu_open .clean_space_header_menu li {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  #clean_space_header.clean_space_header_menu_open .clean_space_header_menu li ul {
+    position: static;
+    width: 100%;
+  }
+  #clean_space_header.clean_space_header_menu_open .clean_space_header_menu li .clean_space_submenu_open {
+    display: flex;
+  }
 }
 #clean_space_header .clean_space_header_content {
   height: 3.5em;

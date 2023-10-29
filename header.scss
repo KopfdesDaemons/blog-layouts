@@ -5,8 +5,23 @@
     flex-direction: column;
     align-items: center;
     z-index: 20;
-    gap: 1em;
-    
+    // gap: 1em;
+
+    #clean_space_header_menu_button {
+        border: none;
+        display: none;
+        margin: 0.5em;
+        font-size: 1.5em;
+        background-color: rgb(45, 42, 58);
+        padding: 0.5em 0.8em;
+        box-shadow: none;
+        cursor: pointer;
+
+        @media only screen and (max-width: 600px) {
+            display: block;
+        }
+    }
+
     .clean_space_header_menu{
         display: flex;
         justify-content: center;
@@ -14,42 +29,63 @@
         white-space: nowrap;
         width: 100%;
         user-select: none;
+        list-style: none;
+        overflow-x: clip;
+        margin: 0;
+        padding: 0;
+        // gap: 0.5em;
+        flex-wrap: wrap;
+        // display: none;
 
+        @media only screen and (max-width: 600px) {
+            // flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
 
-        ul {
+        li {
+            position: relative;
             display: flex;
-            list-style: none;
-            overflow-x: clip;
-            margin: 0;
+            transition: background-color 400ms;
+            border-radius: 8px;
 
-            li {
-                position: relative;
+            .clean_space_menuitem_container {
                 display: flex;
-                transition: background-color 400ms;
-                border-radius: 8px;
+                align-items: center;
                 
                 a {
-                    padding: 0.8em 0.5em;
+                    padding: 0.8em 0.2em 0.8em 0.5em;
                     margin: 0.2em;
                     text-decoration: none;
                     color: rgba(238, 238, 238, 0.856);
                     font-family: Arial, Helvetica, sans-serif;
                     font-size: 0.8em;
                 }
-
+            }
+            
+            
+            ul {
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                overflow: visible;
+                background-color: rgb(31, 15, 75);
+                top: 100%;
+                padding: 0;
+                z-index: 5;
+                
+                li {
+                    transition: all 100ms;
+                }
+                
                 ul {
-                    display: none;
-                    position: absolute;
-                    flex-direction: column;
-                    overflow: visible;
-                    background-color: rgb(31, 15, 75);
-                    top: 100%;
-                    padding: 0;
-
-                    ul {
-                        left: 100%;
-                        top: 0;
-                    }
+                    left: 100%;
+                    top: 0;
+                }
+            }
+            
+            @media only screen and (min-width: 600px) {
+                >ul .clean_space_submenu_toggle{
+                    transform: rotate(-90deg);
                 }
 
                 &:hover, &:focus-within {
@@ -59,10 +95,49 @@
                     }
                 }
             }
+
         }
 
         ::-webkit-scrollbar {
             display: none;
+        }
+    }
+
+    // mobile menu
+    @media only screen and (max-width: 600px) {
+        .clean_space_header_menu {
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        &.clean_space_header_menu_open {
+            background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
+            
+            .clean_space_header_menu{
+                transition: max-height 300ms;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 1.5em;
+                background-color: transparent;
+                max-height: 100vh;
+                flex-wrap: nowrap;
+
+                li{
+                    flex-direction: column;
+                    width: 100%;
+                    align-items: center;
+
+                    ul {
+                        position: static;
+                        width: 100%;
+                    }
+
+                    .clean_space_submenu_open {
+                        display: flex;
+                    }
+                }
+            }
         }
     }
 

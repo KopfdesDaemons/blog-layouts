@@ -10,16 +10,15 @@ function enqueue_custom_styles()
         'custom-styles' => '/style.css',
         'header-styles' => '/header.css',
         'footer-styles' => '/footer.css',
-        'sidebar-styles' => '/sidebar.css',
         'comments-styles' => '/comments.css',
         'archive-styles' => '/archive.css',
         'single-styles' => '/single.css',
         'page-style' => '/page.css',
         'search-style' => '/search.css',
         'wp-block-style' => '/wp-block.css',
-        'paginantion-style' => '/pagination.css'
+        'paginantion-style' => '/pagination.css',
         // '404-styles' => '/404.css',
-        // 'fontawesome' => '/fonts/fontawesome/css/all.min.css',
+        'fontawesome' => '/fonts/fontawesome/css/all.min.css',
     );
 
     foreach ($styles as $handle => $file) {
@@ -77,6 +76,12 @@ function clean_space_set_default_front_page()
 }
 add_action('after_setup_theme', 'clean_space_set_default_front_page');
 
+// Header Script
+function clean_space_header_script()
+{
+    wp_enqueue_script('clean_space_header_script', get_template_directory_uri() . '/js/clean_space_header_script.js', null, '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'clean_space_header_script');
 
 function clean_space_register_menus()
 {
@@ -115,6 +120,7 @@ function clean_space_register_landigpage_widget_area()
 }
 add_action('widgets_init', 'clean_space_register_landigpage_widget_area');
 
+
 // Number of words previewed in the feed
 function clean_space_custom_excerpt_length()
 {
@@ -122,9 +128,31 @@ function clean_space_custom_excerpt_length()
 }
 add_filter('excerpt_length', 'clean_space_custom_excerpt_length', 999);
 
+
 // Characters after snippet
 function clean_space_custom_excerpt_more()
 {
     return ' ...';
 }
 add_filter('excerpt_more', 'clean_space_custom_excerpt_more');
+
+
+// Custom menu structure
+class clean_space_menu_walker extends Walker_Nav_Menu
+{
+    function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
+    {
+        if (empty($item->title)) return;
+
+        $output .= "<li class='" .  implode(" ", (array)$item->classes) . "'>";
+        $output .= "<div class='clean_space_menuitem_container'>";
+        $output .= '<a href="' . esc_url($item->url) . '">';
+        $output .= $item->title;
+        $output .= '</a>';
+
+        if ($args->walker->has_children) {
+            $output .= '<i class="clean_space_submenu_toggle fa fa-sort-down"></i>';
+        }
+        $output .= "</div>";
+    }
+}
