@@ -12,7 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2vw;
-  padding: 3em 5%;
+  padding: 2em 5%;
 }
 .clean_space_post_headline_section header h1 {
   flex: 1 0 50%;
