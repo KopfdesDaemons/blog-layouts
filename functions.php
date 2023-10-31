@@ -151,7 +151,7 @@ class clean_space_menu_walker extends Walker_Nav_Menu
         $output .= '</a>';
 
         if ($args->walker->has_children) {
-            $output .= '<i class="clean_space_submenu_toggle fa fa-caret-down"></i>';
+            $output .= '<i tabindex="0" class="clean_space_submenu_toggle fa fa-caret-down"></i>';
         }
         $output .= "</div>";
     }

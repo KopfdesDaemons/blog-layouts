@@ -87,17 +87,77 @@
 #clean_space_header .clean_space_header_menu ::-webkit-scrollbar {
   display: none;
 }
+#clean_space_header .clean_space_header_mobile_content,
+#clean_space_header .clean_space_header_content {
+  height: 3.5em;
+  padding: 1em;
+  max-width: 50em;
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+#clean_space_header .clean_space_header_mobile_content .clean_space_header_logo,
+#clean_space_header .clean_space_header_content .clean_space_header_logo {
+  display: flex;
+}
+#clean_space_header .clean_space_header_mobile_content .clean_space_header_logo img,
+#clean_space_header .clean_space_header_content .clean_space_header_logo img {
+  height: 100%;
+}
+#clean_space_header .clean_space_header_mobile_content .search-form,
+#clean_space_header .clean_space_header_content .search-form {
+  display: flex;
+  gap: 0.5em;
+}
+#clean_space_header .clean_space_header_mobile_content .search-form label,
+#clean_space_header .clean_space_header_content .search-form label {
+  display: flex;
+}
+#clean_space_header .clean_space_header_mobile_content .search-field,
+#clean_space_header .clean_space_header_content .search-field {
+  border-radius: 2em;
+  border: 1px solid rgb(56, 56, 56);
+  padding: 1em;
+  width: 30vw;
+  max-width: 30em;
+  min-width: 20em;
+  background-color: rgb(22, 22, 24);
+  color: whitesmoke;
+}
+@media only screen and (max-width: 800px) {
+  #clean_space_header .clean_space_header_mobile_content .search-field,
+  #clean_space_header .clean_space_header_content .search-field {
+    min-width: 40vw;
+  }
+}
+#clean_space_header .clean_space_header_mobile_content .search-submit,
+#clean_space_header .clean_space_header_content .search-submit {
+  border-radius: 2em;
+  border: none;
+  padding: 0 2em;
+  color: whitesmoke;
+  background-color: blue;
+  cursor: pointer;
+}
+#clean_space_header .clean_space_header_mobile_content .search-submit:hover,
+#clean_space_header .clean_space_header_content .search-submit:hover {
+  background-color: rgb(54, 51, 63);
+  outline: 2px solid black;
+}
+#clean_space_header .clean_space_header_mobile_content {
+  display: none;
+}
 @media only screen and (max-width: 600px) {
   #clean_space_header .clean_space_header_menu {
     max-height: 0;
     overflow: hidden;
-    order: 1;
-  }
-  #clean_space_header #clean_space_header_menu_button, #clean_space_header .clean_space_header_menu {
-    order: 1;
+    display: none;
   }
   #clean_space_header .clean_space_header_content {
-    order: 0;
+    display: none;
+  }
+  #clean_space_header .clean_space_header_mobile_content {
+    display: flex;
   }
   #clean_space_header.clean_space_header_menu_open {
     background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
@@ -144,52 +204,4 @@
   #clean_space_header.clean_space_header_menu_open .clean_space_header_menu .clean_space_submenu_open > .sub-menu {
     display: flex;
   }
-}
-#clean_space_header .clean_space_header_content {
-  height: 3.5em;
-  padding: 1em;
-  max-width: 50em;
-  display: flex;
-  justify-content: center;
-  gap: 0.5em;
-}
-#clean_space_header .clean_space_header_content .clean_space_header_logo {
-  display: flex;
-}
-#clean_space_header .clean_space_header_content .clean_space_header_logo img {
-  height: 100%;
-}
-#clean_space_header .clean_space_header_content .search-form {
-  display: flex;
-  gap: 0.5em;
-}
-#clean_space_header .clean_space_header_content .search-form label {
-  display: flex;
-}
-#clean_space_header .clean_space_header_content .search-field {
-  border-radius: 2em;
-  border: 1px solid rgb(56, 56, 56);
-  padding: 1em;
-  width: 30vw;
-  max-width: 30em;
-  min-width: 20em;
-  background-color: rgb(22, 22, 24);
-  color: whitesmoke;
-}
-@media only screen and (max-width: 800px) {
-  #clean_space_header .clean_space_header_content .search-field {
-    min-width: 40vw;
-  }
-}
-#clean_space_header .clean_space_header_content .search-submit {
-  border-radius: 2em;
-  border: none;
-  padding: 0 2em;
-  color: whitesmoke;
-  background-color: blue;
-  cursor: pointer;
-}
-#clean_space_header .clean_space_header_content .search-submit:hover {
-  background-color: rgb(54, 51, 63);
-  outline: 2px solid black;
 }/*# sourceMappingURL=header.css.map */

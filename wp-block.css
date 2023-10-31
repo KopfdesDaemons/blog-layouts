@@ -142,7 +142,6 @@
 }
 .wp-block-latest-comments .wp-block-latest-comments__comment-link {
   color: whitesmoke;
-  font-weight: bold;
 }
 
 .has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt, .has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta {
