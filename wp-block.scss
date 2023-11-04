@@ -188,8 +188,12 @@
         background-color: rgb(24, 24, 129);
     }
 
-    &:hover tr{
+    tr {
         background-color: rgb(41, 41, 41);
+    }
+    
+    &:hover tr{
+        background-color: rgb(66, 66, 66);
     }
 }
 
@@ -225,7 +229,6 @@
             }
         }
     }
-    
 }
 
 .wp-block-archives-dropdown, .wp-block-categories-dropdown {

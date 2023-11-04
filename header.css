@@ -151,7 +151,8 @@
   #clean_space_header .clean_space_header_menu {
     max-height: 0;
     overflow: hidden;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
   #clean_space_header .clean_space_header_content {
     display: none;
@@ -164,7 +165,8 @@
   }
   #clean_space_header.clean_space_header_menu_open .clean_space_header_menu {
     transition: max-height 300ms;
-    display: flex;
+    visibility: visible;
+    opacity: 1;
     flex-direction: column;
     align-items: center;
     font-size: 1.5em;

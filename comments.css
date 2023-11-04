@@ -3,6 +3,7 @@
 }
 .clean_space_comments_area .clean_space_comment_list {
   padding-left: 0;
+  font-size: clamp(0.8em, 2vw, 1em);
 }
 .clean_space_comments_area a {
   color: rgb(177, 177, 177);

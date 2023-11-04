@@ -9,6 +9,7 @@
   margin-bottom: 3em;
   padding: 1em;
   box-shadow: 0 0 20px 0px rgba(87, 87, 255, 0.2941176471);
+  font-size: clamp(0.8em, 1vw, 1em);
 }
 .clean_space_post_card .clean_space_post_card_row_1 {
   display: flex;

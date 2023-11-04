@@ -27,13 +27,13 @@
      object-fit: cover;
 }
 .search .clean_space_searchresult .clean_space_searchresult_content {
-  flex: 1;
+  flex: 1 0 60%;
 }
 .search .clean_space_searchresult .clean_space_searchresult_content a {
   text-decoration: none;
 }
 .search .clean_space_searchresult .clean_space_searchresult_content h2 {
-  color: rgb(0, 0, 138);
+  color: rgb(0, 0, 175);
 }
 .search .clean_space_searchresult .clean_space_searchresult_content p {
   line-height: 1.5em;

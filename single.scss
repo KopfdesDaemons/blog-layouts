@@ -61,18 +61,22 @@
 .clean_space_post_row_1 {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 5px;
 
     .clean_space_post_date {
         white-space: nowrap;
         font-style: italic;
+        flex: 1 0 auto;
     }
 
     .clean_space_post_categories {
+        min-width: 30%;
+        max-height: 10em;
+        overflow-y: auto;
         ul {
             padding: 0;
             display: flex;
-            justify-content: flex-end;
             flex-wrap: wrap;
             gap: 0.5em;
             margin: 0;
@@ -86,6 +90,8 @@
 }
 
 .clean_space_post_tags {
+    max-height: 10em;
+    overflow-y: auto;
     ul {
         list-style: none;
         padding: 0;
@@ -133,10 +139,19 @@
 
 .clean_space_post_pagination {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.2em;
 
     a {
         @include navigation_link
+    }
+
+    .clean_space_post_pagination_prev {
+        margin-right: auto;
+    }
+
+    .clean_space_post_pagination_next {
+        margin-left: auto;
     }
 }
 

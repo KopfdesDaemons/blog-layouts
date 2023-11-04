@@ -19,6 +19,7 @@
   color: whitesmoke;
   text-decoration: none;
   white-space: nowrap;
+  font-size: 0.8em;
 }
 .wp-block-post-terms a a {
   color: whitesmoke;
@@ -37,6 +38,7 @@
           user-select: none;
   display: flex;
   justify-content: center;
+  font-size: clamp(12px, 2vw, 16px);
 }
 
 .wp-block-read-more {
@@ -192,8 +194,11 @@
 .wp-block-calendar thead th {
   background-color: rgb(24, 24, 129);
 }
-.wp-block-calendar:hover tr {
+.wp-block-calendar tr {
   background-color: rgb(41, 41, 41);
+}
+.wp-block-calendar:hover tr {
+  background-color: rgb(66, 66, 66);
 }
 
 .wp-block-archives-list, .wp-block-categories-list {

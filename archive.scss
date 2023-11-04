@@ -61,7 +61,7 @@
                         display: flex;
                         gap: 3em;
                         overflow-x: auto;
-                        font-size: clamp(10px, 1.5vw, 14px);
+                        font-size: clamp(8px, 1.5vw, 14px);
         
                         li {
                             .clean_space_author_stats_data{
@@ -119,6 +119,7 @@
             justify-content: center;
             background-color: black;
             width: 100%;
+            font-size: clamp(0.8em, 1vw, 1em);
             
             .clean_space_author_bio {
                 position: relative;
