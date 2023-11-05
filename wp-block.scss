@@ -23,6 +23,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.3em;
+
     a {
         @include tag;
         font-size: 0.8em !important;
@@ -82,7 +83,7 @@
     // table with stripes
     &.is-style-stripes {
         border-bottom: none;
-    
+
         tbody tr:nth-child(odd) {
             background-color: rgb(43, 45, 48);
         }
@@ -99,7 +100,8 @@
     }
 }
 
-.wp-block-quote, blockquote {
+.wp-block-quote,
+blockquote {
     border-left: 6px solid blue;
     padding-left: 0.5em;
     display: flex;
@@ -131,22 +133,24 @@
     .avatar {
         margin: 0.2em;
     }
+
     .wp-block-latest-comments__comment-meta {
         line-height: 1.2em;
-        background-color: rgb(85, 86, 90);
+        // background-color: rgb(85, 86, 90);
         border-radius: 4px;
         transition: background-color 400ms;
 
-        &:hover {
-            background-color: rgb(144, 151, 255);
+        a:hover {
+            color: rgb(144, 151, 255);
         }
     }
 
     .wp-block-latest-comments__comment-excerpt p {
         max-height: 300px;
         overflow-y: auto;
-        margin: 1em 0;
-        padding: 0 0.2em;
+        margin: 0.3em 0;
+        padding: 1em 0.2em;
+        background-color: #1d2027;
     }
 
     .wp-block-latest-comments__comment-link {
@@ -154,12 +158,13 @@
     }
 }
 
-.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt, .has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta {
+.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt,
+.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta {
     margin-left: 0;
     min-height: 50px;
 }
 
-.wp-block-social-links{
+.wp-block-social-links {
     padding: 0;
 }
 
@@ -171,6 +176,11 @@
     a {
         @include color_button;
     }
+
+    .login-username, .login-password {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .wp-block-calendar {
@@ -180,14 +190,15 @@
     table {
         display: table;
     }
-    
-    table:where(:not(.has-text-color)){
+
+    table:where(:not(.has-text-color)) {
         color: whitesmoke;
     }
 
-    th, td {
+    th,
+    td {
         border: none;
-        
+
         a {
             padding: 0.2em;
             background-color: rgb(32, 32, 121);
@@ -196,20 +207,21 @@
         }
     }
 
-    thead th{
+    thead th {
         background-color: rgb(24, 24, 129);
     }
 
     tr {
         background-color: rgb(41, 41, 41);
     }
-    
-    &:hover tr{
+
+    &:hover tr {
         background-color: rgb(66, 66, 66);
     }
 }
 
-.wp-block-archives-list, .wp-block-categories-list {
+.wp-block-archives-list,
+.wp-block-categories-list {
     padding-left: 1em;
 
     li {
@@ -217,35 +229,29 @@
         list-style: none;
         padding-left: 2em;
         margin: 0.2em;
-        
-        &::before {
+
+        a::before {
             content: '\f07b ';
             font-family: 'Font Awesome Solid';
             position: absolute;
             left: 0;
-            transition: all 400ms;
-        }
-
-        &:hover {
-            &::before {
-                color: blue;
-            }
         }
 
         a {
             color: #b7b7b7;
-    
+
             &:hover {
-                color: rgb(17, 17, 165);
-                transition: all 400ms;
+                color: rgb(144, 151, 255);
             }
         }
     }
 }
 
-.wp-block-archives-dropdown, .wp-block-categories-dropdown {
+.wp-block-archives-dropdown,
+.wp-block-categories-dropdown {
     display: flex;
     flex-direction: column;
+
     select {
         margin: 0.2em;
     }
@@ -253,6 +259,14 @@
 
 .wp-block-page-list {
     padding-left: 2em;
+
+    a {
+        color: #b7b7b7;
+
+        &:hover {
+            color: rgb(144, 151, 255);
+        }
+    }
 }
 
 .wp-block-latest-posts__list {
@@ -270,7 +284,6 @@
     }
 
     .wp-block-latest-posts__post-title {
-        background-color: rgb(85, 86, 90);
         border-radius: 2px;
         transition: background-color 400ms;
         padding: 0.2em;
@@ -278,25 +291,19 @@
         color: rgb(238, 238, 238);
 
         &:hover {
-            background-color: rgb(144, 151, 255);
+            color: rgb(144, 151, 255);
         }
     }
 
     .wp-block-latest-posts__post-excerpt {
         display: flex;
         flex-direction: column;
+        background-color: #1d2027;
+        padding: 0.5em;
+        gap: 0.5em;
 
         a {
-            padding: 0.8em;
-            border-radius: 6px;
-            border: 1px solid blue;
-            background-color: black;
-            text-decoration: none;
-            margin-top: 0.5em;
-    
-            &:hover {
-                background-color: rgb(41, 41, 41);
-            }
+            @include color_button;
         }
     }
 }
@@ -357,4 +364,17 @@
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+
+    a {
+        color: #b7b7b7;
+
+        &:hover {
+            color: rgb(144, 151, 255);
+        }
+    }
+
+    .wp-block-rss__item-excerpt {
+        background-color: #1d2027;
+        padding: 0.5em;
+    }
 }

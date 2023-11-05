@@ -136,9 +136,6 @@
 .author .clean_space_autor_content {
   min-height: 70vh;
 }
-.author .wp-block-latest-comments__comment {
-  background-color: rgb(36, 36, 36);
-}
 .author .clean_space_author_comments_container {
   display: none;
 }

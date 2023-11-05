@@ -1,16 +1,16 @@
 .clean_space_comments_area {
   margin-top: 3em;
+  font-size: 0.8em;
 }
 .clean_space_comments_area .clean_space_comment_list {
   padding-left: 0;
-  font-size: clamp(0.8em, 2vw, 1em);
 }
 .clean_space_comments_area a {
   color: rgb(177, 177, 177);
 }
 .clean_space_comments_area .comment, .clean_space_comments_area .children, .clean_space_comments_area .pingback {
   list-style: none;
-  padding: 2%;
+  padding: 1% 2%;
 }
 .clean_space_comments_area .comment li, .clean_space_comments_area .children li, .clean_space_comments_area .pingback li {
   border-radius: 4px;
@@ -20,7 +20,7 @@
   padding-left: 0.5em;
 }
 .clean_space_comments_area .comment-content {
-  background-color: rgb(15, 15, 15);
+  background-color: #1d2027;
   padding: 1em;
   margin: 1em 0.5em;
   border-radius: 4px;
@@ -28,8 +28,21 @@
   max-height: 40em;
   overflow-y: auto;
 }
+.clean_space_comments_area .comment-content > p {
+  margin: 0;
+}
+.clean_space_comments_area .bypostauthor .url {
+  background-color: #0f01cf;
+  border-radius: 8px;
+  padding: 0.2em;
+  color: black;
+}
+.clean_space_comments_area .bypostauthor .url:after {
+  content: " \f4ff";
+  font-family: "Font Awesome Solid";
+}
 .clean_space_comments_area .reply {
-  margin: 0.5em;
+  margin: 0 0.5em;
   display: flex;
 }
 .clean_space_comments_area .reply a {
@@ -87,12 +100,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
+  margin-top: 0.5em;
 }
 .clean_space_comments_area .clean_space_comment_reply_title small {
   margin-left: auto;
 }
 .clean_space_comments_area .clean_space_comment_reply_title small a {
-  color: rgb(117, 0, 0);
+  color: rgb(146, 0, 0);
 }
 
 .wp-block-latest-comments__comment {

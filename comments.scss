@@ -1,9 +1,10 @@
 .clean_space_comments_area {
     margin-top: 3em;
+    font-size: 0.8em;
 
     .clean_space_comment_list {
         padding-left: 0;
-        font-size: clamp(0.8em, 2vw, 1em);
+        // font-size: clamp(0.8em, 2vw, 1em);
     }
 
     a {
@@ -12,7 +13,7 @@
 
     .comment, .children, .pingback  {
         list-style: none;
-        padding: 2%;
+        padding: 1% 2%;
 
         li {
             border-radius: 4px;
@@ -25,17 +26,35 @@
     }
 
     .comment-content {
-        background-color: rgb(15, 15, 15);
+        background-color: #1d2027;
         padding: 1em;
         margin: 1em 0.5em;
         border-radius: 4px;
         overflow-wrap: break-word;
         max-height: 40em;
         overflow-y: auto;
+
+        > p {
+            margin: 0;
+        }
+    }
+
+    .bypostauthor {
+        .url {
+            background-color: #0f01cf;
+            border-radius: 8px;
+            padding: 0.2em;
+            color: black;
+
+            &:after {
+                content: ' \f4ff';
+                font-family: 'Font Awesome Solid';
+            }
+        }
     }
 
     .reply {
-        margin: 0.5em;
+        margin: 0 0.5em;
         display: flex;
 
         a {
@@ -103,12 +122,13 @@
         display: flex;
         flex-wrap: wrap;
         gap: 0.5em;
+        margin-top: 0.5em;
 
         small {
             margin-left: auto;
 
             a {
-                color: rgb(117, 0, 0);
+                color: rgb(146, 0, 0);
             }
         }
     }

@@ -2,7 +2,7 @@
     Contains a uniform style for all pagination: feed, post, author page, search, wp-blocks.
 */
 
-$font-size: clamp(12px, 3vw, 16px);
+$font-size: clamp(12px, 1.5vw, 16px);
 
 .clean_space_pagination {
     display: flex;

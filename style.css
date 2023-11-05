@@ -164,6 +164,9 @@ iframe {
   text-decoration: none;
   white-space: nowrap;
 }
+.clean_space_tag:hover {
+  background-color: gray;
+}
 
 select {
   padding: 0.5em;
@@ -207,7 +210,7 @@ hr {
 table {
   border-collapse: collapse;
   margin-top: 25px;
-  font-size: clamp(0.8rem, 4vw, 1rem);
+  font-size: clamp(0.8rem, 4vw, 1em);
   display: block;
   overflow-x: auto;
   color: rgb(151, 151, 151);
