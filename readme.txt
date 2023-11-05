@@ -17,9 +17,9 @@ Copyright: Clean Space Theme, Copyright 2023
 1. In your WordPress dashboard, navigate to "Appearance" > "Themes."
 2. Click on "Add New" at the top of the page.
 3. Click on "Upload Theme."
-4. Choose the ZIP file of the neo_blog theme that you downloaded from the official WordPress Themes website.
+4. Choose the ZIP file of the Clean Space theme that you downloaded from the official WordPress Themes website.
 5. Click on "Install Now."
-6. Activate the neo_blog theme once the installation is complete.
+6. Activate the Clean Space theme once the installation is complete.
 
 == Changelog ==
 

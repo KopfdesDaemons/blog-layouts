@@ -17,7 +17,7 @@ function enqueue_custom_styles()
         'search-style' => '/search.css',
         'wp-block-style' => '/wp-block.css',
         'paginantion-style' => '/pagination.css',
-        // '404-styles' => '/404.css',
+        '404-styles' => '/404.css',
         'fontawesome' => '/fonts/fontawesome/css/all.min.css',
     );
 

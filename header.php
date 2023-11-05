@@ -16,7 +16,7 @@
 
     <!-- Other Meta Tags for SEO and Other Purposes -->
     <meta name="description" content="<?php echo esc_attr(get_the_excerpt()); ?>">
-    <meta name="author" content="<?php the_author_meta('user_nicename', $post->post_author); ?>">
+    <!-- <meta name="author" content="<?php the_author_meta('user_nicename', $post->post_author); ?>"> -->
     <?php
     $tags = get_the_tags();
     if ($tags) {

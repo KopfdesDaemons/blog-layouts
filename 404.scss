@@ -1,0 +1,39 @@
+@use 'mixins' as *; 
+
+.error404 {
+    .clean_space_content_spacer {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .clean_space_error {
+        background-color: rgb(37, 3, 3);
+        border: 1px solid rgb(163, 0, 0);
+        border-radius: 4px;
+        padding: 1em;
+        max-width: 25em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .clean_space_404_headline_row {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            h1 {
+                color: red;
+            }
+        }
+
+        a {
+            @include color_button;
+        }
+    }
+
+    #clean_space_sidebar {
+        margin-top: var(--clean_space_margin_to_header);
+    }
+}
