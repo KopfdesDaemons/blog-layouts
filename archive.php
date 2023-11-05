@@ -64,8 +64,16 @@
                             <label class="clean_space_author_stats_label"><?php echo esc_html(__('Role', 'clean-space')) ?></label>
                         </li>
                         <li>
-                            <div class="clean_space_author_stats_data"> <?php echo $formatted_date ?></div>
-                            <label class="clean_space_author_stats_label"><?php echo esc_html(__('Registration Date', 'clean-space')) ?></label>
+                            <div class="clean_space_author_stats_data">
+                                <?php
+                                $registration_date = get_the_author_meta('user_registered', $author_id);
+                                $formatted_date = date_i18n('d.m.Y', strtotime($registration_date));
+                                ?>
+                                <time datetime="<?php echo date('Y-m-d', strtotime($registration_date)); ?>"><?php echo $formatted_date; ?></time>
+                            </div>
+                            <label class="clean_space_author_stats_label">
+                                <?php echo esc_html(__('Registration date', 'clean-space')); ?>
+                            </label>
                         </li>
                         <li>
                             <div class="clean_space_author_stats_data"> <?php echo $author_posts_count ?></div>
@@ -106,7 +114,7 @@
 <main role="main">
     <section class="clean_space_content_spacer clean_space_content_spacer_feed clean_space_content_and_sidebar_grid">
         <?php if (is_author()) {; ?>
-            <div>
+            <div class="clean_space_autor_content">
                 <div class="clean_space_author_comments_container">
                     <?php
                     $args = array(

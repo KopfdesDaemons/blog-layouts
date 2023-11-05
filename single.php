@@ -25,7 +25,7 @@
                     <?php
                     $post_date = get_theme_mod('post_date', true);
                     if ($post_date) { ?>
-                        <span class="clean_space_post_date"><?php the_date(); ?></span>
+                        <time class="clean_space_post_date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('d.m.Y'); ?></time>
 
                         <!-- Categories -->
                     <?php }

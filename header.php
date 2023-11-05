@@ -16,6 +16,21 @@
 
     <!-- Other Meta Tags for SEO and Other Purposes -->
     <meta name="description" content="<?php echo esc_attr(get_the_excerpt()); ?>">
+    <meta name="author" content="<?php the_author_meta('user_nicename', $post->post_author); ?>">
+    <?php
+    $tags = get_the_tags();
+    if ($tags) {
+        $tag_list = array();
+        foreach ($tags as $tag) {
+            $tag_list[] = $tag->name;
+        }
+        $tag_string = implode(', ', $tag_list);
+    } else {
+        $tag_string = '';
+    }
+    ?>
+    <meta name="keywords" content="<?php echo esc_attr($tag_string); ?>">
+    <meta name="robots" content="index, follow">
 
     <?php if (is_singular() && pings_open()) { ?>
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -27,6 +42,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <header id="clean_space_header">
+        <a href="#clean_space_main_content" class="clean_space_skip_link"><?php echo esc_html__('Skip to main content', 'clean-space') ?></a>
 
         <!-- Mobile -->
         <div class="clean_space_header_mobile_content">

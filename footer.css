@@ -1,30 +1,33 @@
-#clean_space_blog_footer {
+#clean_space_footer {
   background-color: rgb(26, 25, 46);
-  padding: 8vw;
+  padding: 5vw;
   grid-area: footer;
+  font-size: clamp(0.6em, 2vw, 1em);
+  display: flex;
+  justify-content: center;
 }
-#clean_space_blog_footer ul {
+#clean_space_footer ul {
   padding-left: 0.5em;
   display: flex;
   gap: 2em;
   flex-wrap: wrap;
 }
-#clean_space_blog_footer ul ul {
+#clean_space_footer ul ul {
   display: block;
 }
-#clean_space_blog_footer ul li {
+#clean_space_footer ul li {
   list-style: none;
 }
-#clean_space_blog_footer ul li a {
-  font-size: 1.3em;
+#clean_space_footer ul li a {
+  font-size: 1.1em;
   color: #cef5f5;
   text-decoration: none;
 }
-#clean_space_blog_footer ul li li {
+#clean_space_footer ul li li {
   margin-top: 0.5em;
 }
-#clean_space_blog_footer ul li li a {
-  font-size: 1.5em;
+#clean_space_footer ul li li a {
+  font-size: 1.3em;
   color: whitesmoke;
   text-decoration: underline;
 }/*# sourceMappingURL=footer.css.map */

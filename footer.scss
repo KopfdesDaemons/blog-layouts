@@ -1,7 +1,10 @@
-#clean_space_blog_footer {
+#clean_space_footer {
     background-color: rgb(26, 25, 46);
-    padding: 8vw;
+    padding: 5vw;
     grid-area: footer;
+    font-size: clamp(0.6em, 2vw, 1em);
+    display: flex;
+    justify-content: center;
 
     ul {
         padding-left: 0.5em;
@@ -17,7 +20,7 @@
             list-style: none;
 
             a {
-                font-size: 1.3em;
+                font-size: 1.1em;
                 color: #cef5f5;
                 text-decoration: none;
             }
@@ -26,7 +29,7 @@
                 margin-top: 0.5em;
 
                 a {
-                    font-size: 1.5em;
+                    font-size: 1.3em;
                     color: whitesmoke;
                     text-decoration: underline;
                 }

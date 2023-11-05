@@ -12,7 +12,7 @@
 </section>
 <main role="main">
     <section class="clean_space_content_spacer">
-        <h2 class="clean_space_h2_latest_posts"><?php echo esc_html(__('Latest Posts', 'clean-blog')) ?></h2>
+        <h2 class="clean_space_h2_latest_posts"><?php echo esc_html(__('Latest Posts', 'clean-space')) ?></h2>
         <ul class="clean_space_feed" id="clean_space_main_content">
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

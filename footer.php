@@ -1,4 +1,4 @@
-<footer id="clean_space_blog_footer">
+<footer id="clean_space_footer">
     <nav>
         <?php
         wp_nav_menu(array(

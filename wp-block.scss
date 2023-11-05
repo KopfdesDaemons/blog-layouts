@@ -19,6 +19,18 @@
     }
 }
 
+.wp-block-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    a {
+        @include tag;
+        font-size: 0.8em !important;
+        margin-right: 0;
+        background-color: #28282d;
+    }
+}
+
 .wp-block-post-navigation-link {
     @include navigation_link;
 }
@@ -306,7 +318,7 @@
 }
 
 .wp-block-search__input {
-    border-radius: 2em;
+    border-radius: 8px;
     border: 1px solid rgb(56, 56, 56);
     padding: 1em;
     background-color: rgb(22, 22, 24);
@@ -339,4 +351,10 @@
             outline: 2px solid rgb(0, 0, 117);
         }
     }
+}
+
+.wp-block-rss {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
 }

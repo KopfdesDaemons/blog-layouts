@@ -4,6 +4,7 @@
 .search .clean_space_searchresults {
   display: flex;
   flex-direction: column;
+  min-height: 70vh;
 }
 .search h1 {
   text-align: center;

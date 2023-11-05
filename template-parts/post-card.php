@@ -22,7 +22,7 @@ function clean_space_display_post_card($post_classes)
 
                     <a href="<?php comments_link(); ?>" class="clean_space_post_card_comments_count">
                         <?php
-                                echo get_comments_number() . ' ' . __('comments', 'clean-blog')
+                                echo get_comments_number() . ' ' . __('comments', 'clean-space')
                                 ?>
                     </a>
                     <?php } ?>

@@ -54,7 +54,7 @@
 .wp-block-query-pagination-previous:hover,
 .clean_space_pagination_controls a:hover,
 .page-numbers:not(.current, .dots):hover,
-.post-page-numbers:hover {
+.post-page-numbers:not(.current, .dots):hover {
   background-color: rgb(54, 54, 54);
 }
 

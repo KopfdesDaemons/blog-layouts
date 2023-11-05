@@ -110,7 +110,7 @@ add_action('widgets_init', 'clean_space_register_sidebar');
 function clean_space_register_landigpage_widget_area()
 {
     register_sidebar(array(
-        'name' => __('Landingpage Widget Area', 'landingpage-widget-area'),
+        'name' => __('Landingpage Widget Area', 'clean-space'),
         'id' => 'landingpage-widget-area',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
