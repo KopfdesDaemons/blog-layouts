@@ -207,37 +207,6 @@ hr {
   width: 70%;
 }
 
-table {
-  border-collapse: collapse;
-  margin-top: 25px;
-  font-size: clamp(0.8rem, 4vw, 1em);
-  display: block;
-  overflow-x: auto;
-  color: rgb(151, 151, 151);
-}
-
-table thead tr {
-  background-color: transparent;
-  text-align: left;
-}
-
-th,
-td {
-  padding: 12px 15px;
-  color: whitesmoke;
-  border-color: #555;
-  border: 1px solid;
-}
-
-th {
-  background-color: black;
-}
-
-tr {
-  background-color: rgb(66, 66, 66);
-  transition: all 400ms;
-}
-
 .widget {
   margin-bottom: 1em;
   padding: 1em;

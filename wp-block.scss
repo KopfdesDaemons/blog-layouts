@@ -33,7 +33,7 @@
 }
 
 .wp-block-post-navigation-link {
-    @include navigation_link;
+    @include color_button;
 }
 
 .wp-block-read-more {
@@ -76,16 +76,55 @@
 
 // table
 .wp-block-table {
-    .wp-block-table.is-style-stripes {
-        border-bottom: none;
+    table {
+        border-collapse: collapse;
+        margin-top: 25px;
+        font-size: clamp(0.8em, 2vw, 1em);
+        display: block;
+        overflow-x: auto;
+        color: rgb(151, 151, 151);
+    }
+    
+    table thead tr {
+        background-color: transparent;
+        text-align: left;
+    }
+    
+    th,
+    td {
+        padding: 1em 1em;
+        color: whitesmoke;
+        border-color: #555;
+        border: 1px solid;
+    }
+    
+    thead {
+        border-bottom: 2px solid;
     }
 
+    tfoot {
+        border-top: 2px solid;
+    }
+
+    th {
+        background-color: black;
+    }
+    
+    tr {
+        background-color: #1d2027;
+        transition: all 400ms;
+    }
+    
     // table with stripes
     &.is-style-stripes {
         border-bottom: none;
 
+        th {
+            background-color: transparent;
+        }
+        
         tbody tr:nth-child(odd) {
-            background-color: rgb(43, 45, 48);
+            background-color: rgba(43, 45, 48, 0);
         }
     }
 }
@@ -107,6 +146,7 @@ blockquote {
     display: flex;
     flex-direction: column;
     margin-left: 1em;
+    background-color: #1d2027;
 }
 
 .wp-block-separator {

@@ -63,8 +63,7 @@
   flex: 1 0 auto;
 }
 .clean_space_post_row_1 .clean_space_post_categories {
-  min-width: 30%;
-  max-height: 10em;
+  max-height: 15em;
   overflow-y: auto;
 }
 .clean_space_post_row_1 .clean_space_post_categories ul {
@@ -81,7 +80,7 @@
 }
 
 .clean_space_post_tags {
-  max-height: 10em;
+  max-height: 15em;
   overflow-y: auto;
 }
 .clean_space_post_tags ul {
@@ -133,17 +132,16 @@
   gap: 0.2em;
 }
 .clean_space_post_pagination a {
-  border-radius: 4px;
-  padding: 0.8em 1.2em;
-  background: black;
-  border: solid 1px gray;
-  white-space: nowrap;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  padding: 0.8em;
+  border-radius: 6px;
+  border: 1px solid blue;
+  background-color: black;
+  text-decoration: none;
+  color: blue;
   display: flex;
-  justify-content: center;
-  font-size: clamp(0.8em, 2vw, 0.9em);
+}
+.clean_space_post_pagination a:hover {
+  background-color: rgb(41, 41, 41);
 }
 .clean_space_post_pagination .clean_space_post_pagination_prev {
   margin-right: auto;

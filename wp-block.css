@@ -59,17 +59,16 @@
 }
 
 .wp-block-post-navigation-link {
-  border-radius: 4px;
-  padding: 0.8em 1.2em;
-  background: black;
-  border: solid 1px gray;
-  white-space: nowrap;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  padding: 0.8em;
+  border-radius: 6px;
+  border: 1px solid blue;
+  background-color: black;
+  text-decoration: none;
+  color: blue;
   display: flex;
-  justify-content: center;
-  font-size: clamp(0.8em, 2vw, 0.9em);
+}
+.wp-block-post-navigation-link:hover {
+  background-color: rgb(41, 41, 41);
 }
 
 .wp-block-read-more {
@@ -79,6 +78,7 @@
   background-color: black;
   text-decoration: none;
   color: blue;
+  display: flex;
 }
 .wp-block-read-more:hover {
   background-color: rgb(41, 41, 41);
@@ -111,14 +111,46 @@
   gap: 0.5em;
 }
 
-.wp-block-table .wp-block-table.is-style-stripes {
-  border-bottom: none;
+.wp-block-table table {
+  border-collapse: collapse;
+  margin-top: 25px;
+  font-size: clamp(0.8em, 2vw, 1em);
+  display: block;
+  overflow-x: auto;
+  color: rgb(151, 151, 151);
+}
+.wp-block-table table thead tr {
+  background-color: transparent;
+  text-align: left;
+}
+.wp-block-table th,
+.wp-block-table td {
+  padding: 1em 1em;
+  color: whitesmoke;
+  border-color: #555;
+  border: 1px solid;
+}
+.wp-block-table thead {
+  border-bottom: 2px solid;
+}
+.wp-block-table tfoot {
+  border-top: 2px solid;
+}
+.wp-block-table th {
+  background-color: black;
+}
+.wp-block-table tr {
+  background-color: #1d2027;
+  transition: all 400ms;
 }
 .wp-block-table.is-style-stripes {
   border-bottom: none;
 }
+.wp-block-table.is-style-stripes th {
+  background-color: transparent;
+}
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
-  background-color: rgb(43, 45, 48);
+  background-color: rgba(43, 45, 48, 0);
 }
 
 .wp-block-button a {
@@ -135,6 +167,7 @@ blockquote {
   display: flex;
   flex-direction: column;
   margin-left: 1em;
+  background-color: #1d2027;
 }
 
 .wp-block-separator {
@@ -200,6 +233,7 @@ blockquote {
   background-color: black;
   text-decoration: none;
   color: blue;
+  display: flex;
 }
 .wp-block-loginout a:hover {
   background-color: rgb(41, 41, 41);
@@ -322,6 +356,7 @@ blockquote {
   background-color: black;
   text-decoration: none;
   color: blue;
+  display: flex;
 }
 .wp-block-latest-posts__list .wp-block-latest-posts__post-excerpt a:hover {
   background-color: rgb(41, 41, 41);
