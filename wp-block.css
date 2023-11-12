@@ -16,7 +16,7 @@
   border-radius: 4px;
   background-color: #303030;
   cursor: pointer;
-  color: whitesmoke;
+  color: rgb(177, 177, 177);
   text-decoration: none;
   white-space: nowrap;
   font-size: 0.8em;
@@ -41,7 +41,7 @@
   border-radius: 4px;
   background-color: #303030;
   cursor: pointer;
-  color: whitesmoke;
+  color: rgb(177, 177, 177);
   text-decoration: none;
   white-space: nowrap;
   font-size: 0.8em;
@@ -61,11 +61,12 @@
 .wp-block-post-navigation-link {
   padding: 0.8em;
   border-radius: 6px;
-  border: 1px solid blue;
+  border: 1px solid var(--clean_space_primary_color);
   background-color: black;
   text-decoration: none;
-  color: blue;
+  color: var(--clean_space_primary_color);
   display: flex;
+  cursor: pointer;
 }
 .wp-block-post-navigation-link:hover {
   background-color: rgb(41, 41, 41);
@@ -74,11 +75,12 @@
 .wp-block-read-more {
   padding: 0.8em;
   border-radius: 6px;
-  border: 1px solid blue;
+  border: 1px solid var(--clean_space_primary_color);
   background-color: black;
   text-decoration: none;
-  color: blue;
+  color: var(--clean_space_primary_color);
   display: flex;
+  cursor: pointer;
 }
 .wp-block-read-more:hover {
   background-color: rgb(41, 41, 41);
@@ -162,7 +164,7 @@
 
 .wp-block-quote,
 blockquote {
-  border-left: 6px solid blue;
+  border-left: 6px solid var(--clean_space_primary_color);
   padding-left: 0.5em;
   display: flex;
   flex-direction: column;
@@ -198,7 +200,7 @@ blockquote {
   transition: background-color 400ms;
 }
 .wp-block-latest-comments .wp-block-latest-comments__comment-meta a:hover {
-  color: rgb(144, 151, 255);
+  color: var(--clean_space_primary_variant_much_brighter);
 }
 .wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
   max-height: 300px;
@@ -229,11 +231,12 @@ blockquote {
 .wp-block-loginout a {
   padding: 0.8em;
   border-radius: 6px;
-  border: 1px solid blue;
+  border: 1px solid var(--clean_space_primary_color);
   background-color: black;
   text-decoration: none;
-  color: blue;
+  color: var(--clean_space_primary_color);
   display: flex;
+  cursor: pointer;
 }
 .wp-block-loginout a:hover {
   background-color: rgb(41, 41, 41);
@@ -260,12 +263,16 @@ blockquote {
 .wp-block-calendar th a,
 .wp-block-calendar td a {
   padding: 0.2em;
-  background-color: rgb(32, 32, 121);
+  background-color: var(--clean_space_element_background_variant_darker);
   border-radius: 4px;
   color: whitesmoke;
 }
+.wp-block-calendar th a:hover,
+.wp-block-calendar td a:hover {
+  background-color: var(--clean_space_primary_variant_darker);
+}
 .wp-block-calendar thead th {
-  background-color: rgb(24, 24, 129);
+  background-color: var(--clean_space_primary_variant_darker);
 }
 .wp-block-calendar tr {
   background-color: rgb(41, 41, 41);
@@ -298,7 +305,7 @@ blockquote {
 }
 .wp-block-archives-list li a:hover,
 .wp-block-categories-list li a:hover {
-  color: rgb(144, 151, 255);
+  color: var(--clean_space_primary_variant_much_brighter);
 }
 
 .wp-block-archives-dropdown,
@@ -318,7 +325,7 @@ blockquote {
   color: #b7b7b7;
 }
 .wp-block-page-list a:hover {
-  color: rgb(144, 151, 255);
+  color: var(--clean_space_primary_variant_much_brighter);
 }
 
 .wp-block-latest-posts__list img {
@@ -340,7 +347,7 @@ blockquote {
   color: rgb(238, 238, 238);
 }
 .wp-block-latest-posts__list .wp-block-latest-posts__post-title:hover {
-  color: rgb(144, 151, 255);
+  color: var(--clean_space_primary_variant_much_brighter);
 }
 .wp-block-latest-posts__list .wp-block-latest-posts__post-excerpt {
   display: flex;
@@ -352,11 +359,12 @@ blockquote {
 .wp-block-latest-posts__list .wp-block-latest-posts__post-excerpt a {
   padding: 0.8em;
   border-radius: 6px;
-  border: 1px solid blue;
+  border: 1px solid var(--clean_space_primary_color);
   background-color: black;
   text-decoration: none;
-  color: blue;
+  color: var(--clean_space_primary_color);
   display: flex;
+  cursor: pointer;
 }
 .wp-block-latest-posts__list .wp-block-latest-posts__post-excerpt a:hover {
   background-color: rgb(41, 41, 41);
@@ -365,7 +373,7 @@ blockquote {
 .wp-block-search__button {
   padding: 0 0.8em;
   border-radius: 6px;
-  border: 1px solid blue;
+  border: 1px solid var(--clean_space_primary_color);
   background-color: black;
   min-height: 2.5em;
 }
@@ -396,17 +404,17 @@ blockquote {
 
 .wp-block-post-template li {
   max-width: 65em;
-  border: 2px solid rgb(0, 0, 117);
+  border: 2px solid var(--clean_space_primary_variant_darker);
   background-color: black;
   border-radius: 12px;
   margin-bottom: 3em;
   padding: 1em;
-  box-shadow: 0 0 20px 0px rgba(87, 87, 255, 0.2941176471);
+  box-shadow: 0 0 20px 0px var(--clean_space_primary_variant_darker);
 }
 .wp-block-post-template li:hover {
   transition: all 0.2s;
-  box-shadow: 0 0 40px 5px #5857ff;
-  outline: 2px solid rgb(0, 0, 117);
+  box-shadow: 0 0 40px 5px var(--clean_space_primary_color);
+  outline: 2px solid var(--clean_space_primary_color);
 }
 
 .wp-block-rss {
@@ -418,7 +426,7 @@ blockquote {
   color: #b7b7b7;
 }
 .wp-block-rss a:hover {
-  color: rgb(144, 151, 255);
+  color: var(--clean_space_primary_variant_much_brighter);
 }
 .wp-block-rss .wp-block-rss__item-excerpt {
   background-color: #1d2027;

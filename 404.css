@@ -25,11 +25,12 @@
 .error404 .clean_space_error a {
   padding: 0.8em;
   border-radius: 6px;
-  border: 1px solid blue;
+  border: 1px solid var(--clean_space_primary_color);
   background-color: black;
   text-decoration: none;
-  color: blue;
+  color: var(--clean_space_primary_color);
   display: flex;
+  cursor: pointer;
 }
 .error404 .clean_space_error a:hover {
   background-color: rgb(41, 41, 41);

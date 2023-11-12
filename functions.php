@@ -156,3 +156,6 @@ class clean_space_menu_walker extends Walker_Nav_Menu
         $output .= "</div>";
     }
 }
+
+// Custom Settings
+require_once get_template_directory() . '/customizer-options/colors-options.php';

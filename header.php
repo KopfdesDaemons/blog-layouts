@@ -37,6 +37,8 @@
     <?php }
 
     wp_head(); ?>
+
+    <?php require_once get_template_directory() . '/customizer-options/css-variables.php'; ?>
 </head>
 
 <body <?php body_class(); ?>>

@@ -55,7 +55,7 @@
                     <?php
                     wp_link_pages(
                         array(
-                            'before'      => '<div class="page-links"><span class="page-links-title">Seiten:</span>',
+                            'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html(__('Pages:', 'clean-space')) . '</span>',
                             'after'       => '</div>',
                             'link_before' => '<span class="page-number">',
                             'link_after'  => '</span>',
@@ -109,11 +109,9 @@
                     if ($post_pagination) { ?>
                         <div class="clean_space_post_pagination">
                             <div class="clean_space_post_pagination_prev">
-                                <?php previous_post_link('%link', '&laquo; Vorheriger Beitrag'); ?>
-                            </div>
+                            <?php previous_post_link('%link', __('&laquo; Previous Post', 'clean-space')); ?>                            </div>
                             <div class="clean_space_post_pagination_next">
-                                <?php next_post_link('%link', 'Nächster Beitrag &raquo;'); ?>
-                            </div>
+                            <?php next_post_link('%link', __('Next Post &raquo;', 'clean-space')); ?>                            </div>
                         </div>
                     <?php } ?>
 

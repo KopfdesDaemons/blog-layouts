@@ -37,8 +37,13 @@
             a {
                 text-decoration: none;
             }
+            
             h2 {
-                color: rgb(0, 0, 175);
+                color: var(--clean_space_primary_color);
+    
+                &:hover {
+                    color:  var(--clean_space_primary_variant_brighter);
+                }
             }
 
             p {

@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 body {
   margin: 0;
-  background-color: rgb(22, 22, 24);
+  background-color: var(--clean_space_background_color);
   font-family: monospace;
   font-family: Fragment Mono;
   font-size: 14px;
@@ -22,6 +22,7 @@ body {
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas: "landingpagesection landingpagesection" "main sidebar" "footer footer";
   --clean_space_margin_to_header: 10em;
+  --clean_space_gradient: linear-gradient(90deg, var(--clean_space_primary_variant_darker) 0%, var(--clean_space_primary_color) 75%, var(--clean_space_primary_variant_darker) 100%);
 }
 @media only screen and (max-width: 800px) {
   body {
@@ -80,6 +81,16 @@ button {
   color: rgb(238, 238, 238);
 }
 
+a {
+  color: var(--clean_space_primary_color);
+}
+a:visited {
+  color: var(--clean_space_primary_variant_darker);
+}
+a:hover {
+  color: var(--clean_space_primary_variant_brighter);
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -114,6 +125,7 @@ button {
   min-height: 60vh;
   margin: 2em 0;
   padding: 0 clamp(1em, 2vw, 5em);
+  overflow: hidden;
 }
 
 img {
@@ -137,10 +149,10 @@ iframe {
   min-height: 80vh;
   padding: clamp(0.5em, 5vw, 2em);
   padding-top: var(--clean_space_margin_to_header);
-  background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
+  background: var(--clean_space_gradient);
 }
 .clean_space_landing_page_section .wp-block-image.size-full img {
-  border: 6px solid blue;
+  border: 6px solid var(--clean_space_primary_variant_darker);
   animation: wobble 5s linear infinite;
 }
 
@@ -154,7 +166,7 @@ iframe {
   border-radius: 4px;
   background-color: #303030;
   cursor: pointer;
-  color: whitesmoke;
+  color: rgb(177, 177, 177);
   text-decoration: none;
   white-space: nowrap;
   font-size: 0.8em;
@@ -194,7 +206,7 @@ figcaption {
 }
 
 dt {
-  color: rgb(10, 10, 196);
+  color: var(--clean_space_primary_color);
   margin: 0.5em 0;
   font-weight: bold;
 }
@@ -215,7 +227,7 @@ hr {
   overflow-wrap: anywhere;
 }
 
-input,
+input:not([type=submit]),
 textarea,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -235,13 +247,15 @@ textarea:-webkit-autofill:focus {
 input[type=submit] {
   border-radius: 4px;
   padding: 0.8em 1.2em;
+  background-color: black;
   border: solid 1px gray;
   white-space: nowrap;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  -webkit-text-fill-color: unset;
-  box-shadow: none;
+  text-decoration: none;
+  color: rgb(177, 177, 177);
+  cursor: pointer;
 }
 input[type=submit]:hover {
   background-color: rgb(41, 41, 41);

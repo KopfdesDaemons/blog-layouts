@@ -34,7 +34,10 @@
   text-decoration: none;
 }
 .search .clean_space_searchresult .clean_space_searchresult_content h2 {
-  color: rgb(0, 0, 175);
+  color: var(--clean_space_primary_color);
+}
+.search .clean_space_searchresult .clean_space_searchresult_content h2:hover {
+  color: var(--clean_space_primary_variant_brighter);
 }
 .search .clean_space_searchresult .clean_space_searchresult_content p {
   line-height: 1.5em;

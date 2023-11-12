@@ -141,7 +141,7 @@
 
 .wp-block-quote,
 blockquote {
-    border-left: 6px solid blue;
+    border-left: 6px solid var(--clean_space_primary_color);
     padding-left: 0.5em;
     display: flex;
     flex-direction: column;
@@ -181,7 +181,7 @@ blockquote {
         transition: background-color 400ms;
 
         a:hover {
-            color: rgb(144, 151, 255);
+            color: var(--clean_space_primary_variant_much_brighter);
         }
     }
 
@@ -241,14 +241,18 @@ blockquote {
 
         a {
             padding: 0.2em;
-            background-color: rgb(32, 32, 121);
+            background-color: var(--clean_space_element_background_variant_darker);
             border-radius: 4px;
             color: whitesmoke;
+
+            &:hover {
+                background-color: var(--clean_space_primary_variant_darker);
+            }
         }
     }
 
     thead th {
-        background-color: rgb(24, 24, 129);
+        background-color: var(--clean_space_primary_variant_darker);
     }
 
     tr {
@@ -281,7 +285,7 @@ blockquote {
             color: #b7b7b7;
 
             &:hover {
-                color: rgb(144, 151, 255);
+                color: var(--clean_space_primary_variant_much_brighter);
             }
         }
     }
@@ -304,7 +308,7 @@ blockquote {
         color: #b7b7b7;
 
         &:hover {
-            color: rgb(144, 151, 255);
+            color: var(--clean_space_primary_variant_much_brighter);
         }
     }
 }
@@ -331,7 +335,7 @@ blockquote {
         color: rgb(238, 238, 238);
 
         &:hover {
-            color: rgb(144, 151, 255);
+            color: var(--clean_space_primary_variant_much_brighter);
         }
     }
 
@@ -351,7 +355,7 @@ blockquote {
 .wp-block-search__button {
     padding: 0 0.8em;
     border-radius: 6px;
-    border: 1px solid blue;
+    border: 1px solid var(--clean_space_primary_color);
     background-color: black;
     min-height: 2.5em;
 
@@ -385,17 +389,17 @@ blockquote {
 .wp-block-post-template {
     li {
         max-width: 65em;
-        border: 2px solid rgb(0, 0, 117);
+        border: 2px solid var(--clean_space_primary_variant_darker);
         background-color: black;
         border-radius: 12px;
         margin-bottom: 3em;
         padding: 1em;
-        box-shadow: 0 0 20px 0px rgba(87, 87, 255, 0.2941176471);
+        box-shadow: 0 0 20px 0px var(--clean_space_primary_variant_darker);
 
         &:hover {
             transition: all 0.2s;
-            box-shadow: 0 0 40px 5px #5857ff;
-            outline: 2px solid rgb(0, 0, 117);
+            box-shadow: 0 0 40px 5px var(--clean_space_primary_color);
+            outline: 2px solid var(--clean_space_primary_color);
         }
     }
 }
@@ -409,7 +413,7 @@ blockquote {
         color: #b7b7b7;
 
         &:hover {
-            color: rgb(144, 151, 255);
+            color: var(--clean_space_primary_variant_much_brighter);
         }
     }
 

@@ -26,7 +26,7 @@
     .clean_space_header_menu{
         display: flex;
         justify-content: center;
-        background-color: rgb(26, 29, 44);
+        background-color: var(--clean_space_primary_variant_much_darker);
         white-space: nowrap;
         width: 100%;
         user-select: none;
@@ -61,7 +61,7 @@
                 position: absolute;
                 flex-direction: column;
                 overflow: visible;
-                background-color: rgb(31, 15, 75);
+                background-color: var(--clean_space_primary_variant_much_darker);
                 top: 100%;
                 padding: 0;
                 z-index: 5;
@@ -82,7 +82,7 @@
                 }
 
                 &:hover, &:focus-within {
-                    background-color: rgb(0, 0, 136);
+                    background-color: var(--clean_space_primary_variant_darker);
                     >ul {
                         display: flex;
                     }
@@ -141,11 +141,11 @@
             border: none;
             padding: 0 2em;
             color: whitesmoke;
-            background-color: blue;
+            background-color: var(--clean_space_primary_variant_darker);
             cursor: pointer;
-
+            
             &:hover {
-                background-color: rgb(0, 0, 134);
+                background-color: var(--clean_space_primary_variant_much_darker);
             }
         }
     }

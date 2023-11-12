@@ -48,13 +48,15 @@
 .clean_space_comments_area .reply a {
   border-radius: 4px;
   padding: 0.8em 1.2em;
-  background: black;
+  background-color: black;
   border: solid 1px gray;
   white-space: nowrap;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   text-decoration: none;
+  color: rgb(177, 177, 177);
+  cursor: pointer;
 }
 .clean_space_comments_area .reply a:hover {
   background-color: rgb(41, 41, 41);

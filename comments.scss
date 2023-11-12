@@ -1,10 +1,11 @@
+@use 'mixins' as *; 
+
 .clean_space_comments_area {
     margin-top: 3em;
     font-size: 0.8em;
 
     .clean_space_comment_list {
         padding-left: 0;
-        // font-size: clamp(0.8em, 2vw, 1em);
     }
 
     a {
@@ -58,17 +59,7 @@
         display: flex;
 
         a {
-            border-radius: 4px;
-            padding: 0.8em 1.2em;
-            background: black;
-            border: solid 1px gray;
-            white-space: nowrap;
-            user-select: none;
-            text-decoration: none;
-
-            &:hover {
-                background-color: rgb(41, 41, 41);
-            }
+            @include button;
         }
     }
 

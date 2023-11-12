@@ -1,5 +1,5 @@
 .clean_space_post_headline_section {
-  background: linear-gradient(90deg, rgb(26, 25, 46) 0%, rgb(49, 49, 150) 75%, rgb(26, 25, 46) 100%);
+  background: var(--clean_space_gradient);
   grid-area: landingpagesection;
   min-height: 20vh;
   padding-top: var(--clean_space_margin_to_header);
@@ -48,7 +48,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: #768fff 0 -1px 140px, #3639db 0 -2px 10px, #361da7 0 -10px 20px, #200b58 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: #ffffff 0 -1px 140px, #ffffff 0 -2px 10px, #ffffff 0 -10px 20px, #ffffff 0 -18px 40px, 5px 5px 15px 5px rgba(255, 255, 255, 0);
 }
 
 .clean_space_post_row_1 {
@@ -110,13 +110,13 @@
   justify-content: center;
 }
 .clean_space_author_card .clean_space_author_avatar a img {
-  box-shadow: #768fff 0 0 30px;
+  box-shadow: var(--clean_space_primary_color) 0 0 30px;
   margin: 1.5em;
   width: auto;
-  border: 2px solid blue;
+  border: 2px solid var(--clean_space_primary_color);
 }
 .clean_space_author_card .clean_space_author_avatar a img:hover {
-  box-shadow: #768fff 0 0 50px;
+  box-shadow: var(--clean_space_primary_color) 0 0 50px;
 }
 .clean_space_author_card .clean_space_author_details {
   flex: 1 0 70%;
@@ -134,11 +134,12 @@
 .clean_space_post_pagination a {
   padding: 0.8em;
   border-radius: 6px;
-  border: 1px solid blue;
+  border: 1px solid var(--clean_space_primary_color);
   background-color: black;
   text-decoration: none;
-  color: blue;
+  color: var(--clean_space_primary_color);
   display: flex;
+  cursor: pointer;
 }
 .clean_space_post_pagination a:hover {
   background-color: rgb(41, 41, 41);
@@ -188,4 +189,17 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 100%;
+}
+.post-password-form input[type=submit] {
+  padding: 0.8em;
+  border-radius: 6px;
+  border: 1px solid var(--clean_space_primary_color);
+  background-color: black;
+  text-decoration: none;
+  color: var(--clean_space_primary_color);
+  display: flex;
+  cursor: pointer;
+}
+.post-password-form input[type=submit]:hover {
+  background-color: rgb(41, 41, 41);
 }/*# sourceMappingURL=single.css.map */

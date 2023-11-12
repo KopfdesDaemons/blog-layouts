@@ -3,12 +3,12 @@
     flex-direction: column;
     align-items: center;
     max-width: 65em;
-    border: 2px solid rgb(0, 0, 117);
+    border: 2px solid var(--clean_space_primary_variant_darker);
     background-color: black;
     border-radius: 12px;
     margin-bottom: 3em;
     padding: 1em;
-    box-shadow: 0 0 20px 0px #5757ff4b;
+    box-shadow: 0 0 20px 0px var(--clean_space_primary_variant_much_darker);
     font-size: clamp(0.8em, 1vw, 1em);
 
     .clean_space_post_card_row_1 {
@@ -41,10 +41,10 @@
                 text-decoration: none;
                 
                 h2 {
-                    color: blue;
+                    color: var(--clean_space_primary_color);
                 }
                 &:hover h2 {
-                    color: rgb(80, 80, 255);
+                    color: var(--clean_space_primary_variant_brighter);
                 }
             }
             
@@ -75,7 +75,7 @@
                         color: whitesmoke;
 
                         &:hover {
-                            border-color: blue;
+                            border-color: var(--clean_space_primary_color);
                         }
                     }
                 }
@@ -107,7 +107,7 @@
     }
 
     &.clean_space_sticky_post {
-        background-color: rgb(1, 1, 34);
+        background-color: var(--clean_space_primary_variant_much_darker);
 
         .clean_space_post_card_sticky_pin {
             margin-left: 1em;
@@ -118,6 +118,6 @@
 
 .clean_space_post_card:hover {
     transition: all .2s;
-    box-shadow: 0 0 40px 5px #5857ff;
-    outline: 2px solid rgb(0, 0, 117);
+    box-shadow: 0 0 40px 5px var(--clean_space_primary_color);
+    outline: 2px solid var(--clean_space_primary_color);
 }
