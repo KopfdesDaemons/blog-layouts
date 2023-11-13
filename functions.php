@@ -159,3 +159,11 @@ class clean_space_menu_walker extends Walker_Nav_Menu
 
 // Custom Settings
 require_once get_template_directory() . '/customizer-options/colors-options.php';
+require_once get_template_directory() . '/customizer-options/header-options.php';
+require_once get_template_directory() . '/customizer-options/posts-options.php';
+
+// Sanitize function to check checkbox value (true/false)
+function clean_space_sanitize_checkbox($input)
+{
+    return (isset($input) && true === $input) ? true : false;
+}

@@ -1,4 +1,4 @@
-.clean_space_post_headline_section {
+.clean_space_hero {
   background: var(--clean_space_gradient);
   grid-area: landingpagesection;
   min-height: 20vh;
@@ -7,14 +7,14 @@
   align-items: center;
   justify-content: center;
 }
-.clean_space_post_headline_section header {
+.clean_space_hero header {
   max-width: 80em;
   display: flex;
   flex-wrap: wrap;
   gap: 2vw;
   padding: 2em 5%;
 }
-.clean_space_post_headline_section header h1 {
+.clean_space_hero header h1 {
   flex: 1 0 50%;
   display: flex;
   justify-content: center;
@@ -22,16 +22,16 @@
   font-size: clamp(16px, 5vw, 34px);
   min-width: 15em;
 }
-.clean_space_post_headline_section header .clean_space_post_thumbnail {
+.clean_space_hero header .clean_space_post_thumbnail {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1 0 30%;
 }
-.clean_space_post_headline_section header .clean_space_post_thumbnail div {
+.clean_space_hero header .clean_space_post_thumbnail div {
   position: relative;
 }
-.clean_space_post_headline_section header img {
+.clean_space_hero header img {
   height: auto;
   width: auto;
   max-height: 20vh;
@@ -39,7 +39,7 @@
      object-fit: contain;
   animation: UpAndDown 8s linear infinite;
 }
-.clean_space_post_headline_section header .clean_space_post_thumbnail div::before {
+.clean_space_hero header .clean_space_post_thumbnail div::before {
   content: " ";
   position: absolute;
   display: inline-block;
@@ -75,8 +75,15 @@
   list-style: none;
 }
 
+.single .clean_space_content_spacer {
+  max-width: var(--clean_space_max_posts_width);
+}
+
 .clean_space_article {
   width: 100%;
+}
+.clean_space_article article {
+  background-color: var(--clean_space_background_color_posts);
 }
 
 .clean_space_post_tags {

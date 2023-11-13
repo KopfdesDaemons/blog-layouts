@@ -241,12 +241,12 @@ blockquote {
 
         a {
             padding: 0.2em;
-            background-color: var(--clean_space_element_background_variant_darker);
+            background-color: var(--clean_space_primary_variant_darker);
             border-radius: 4px;
             color: whitesmoke;
 
             &:hover {
-                background-color: var(--clean_space_primary_variant_darker);
+                background-color: var(--clean_space_primary_color);
             }
         }
     }

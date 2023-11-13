@@ -263,13 +263,13 @@ blockquote {
 .wp-block-calendar th a,
 .wp-block-calendar td a {
   padding: 0.2em;
-  background-color: var(--clean_space_element_background_variant_darker);
+  background-color: var(--clean_space_primary_variant_darker);
   border-radius: 4px;
   color: whitesmoke;
 }
 .wp-block-calendar th a:hover,
 .wp-block-calendar td a:hover {
-  background-color: var(--clean_space_primary_variant_darker);
+  background-color: var(--clean_space_primary_color);
 }
 .wp-block-calendar thead th {
   background-color: var(--clean_space_primary_variant_darker);

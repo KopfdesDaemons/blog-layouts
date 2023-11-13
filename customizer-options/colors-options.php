@@ -10,7 +10,7 @@ function clean_space_custom_colors($wp_customize)
 
     // Primary color
     $wp_customize->add_setting('primary_color', array(
-        'default' => '#0033a3',
+        'default' => '#2a30d4',
         'sanitize_callback' => 'sanitize_hex_color',
     ));
 
@@ -22,7 +22,7 @@ function clean_space_custom_colors($wp_customize)
 
     // Background color
     $wp_customize->add_setting('body_background_color', array(
-        'default' => '#161618',
+        'default' => '#2d2d31',
         'sanitize_callback' => 'sanitize_hex_color',
     ));
 

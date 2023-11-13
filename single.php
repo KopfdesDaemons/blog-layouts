@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="clean_space_post_headline_section">
+<section class="clean_space_hero">
     <header>
         <h1 class="title"><?php the_title(); ?></h1>
         <?php if (has_post_thumbnail()) : ?>

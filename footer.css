@@ -1,5 +1,5 @@
 #clean_space_footer {
-  background-color: rgb(26, 25, 46);
+  background-color: var(--clean_space_primary_variant_darker);
   padding: 5vw;
   grid-area: footer;
   font-size: clamp(0.6em, 2vw, 1em);

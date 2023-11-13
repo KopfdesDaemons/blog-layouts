@@ -45,6 +45,7 @@
   margin: 0.5em 1em 0 0;
   font-size: clamp(26px, 5vw, 34px);
   flex: 1 0 20%;
+  color: black;
 }
 @media only screen and (max-width: 600px) {
   .author .clean_space_post_author_headline_section header .clean_space_author_row_1 .clean_space_author_headline_container h1 {
@@ -65,6 +66,10 @@
 .author .clean_space_post_author_headline_section header .clean_space_author_row_1 .clean_space_author_headline_container .clean_space_author_stats li .clean_space_author_stats_data {
   font-weight: bold;
   font-size: 1.2em;
+  color: black;
+}
+.author .clean_space_post_author_headline_section header .clean_space_author_row_1 .clean_space_author_headline_container .clean_space_author_stats li .clean_space_author_stats_label {
+  color: black;
 }
 .author .clean_space_post_author_headline_section .clean_space_author_nav {
   width: 100%;

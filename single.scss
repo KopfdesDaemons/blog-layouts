@@ -1,6 +1,6 @@
 @use 'mixins' as *;
 
-.clean_space_post_headline_section {
+.clean_space_hero {
     background: var(--clean_space_gradient);
     grid-area: landingpagesection;
     min-height: 20vh;
@@ -71,7 +71,6 @@
     }
 
     .clean_space_post_categories {
-        // min-width: 30%;
         max-height: 15em;
         overflow-y: auto;
         ul {
@@ -84,9 +83,16 @@
         }
     }
 }
+.single .clean_space_content_spacer {
+    max-width: var(--clean_space_max_posts_width);
+}
 
 .clean_space_article {
     width: 100%;
+
+    article {
+        background-color: var(--clean_space_background_color_posts);
+    }
 }
 
 .clean_space_post_tags {

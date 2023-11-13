@@ -52,35 +52,40 @@
             $favicon_url = get_site_icon_url();
             $home_url = esc_url(home_url('/'));
 
-            if ($favicon_url) {
+            if (get_theme_mod('logo', true) && $favicon_url) {
                 echo '<a class="clean_space_header_logo" href="' . $home_url . '"><img src="' . esc_url($favicon_url) . '" alt="Favicon" /></a>';
             }
 
-            get_search_form(array('button_text' => 's'));
+            if(get_theme_mod('searchbar', true)) get_search_form(array('button_text' => 's'));
             ?>
         </div>
-        <button id="clean_space_header_menu_button" onclick="clean_space_toggle_menu()" aria-label="<?php echo esc_attr('open menu', 'clean-space') ?>"><i class="fa-solid fa-bars"></i></button>
+        <?php
+        if (get_theme_mod('header_menu', true)) {?>
+            <button id="clean_space_header_menu_button" onclick="clean_space_toggle_menu()" aria-label="<?php echo esc_attr('open menu', 'clean-space') ?>"><i class="fa-solid fa-bars"></i></button>
+        <?php }?>
+
 
         <!-- desktop -->
         <?php
-        wp_nav_menu(array(
-            'theme_location' => 'header-menu',
-            'menu_class' => 'clean_space_header_menu',
-            'container'      => false,
-            'walker' => new clean_space_menu_walker(),
-        ));
+        if (get_theme_mod('header_menu', true)) {
+            wp_nav_menu(array(
+                'theme_location' => 'header-menu',
+                'menu_class' => 'clean_space_header_menu',
+                'container'      => false,
+                'walker' => new clean_space_menu_walker(),
+            ));
+        }
         ?>
         <div class="clean_space_header_content">
             <?php
             $favicon_url = get_site_icon_url();
             $home_url = esc_url(home_url('/'));
 
-            if ($favicon_url) {
+            if (get_theme_mod('logo', true) && $favicon_url) {
                 echo '<a class="clean_space_header_logo" href="' . $home_url . '"><img src="' . esc_url($favicon_url) . '" alt="Favicon" /></a>';
             }
 
-            get_search_form(array('button_text' => 's'));
+            if(get_theme_mod('searchbar', true)) get_search_form(array('button_text' => 's'));
             ?>
         </div>
-
     </header>

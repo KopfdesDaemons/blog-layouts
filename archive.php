@@ -2,7 +2,7 @@
 
 <!-- header with headline and gradient -->
 <?php if (!is_author()) { ?>
-    <section class="clean_space_post_headline_section">
+    <section class="clean_space_hero">
         <header>
             <h1>
                 <?php
