@@ -72,6 +72,23 @@ $clean_space_background_variant_darker = "hsl($primary_hue, " . (min(100, $satur
                                                 ?>;
         --clean_space_background_color_posts: <?php echo esc_attr(get_theme_mod('background_color_posts', ''))
                                                 ?>;
-        --clean_space_max_posts_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_posts', '70')) . 'em';?>
-    }   
+        --clean_space_max_posts_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_posts', '70')) . 'em'; ?>;
+
+        
+         /* Feed Setting */
+        --clean_space_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_height', '20')) . 'px;';
+                                                    ?>;
+        --clean_space_feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius', '12')) . 'px;';
+                                                    ?>;
+        --clean_space_feed_post_card_padding: <?php echo esc_attr(get_theme_mod('feed_post_card_padding', '1')) . 'em;';
+                                            ?>;
+        --clean_space_feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image', '6')) . 'px;';
+                                                        ?>;
+        --clean_space_feed_post_card_spacing: <?php echo esc_attr(get_theme_mod('feed_post_card_spacing', '3')) . 'em;';
+                                            ?>;
+        --clean_space_tags_border_radius: <?php echo esc_attr(get_theme_mod('tags_border_radius', '4')) . 'px;';
+                                        ?>;
+        --clean_space_max_feed_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_the_feed', '70')) . 'em';
+                                    ?>;
+    }
 </style>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main role="main">
+<main role="main" class="clean_space_has_sidebar">
     <section class="clean_space_content_spacer">
         <div class="clean_space_searchresults" id="clean_space_main_content">
             <?php

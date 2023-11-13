@@ -12,7 +12,7 @@
         <?php endif; ?>
     </header>
 </section>
-<main>
+<main <?php if(get_theme_mod('post_sidebar', true)) echo 'class="clean_space_has_sidebar"'?>>
     <?php
     while (have_posts()) :
         the_post();
@@ -126,5 +126,5 @@
             </div>
         </section>
 </main>
-<?php get_sidebar(); ?>
+<?php if(get_theme_mod('post_sidebar', true)) get_sidebar(); ?>
 <?php get_footer(); ?>

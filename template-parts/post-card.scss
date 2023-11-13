@@ -2,12 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 65em;
     border: 2px solid var(--clean_space_primary_variant_darker);
     background-color: black;
-    border-radius: 12px;
-    margin-bottom: 3em;
-    padding: 1em;
+    border-radius: var(--clean_space_feed_post_card_border_radius);
+    padding: var(--clean_space_feed_post_card_padding);
     box-shadow: 0 0 20px 0px var(--clean_space_primary_variant_much_darker);
     font-size: clamp(0.8em, 1vw, 1em);
 
@@ -26,6 +24,7 @@
                 height: auto;
                 aspect-ratio: 4 / 3;
                 object-fit: cover;
+                border-radius: var(--clean_space_feed_post_card_border_radius_image);
             }
         }
         
@@ -49,7 +48,7 @@
             }
             
             p {
-                line-height: 1.5em;
+                line-height: var(--clean_space_feed_post_card_line_height);
             }
 
             .clean_space_post_card_buttom_row {
@@ -99,6 +98,10 @@
 
         .clean_space_post_card_tags_div {
             flex: 1;
+
+            .clean_space_tag {
+                border-radius: var(--clean_space_tags_border_radius);
+            }
         }
     }
 

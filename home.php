@@ -10,7 +10,7 @@
         ?>
     </div>
 </section>
-<main role="main">
+<main role="main" <?php if(get_theme_mod('feed_sidebar', true)) echo 'class="clean_space_has_sidebar"'?>>
     <section class="clean_space_content_spacer">
         <h2 class="clean_space_h2_latest_posts"><?php echo esc_html(__('Latest Posts', 'clean-space')) ?></h2>
         <ul class="clean_space_feed" id="clean_space_main_content">

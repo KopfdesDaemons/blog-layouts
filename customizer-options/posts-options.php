@@ -39,6 +39,19 @@ function clean_space_custom_posts($wp_customize)
         'settings' => 'background_color_posts'
     )));
 
+        // Sidebar
+        $wp_customize->add_setting('post_sidebar', array(
+            'default' => true,
+            'transport' => 'refresh',
+            'sanitize_callback' => 'clean_space_sanitize_checkbox',
+        ));
+    
+        $wp_customize->add_control('post_sidebar', array(
+            'type' => 'checkbox',
+            'label' => __('Show sidebar', 'clean-space'),
+            'section' => 'custom_theme_article',
+        ));
+
     // Date
     $wp_customize->add_setting('post_date', array(
         'default' => true,

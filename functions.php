@@ -120,23 +120,6 @@ function clean_space_register_landigpage_widget_area()
 }
 add_action('widgets_init', 'clean_space_register_landigpage_widget_area');
 
-
-// Number of words previewed in the feed
-function clean_space_custom_excerpt_length()
-{
-    return get_theme_mod('words_in_snippet', 30);
-}
-add_filter('excerpt_length', 'clean_space_custom_excerpt_length', 999);
-
-
-// Characters after snippet
-function clean_space_custom_excerpt_more()
-{
-    return ' ...';
-}
-add_filter('excerpt_more', 'clean_space_custom_excerpt_more');
-
-
 // Custom menu structure
 class clean_space_menu_walker extends Walker_Nav_Menu
 {
@@ -161,6 +144,7 @@ class clean_space_menu_walker extends Walker_Nav_Menu
 require_once get_template_directory() . '/customizer-options/colors-options.php';
 require_once get_template_directory() . '/customizer-options/header-options.php';
 require_once get_template_directory() . '/customizer-options/posts-options.php';
+require_once get_template_directory() . '/customizer-options/feed-options.php';
 
 // Sanitize function to check checkbox value (true/false)
 function clean_space_sanitize_checkbox($input)

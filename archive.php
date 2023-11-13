@@ -111,7 +111,7 @@
 
 
 
-<main role="main">
+<main role="main" class="clean_space_has_sidebar">
     <section class="clean_space_content_spacer clean_space_content_spacer_feed clean_space_content_and_sidebar_grid">
         <?php if (is_author()) {; ?>
             <div class="clean_space_autor_content">

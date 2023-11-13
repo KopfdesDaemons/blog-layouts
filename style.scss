@@ -57,7 +57,9 @@ main {
     padding-top: 2em;
 
     @media only screen and (min-width: 1300px) {
-        padding-left: 20em;
+        &.clean_space_has_sidebar {
+            padding-left: 20em;
+        }
     }
 }
 
@@ -118,6 +120,10 @@ a {
     background: #555;
 }
 
+.home .clean_space_content_spacer:has(.clean_space_feed) {
+    max-width: var(--clean_space_max_feed_width);
+}
+
 .clean_space_content_spacer {
     max-width: 70em;
     display: flex;
@@ -144,6 +150,9 @@ iframe {
 
 .clean_space_feed {
     padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: var(--clean_space_feed_post_card_spacing);
 }
 
 .clean_space_landing_page_section {
