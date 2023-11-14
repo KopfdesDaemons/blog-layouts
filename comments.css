@@ -57,6 +57,7 @@
   text-decoration: none;
   color: rgb(177, 177, 177);
   cursor: pointer;
+  padding: 0.4em 1.2em;
 }
 .clean_space_comments_area .reply a:hover {
   background-color: rgb(41, 41, 41);

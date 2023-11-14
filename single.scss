@@ -90,7 +90,7 @@
 .clean_space_article {
     width: 100%;
 
-    article {
+    >article {
         background-color: var(--clean_space_background_color_posts);
     }
 }

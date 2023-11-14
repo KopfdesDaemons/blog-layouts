@@ -82,7 +82,7 @@
 .clean_space_article {
   width: 100%;
 }
-.clean_space_article article {
+.clean_space_article > article {
   background-color: var(--clean_space_background_color_posts);
 }
 

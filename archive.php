@@ -59,10 +59,13 @@
                         } ?>
                     </h1>
                     <ul class="clean_space_author_stats">
-                        <li>
-                            <div class="clean_space_author_stats_data"> <?php echo $author_roles[0] ?></div>
-                            <label class="clean_space_author_stats_label"><?php echo esc_html(__('Role', 'clean-space')) ?></label>
-                        </li>
+                        <?php if (get_theme_mod('author_page_role', true)) { ?>
+                            <li>
+                                <div class="clean_space_author_stats_data"> <?php echo $author_roles[0] ?></div>
+                                <label class="clean_space_author_stats_label"><?php echo esc_html(__('Role', 'clean-space')) ?></label>
+                            </li>
+                        <?php } ?>
+                        <?php if (get_theme_mod('author_registration_date', true)) { ?>
                         <li>
                             <div class="clean_space_author_stats_data">
                                 <?php
@@ -75,10 +78,13 @@
                                 <?php echo esc_html(__('Registration date', 'clean-space')); ?>
                             </label>
                         </li>
+                        <?php } ?>
+                        <?php if (get_theme_mod('author_number_of_posts', true)) { ?>
                         <li>
                             <div class="clean_space_author_stats_data"> <?php echo $author_posts_count ?></div>
                             <label class="clean_space_author_stats_label"><?php echo esc_html(__('Number of posts', 'clean-space')) ?></label>
                         </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -88,9 +94,11 @@
                 <li>
                     <button id="clean_space_author_posts" onclick="click_author_posts()"><?php echo esc_html(__('Posts', 'clean-space')) ?></button>
                 </li>
-                <li>
-                    <button id="clean_space_author_comments" onclick="click_author_comments()"><?php echo esc_html(__('Comments', 'clean-space')) ?></button>
-                </li>
+                <?php if (get_theme_mod('author_page_latest_comments', true)) { ?>
+                    <li>
+                        <button id="clean_space_author_comments" onclick="click_author_comments()"><?php echo esc_html(__('Comments', 'clean-space')) ?></button>
+                    </li>
+                <?php } ?>
             </ul>
         </nav>
         <?php if (!empty($author_description)) : ?>
@@ -98,10 +106,10 @@
                 <div class="clean_space_author_bio">
                     <h2><?php printf(esc_html__('About %s:', 'clean-space'), get_the_author()); ?></h2>
                     <p><?php echo $author_description; ?></p>
-                    <?php if ($author_website) : ?>
+                    <?php if (get_theme_mod('author_website', true) && $author_website){ ?>
                         <a class="clean_space_author_website" href="<?php echo $author_website; ?>" target="_blank">🌐
                             <?php echo esc_html(__('Website', 'clean-space')) ?></a>
-                    <?php endif; ?>
+                    <?php } ?>
                 </div>
             </div>
         <?php endif; ?>
@@ -109,9 +117,11 @@
     </section>
 <?php } ?>
 
+<?php
+$clean_space_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', true));
+?>
 
-
-<main role="main" class="clean_space_has_sidebar">
+<main role="main" <?php if ($clean_space_side_bar) echo 'class="clean_space_has_sidebar"' ?>>
     <section class="clean_space_content_spacer clean_space_content_spacer_feed clean_space_content_and_sidebar_grid">
         <?php if (is_author()) {; ?>
             <div class="clean_space_autor_content">
@@ -202,5 +212,5 @@
     </section>
 </main>
 <?php
-get_sidebar();
+if ($clean_space_side_bar) get_sidebar();
 get_footer(); ?>

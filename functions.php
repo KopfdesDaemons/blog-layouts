@@ -47,7 +47,7 @@ function clean_space_author_script()
 {
     wp_enqueue_script('clean_space_author_script', get_template_directory_uri() . '/js/author_page.js', null, '1.0', true);
 }
-add_action('wp_enqueue_scripts', 'clean_space_author_script');
+if(get_theme_mod('author_page_latest_comments', true)) add_action('wp_enqueue_scripts', 'clean_space_author_script');
 
 // Load the wordpress comment script from the “\wordpress\wp-includes\js” directory.
 // This allows the comment response form to be located below the corresponding comment
@@ -146,6 +146,7 @@ require_once get_template_directory() . '/customizer-options/header-options.php'
 require_once get_template_directory() . '/customizer-options/posts-options.php';
 require_once get_template_directory() . '/customizer-options/feed-options.php';
 require_once get_template_directory() . '/customizer-options/fonts-options.php';
+require_once get_template_directory() . '/customizer-options/author-page-options.php';
 
 // Sanitize function to check checkbox value (true/false)
 function clean_space_sanitize_checkbox($input)
