@@ -2,7 +2,7 @@
     border: 1px solid rgb(95, 95, 95);
     padding: 0.8em;
     border-radius: 4px;
-    background-color: #303030;
+    background-color: var(--clean_space_tag_color);
     cursor: pointer;
     color: rgb(177, 177, 177);
     text-decoration: none;
@@ -16,7 +16,7 @@
     }
     
     &:hover {
-        background-color: gray;
+        background-color: rgba(128, 128, 128, 0.575);
     }
 }
 

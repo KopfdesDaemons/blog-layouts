@@ -145,6 +145,7 @@ require_once get_template_directory() . '/customizer-options/colors-options.php'
 require_once get_template_directory() . '/customizer-options/header-options.php';
 require_once get_template_directory() . '/customizer-options/posts-options.php';
 require_once get_template_directory() . '/customizer-options/feed-options.php';
+require_once get_template_directory() . '/customizer-options/fonts-options.php';
 
 // Sanitize function to check checkbox value (true/false)
 function clean_space_sanitize_checkbox($input)

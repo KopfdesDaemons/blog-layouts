@@ -15,7 +15,7 @@ function clean_space_custom_colors($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'primary_color', array(
-        'label' => __('Primary Color', 'clean-space'),
+        'label' => __('Primary color', 'clean-space'),
         'section' => 'custom_theme_colors',
         'settings' => 'primary_color'
     )));
@@ -30,6 +30,30 @@ function clean_space_custom_colors($wp_customize)
         'label' => __('Background color', 'clean-space'),
         'section' => 'custom_theme_colors',
         'settings' => 'body_background_color'
+    )));
+
+    // Background color sidebar widget blocks
+    $wp_customize->add_setting('body_background_color_sidebar_widget_blocks', array(
+        'default' => '#303030',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'body_background_color_sidebar_widget_blocks', array(
+        'label' => __('Widget blocks sidebar background color', 'clean-space'),
+        'section' => 'custom_theme_colors',
+        'settings' => 'body_background_color_sidebar_widget_blocks'
+    )));
+
+    // Tags color
+    $wp_customize->add_setting('tags_color', array(
+        'default' => '#303030',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'tags_color', array(
+        'label' => __('Tags and chips color', 'clean-space'),
+        'section' => 'custom_theme_colors',
+        'settings' => 'tags_color'
     )));
 }
 add_action('customize_register', 'clean_space_custom_colors');

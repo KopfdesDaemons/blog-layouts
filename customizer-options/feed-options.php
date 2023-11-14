@@ -26,6 +26,18 @@ function clean_space_custom_feed($wp_customize)
         ),
     ));
 
+    // Background color
+    $wp_customize->add_setting('feed_post_card_color', array(
+        'default' => '#000000',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'feed_post_card_color', array(
+        'label' => __('Cards background color', 'clean-space'),
+        'section' => 'custom_feed',
+        'settings' => 'feed_post_card_color'
+    )));
+
     // Sidebar
     $wp_customize->add_setting('feed_sidebar', array(
         'default' => true,

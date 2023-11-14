@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     border: 2px solid var(--clean_space_primary_variant_darker);
-    background-color: black;
+    background-color: var(--clean_space_feed_post_card_background_color);
     border-radius: var(--clean_space_feed_post_card_border_radius);
     padding: var(--clean_space_feed_post_card_padding);
     box-shadow: 0 0 20px 0px var(--clean_space_primary_variant_much_darker);

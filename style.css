@@ -15,14 +15,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 body {
   margin: 0;
   background-color: var(--clean_space_background_color);
-  font-family: monospace;
-  font-family: Fragment Mono;
+  font-family: var(--clean_space_body_font);
   font-size: 14px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas: "landingpagesection landingpagesection" "main sidebar" "footer footer";
-  --clean_space_margin_to_header: 10em;
-  --clean_space_gradient: linear-gradient(90deg, var(--clean_space_primary_variant_darker) 0%, var(--clean_space_primary_color) 75%, var(--clean_space_primary_variant_darker) 100%);
 }
 @media only screen and (max-width: 800px) {
   body {
@@ -78,7 +75,7 @@ table,
 label,
 div,
 button {
-  color: rgb(238, 238, 238);
+  color: var(--clean_space_font_color);
 }
 
 a {
@@ -171,7 +168,7 @@ iframe {
   border: 1px solid rgb(95, 95, 95);
   padding: 0.8em;
   border-radius: 4px;
-  background-color: #303030;
+  background-color: var(--clean_space_tag_color);
   cursor: pointer;
   color: rgb(177, 177, 177);
   text-decoration: none;
@@ -184,7 +181,7 @@ iframe {
   white-space: nowrap;
 }
 .clean_space_tag:hover {
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.575);
 }
 
 select {
@@ -280,7 +277,7 @@ input[type=submit]:hover {
   }
 }
 #clean_space_sidebar .widget {
-  background-color: #303030;
+  background-color: var(--clean_space_background_color_sidebar_widget_blocks);
   border: 1px solid rgb(95, 95, 95);
 }
 

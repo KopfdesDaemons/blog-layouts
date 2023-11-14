@@ -14,7 +14,7 @@
   border: 1px solid rgb(95, 95, 95);
   padding: 0.8em;
   border-radius: 4px;
-  background-color: #303030;
+  background-color: var(--clean_space_tag_color);
   cursor: pointer;
   color: rgb(177, 177, 177);
   text-decoration: none;
@@ -27,7 +27,7 @@
   white-space: nowrap;
 }
 .wp-block-post-terms a:hover {
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.575);
 }
 
 .wp-block-tag-cloud {
@@ -39,7 +39,7 @@
   border: 1px solid rgb(95, 95, 95);
   padding: 0.8em;
   border-radius: 4px;
-  background-color: #303030;
+  background-color: var(--clean_space_tag_color);
   cursor: pointer;
   color: rgb(177, 177, 177);
   text-decoration: none;
@@ -55,7 +55,7 @@
   white-space: nowrap;
 }
 .wp-block-tag-cloud a:hover {
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.575);
 }
 
 .wp-block-post-navigation-link {

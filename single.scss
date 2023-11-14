@@ -1,7 +1,7 @@
 @use 'mixins' as *;
 
 .clean_space_hero {
-    background: var(--clean_space_gradient);
+    background: var(--clean_space_hero_background);
     grid-area: landingpagesection;
     min-height: 20vh;
     padding-top: var(--clean_space_margin_to_header);
@@ -10,7 +10,7 @@
     justify-content: center;
 
     header {
-        max-width: 80em;
+        max-width: var(--clean_space_max_hero_width);
         display: flex;
         flex-wrap: wrap;
         gap: 2vw;
