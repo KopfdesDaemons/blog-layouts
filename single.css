@@ -85,6 +85,41 @@
 .clean_space_article > article {
   background-color: var(--clean_space_background_color_posts);
 }
+.clean_space_article > article .wp-block-columns {
+  margin: 1em 0 0 0;
+}
+.clean_space_article > article .wp-block-columns p {
+  margin: 0;
+}
+.clean_space_article > article li {
+  margin: 3px;
+}
+.clean_space_article > article .wp-caption {
+  font-size: 0.8em;
+  font-style: italic;
+}
+.clean_space_article > article figure {
+  margin: 0;
+}
+.clean_space_article > article img {
+  margin: 0.6em 0;
+}
+.clean_space_article > article .alignleft {
+  float: left;
+  margin: 0 1.5em 1em 0;
+}
+.clean_space_article > article .alignright {
+  float: right;
+  margin: 0 0 1em 1.5em;
+}
+.clean_space_article > article .aligncenter {
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clean_space_article > article .alignnone {
+  display: contents;
+}
 
 .clean_space_post_tags {
   max-height: 15em;
