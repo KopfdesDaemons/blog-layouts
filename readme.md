@@ -6,9 +6,10 @@ doesn't get in the way. The author page is particularly extensive.
 There is a landing page with a widget area.
 
 ## Features
-    - gradient hero and landingpage
-    - extensive author page
-    - custom color
-    - wide layout, sidebar right at the edge
+
+- gradient hero and landingpage
+- extensive author page
+- custom color
+- wide layout, sidebar right at the edge
 
 ![Preview](/screenshot.jpg)

@@ -45,7 +45,7 @@ add_theme_support('responsive-embeds');
 // Author Script
 function lime_blog_author_script()
 {
-    wp_enqueue_script('lime_blog_author_script', get_template_directory_uri() . '/js/author_page.js', null, '1.0', true);
+    wp_enqueue_script('lime_blog_author_script', get_template_directory_uri() . '/js/lime_blog_author_page.js', null, '1.0', true);
 }
 if(get_theme_mod('author_page_latest_comments', true)) add_action('wp_enqueue_scripts', 'lime_blog_author_script');
 

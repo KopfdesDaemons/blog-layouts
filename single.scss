@@ -148,6 +148,7 @@
 
     a {
         @include color_button;
+        font-size: clamp(0.8em, 2vw, 1em);
     }
 
     .lime_blog_post_pagination_prev {

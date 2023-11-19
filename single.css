@@ -140,6 +140,7 @@
   color: var(--lime_blog_primary_color);
   display: flex;
   cursor: pointer;
+  font-size: clamp(0.8em, 2vw, 1em);
 }
 .lime_blog_post_pagination a:hover {
   background-color: rgb(41, 41, 41);
