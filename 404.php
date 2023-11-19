@@ -6,7 +6,7 @@
                 <i class="fa-solid fa-triangle-exclamation"></i>
                 <h1><?php esc_html_e('File not found', 'clean-space'); ?></h1>
             </div>
-            <p><?php echo esc_html("The page you are looking for could not be found. Please check the URL or go back to the homepage."); ?></p>
+            <p><?php echo esc_html__("The page you are looking for could not be found. Please check the URL or go back to the homepage.", 'clean-space'); ?></p>
             <a href="<?php echo esc_url(home_url('/')); ?>"><?php echo __('Go to the home page', 'clean-space'); ?></a>
         </div>
     </section>

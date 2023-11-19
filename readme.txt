@@ -10,7 +10,10 @@ Copyright: Clean Space Theme, Copyright 2023
 
 == Description ==
 
-
+Clean Space is a modern theme for blogs. The primary color is customizable.
+It has a tidy, wide layout with a sidebar, which is right at the edge and 
+doesn't get in the way. The author page is particularly extensive. 
+There is a landing page with a widget area.
 
 == Installation ==
 
@@ -30,11 +33,6 @@ Copyright: Clean Space Theme, Copyright 2023
 
     = Images =
 
-    Image for theme screenshot (Header Image)
-    License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
-    License URL: https://creativecommons.org/publicdomain/zero/1.0/
-    Source: https://pxhere.com/de/photo/911268
-
     Image for theme screenshot (Post 1)
     License: Attribution 2.0 Generic (CC BY 2.0)
     License URL: https://creativecommons.org/licenses/by/2.0/
@@ -44,11 +42,6 @@ Copyright: Clean Space Theme, Copyright 2023
     License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
     License URL: https://creativecommons.org/publicdomain/zero/1.0/
     Source: https://www.flickr.com/photos/jonas-svidras/39608400995/
-
-    Image for theme screenshot (Post 3)
-    License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
-    License URL: https://creativecommons.org/publicdomain/zero/1.0/
-    Source: https://www.stockvault.net/photo/189035/coding
 
     = Fonts =
 

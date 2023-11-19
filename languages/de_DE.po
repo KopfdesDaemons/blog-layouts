@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-11-19 17:13+0100\n"
-"PO-Revision-Date: 2023-11-19 17:17+0100\n"
+"POT-Creation-Date: 2023-11-19 18:12+0100\n"
+"PO-Revision-Date: 2023-11-19 18:12+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -11,12 +11,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.1\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e;esc_html__;esc_html_e\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e;esc_html__;esc_html_e;"
+"esc_html\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:7
 msgid "File not found"
 msgstr "Datei nicht gefunden."
+
+#: 404.php:9
+msgid ""
+"The page you are looking for could not be found. Please check the URL or go "
+"back to the homepage."
+msgstr ""
+"Die gesuchte Seite konnte nicht gefunden werden. Bitte überprüfen Sie die "
+"URL oder kehren Sie zur Startseite zurück."
 
 #: 404.php:10
 msgid "Go to the home page"

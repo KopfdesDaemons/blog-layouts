@@ -40,7 +40,7 @@ function clean_space_hex2hsl($hex)
 }
 
 // Get the primary color from the Customizer
-$clean_space_primary_color = esc_attr(get_theme_mod('primary_color', '#2a30d4'));
+$clean_space_primary_color = esc_attr(get_theme_mod('primary_color', '#81d742'));
 // Convert the primary color to HSL
 list($primary_hue, $saturation, $lightness) = clean_space_hex2hsl($clean_space_primary_color);
 $lightness = 50;
