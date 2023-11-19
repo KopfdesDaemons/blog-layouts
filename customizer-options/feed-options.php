@@ -1,9 +1,9 @@
 <?php
-function clean_space_custom_feed($wp_customize)
+function lime_blog_custom_feed($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_feed', array(
-        'title' => __('Feed', 'clean-space'),
+        'title' => __('Feed', 'lime-blog'),
         'priority' => 30,
     ));
 
@@ -17,7 +17,7 @@ function clean_space_custom_feed($wp_customize)
     $wp_customize->add_control('maximum_width_of_the_feed', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Maximum width of the feed', 'clean-space'),
+        'label' => __('Maximum width of the feed', 'lime-blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 50,
@@ -33,7 +33,7 @@ function clean_space_custom_feed($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'feed_post_card_color', array(
-        'label' => __('Cards background color', 'clean-space'),
+        'label' => __('Cards background color', 'lime-blog'),
         'section' => 'custom_feed',
         'settings' => 'feed_post_card_color'
     )));
@@ -42,12 +42,12 @@ function clean_space_custom_feed($wp_customize)
     $wp_customize->add_setting('feed_sidebar', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'clean_space_sanitize_checkbox',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show sidebar', 'clean-space'),
+        'label' => __('Show sidebar', 'lime-blog'),
         'section' => 'custom_feed',
     ));
 
@@ -61,7 +61,7 @@ function clean_space_custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_spacing', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Spacing between posts', 'clean-space'),
+        'label' => __('Spacing between posts', 'lime-blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0,
@@ -78,7 +78,7 @@ function clean_space_custom_feed($wp_customize)
 
     $wp_customize->add_control('words_in_snippet', array(
         'type' => 'number',
-        'label' => __('Number of words in the snippet', 'clean-space'),
+        'label' => __('Number of words in the snippet', 'lime-blog'),
         'section' => 'custom_feed',
         'priority' => 10,
         'input_attrs' => array(
@@ -92,12 +92,12 @@ function clean_space_custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_tags', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'clean_space_sanitize_checkbox',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_tags', array(
         'type' => 'checkbox',
-        'label' => __('Show tags', 'clean-space'),
+        'label' => __('Show tags', 'lime-blog'),
         'section' => 'custom_feed',
     ));
 
@@ -111,7 +111,7 @@ function clean_space_custom_feed($wp_customize)
     $wp_customize->add_control('tags_border_radius', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Tags border radius', 'clean-space'),
+        'label' => __('Tags border radius', 'lime-blog'),
         'section' => 'custom_feed',
         'active_callback' => 'tags_active_callback',
         'input_attrs' => array(
@@ -125,12 +125,12 @@ function clean_space_custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_read_more', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'clean_space_sanitize_checkbox',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_read_more', array(
         'type' => 'checkbox',
-        'label' => __('Show read more button', 'clean-space'),
+        'label' => __('Show read more button', 'lime-blog'),
         'section' => 'custom_feed',
     ));
 
@@ -138,12 +138,12 @@ function clean_space_custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_comments', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'clean_space_sanitize_checkbox',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_comments', array(
         'type' => 'checkbox',
-        'label' => __('Show comments', 'clean-space'),
+        'label' => __('Show comments', 'lime-blog'),
         'section' => 'custom_feed',
     ));
 
@@ -157,7 +157,7 @@ function clean_space_custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_line_height', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Line height in text snippet', 'clean-space'),
+        'label' => __('Line height in text snippet', 'lime-blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 15,
@@ -175,7 +175,7 @@ function clean_space_custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_border_radius', array(
         'type' => 'range',
-        'label' => __('Border radius', 'clean-space'),
+        'label' => __('Border radius', 'lime-blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0,
@@ -193,7 +193,7 @@ function clean_space_custom_feed($wp_customize)
 
     $wp_customize->add_control('feed_post_card_padding', array(
         'type' => 'range',
-        'label' => __('Padding', 'clean-space'),
+        'label' => __('Padding', 'lime-blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 0,
@@ -206,12 +206,12 @@ function clean_space_custom_feed($wp_customize)
     $wp_customize->add_setting('feed_post_card_image', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'clean_space_sanitize_checkbox',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_post_card_image', array(
         'type' => 'checkbox',
-        'label' => __('Show image', 'clean-space'),
+        'label' => __('Show image', 'lime-blog'),
         'section' => 'custom_feed',
     ));
 
@@ -225,7 +225,7 @@ function clean_space_custom_feed($wp_customize)
     $wp_customize->add_control('feed_post_card_border_radius_image', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Image radius', 'clean-space'),
+        'label' => __('Image radius', 'lime-blog'),
         'section' => 'custom_feed',
         'active_callback' => 'image_active_callback',
         'input_attrs' => array(
@@ -245,18 +245,18 @@ function clean_space_custom_feed($wp_customize)
         return $control->manager->get_setting('feed_post_card_tags')->value();
     }
 }
-add_action('customize_register', 'clean_space_custom_feed');
+add_action('customize_register', 'lime_blog_custom_feed');
 
 // Number of words previewed in the feed
-function clean_space_custom_excerpt_length($length)
+function lime_blog_custom_excerpt_length($length)
 {
     return get_theme_mod('words_in_snippet', 30);
 }
-add_filter('excerpt_length', 'clean_space_custom_excerpt_length', 999);
+add_filter('excerpt_length', 'lime_blog_custom_excerpt_length', 999);
 
 // Characters after snippet
-function clean_space_custom_excerpt_more($more)
+function lime_blog_custom_excerpt_more($more)
 {
     return '...';
 }
-add_filter('excerpt_more', 'clean_space_custom_excerpt_more');
+add_filter('excerpt_more', 'lime_blog_custom_excerpt_more');

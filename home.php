@@ -1,19 +1,19 @@
 <?php get_header(); ?>
-<section class="clean_space_landing_page_section">
-    <div class="clean_space_content_spacer">
+<section class="lime_blog_landing_page_section">
+    <div class="lime_blog_content_spacer">
         <?php
         if (is_active_sidebar('landingpage-widget-area')) {
-            echo '<div id="clean_space_landingpage_widget_area">';
+            echo '<div id="lime_blog_landingpage_widget_area">';
             dynamic_sidebar('landingpage-widget-area');
             echo '</div>';
         }
         ?>
     </div>
 </section>
-<main role="main" <?php if(get_theme_mod('feed_sidebar', true)) echo 'class="clean_space_has_sidebar"'?>>
-    <section class="clean_space_content_spacer">
-        <h2 class="clean_space_h2_latest_posts"><?php echo esc_html(__('Latest Posts', 'clean-space')) ?></h2>
-        <ul class="clean_space_feed" id="clean_space_main_content">
+<main role="main" <?php if(get_theme_mod('feed_sidebar', true)) echo 'class="lime_blog_has_sidebar"'?>>
+    <section class="lime_blog_content_spacer">
+        <h2 class="lime_blog_h2_latest_posts"><?php echo esc_html(__('Latest Posts', 'lime-blog')) ?></h2>
+        <ul class="lime_blog_feed" id="lime_blog_main_content">
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $posts_per_page = get_option('posts_per_page');
@@ -28,31 +28,31 @@
             if ($query->have_posts()) {
                 while ($query->have_posts()) {
                     $query->the_post();
-                    $post_classes = array('clean_space_post_card clean_space_shadow');
+                    $post_classes = array('lime_blog_post_card lime_blog_shadow');
                     if (is_sticky()) {
-                        $post_classes[] = 'clean_space_sticky_post';
+                        $post_classes[] = 'lime_blog_sticky_post';
                     }
 
                     // Show Cards
                     require_once get_template_directory() . '/template-parts/post-card.php';
-                    echo clean_space_display_post_card($post_classes);
+                    echo lime_blog_display_post_card($post_classes);
                 }
             } else {
-                echo esc_html__('No posts found.', 'clean-space');
+                echo esc_html__('No posts found.', 'lime-blog');
             }
             ?>
         </ul>
         <?php
         // Pagination only if needed
         if ($query->max_num_pages > 1) {
-            echo '<div class="clean_space_pagination">';
-            echo '<div class="clean_space_pagination_content">';
+            echo '<div class="lime_blog_pagination">';
+            echo '<div class="lime_blog_pagination_content">';
 
-            echo '<div class="clean_space_pagination_controls">';
-            previous_posts_link(__('« Previous', 'clean-space'));
+            echo '<div class="lime_blog_pagination_controls">';
+            previous_posts_link(__('« Previous', 'lime-blog'));
             echo '</div>';
 
-            echo '<div class="clean_space_pagination_pages">';
+            echo '<div class="lime_blog_pagination_pages">';
             echo paginate_links(array(
                 'total' => $query->max_num_pages,
                 'current' => $paged,
@@ -60,8 +60,8 @@
             ));
             echo '</div>';
 
-            echo '<div class="clean_space_pagination_controls">';
-            next_posts_link(__('Next »', 'clean-space'), $query->max_num_pages);
+            echo '<div class="lime_blog_pagination_controls">';
+            next_posts_link(__('Next »', 'lime-blog'), $query->max_num_pages);
             echo '</div>';
 
             echo '</div>';

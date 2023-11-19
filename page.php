@@ -2,22 +2,22 @@
 get_header();
 ?>
 <main>
-    <section class="clean_space_content_spacer">
-        <div class="clean_space_content" id="clean_space_main_content">
+    <section class="lime_blog_content_spacer">
+        <div class="lime_blog_content" id="lime_blog_main_content">
             <?php
             while (have_posts()) {
                 the_post();
             ?>
-                <article id="post-<?php the_ID(); ?>" <?php post_class('clean_space_content_container'); ?>>
+                <article id="post-<?php the_ID(); ?>" <?php post_class('lime_blog_content_container'); ?>>
                     <h1><?php the_title(); ?></h1>
                     <?php the_content(); ?>
                 </article>
-                <footer class="clean_space_post_footer">
+                <footer class="lime_blog_post_footer">
                     <!-- Pagination-->
                     <?php
                     wp_link_pages(
                         array(
-                            'before'         => '<div class="page-links"><span class="page-links-title">' . esc_html__('Pages:', 'clean-space') . '</span>',
+                            'before'         => '<div class="page-links"><span class="page-links-title">' . esc_html__('Pages:', 'lime-blog') . '</span>',
                             'after'       => '</div>',
                             'link_before' => '<span class="page-number">',
                             'link_after'  => '</span>',

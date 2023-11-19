@@ -1,5 +1,5 @@
-.page main, .page #clean_space_sidebar {
-  margin-top: var(--clean_space_margin_to_header);
+.page main, .page #lime_blog_sidebar {
+  margin-top: var(--lime_blog_margin_to_header);
 }
 .page h1 {
   font-size: clamp(21px, 4vw, 26px);

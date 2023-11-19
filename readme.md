@@ -1,6 +1,6 @@
 # Wordpress theme
 
-Clean Space is a modern theme for blogs. The primary color is customizable.
+Lime Blog is a modern theme for blogs. The primary color is customizable.
 It has a tidy, wide layout with a sidebar, which is right at the edge and 
 doesn't get in the way. The author page is particularly extensive. 
 There is a landing page with a widget area.

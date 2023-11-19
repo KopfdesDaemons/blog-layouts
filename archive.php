@@ -2,7 +2,7 @@
 
 <!-- header with headline and gradient -->
 <?php if (!is_author()) { ?>
-    <section class="clean_space_hero">
+    <section class="lime_blog_hero">
         <header>
             <h1>
                 <?php
@@ -11,13 +11,13 @@
                 } elseif (is_tag()) {
                     echo single_tag_title(); // Tag
                 } elseif (is_day()) {
-                    echo esc_html__('Archive for', 'clean-space') . ' ' . get_the_date(); // Archive for day
+                    echo esc_html__('Archive for', 'lime-blog') . ' ' . get_the_date(); // Archive for day
                 } elseif (is_month()) {
-                    echo esc_html__('Archive for', 'clean-space') . ' ' . get_the_date('F Y'); // Archive for month
+                    echo esc_html__('Archive for', 'lime-blog') . ' ' . get_the_date('F Y'); // Archive for month
                 } elseif (is_year()) {
-                    echo esc_html__('Archive for', 'clean-space') . ' ' . get_the_date('Y'); // Archive for year
+                    echo esc_html__('Archive for', 'lime-blog') . ' ' . get_the_date('Y'); // Archive for year
                 } else {
-                    echo esc_html__('Archive', 'clean-space'); // default
+                    echo esc_html__('Archive', 'lime-blog'); // default
                 }
                 ?>
             </h1>
@@ -45,11 +45,11 @@
     $image_size = esc_attr(get_theme_mod('image_size_setting', '150'));
     $author_avatar = get_avatar($author_id, $image_size);
 ?>
-    <section class="clean_space_post_author_headline_section">
+    <section class="lime_blog_post_author_headline_section">
         <header>
-            <div class="clean_space_author_row_1">
+            <div class="lime_blog_author_row_1">
                 <?php echo $author_avatar ?>
-                <div class="clean_space_author_headline_container">
+                <div class="lime_blog_author_headline_container">
                     <h1>
                         <?php
                         if (is_author()) {
@@ -58,57 +58,57 @@
                             rewind_posts();
                         } ?>
                     </h1>
-                    <ul class="clean_space_author_stats">
+                    <ul class="lime_blog_author_stats">
                         <?php if (get_theme_mod('author_page_role', true)) { ?>
                             <li>
-                                <div class="clean_space_author_stats_data"> <?php echo $author_roles[0] ?></div>
-                                <label class="clean_space_author_stats_label"><?php echo esc_html(__('Role', 'clean-space')) ?></label>
+                                <div class="lime_blog_author_stats_data"> <?php echo $author_roles[0] ?></div>
+                                <label class="lime_blog_author_stats_label"><?php echo esc_html(__('Role', 'lime-blog')) ?></label>
                             </li>
                         <?php } ?>
                         <?php if (get_theme_mod('author_registration_date', true)) { ?>
                         <li>
-                            <div class="clean_space_author_stats_data">
+                            <div class="lime_blog_author_stats_data">
                                 <?php
                                 $registration_date = get_the_author_meta('user_registered', $author_id);
                                 $formatted_date = date_i18n('d.m.Y', strtotime($registration_date));
                                 ?>
                                 <time datetime="<?php echo date('Y-m-d', strtotime($registration_date)); ?>"><?php echo $formatted_date; ?></time>
                             </div>
-                            <label class="clean_space_author_stats_label">
-                                <?php echo esc_html(__('Registration date', 'clean-space')); ?>
+                            <label class="lime_blog_author_stats_label">
+                                <?php echo esc_html(__('Registration date', 'lime-blog')); ?>
                             </label>
                         </li>
                         <?php } ?>
                         <?php if (get_theme_mod('author_number_of_posts', true)) { ?>
                         <li>
-                            <div class="clean_space_author_stats_data"> <?php echo $author_posts_count ?></div>
-                            <label class="clean_space_author_stats_label"><?php echo esc_html(__('Number of posts', 'clean-space')) ?></label>
+                            <div class="lime_blog_author_stats_data"> <?php echo $author_posts_count ?></div>
+                            <label class="lime_blog_author_stats_label"><?php echo esc_html(__('Number of posts', 'lime-blog')) ?></label>
                         </li>
                         <?php } ?>
                     </ul>
                 </div>
             </div>
         </header>
-        <nav class="clean_space_author_nav">
+        <nav class="lime_blog_author_nav">
             <ul>
                 <li>
-                    <button id="clean_space_author_posts" onclick="click_author_posts()"><?php echo esc_html(__('Posts', 'clean-space')) ?></button>
+                    <button id="lime_blog_author_posts" onclick="click_author_posts()"><?php echo esc_html(__('Posts', 'lime-blog')) ?></button>
                 </li>
                 <?php if (get_theme_mod('author_page_latest_comments', true)) { ?>
                     <li>
-                        <button id="clean_space_author_comments" onclick="click_author_comments()"><?php echo esc_html(__('Comments', 'clean-space')) ?></button>
+                        <button id="lime_blog_author_comments" onclick="click_author_comments()"><?php echo esc_html(__('Comments', 'lime-blog')) ?></button>
                     </li>
                 <?php } ?>
             </ul>
         </nav>
         <?php if (!empty($author_description)) : ?>
-            <div class="clean_space_author_bio_container">
-                <div class="clean_space_author_bio">
-                    <h2><?php printf(esc_html__('About %s:', 'clean-space'), get_the_author()); ?></h2>
+            <div class="lime_blog_author_bio_container">
+                <div class="lime_blog_author_bio">
+                    <h2><?php printf(esc_html__('About %s:', 'lime-blog'), get_the_author()); ?></h2>
                     <p><?php echo $author_description; ?></p>
                     <?php if (get_theme_mod('author_website', true) && $author_website){ ?>
-                        <a class="clean_space_author_website" href="<?php echo $author_website; ?>" target="_blank">🌐
-                            <?php echo esc_html(__('Website', 'clean-space')) ?></a>
+                        <a class="lime_blog_author_website" href="<?php echo $author_website; ?>" target="_blank">🌐
+                            <?php echo esc_html(__('Website', 'lime-blog')) ?></a>
                     <?php } ?>
                 </div>
             </div>
@@ -118,14 +118,14 @@
 <?php } ?>
 
 <?php
-$clean_space_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', true));
+$lime_blog_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', true));
 ?>
 
-<main role="main" <?php if ($clean_space_side_bar) echo 'class="clean_space_has_sidebar"' ?>>
-    <section class="clean_space_content_spacer clean_space_content_spacer_feed clean_space_content_and_sidebar_grid">
+<main role="main" <?php if ($lime_blog_side_bar) echo 'class="lime_blog_has_sidebar"' ?>>
+    <section class="lime_blog_content_spacer lime_blog_content_spacer_feed lime_blog_content_and_sidebar_grid">
         <?php if (is_author()) {; ?>
-            <div class="clean_space_autor_content">
-                <div class="clean_space_author_comments_container">
+            <div class="lime_blog_autor_content">
+                <div class="lime_blog_author_comments_container">
                     <?php
                     $args = array(
                         'user_id' => $author_id,
@@ -133,8 +133,8 @@ $clean_space_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', tru
                     );
                     $author_comments = get_comments($args);
                     ?>
-                    <h3 class="clean_space_author_last_comments_headline">
-                        <?php echo __('Last comments from', 'clean-space') . ' ' . $author_name; ?></h3>
+                    <h3 class="lime_blog_author_last_comments_headline">
+                        <?php echo __('Last comments from', 'lime-blog') . ' ' . $author_name; ?></h3>
                     <ol class="has-avatars has-dates has-excerpts wp-block-latest-comments">
                         <?php
                         if ($author_comments) {
@@ -154,7 +154,7 @@ $clean_space_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', tru
                                 echo '</li>';
                             }
                         } else {
-                            echo __('No comments found.', 'clean-space');
+                            echo __('No comments found.', 'lime-blog');
                         }
                         ?>
                     </ol>
@@ -164,31 +164,31 @@ $clean_space_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', tru
 
                 <?php
                 if (have_posts()) {
-                    echo '<div class="clean_space_feed">';
+                    echo '<div class="lime_blog_feed">';
                     while (have_posts()) {
                         the_post();
-                        $post_classes = array('clean_space_post_card clean_space_shadow');
+                        $post_classes = array('lime_blog_post_card lime_blog_shadow');
                         if (is_sticky()) {
-                            $post_classes[] = 'clean_space_sticky_post';
+                            $post_classes[] = 'lime_blog_sticky_post';
                         }
 
                         // Show cards
                         require_once get_template_directory() . '/template-parts/post-card.php';
-                        echo clean_space_display_post_card($post_classes);
+                        echo lime_blog_display_post_card($post_classes);
                     }
 
                     // Pagination 
                     global $wp_query;
                     $total_pages = $wp_query->max_num_pages;
                     if ($total_pages > 1) {
-                        echo '<div class="clean_space_pagination clean_space_shadow">';
-                        echo '<div class="clean_space_pagination_content">';
+                        echo '<div class="lime_blog_pagination lime_blog_shadow">';
+                        echo '<div class="lime_blog_pagination_content">';
 
-                        echo '<div class="clean_space_pagination_controls">';
-                        previous_posts_link(__('« Previous', 'clean-space'));
+                        echo '<div class="lime_blog_pagination_controls">';
+                        previous_posts_link(__('« Previous', 'lime-blog'));
                         echo '</div>';
 
-                        echo '<div class="clean_space_pagination_pages">';
+                        echo '<div class="lime_blog_pagination_pages">';
                         echo paginate_links(array(
                             'total' => $wp_query->max_num_pages,
                             'current' => $paged,
@@ -196,15 +196,15 @@ $clean_space_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', tru
                         ));
                         echo '</div>';
 
-                        echo '<div class="clean_space_pagination_controls">';
-                        next_posts_link(__('Next »', 'clean-space'), $wp_query->max_num_pages);
+                        echo '<div class="lime_blog_pagination_controls">';
+                        next_posts_link(__('Next »', 'lime-blog'), $wp_query->max_num_pages);
                         echo '</div>';
 
                         echo '</div>';
                         echo '</div>';
                     }
                 } else {
-                    echo esc_html__('No posts found.', 'clean-space');
+                    echo esc_html__('No posts found.', 'lime-blog');
                 }
                 ?>
             </div>
@@ -212,5 +212,5 @@ $clean_space_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', tru
     </section>
 </main>
 <?php
-if ($clean_space_side_bar) get_sidebar();
+if ($lime_blog_side_bar) get_sidebar();
 get_footer(); ?>

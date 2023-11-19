@@ -1,7 +1,7 @@
-.search main, .search #clean_space_sidebar {
-  margin-top: var(--clean_space_margin_to_header);
+.search main, .search #lime_blog_sidebar {
+  margin-top: var(--lime_blog_margin_to_header);
 }
-.search .clean_space_searchresults {
+.search .lime_blog_searchresults {
   display: flex;
   flex-direction: column;
   min-height: 70vh;
@@ -9,7 +9,7 @@
 .search h1 {
   text-align: center;
 }
-.search .clean_space_searchresult {
+.search .lime_blog_searchresult {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -17,32 +17,32 @@
   gap: 1em;
   padding: 2em 1.5em;
 }
-.search .clean_space_searchresult .clean_space_searchresult_image_a {
+.search .lime_blog_searchresult .lime_blog_searchresult_image_a {
   margin: 1em 1em 1em 0;
 }
-.search .clean_space_searchresult .clean_space_searchresult_image_a img {
+.search .lime_blog_searchresult .lime_blog_searchresult_image_a img {
   aspect-ratio: 1/1;
   border-radius: 4px;
   max-height: 8em;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.search .clean_space_searchresult .clean_space_searchresult_content {
+.search .lime_blog_searchresult .lime_blog_searchresult_content {
   flex: 1 0 60%;
 }
-.search .clean_space_searchresult .clean_space_searchresult_content a {
+.search .lime_blog_searchresult .lime_blog_searchresult_content a {
   text-decoration: none;
 }
-.search .clean_space_searchresult .clean_space_searchresult_content h2 {
-  color: var(--clean_space_primary_color);
+.search .lime_blog_searchresult .lime_blog_searchresult_content h2 {
+  color: var(--lime_blog_primary_color);
 }
-.search .clean_space_searchresult .clean_space_searchresult_content h2:hover {
-  color: var(--clean_space_primary_variant_brighter);
+.search .lime_blog_searchresult .lime_blog_searchresult_content h2:hover {
+  color: var(--lime_blog_primary_variant_brighter);
 }
-.search .clean_space_searchresult .clean_space_searchresult_content p {
+.search .lime_blog_searchresult .lime_blog_searchresult_content p {
   line-height: 1.5em;
 }
-.search .clean_space_searchresult::after {
+.search .lime_blog_searchresult::after {
   content: " ";
   position: absolute;
   border-bottom: 1px solid;
@@ -51,6 +51,6 @@
   bottom: 0;
   color: gray;
 }
-.search .clean_space_pagination {
+.search .lime_blog_pagination {
   margin-top: 1em;
 }/*# sourceMappingURL=search.css.map */

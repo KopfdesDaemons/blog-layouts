@@ -4,7 +4,7 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="comments" class="clean_space_comments_area">
+<div id="comments" class="lime_blog_comments_area">
 
     <?php if (have_comments()) : ?>
 
@@ -12,14 +12,14 @@ if (post_password_required()) {
             <?php
             $comments_number = get_comments_number();
             if ($comments_number === 1) {
-                printf(__('One Comment', 'clean-space'));
+                printf(__('One Comment', 'lime-blog'));
             } else {
-                printf(__('%d Comments', 'clean-space'), $comments_number);
+                printf(__('%d Comments', 'lime-blog'), $comments_number);
             }
             ?>
         </h2>
 
-        <ul class="clean_space_comment_list <?php if (!get_theme_mod('comments_image', true)) echo 'clean_space_comments_without_image'; ?>">
+        <ul class="lime_blog_comment_list <?php if (!get_theme_mod('comments_image', true)) echo 'lime_blog_comments_without_image'; ?>">
             <?php
             wp_list_comments(array(
                 'style'       => 'ol',
@@ -31,20 +31,20 @@ if (post_password_required()) {
 
         <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
             <nav role="navigation">
-                <div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'clean-space')); ?></div>
-                <div class="nav-next"><?php next_comments_link(__('Newer Comments', 'clean-space')); ?></div>
+                <div class="nav-previous"><?php previous_comments_link(__('Older Comments', 'lime-blog')); ?></div>
+                <div class="nav-next"><?php next_comments_link(__('Newer Comments', 'lime-blog')); ?></div>
             </nav>
         <?php endif; ?>
 
     <?php endif; ?>
 
     <?php if (!comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) : ?>
-        <p><?php _e('Comments are closed.', 'clean-space'); ?></p>
+        <p><?php _e('Comments are closed.', 'lime-blog'); ?></p>
     <?php endif; ?>
 
     <?php
     comment_form(array(
-        'title_reply_before' => '<h2 class="clean_space_comment_reply_title">',
+        'title_reply_before' => '<h2 class="lime_blog_comment_reply_title">',
         'title_reply_after'  => '</h2>',
     ));
     ?>

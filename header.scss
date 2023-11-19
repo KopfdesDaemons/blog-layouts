@@ -1,4 +1,4 @@
-#clean_space_header {
+#lime_blog_header {
     position: absolute;
     width: 100%;
     display: flex;
@@ -6,12 +6,12 @@
     align-items: center;
     z-index: 20;
 
-    #clean_space_header_menu_button {
+    #lime_blog_header_menu_button {
         border: none;
         display: none;
         margin: 0.5em;
         font-size: 1.5em;
-        background-color: var(--clean_space_primary_variant_much_darker);
+        background-color: var(--lime_blog_primary_variant_much_darker);
         padding: 0.5em 0.8em;
         box-shadow: none;
         cursor: pointer;
@@ -23,10 +23,10 @@
         }
     }
 
-    .clean_space_header_menu{
+    .lime_blog_header_menu{
         display: flex;
         justify-content: center;
-        background-color: var(--clean_space_primary_variant_much_darker);
+        background-color: var(--lime_blog_primary_variant_much_darker);
         white-space: nowrap;
         width: 100%;
         user-select: none;
@@ -35,7 +35,7 @@
         margin: 0;
         padding: 0;
         flex-wrap: wrap;
-        font-size: var(--clean_space_header_menu_font_size);
+        font-size: var(--lime_blog_header_menu_font_size);
 
         li {
             position: relative;
@@ -43,7 +43,7 @@
             transition: background-color 400ms;
             border-radius: 8px;
 
-            .clean_space_menuitem_container {
+            .lime_blog_menuitem_container {
                 display: flex;
                 align-items: center;
                 
@@ -62,7 +62,7 @@
                 position: absolute;
                 flex-direction: column;
                 overflow: visible;
-                background-color: var(--clean_space_primary_variant_much_darker);
+                background-color: var(--lime_blog_primary_variant_much_darker);
                 top: 100%;
                 padding: 0;
                 z-index: 5;
@@ -78,12 +78,12 @@
             }
             
             @media only screen and (min-width: 600px) {
-                >ul .clean_space_submenu_toggle{
+                >ul .lime_blog_submenu_toggle{
                     transform: rotate(-90deg);
                 }
 
                 &:hover, &:focus-within {
-                    background-color: var(--clean_space_primary_variant_darker);
+                    background-color: var(--lime_blog_primary_variant_darker);
                     >ul {
                         display: flex;
                     }
@@ -97,8 +97,8 @@
     }
 
         
-    .clean_space_header_mobile_content,
-    .clean_space_header_content{
+    .lime_blog_header_mobile_content,
+    .lime_blog_header_content{
         max-height: 3.5em;
         padding: 1em;
         max-width: 50em;
@@ -106,7 +106,7 @@
         justify-content: center;
         gap: 0.5em;
 
-        .clean_space_header_logo {
+        .lime_blog_header_logo {
             display: flex;
             width: 4em;
 
@@ -143,40 +143,40 @@
             border: none;
             padding: 0 2em;
             color: whitesmoke;
-            background-color: var(--clean_space_primary_variant_darker);
+            background-color: var(--lime_blog_primary_variant_darker);
             cursor: pointer;
             
             &:hover {
-                background-color: var(--clean_space_primary_variant_much_darker);
+                background-color: var(--lime_blog_primary_variant_much_darker);
             }
         }
     }
 
-    .clean_space_header_mobile_content {
+    .lime_blog_header_mobile_content {
         display: none;
     }
 
     // mobile menu
     @media only screen and (max-width: 600px) {
-        .clean_space_header_menu {
+        .lime_blog_header_menu {
             max-height: 0;
             overflow: hidden;
             visibility: hidden;
             opacity: 0;
         }
 
-        .clean_space_header_content {
+        .lime_blog_header_content {
             display: none;
         }
 
-        .clean_space_header_mobile_content {
+        .lime_blog_header_mobile_content {
             display: flex;
         }
         
-        &.clean_space_header_menu_open {
-            background: var(--clean_space_gradient);
+        &.lime_blog_header_menu_open {
+            background: var(--lime_blog_gradient);
             
-            .clean_space_header_menu{
+            .lime_blog_header_menu{
                 transition: max-height 300ms;
                 visibility: visible;
                 opacity: 1;
@@ -191,12 +191,12 @@
                     flex-direction: column;
                     width: 70%;
                     
-                    .clean_space_menuitem_container a{
+                    .lime_blog_menuitem_container a{
                         white-space: normal;
                         flex: 1;
                     }
 
-                    .clean_space_submenu_toggle {
+                    .lime_blog_submenu_toggle {
                         border-radius: 4px;
                         border: 1px solid;
                         padding: 0.3em 0.5em;
@@ -213,15 +213,15 @@
                         }
                     }
                 }
-                .clean_space_submenu_open {
-                    >.clean_space_menuitem_container {
+                .lime_blog_submenu_open {
+                    >.lime_blog_menuitem_container {
                         a {
                             font-weight: bold;
                         }
                         
-                        .clean_space_submenu_toggle{
+                        .lime_blog_submenu_toggle{
                             transform: rotate(180deg);
-                            background-color: var(--clean_space_primary_variant_much_darker);
+                            background-color: var(--lime_blog_primary_variant_much_darker);
                         }
                     }
 

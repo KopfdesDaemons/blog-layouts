@@ -1,26 +1,26 @@
-.clean_space_comments_area {
+.lime_blog_comments_area {
   margin-top: 3em;
   font-size: 0.8em;
 }
-.clean_space_comments_area .clean_space_comment_list {
+.lime_blog_comments_area .lime_blog_comment_list {
   padding-left: 0;
 }
-.clean_space_comments_area a {
+.lime_blog_comments_area a {
   color: rgb(177, 177, 177);
 }
-.clean_space_comments_area .comment, .clean_space_comments_area .children, .clean_space_comments_area .pingback {
+.lime_blog_comments_area .comment, .lime_blog_comments_area .children, .lime_blog_comments_area .pingback {
   list-style: none;
   padding: 1% 2%;
 }
-.clean_space_comments_area .comment li, .clean_space_comments_area .children li, .clean_space_comments_area .pingback li {
+.lime_blog_comments_area .comment li, .lime_blog_comments_area .children li, .lime_blog_comments_area .pingback li {
   border-radius: 4px;
   padding: 2%;
 }
-.clean_space_comments_area .comment li ol, .clean_space_comments_area .children li ol, .clean_space_comments_area .pingback li ol {
+.lime_blog_comments_area .comment li ol, .lime_blog_comments_area .children li ol, .lime_blog_comments_area .pingback li ol {
   padding-left: 0.5em;
 }
-.clean_space_comments_area .comment-content {
-  background-color: var(--clean_space_comments_background_color);
+.lime_blog_comments_area .comment-content {
+  background-color: var(--lime_blog_comments_background_color);
   padding: 1em;
   margin: 1em 0.5em;
   border-radius: 4px;
@@ -28,24 +28,24 @@
   max-height: 40em;
   overflow-y: auto;
 }
-.clean_space_comments_area .comment-content > p {
+.lime_blog_comments_area .comment-content > p {
   margin: 0;
 }
-.clean_space_comments_area .bypostauthor .url {
-  background-color: var(--clean_space_primary_color);
+.lime_blog_comments_area .bypostauthor .url {
+  background-color: var(--lime_blog_primary_color);
   border-radius: 8px;
   padding: 0.2em;
   color: black;
 }
-.clean_space_comments_area .bypostauthor .url:after {
+.lime_blog_comments_area .bypostauthor .url:after {
   content: " \f4ff";
   font-family: "Font Awesome Solid";
 }
-.clean_space_comments_area .reply {
+.lime_blog_comments_area .reply {
   margin: 0 0.5em;
   display: flex;
 }
-.clean_space_comments_area .reply a {
+.lime_blog_comments_area .reply a {
   border-radius: 4px;
   padding: 0.8em 1.2em;
   background-color: black;
@@ -59,56 +59,56 @@
   cursor: pointer;
   padding: 0.4em 1.2em;
 }
-.clean_space_comments_area .reply a:hover {
+.lime_blog_comments_area .reply a:hover {
   background-color: rgb(41, 41, 41);
 }
-.clean_space_comments_area .says {
+.lime_blog_comments_area .says {
   display: none;
 }
-.clean_space_comments_area .vcard {
+.lime_blog_comments_area .vcard {
   display: flex;
   gap: 0.5em;
   align-items: center;
   font-size: 1.3em;
 }
-.clean_space_comments_area .vcard img {
+.lime_blog_comments_area .vcard img {
   border-radius: 8px;
 }
-.clean_space_comments_area .vcard .url {
+.lime_blog_comments_area .vcard .url {
   text-decoration: none;
 }
-.clean_space_comments_area .comment-metadata {
+.lime_blog_comments_area .comment-metadata {
   display: flex;
   justify-content: space-between;
   padding: 0.8em 1em 0.3em 1em;
 }
-.clean_space_comments_area .comment-form {
+.lime_blog_comments_area .comment-form {
   padding: 3%;
 }
-.clean_space_comments_area .comment-form .comment-form-comment {
+.lime_blog_comments_area .comment-form .comment-form-comment {
   display: flex;
   flex-direction: column;
 }
-.clean_space_comments_area .comment-form .comment-form-comment textarea {
+.lime_blog_comments_area .comment-form .comment-form-comment textarea {
   resize: vertical;
   max-width: 90vw;
 }
-.clean_space_comments_area .comment-form .comment-form-author,
-.clean_space_comments_area .comment-form .comment-form-email,
-.clean_space_comments_area .comment-form .comment-form-url {
+.lime_blog_comments_area .comment-form .comment-form-author,
+.lime_blog_comments_area .comment-form .comment-form-email,
+.lime_blog_comments_area .comment-form .comment-form-url {
   display: flex;
   flex-direction: column;
 }
-.clean_space_comments_area .clean_space_comment_reply_title {
+.lime_blog_comments_area .lime_blog_comment_reply_title {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
   margin-top: 0.5em;
 }
-.clean_space_comments_area .clean_space_comment_reply_title small {
+.lime_blog_comments_area .lime_blog_comment_reply_title small {
   margin-left: auto;
 }
-.clean_space_comments_area .clean_space_comment_reply_title small a {
+.lime_blog_comments_area .lime_blog_comment_reply_title small a {
   color: rgb(146, 0, 0);
 }
 

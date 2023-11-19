@@ -1,9 +1,9 @@
 <?php
-function clean_space_header($wp_customize)
+function lime_blog_header($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_header', array(
-        'title' => __('Header', 'clean-space'),
+        'title' => __('Header', 'lime-blog'),
         'priority' => 30,
     ));
 
@@ -11,12 +11,12 @@ function clean_space_header($wp_customize)
     $wp_customize->add_setting('header_menu', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'clean_space_sanitize_checkbox',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('header_menu', array(
         'type' => 'checkbox',
-        'label' => __('Show menu in header', 'clean-space'),
+        'label' => __('Show menu in header', 'lime-blog'),
         'section' => 'custom_theme_header',
     ));
 
@@ -24,12 +24,12 @@ function clean_space_header($wp_customize)
     $wp_customize->add_setting('logo', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'clean_space_sanitize_checkbox',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('logo', array(
         'type' => 'checkbox',
-        'label' => __('Show logo with link to home page', 'clean-space'),
+        'label' => __('Show logo with link to home page', 'lime-blog'),
         'section' => 'custom_theme_header',
     ));
 
@@ -37,12 +37,12 @@ function clean_space_header($wp_customize)
     $wp_customize->add_setting('searchbar', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'clean_space_sanitize_checkbox',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('searchbar', array(
         'type' => 'checkbox',
-        'label' => __('Show search bar', 'clean-space'),
+        'label' => __('Show search bar', 'lime-blog'),
         'section' => 'custom_theme_header',
     ));
 
@@ -60,7 +60,7 @@ function clean_space_header($wp_customize)
 
     $wp_customize->add_control('header_menu_font_size_setting', array(
         'type' => 'range',
-        'label' => __('Menu font size', 'clean-space'),
+        'label' => __('Menu font size', 'lime-blog'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 10,
@@ -75,4 +75,4 @@ function clean_space_header($wp_customize)
         return $control->manager->get_setting('header_menu')->value();
     }
 }
-add_action('customize_register', 'clean_space_header');
+add_action('customize_register', 'lime_blog_header');

@@ -1,9 +1,9 @@
 .search {
-    main, #clean_space_sidebar {
-        margin-top: var(--clean_space_margin_to_header);
+    main, #lime_blog_sidebar {
+        margin-top: var(--lime_blog_margin_to_header);
     }
     
-    .clean_space_searchresults {
+    .lime_blog_searchresults {
         display: flex;
         flex-direction: column;
         min-height: 70vh;
@@ -13,7 +13,7 @@
         text-align: center;
     }
 
-    .clean_space_searchresult {
+    .lime_blog_searchresult {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -21,7 +21,7 @@
         gap: 1em;
         padding: 2em 1.5em;
 
-        .clean_space_searchresult_image_a {
+        .lime_blog_searchresult_image_a {
             margin: 1em 1em 1em 0;
             img {
                 aspect-ratio: 1 / 1;
@@ -31,7 +31,7 @@
             }
         }
 
-        .clean_space_searchresult_content {
+        .lime_blog_searchresult_content {
             flex: 1 0 60%;
 
             a {
@@ -39,10 +39,10 @@
             }
             
             h2 {
-                color: var(--clean_space_primary_color);
+                color: var(--lime_blog_primary_color);
     
                 &:hover {
-                    color:  var(--clean_space_primary_variant_brighter);
+                    color:  var(--lime_blog_primary_variant_brighter);
                 }
             }
 
@@ -52,7 +52,7 @@
         }
     }
 
-    .clean_space_searchresult::after {
+    .lime_blog_searchresult::after {
         content: ' ';
         position: absolute;
         border-bottom: 1px solid;
@@ -62,7 +62,7 @@
         color: gray;
     }
 
-    .clean_space_pagination {
+    .lime_blog_pagination {
         margin-top: 1em;
     }
 }

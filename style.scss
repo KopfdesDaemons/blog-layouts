@@ -1,9 +1,9 @@
 /*
-Theme Name: Clean Space
+Theme Name: Lime Blog
 Author: Rico
 Author URI: https://ricoswebsite.com/
-Text Domain: clean-space
-Description: Clean Space is a modern theme for blogs. The primary color is customizable. It has a tidy, wide layout with a sidebar, which is right at the edge and doesn't get in the way. The author page is particularly extensive. There is a landing page with a widget area.
+Text Domain: lime-blog
+Description: Lime Blog is a modern theme for blogs. The primary color is customizable. It has a tidy, wide layout with a sidebar, which is right at the edge and doesn't get in the way. The author page is particularly extensive. There is a landing page with a widget area.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Version: 1.0.0
 Requires at least: 5.0
@@ -17,8 +17,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 body {
     margin: 0;
-    background-color: var(--clean_space_background_color);
-    font-family: var(--clean_space_body_font);
+    background-color: var(--lime_blog_background_color);
+    font-family: var(--lime_blog_body_font);
     font-size: 14px;
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -30,7 +30,7 @@ body {
     grid-template-areas: "landingpagesection landingpagesection" "main sidebar" "footer footer";
 }
 
-.clean_space_skip_link {
+.lime_blog_skip_link {
     position: absolute;
     top: -40px;
     left: 0;
@@ -40,7 +40,7 @@ body {
     z-index: 999;
 }
 
-.clean_space_skip_link:focus {
+.lime_blog_skip_link:focus {
     top: 0;
 }
 
@@ -53,7 +53,7 @@ main {
     padding-top: 2em;
 
     @media only screen and (min-width: 1300px) {
-        &.clean_space_has_sidebar {
+        &.lime_blog_has_sidebar {
             padding-left: 20em;
         }
     }
@@ -79,18 +79,18 @@ table,
 label,
 div,
 button {
-    color: var(--clean_space_font_color);
+    color: var(--lime_blog_font_color);
 }
 
 a {
-    color: var(--clean_space_primary_color);
+    color: var(--lime_blog_primary_color);
 
     &:visited {
-        color: var(--clean_space_primary_variant_darker);
+        color: var(--lime_blog_primary_variant_darker);
     }
 
     &:hover {
-        color: var(--clean_space_primary_variant_brighter);
+        color: var(--lime_blog_primary_variant_brighter);
     }
 }
 
@@ -116,11 +116,11 @@ a {
     background: #555;
 }
 
-.home .clean_space_content_spacer:has(.clean_space_feed) {
-    max-width: var(--clean_space_max_feed_width);
+.home .lime_blog_content_spacer:has(.lime_blog_feed) {
+    max-width: var(--lime_blog_max_feed_width);
 }
 
-.clean_space_content_spacer {
+.lime_blog_content_spacer {
     max-width: 70em;
     display: flex;
     flex-direction: column;
@@ -128,7 +128,7 @@ a {
     width: 100%;
 }
 
-.clean_space_content_container {
+.lime_blog_content_container {
     min-height: 60vh;
     margin: 2em 0;
     padding: 0 clamp(1em, 2vw, 5em);
@@ -143,36 +143,36 @@ iframe {
     max-width: 100%;
 }
 
-.clean_space_feed {
+.lime_blog_feed {
     padding: 0.5em;
     display: flex;
     flex-direction: column;
-    gap: var(--clean_space_feed_post_card_spacing);
+    gap: var(--lime_blog_feed_post_card_spacing);
 }
 
-.clean_space_landing_page_section {
+.lime_blog_landing_page_section {
     grid-area: landingpagesection;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 80vh;
     padding: clamp(0.5em, 5vw, 2em);
-    padding-top: var(--clean_space_margin_to_header);
-    background: var(--clean_space_gradient);
+    padding-top: var(--lime_blog_margin_to_header);
+    background: var(--lime_blog_gradient);
 
     .wp-block-image.size-full {
         img {
-            border: 6px solid var(--clean_space_primary_variant_darker);
+            border: 6px solid var(--lime_blog_primary_variant_darker);
             animation: wobble 5s linear infinite;
         }
     }
 }
 
-.clean_space_h2_latest_posts {
+.lime_blog_h2_latest_posts {
     font-size: 2em;
 }
 
-.clean_space_tag {
+.lime_blog_tag {
     @include tag;
 }
 
@@ -202,7 +202,7 @@ figcaption {
 }
 
 dt {
-    color: var(--clean_space_primary_color);
+    color: var(--lime_blog_primary_color);
     margin: 0.5em 0;
     font-weight: bold;
 }
@@ -245,7 +245,7 @@ input[type=submit] {
     @include button;
 }
 
-#clean_space_sidebar {
+#lime_blog_sidebar {
     width: 20em;
     overflow: hidden;
     padding: 2em;
@@ -256,7 +256,7 @@ input[type=submit] {
     }
 
     .widget {
-        background-color: var(--clean_space_background_color_sidebar_widget_blocks);
+        background-color: var(--lime_blog_background_color_sidebar_widget_blocks);
         border: 1px solid rgb(95, 95, 95);
     }
 }
@@ -326,11 +326,11 @@ input[type=submit] {
     }
 }
 
-.clean_space_content {
+.lime_blog_content {
     width: 100%;
 
     >article {
-        background-color: var(--clean_space_background_color_posts);
+        background-color: var(--lime_blog_background_color_posts);
 
         .wp-block-columns {
             margin: 1em 0 0 0;

@@ -1,10 +1,10 @@
 @use 'mixins' as *; 
 
-.clean_space_comments_area {
+.lime_blog_comments_area {
     margin-top: 3em;
     font-size: 0.8em;
 
-    .clean_space_comment_list {
+    .lime_blog_comment_list {
         padding-left: 0;
     }
 
@@ -27,7 +27,7 @@
     }
 
     .comment-content {
-        background-color: var(--clean_space_comments_background_color);
+        background-color: var(--lime_blog_comments_background_color);
         padding: 1em;
         margin: 1em 0.5em;
         border-radius: 4px;
@@ -42,7 +42,7 @@
 
     .bypostauthor {
         .url {
-            background-color: var(--clean_space_primary_color);
+            background-color: var(--lime_blog_primary_color);
             border-radius: 8px;
             padding: 0.2em;
             color: black;
@@ -110,7 +110,7 @@
         }
     }
 
-    .clean_space_comment_reply_title {
+    .lime_blog_comment_reply_title {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5em;

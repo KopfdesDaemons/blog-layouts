@@ -4,7 +4,7 @@
 
 $font-size: clamp(12px, 1.5vw, 16px);
 
-.clean_space_pagination {
+.lime_blog_pagination {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,22 +15,22 @@ $font-size: clamp(12px, 1.5vw, 16px);
         height: 1px;
     }
 
-    .clean_space_pagination_controls a {
-        background-color: var(--clean_space_primary_color);
+    .lime_blog_pagination_controls a {
+        background-color: var(--lime_blog_primary_color);
         margin: 0 0.5em;
         padding: 0.8em 2em;
         display: flex;
         color: rgb(14, 14, 14);
     }
 
-    .clean_space_pagination_content {
+    .lime_blog_pagination_content {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         max-width: 100%;
     }
 
-    .clean_space_pagination_pages {
+    .lime_blog_pagination_pages {
         display: flex;
         overflow-x: auto;
         gap: 0.5em;
@@ -41,7 +41,7 @@ $font-size: clamp(12px, 1.5vw, 16px);
 // basic pagination layout for all elements (Numbers + Buttons)
 .wp-block-query-pagination-next,
 .wp-block-query-pagination-previous,
-.clean_space_pagination_controls a,
+.lime_blog_pagination_controls a,
 .post-page-numbers,
 .page-numbers {
     border-radius: 4px;
@@ -54,13 +54,13 @@ $font-size: clamp(12px, 1.5vw, 16px);
 
 // pagination current page
 .current {
-    background-color: var(--clean_space_primary_variant_darker);
+    background-color: var(--lime_blog_primary_variant_darker);
 }
 
 // pagination hover
 .wp-block-query-pagination-next:hover,
 .wp-block-query-pagination-previous:hover,
-.clean_space_pagination_controls a:hover,
+.lime_blog_pagination_controls a:hover,
 .page-numbers:not(.current, .dots):hover,
 .post-page-numbers:not(.current, .dots):hover {
     background-color: rgb(54, 54, 54);

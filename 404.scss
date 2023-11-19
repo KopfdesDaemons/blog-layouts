@@ -1,14 +1,14 @@
 @use 'mixins' as *; 
 
 .error404 {
-    .clean_space_content_spacer {
+    .lime_blog_content_spacer {
         min-height: 70vh;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .clean_space_error {
+    .lime_blog_error {
         background-color: rgb(37, 3, 3);
         border: 1px solid rgb(163, 0, 0);
         border-radius: 4px;
@@ -18,7 +18,7 @@
         flex-direction: column;
         align-items: flex-start;
 
-        .clean_space_404_headline_row {
+        .lime_blog_404_headline_row {
             display: flex;
             align-items: center;
             gap: 1em;
@@ -33,7 +33,7 @@
         }
     }
 
-    #clean_space_sidebar {
-        margin-top: var(--clean_space_margin_to_header);
+    #lime_blog_sidebar {
+        margin-top: var(--lime_blog_margin_to_header);
     }
 }

@@ -1,10 +1,10 @@
 <?php
-function clean_space_custom_fonts($wp_customize)
+function lime_blog_custom_fonts($wp_customize)
 {
     // Section
     $wp_customize->add_section('theme_fonts_section', array(
-        'title'      => __('Font', 'clean-space'),
-        'description' => __('All fonts are hosted locally. Consent according to the GDPR is not required for this theme (cookie banner).', 'clean-space'),
+        'title'      => __('Font', 'lime-blog'),
+        'description' => __('All fonts are hosted locally. Consent according to the GDPR is not required for this theme (cookie banner).', 'lime-blog'),
         'priority'   => 30,
     ));
 
@@ -16,7 +16,7 @@ function clean_space_custom_fonts($wp_customize)
     ));
 
     $wp_customize->add_control('body_font', array(
-        'label'      => __('Main text font', 'clean-space'),
+        'label'      => __('Main text font', 'lime-blog'),
         'section'    => 'theme_fonts_section',
         'type'       => 'select',
         'choices'    => array(
@@ -47,9 +47,9 @@ function clean_space_custom_fonts($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color', array(
-        'label' => __('Font color', 'clean-space'),
+        'label' => __('Font color', 'lime-blog'),
         'section' => 'theme_fonts_section',
         'settings' => 'font_color'
     )));
 }
-add_action('customize_register', 'clean_space_custom_fonts');
+add_action('customize_register', 'lime_blog_custom_fonts');

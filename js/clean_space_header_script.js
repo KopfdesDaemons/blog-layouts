@@ -1,12 +1,12 @@
-function clean_space_toggle_menu() {
-    var menu = document.querySelector('#clean_space_header');
-    menu.classList.toggle('clean_space_header_menu_open');
+function lime_blog_toggle_menu() {
+    var menu = document.querySelector('#lime_blog_header');
+    menu.classList.toggle('lime_blog_header_menu_open');
 }
 
 window.addEventListener("DOMContentLoaded", function() {
 
 // header mobile submenu toggle
-const header_submenu_toggle = document.querySelectorAll('.clean_space_submenu_toggle');
+const header_submenu_toggle = document.querySelectorAll('.lime_blog_submenu_toggle');
 
 for (const toggle of header_submenu_toggle) {
     toggle.addEventListener('click', toggleSubMenu);
@@ -26,18 +26,18 @@ function toggleSubMenu(event) {
     const submenu = listItemContainer.parentElement.querySelector('.sub-menu');
 
     // close all open menus
-    const allOpenMenus = document.querySelectorAll('.clean_space_submenu_open');
+    const allOpenMenus = document.querySelectorAll('.lime_blog_submenu_open');
     const parentListItem = listItem.parentElement.parentElement;
-    const isInOpenSubmenu = parentListItem.classList.contains('clean_space_submenu_open');
+    const isInOpenSubmenu = parentListItem.classList.contains('lime_blog_submenu_open');
     
     if (!isInOpenSubmenu) {
         for (const menu of allOpenMenus) {
             if (menu === submenu.parentElement) continue;
-            menu.classList.remove('clean_space_submenu_open');
+            menu.classList.remove('lime_blog_submenu_open');
         }
     }
 
-    listItem.classList.toggle('clean_space_submenu_open');
+    listItem.classList.toggle('lime_blog_submenu_open');
 }
 
 }, false);

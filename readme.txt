@@ -1,4 +1,4 @@
-=== Clean Space ===
+=== Lime Blog ===
 Contributors: Rico
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 5.0
@@ -6,11 +6,11 @@ Requires PHP: 7.0
 Tested up to: 6.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Copyright: Clean Space Theme, Copyright 2023
+Copyright: Lime Blog Theme, Copyright 2023
 
 == Description ==
 
-Clean Space is a modern theme for blogs. The primary color is customizable.
+Lime Blog is a modern theme for blogs. The primary color is customizable.
 It has a tidy, wide layout with a sidebar, which is right at the edge and 
 doesn't get in the way. The author page is particularly extensive. 
 There is a landing page with a widget area.
@@ -20,9 +20,9 @@ There is a landing page with a widget area.
 1. In your WordPress dashboard, navigate to "Appearance" > "Themes."
 2. Click on "Add New" at the top of the page.
 3. Click on "Upload Theme."
-4. Choose the ZIP file of the Clean Space theme that you downloaded from the official WordPress Themes website.
+4. Choose the ZIP file of the Lime Blog theme that you downloaded from the official WordPress Themes website.
 5. Click on "Install Now."
-6. Activate the Clean Space theme once the installation is complete.
+6. Activate the Lime Blog theme once the installation is complete.
 
 == Changelog ==
 

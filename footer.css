@@ -1,32 +1,32 @@
-#clean_space_footer {
-  background-color: var(--clean_space_primary_variant_darker);
+#lime_blog_footer {
+  background-color: var(--lime_blog_primary_variant_darker);
   padding: 5vw;
   grid-area: footer;
   font-size: clamp(0.6em, 2vw, 1em);
   display: flex;
   justify-content: center;
 }
-#clean_space_footer ul {
+#lime_blog_footer ul {
   padding-left: 0.5em;
   display: flex;
   gap: 2em;
   flex-wrap: wrap;
 }
-#clean_space_footer ul ul {
+#lime_blog_footer ul ul {
   display: block;
 }
-#clean_space_footer ul li {
+#lime_blog_footer ul li {
   list-style: none;
 }
-#clean_space_footer ul li a {
+#lime_blog_footer ul li a {
   font-size: 1.1em;
   color: #cef5f5;
   text-decoration: none;
 }
-#clean_space_footer ul li li {
+#lime_blog_footer ul li li {
   margin-top: 0.5em;
 }
-#clean_space_footer ul li li a {
+#lime_blog_footer ul li li a {
   font-size: 1.3em;
   color: whitesmoke;
   text-decoration: underline;
