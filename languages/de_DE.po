@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-11-19 18:12+0100\n"
-"PO-Revision-Date: 2023-11-19 18:12+0100\n"
+"POT-Creation-Date: 2023-11-19 22:43+0100\n"
+"PO-Revision-Date: 2023-11-19 22:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -76,17 +76,21 @@ msgstr "Letzte Kommentare von"
 msgid "No comments found."
 msgstr "Keine Kommentare gefunden."
 
-#: archive.php:188 home.php:52 search.php:37
+#: archive.php:188 home.php:57 search.php:37
 msgid "« Previous"
 msgstr "« Vorherige"
 
-#: archive.php:200 home.php:64 search.php:49
+#: archive.php:200 home.php:69 search.php:49
 msgid "Next »"
 msgstr "Weiter »"
 
-#: archive.php:207 home.php:41 search.php:58
+#: archive.php:207 home.php:46 search.php:58
 msgid "No posts found."
 msgstr "Keine Beiträge gefunden."
+
+#: archive.php:216 home.php:84 page.php:41 search.php:66 single.php:129
+msgid "Fill the sidebar in the customizer"
+msgstr "Befülle die Sidebar im Customizer"
 
 #: comments.php:15
 msgid "One Comment"
@@ -114,7 +118,7 @@ msgid "Author Page"
 msgstr "Autorseite"
 
 #: customizer-options/author-page-options.php:19
-#: customizer-options/feed-options.php:50
+#: customizer-options/feed-options.php:63
 #: customizer-options/posts-options.php:83
 msgid "Show sidebar"
 msgstr "Zeige Sidebar"
@@ -171,56 +175,60 @@ msgstr "Kommentare Hintergrundfarbe"
 msgid "Feed"
 msgstr "Feed"
 
-#: customizer-options/feed-options.php:20
+#: customizer-options/feed-options.php:19
+msgid "Show landingpage section"
+msgstr "Zeige Landingpage Section"
+
+#: customizer-options/feed-options.php:33
 msgid "Maximum width of the feed"
 msgstr "Maximale Breite des Feeds"
 
-#: customizer-options/feed-options.php:36
+#: customizer-options/feed-options.php:49
 msgid "Cards background color"
 msgstr "Cards Hintergundfarbe"
 
-#: customizer-options/feed-options.php:64
+#: customizer-options/feed-options.php:77
 msgid "Spacing between posts"
 msgstr "Abstand zwischen den Beiträgen"
 
-#: customizer-options/feed-options.php:81
+#: customizer-options/feed-options.php:94
 msgid "Number of words in the snippet"
 msgstr "Anzahl der Wörter im Textausschnitt"
 
-#: customizer-options/feed-options.php:100
+#: customizer-options/feed-options.php:113
 #: customizer-options/posts-options.php:135
 msgid "Show tags"
 msgstr "Zeige Tags"
 
-#: customizer-options/feed-options.php:114
+#: customizer-options/feed-options.php:127
 msgid "Tags border radius"
 msgstr "Tags Rahmenradius"
 
-#: customizer-options/feed-options.php:133
+#: customizer-options/feed-options.php:146
 msgid "Show read more button"
 msgstr "Zeige mehr lesen Button"
 
-#: customizer-options/feed-options.php:146
+#: customizer-options/feed-options.php:159
 msgid "Show comments"
 msgstr "Zeige Kommentare"
 
-#: customizer-options/feed-options.php:160
+#: customizer-options/feed-options.php:173
 msgid "Line height in text snippet"
 msgstr "Zeilenhöhe im Textausschnitt"
 
-#: customizer-options/feed-options.php:178
+#: customizer-options/feed-options.php:191
 msgid "Border radius"
 msgstr "Rahmenradius"
 
-#: customizer-options/feed-options.php:196
+#: customizer-options/feed-options.php:209
 msgid "Padding"
 msgstr "Padding"
 
-#: customizer-options/feed-options.php:214
+#: customizer-options/feed-options.php:227
 msgid "Show image"
 msgstr "Zeige Bild"
 
-#: customizer-options/feed-options.php:228
+#: customizer-options/feed-options.php:241
 msgid "Image radius"
 msgstr "Bildradius"
 
@@ -304,6 +312,10 @@ msgstr "Zeige Autor Details"
 msgid "Show post pagination"
 msgstr "Zeige Postpaginierung"
 
+#: footer.php:11 header.php:78
+msgid "Select a menu in the customizer"
+msgstr "Wähle ein Menü im Customizer"
+
 #: functions.php:90
 msgid "Header Menu"
 msgstr "Header Menü"
@@ -324,7 +336,11 @@ msgstr "Landingpage Widget Area"
 msgid "Skip to main content"
 msgstr "Springe zum Hauptinhalt"
 
-#: home.php:15
+#: home.php:11
+msgid "Fill the landing page in the customizer"
+msgstr "Befülle die Landingpage im Customizer"
+
+#: home.php:20
 msgid "Latest Posts"
 msgstr "Letzte Beiträge"
 

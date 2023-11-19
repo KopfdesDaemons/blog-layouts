@@ -56,24 +56,26 @@
                 echo '<a class="lime_blog_header_logo" href="' . $home_url . '"><img src="' . esc_url($favicon_url) . '" alt="Favicon" /></a>';
             }
 
-            if(get_theme_mod('searchbar', true)) get_search_form(array('button_text' => 's'));
+            if (get_theme_mod('searchbar', true)) get_search_form(array('button_text' => 's'));
             ?>
         </div>
         <?php
-        if (get_theme_mod('header_menu', true)) {?>
+        if (get_theme_mod('header_menu', true)) { ?>
             <button id="lime_blog_header_menu_button" onclick="lime_blog_toggle_menu()" aria-label="<?php echo esc_attr('open menu', 'lime-blog') ?>"><i class="fa-solid fa-bars"></i></button>
-        <?php }?>
+        <?php } ?>
 
 
         <!-- desktop -->
         <?php
-        if (get_theme_mod('header_menu', true)) {
+        if (get_theme_mod('header_menu', true) && has_nav_menu('header-menu')) {
             wp_nav_menu(array(
                 'theme_location' => 'header-menu',
                 'menu_class' => 'lime_blog_header_menu',
-                'container'      => false,
+                'container' => false,
                 'walker' => new lime_blog_menu_walker(),
             ));
+        } else {
+            echo '<div class="lime_blog_header_menu">'. esc_html__('Select a menu in the customizer', 'lime-blog') .'</div>';
         }
         ?>
         <div class="lime_blog_header_content">
@@ -85,7 +87,7 @@
                 echo '<a class="lime_blog_header_logo" href="' . $home_url . '"><img src="' . esc_url($favicon_url) . '" alt="Favicon" /></a>';
             }
 
-            if(get_theme_mod('searchbar', true)) get_search_form(array('button_text' => 's'));
+            if (get_theme_mod('searchbar', true)) get_search_form(array('button_text' => 's'));
             ?>
         </div>
     </header>

@@ -55,6 +55,11 @@ main {
   }
 }
 
+@media only screen and (min-width: 800px) {
+  .home main, .home #lime_blog_sidebar {
+    margin-top: var(--lime_blog_home_margin_to_header);
+  }
+}
 h1,
 h2,
 h3,

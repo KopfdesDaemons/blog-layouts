@@ -125,5 +125,6 @@
             </div>
         </section>
 </main>
-<?php if(get_theme_mod('post_sidebar', true)) get_sidebar(); ?>
+<?php if(get_theme_mod('post_sidebar', true)) get_sidebar(); 
+    if (!is_active_sidebar('my-sidebar')) echo '<aside id="lime_blog_sidebar" class="lime_blog_empty_sidebar"><div class="widget"><p>' . esc_html__('Fill the sidebar in the customizer', 'lime-blog') .'</p></div></aside>';?>
 <?php get_footer(); ?>

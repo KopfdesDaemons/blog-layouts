@@ -1,16 +1,21 @@
 <?php get_header(); ?>
-<section class="lime_blog_landing_page_section">
-    <div class="lime_blog_content_spacer">
-        <?php
-        if (is_active_sidebar('landingpage-widget-area')) {
-            echo '<div id="lime_blog_landingpage_widget_area">';
-            dynamic_sidebar('landingpage-widget-area');
-            echo '</div>';
-        }
-        ?>
-    </div>
-</section>
-<main role="main" <?php if(get_theme_mod('feed_sidebar', true)) echo 'class="lime_blog_has_sidebar"'?>>
+<?php if (get_theme_mod('landingpage_section')) { ?>
+    <section class="lime_blog_landing_page_section">
+        <div class="lime_blog_content_spacer">
+            <?php
+            if (is_active_sidebar('landingpage-widget-area')) {
+                echo '<div id="lime_blog_landingpage_widget_area">';
+                dynamic_sidebar('landingpage-widget-area');
+                echo '</div>';
+            } else {
+                echo '<div>' . esc_html__('Fill the landing page in the customizer', 'lime-blog') .'</div>';
+            }
+            ?>
+
+        </div>
+    </section>
+<?php } ?>
+<main role="main" <?php if (get_theme_mod('feed_sidebar', true)) echo 'class="lime_blog_has_sidebar"' ?>>
     <section class="lime_blog_content_spacer">
         <h2 class="lime_blog_h2_latest_posts"><?php echo esc_html(__('Latest Posts', 'lime-blog')) ?></h2>
         <ul class="lime_blog_feed" id="lime_blog_main_content">
@@ -72,5 +77,13 @@
         ?>
     </section>
 </main>
-<?php if (get_theme_mod('feed_sidebar', true)) get_sidebar(); ?>
+<?php
+if (get_theme_mod('feed_sidebar', true)) {
+    get_sidebar();
+    if (!is_active_sidebar('my-sidebar')) {
+        echo '<aside id="lime_blog_sidebar" class="lime_blog_empty_sidebar"><div class="widget"><p>' . esc_html__('Fill the sidebar in the customizer', 'lime-blog') . '</p></div></aside>';
+    }
+}
+?>
+
 <?php get_footer(); ?>

@@ -7,6 +7,19 @@ function lime_blog_custom_feed($wp_customize)
         'priority' => 30,
     ));
 
+    // Landingpage area
+    $wp_customize->add_setting('landingpage_section', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('landingpage_section', array(
+        'type' => 'checkbox',
+        'label' => __('Show landingpage section', 'lime-blog'),
+        'section' => 'custom_feed',
+    ));
+
     // Maximum width of the feed
     $wp_customize->add_setting('maximum_width_of_the_feed', array(
         'default' => '70',
