@@ -18,7 +18,7 @@
         the_post();
     ?>
         <section class="clean_space_content_spacer" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="clean_space_article">
+            <div class="clean_space_content">
 
                 <div class="clean_space_post_row_1">
                     <!-- Date -->
@@ -55,11 +55,10 @@
                     <?php
                     wp_link_pages(
                         array(
-                            'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html(__('Pages:', 'clean-space')) . '</span>',
+                            'before'         => '<div class="page-links"><span class="page-links-title">' . esc_html__('Pages:', 'clean-space') . '</span>',
                             'after'       => '</div>',
                             'link_before' => '<span class="page-number">',
                             'link_after'  => '</span>',
-                            'next_or_number' => 'number',
                         )
                     );
                     ?>

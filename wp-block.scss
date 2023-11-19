@@ -169,14 +169,14 @@ blockquote {
     padding: 0;
 }
 
-.wp-block-latest-comments {
+.wp-block-latest-comments, .wp-block-comment-template {
     .avatar {
         margin: 0.2em;
+        border-radius: 8px;
     }
 
     .wp-block-latest-comments__comment-meta {
         line-height: 1.2em;
-        // background-color: rgb(85, 86, 90);
         border-radius: 4px;
         transition: background-color 400ms;
 
@@ -185,7 +185,7 @@ blockquote {
         }
     }
 
-    .wp-block-latest-comments__comment-excerpt p {
+    .wp-block-latest-comments__comment-excerpt p, .wp-block-comment-content p {
         max-height: 300px;
         overflow-y: auto;
         margin: 0.3em 0;

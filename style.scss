@@ -141,7 +141,6 @@ img {
 
 iframe {
     max-width: 100%;
-    height: auto;
 }
 
 .clean_space_feed {
@@ -324,5 +323,57 @@ input[type=submit] {
     img {
         width: 95%;
         height: auto;
+    }
+}
+
+.clean_space_content {
+    width: 100%;
+
+    >article {
+        background-color: var(--clean_space_background_color_posts);
+
+        .wp-block-columns {
+            margin: 1em 0 0 0;
+    
+            p {
+                margin: 0;
+            }
+        }
+    
+        li {
+            margin: 3px;
+        }
+    
+        .wp-caption {
+            font-size: 0.8em;
+            font-style: italic;
+        }
+    
+        figure {
+            margin: 0;
+        }
+    
+        img {
+            margin: 0.6em 0;
+        }
+    
+        $ImageSpacing: 1.5em;
+        $ImageSpacingButtom: 1em;
+    
+        .alignleft {
+            float: left;
+            margin: 0 $ImageSpacing $ImageSpacingButtom 0;
+        }
+    
+        .alignright {
+            float: right;
+            margin: 0 0 $ImageSpacingButtom $ImageSpacing;
+        }
+    
+        .aligncenter {
+            clear: both;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }

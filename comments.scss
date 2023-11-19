@@ -27,7 +27,7 @@
     }
 
     .comment-content {
-        background-color: #1d2027;
+        background-color: var(--clean_space_comments_background_color);
         padding: 1em;
         margin: 1em 0.5em;
         border-radius: 4px;
@@ -42,7 +42,7 @@
 
     .bypostauthor {
         .url {
-            background-color: #0f01cf;
+            background-color: var(--clean_space_primary_color);
             border-radius: 8px;
             padding: 0.2em;
             color: black;
@@ -75,7 +75,7 @@
         font-size: 1.3em;
 
         img {
-            border-radius: 3em;
+            border-radius: 8px;
         }
 
         .url {

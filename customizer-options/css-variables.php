@@ -72,6 +72,7 @@ $clean_space_background_variant_darker = "hsl($primary_hue, " . (min(100, $satur
         --clean_space_tag_color: <?php echo esc_attr(get_theme_mod('tags_color', '#303030')) ?>;
         --clean_space_font_color: <?php echo esc_attr(get_theme_mod('font_color', '#eeeeee')) ?>;
         --clean_space_body_font: <?php echo esc_attr(get_theme_mod('body_font', 'Fragment Mono')) ?>;
+        --clean_space_comments_background_color: <?php echo esc_attr(get_theme_mod('comments_background_color', '#1d2027')) ?>;
 
         --clean_space_header_menu_font_size: <?php echo esc_attr(get_theme_mod('header_menu_font_size_setting', '14')) . 'px;'
                                                 ?>;

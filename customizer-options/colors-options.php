@@ -55,5 +55,17 @@ function clean_space_custom_colors($wp_customize)
         'section' => 'custom_theme_colors',
         'settings' => 'tags_color'
     )));
+
+    // Comments Background color
+    $wp_customize->add_setting('comments_background_color', array(
+        'default' => '#1d2027',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'comments_background_color', array(
+        'label' => __('Comments background color', 'clean-space'),
+        'section' => 'custom_theme_colors',
+        'settings' => 'comments_background_color'
+    )));
 }
 add_action('customize_register', 'clean_space_custom_colors');
