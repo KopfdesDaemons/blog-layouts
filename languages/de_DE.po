@@ -1,0 +1,341 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-11-19 17:13+0100\n"
+"PO-Revision-Date: 2023-11-19 17:17+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e;esc_html__;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:7
+msgid "File not found"
+msgstr "Datei nicht gefunden."
+
+#: 404.php:10
+msgid "Go to the home page"
+msgstr "Gehe zur Startseite"
+
+#: archive.php:14 archive.php:16 archive.php:18
+msgid "Archive for"
+msgstr "Archive für"
+
+#: archive.php:20
+msgid "Archive"
+msgstr "Archive"
+
+#: archive.php:65
+msgid "Role"
+msgstr "Rolle"
+
+#: archive.php:78
+msgid "Registration date"
+msgstr "Registrierungsdatum"
+
+#: archive.php:85
+msgid "Number of posts"
+msgstr "Anzahl der Beiträge"
+
+#: archive.php:95 customizer-options/posts-options.php:6
+msgid "Posts"
+msgstr "Beiträge"
+
+#: archive.php:99 template-parts/post-card.php:25
+msgid "Comments"
+msgstr "Kommentare"
+
+#: archive.php:107
+#, php-format
+msgid "About %s:"
+msgstr "Über %s:"
+
+#: archive.php:111
+msgid "Website"
+msgstr "Webseite"
+
+#: archive.php:137
+msgid "Last comments from"
+msgstr "Letzte Kommentare von"
+
+#: archive.php:157
+msgid "No comments found."
+msgstr "Keine Kommentare gefunden."
+
+#: archive.php:188 home.php:52 search.php:37
+msgid "« Previous"
+msgstr "« Vorherige"
+
+#: archive.php:200 home.php:64 search.php:49
+msgid "Next »"
+msgstr "Weiter »"
+
+#: archive.php:207 home.php:41 search.php:58
+msgid "No posts found."
+msgstr "Keine Beiträge gefunden."
+
+#: comments.php:15
+msgid "One Comment"
+msgstr "Ein Kommentar"
+
+#: comments.php:17
+#, php-format
+msgid "%d Comments"
+msgstr "%d Kommentare"
+
+#: comments.php:34
+msgid "Older Comments"
+msgstr "Ältere Kommentare"
+
+#: comments.php:35
+msgid "Newer Comments"
+msgstr "Neuere Kommentare"
+
+#: comments.php:42
+msgid "Comments are closed."
+msgstr "Kommentare sind geschlossen."
+
+#: customizer-options/author-page-options.php:6
+msgid "Author Page"
+msgstr "Autorseite"
+
+#: customizer-options/author-page-options.php:19
+#: customizer-options/feed-options.php:50
+#: customizer-options/posts-options.php:83
+msgid "Show sidebar"
+msgstr "Zeige Sidebar"
+
+#: customizer-options/author-page-options.php:32
+msgid "Show recent comments"
+msgstr "Zeige letzte Kommentare"
+
+#: customizer-options/author-page-options.php:45
+msgid "Show author role"
+msgstr "Zeige Autorenrolle"
+
+#: customizer-options/author-page-options.php:58
+msgid "Show registration date"
+msgstr "Zeige Registrierungsdatum"
+
+#: customizer-options/author-page-options.php:71
+msgid "Show number of posts"
+msgstr "Zeige Anzahl der Beiträge"
+
+#: customizer-options/author-page-options.php:84
+msgid "Show author website"
+msgstr "Zeige Autorenwebseite"
+
+#: customizer-options/author-page-options.php:98
+msgid "Image size"
+msgstr "Bildgröße"
+
+#: customizer-options/colors-options.php:7
+msgid "Colors"
+msgstr "Farben"
+
+#: customizer-options/colors-options.php:18
+msgid "Primary color"
+msgstr "Primärfarbe"
+
+#: customizer-options/colors-options.php:30
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+#: customizer-options/colors-options.php:42
+msgid "Widget blocks sidebar background color"
+msgstr "Widget Blocks Sidebar Hintergrundfarbe"
+
+#: customizer-options/colors-options.php:54
+msgid "Tags and chips color"
+msgstr "Tags und Chips Farbe"
+
+#: customizer-options/colors-options.php:66
+msgid "Comments background color"
+msgstr "Kommentare Hintergrundfarbe"
+
+#: customizer-options/feed-options.php:6
+msgid "Feed"
+msgstr "Feed"
+
+#: customizer-options/feed-options.php:20
+msgid "Maximum width of the feed"
+msgstr "Maximale Breite des Feeds"
+
+#: customizer-options/feed-options.php:36
+msgid "Cards background color"
+msgstr "Cards Hintergundfarbe"
+
+#: customizer-options/feed-options.php:64
+msgid "Spacing between posts"
+msgstr "Abstand zwischen den Beiträgen"
+
+#: customizer-options/feed-options.php:81
+msgid "Number of words in the snippet"
+msgstr "Anzahl der Wörter im Textausschnitt"
+
+#: customizer-options/feed-options.php:100
+#: customizer-options/posts-options.php:135
+msgid "Show tags"
+msgstr "Zeige Tags"
+
+#: customizer-options/feed-options.php:114
+msgid "Tags border radius"
+msgstr "Tags Rahmenradius"
+
+#: customizer-options/feed-options.php:133
+msgid "Show read more button"
+msgstr "Zeige mehr lesen Button"
+
+#: customizer-options/feed-options.php:146
+msgid "Show comments"
+msgstr "Zeige Kommentare"
+
+#: customizer-options/feed-options.php:160
+msgid "Line height in text snippet"
+msgstr "Zeilenhöhe im Textausschnitt"
+
+#: customizer-options/feed-options.php:178
+msgid "Border radius"
+msgstr "Rahmenradius"
+
+#: customizer-options/feed-options.php:196
+msgid "Padding"
+msgstr "Padding"
+
+#: customizer-options/feed-options.php:214
+msgid "Show image"
+msgstr "Zeige Bild"
+
+#: customizer-options/feed-options.php:228
+msgid "Image radius"
+msgstr "Bildradius"
+
+#: customizer-options/fonts-options.php:6
+msgid "Font"
+msgstr "Schrift"
+
+#: customizer-options/fonts-options.php:7
+msgid ""
+"All fonts are hosted locally. Consent according to the GDPR is not required "
+"for this theme (cookie banner)."
+msgstr ""
+"Alle Schriften werden lokal gehostet. Eine Einwilligung gemäß der DSGVO ist "
+"für dieses Theme nicht erforderlich (Cookie Banner)"
+
+#: customizer-options/fonts-options.php:19
+msgid "Main text font"
+msgstr "Hauptschrift"
+
+#: customizer-options/fonts-options.php:50
+msgid "Font color"
+msgstr "Schriftfarbe"
+
+#: customizer-options/header-options.php:6
+msgid "Header"
+msgstr "Header"
+
+#: customizer-options/header-options.php:19
+msgid "Show menu in header"
+msgstr "Zeige Menü im Header"
+
+#: customizer-options/header-options.php:32
+msgid "Show logo with link to home page"
+msgstr "Zeige Logo mit Link zur Startseite"
+
+#: customizer-options/header-options.php:45
+msgid "Show search bar"
+msgstr "Zeige Suchleiste"
+
+#: customizer-options/header-options.php:63
+msgid "Menu font size"
+msgstr "Menü Schriftgröße"
+
+#: customizer-options/posts-options.php:8
+msgid "Settings of the individual posts."
+msgstr "Einstellungen der einzelnen Beiträge."
+
+#: customizer-options/posts-options.php:21
+msgid "Maximum hero width"
+msgstr "Maximale Hero Breite"
+
+#: customizer-options/posts-options.php:39
+msgid "Show hero gradient background"
+msgstr "Zeige Hero Farbverlaufhintergrund"
+
+#: customizer-options/posts-options.php:53
+msgid "Maximum width of posts"
+msgstr "Maximale Breite der Beiträge"
+
+#: customizer-options/posts-options.php:69
+msgid "Posts background color"
+msgstr "Beiträge Hintergundfarbe"
+
+#: customizer-options/posts-options.php:96
+msgid "Show post image"
+msgstr "Zeige Beitragsbild"
+
+#: customizer-options/posts-options.php:109
+msgid "Show date"
+msgstr "Zeige Datum"
+
+#: customizer-options/posts-options.php:122
+msgid "Show categories"
+msgstr "Zeige Kategorien"
+
+#: customizer-options/posts-options.php:148
+msgid "Show author details"
+msgstr "Zeige Autor Details"
+
+#: customizer-options/posts-options.php:161
+msgid "Show post pagination"
+msgstr "Zeige Postpaginierung"
+
+#: functions.php:90
+msgid "Header Menu"
+msgstr "Header Menü"
+
+#: functions.php:91
+msgid "Footer Menu"
+msgstr "Footer Menü"
+
+#: functions.php:100
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:113
+msgid "Landingpage Widget Area"
+msgstr "Landingpage Widget Area"
+
+#: header.php:47
+msgid "Skip to main content"
+msgstr "Springe zum Hauptinhalt"
+
+#: home.php:15
+msgid "Latest Posts"
+msgstr "Letzte Beiträge"
+
+#: page.php:20 single.php:58
+msgid "Pages:"
+msgstr "Seiten:"
+
+#: search.php:9
+#, php-format
+msgid "Search results for \"%s\""
+msgstr "Suchergebnisse für \"%s\""
+
+#: single.php:111
+msgid "&laquo; Previous Post"
+msgstr "&laquo; Vorheriger Beitrag"
+
+#: single.php:113
+msgid "Next Post &raquo;"
+msgstr "Nächster Beitrag &raquo;"
+
+#: template-parts/post-card.php:31
+msgid "read more"
+msgstr "mehr lesen"

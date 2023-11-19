@@ -6,7 +6,7 @@
 
             if (have_posts()) {
                 $query = get_search_query();
-                echo '<h1 class="clean_space_search_headline">' . sprintf(esc_html__('Suchergebnisse für "%s"', 'clean-space'), esc_html($query)) . '</h1>';
+                echo '<h1 class="clean_space_search_headline">' . sprintf(esc_html__('Search results for "%s"', 'clean-space'), esc_html($query)) . '</h1>';
 
                 while (have_posts()) {
                     the_post(); ?>

@@ -53,55 +53,53 @@ $clean_space_primary_variant_much_brighter = "hsl($primary_hue, " . (min(100, $s
 $clean_space_background_inputfield = "hsl($primary_hue, " . (min(100, $saturation + 45)) . "%, " . (min(100, $lightness + 45)) . "%)";
 $clean_space_background_variant = "hsl($primary_hue, " . (min(100, $saturation + 45)) . "%, " . (min(100, $lightness + 45)) . "%)";
 $clean_space_background_variant_darker = "hsl($primary_hue, " . (min(100, $saturation + 35)) . "%, " . (min(100, $lightness + 35)) . "%)";
+
+$clean_space_search_row = (get_theme_mod('searchbar', true) || get_theme_mod('logo', true));
+$clean_space_header_menu = get_theme_mod('header_menu', true);
+$clean_space_margin_to_header = !$clean_space_search_row || !$clean_space_header_menu ? '5em' : '10em';
+
+$clean_space_hero_background = get_theme_mod('hero_background', true);
 ?>
 
 <style>
     :root {
-        --clean_space_background_color: <?php echo esc_attr(get_theme_mod('body_background_color', '#2d2d31')) ?>;
+        --clean_space_background_color: <?php echo esc_attr(get_theme_mod('body_background_color', '#2d2d31')); ?>;
 
-        --clean_space_primary_color: <?php echo $clean_space_primary_color ?>;
-        --clean_space_primary_variant_darker: <?php echo $clean_space_primary_variant_darker ?>;
-        --clean_space_primary_variant_much_darker: <?php echo $clean_space_primary_variant_much_darker ?>;
-        --clean_space_primary_variant_brighter: <?php echo $clean_space_primary_variant_brighter ?>;
-        --clean_space_primary_variant_much_brighter: <?php echo $clean_space_primary_variant_much_brighter ?>;
-        --clean_space_element_background_inputfeld: <?php echo $clean_space_background_inputfield ?>;
-        --clean_space_element_background_variant: <?php echo $clean_space_background_variant ?>;
-        --clean_space_element_background_variant_darker: <?php echo $clean_space_background_variant_darker ?>;
+        /* Color Settings */
+        --clean_space_primary_color: <?php echo $clean_space_primary_color; ?>;
+        --clean_space_primary_variant_darker: <?php echo $clean_space_primary_variant_darker; ?>;
+        --clean_space_primary_variant_much_darker: <?php echo $clean_space_primary_variant_much_darker; ?>;
+        --clean_space_primary_variant_brighter: <?php echo $clean_space_primary_variant_brighter; ?>;
+        --clean_space_primary_variant_much_brighter: <?php echo $clean_space_primary_variant_much_brighter; ?>;
+        --clean_space_element_background_inputfeld: <?php echo $clean_space_background_inputfield; ?>;
+        --clean_space_element_background_variant: <?php echo $clean_space_background_variant; ?>;
+        --clean_space_element_background_variant_darker: <?php echo $clean_space_background_variant_darker; ?>;
 
-        --clean_space_background_color_sidebar_widget_blocks: <?php echo esc_attr(get_theme_mod('body_background_color_sidebar_widget_blocks', '#303030')) ?>;
-        --clean_space_tag_color: <?php echo esc_attr(get_theme_mod('tags_color', '#303030')) ?>;
-        --clean_space_font_color: <?php echo esc_attr(get_theme_mod('font_color', '#eeeeee')) ?>;
-        --clean_space_body_font: <?php echo esc_attr(get_theme_mod('body_font', 'Fragment Mono')) ?>;
-        --clean_space_comments_background_color: <?php echo esc_attr(get_theme_mod('comments_background_color', '#1d2027')) ?>;
+        --clean_space_background_color_sidebar_widget_blocks: <?php echo esc_attr(get_theme_mod('body_background_color_sidebar_widget_blocks', '#303030')); ?>;
+        --clean_space_tag_color: <?php echo esc_attr(get_theme_mod('tags_color', '#303030')); ?>;
+        --clean_space_font_color: <?php echo esc_attr(get_theme_mod('font_color', '#eeeeee')); ?>;
+        --clean_space_body_font: <?php echo esc_attr(get_theme_mod('body_font', 'Fragment Mono')); ?>;
+        --clean_space_comments_background_color: <?php echo esc_attr(get_theme_mod('comments_background_color', '#1d2027')); ?>;
 
-        --clean_space_header_menu_font_size: <?php echo esc_attr(get_theme_mod('header_menu_font_size_setting', '14')) . 'px;'
-                                                ?>;
-        --clean_space_margin_to_header: 10em;
-
+        /* Header Settings */
+        --clean_space_header_menu_font_size: <?php echo esc_attr(get_theme_mod('header_menu_font_size_setting', '14')) . 'px'; ?>;
+        --clean_space_margin_to_header: <?php echo $clean_space_margin_to_header; ?>;
+        
         /* Post Settings */
-        --clean_space_background_color_posts: <?php echo esc_attr(get_theme_mod('background_color_posts', ''))
-                                                ?>;
+        --clean_space_background_color_posts: <?php echo esc_attr(get_theme_mod('background_color_posts', '')); ?>;
         --clean_space_max_posts_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_posts', '70')) . 'em'; ?>;
         --clean_space_max_hero_width: <?php echo esc_attr(get_theme_mod('maximum_hero_width', '70')) . 'em'; ?>;
         --clean_space_gradient: linear-gradient(90deg, var(--clean_space_primary_variant_darker) 0%, var(--clean_space_primary_color) 75%, var(--clean_space_primary_variant_darker) 100%);
-        --clean_space_hero_background: <?php echo get_theme_mod('hero_background', true) ? 'var(--clean_space_gradient)' : 'none'; ?>;
-
+        --clean_space_hero_background: <?php echo $clean_space_hero_background ? 'var(--clean_space_gradient)' : 'none'; ?>;
 
         /* Feed Setting */
-        --clean_space_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_height', '20')) . 'px;';
-                                                    ?>;
-        --clean_space_feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius', '12')) . 'px;';
-                                                    ?>;
-        --clean_space_feed_post_card_padding: <?php echo esc_attr(get_theme_mod('feed_post_card_padding', '1')) . 'em;';
-                                                ?>;
-        --clean_space_feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image', '6')) . 'px;';
-                                                            ?>;
-        --clean_space_feed_post_card_spacing: <?php echo esc_attr(get_theme_mod('feed_post_card_spacing', '3')) . 'em;';
-                                                ?>;
-        --clean_space_tags_border_radius: <?php echo esc_attr(get_theme_mod('tags_border_radius', '4')) . 'px;';
-                                            ?>;
-        --clean_space_max_feed_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_the_feed', '70')) . 'em';
-                                        ?>;
-        --clean_space_feed_post_card_background_color: <?php echo esc_attr(get_theme_mod('feed_post_card_color', '#000000')) ?>;
+        --clean_space_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_height', '20')) . 'px'; ?>;
+        --clean_space_feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius', '12')) . 'px'; ?>;
+        --clean_space_feed_post_card_padding: <?php echo esc_attr(get_theme_mod('feed_post_card_padding', '1')) . 'em'; ?>;
+        --clean_space_feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image', '6')) . 'px'; ?>;
+        --clean_space_feed_post_card_spacing: <?php echo esc_attr(get_theme_mod('feed_post_card_spacing', '3')) . 'em'; ?>;
+        --clean_space_tags_border_radius: <?php echo esc_attr(get_theme_mod('tags_border_radius', '4')) . 'px'; ?>;
+        --clean_space_max_feed_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_the_feed', '70')) . 'em'; ?>;
+        --clean_space_feed_post_card_background_color: <?php echo esc_attr(get_theme_mod('feed_post_card_color', '#000000')); ?>;
     }
 </style>

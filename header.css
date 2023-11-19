@@ -90,7 +90,7 @@
 }
 #clean_space_header .clean_space_header_mobile_content,
 #clean_space_header .clean_space_header_content {
-  height: 3.5em;
+  max-height: 3.5em;
   padding: 1em;
   max-width: 50em;
   display: flex;
@@ -100,6 +100,7 @@
 #clean_space_header .clean_space_header_mobile_content .clean_space_header_logo,
 #clean_space_header .clean_space_header_content .clean_space_header_logo {
   display: flex;
+  width: 4em;
 }
 #clean_space_header .clean_space_header_mobile_content .clean_space_header_logo img,
 #clean_space_header .clean_space_header_content .clean_space_header_logo img {
