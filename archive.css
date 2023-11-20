@@ -1,3 +1,7 @@
+.archive main {
+  min-height: 80vh;
+}
+
 .author .lime_blog_post_author_headline_section {
   grid-area: landingpagesection;
   display: flex;

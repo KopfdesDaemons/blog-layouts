@@ -1,25 +1,47 @@
-<?php get_header(); ?>
+<?php
+    get_header();
+    $lime_blog_side_bar;
+    $lime_blog_archive_title = esc_html__('Archive', 'lime-blog');
+    $lime_blog_archive_post_list_style = 'cards';
 
-<!-- header with headline and gradient -->
+    if (is_author()) {
+        $lime_blog_side_bar = get_theme_mod('author_page_sidebar', true);
+        $lime_blog_archive_title = get_the_author();
+        $lime_blog_archive_post_list_style = get_theme_mod('author_posts_style', 'cards');
+    } elseif (is_tag()) {
+        $lime_blog_side_bar = get_theme_mod('tags_sidebar', true);
+        $lime_blog_archive_title = single_tag_title('', false);
+        $lime_blog_archive_post_list_style = get_theme_mod('tag_list_style', 'cards');
+    } elseif (is_category()) {
+        $lime_blog_side_bar = get_theme_mod('category_sidebar', true);
+        $lime_blog_archive_title = single_cat_title('', false);
+        $lime_blog_archive_post_list_style = get_theme_mod('category_list_style', 'cards');
+    } elseif (is_date()) {
+        $lime_blog_side_bar = get_theme_mod('date_sidebar', true);
+        if (is_day()) {
+            $lime_blog_archive_title = esc_html__('Archive for', 'lime-blog') . ' ' . get_the_date();
+        } elseif (is_month()) {
+            $lime_blog_archive_title = esc_html__('Archive for', 'lime-blog') . ' ' . get_the_date('F Y');
+        } elseif (is_year()) {
+            $lime_blog_archive_title = esc_html__('Archive for', 'lime-blog') . ' ' . get_the_date('Y');
+        }
+        $lime_blog_archive_post_list_style = get_theme_mod('date_list_style', 'cards');
+    } elseif (is_search()) {
+        $lime_blog_side_bar = get_theme_mod('search_sidebar', true);
+        $lime_blog_archive_post_list_style = get_theme_mod('searchresults_style', 'cards');
+    } elseif (is_archive()) {
+        $lime_blog_side_bar = get_theme_mod('archive_sidebar', true);
+    } else {
+        $lime_blog_side_bar = true;
+    }
+?>
+
+
 <?php if (!is_author()) { ?>
     <section class="lime_blog_hero">
         <header>
             <h1>
-                <?php
-                if (is_category()) {
-                    echo single_cat_title(); // Category name
-                } elseif (is_tag()) {
-                    echo single_tag_title(); // Tag
-                } elseif (is_day()) {
-                    echo esc_html__('Archive for', 'lime-blog') . ' ' . get_the_date(); // Archive for day
-                } elseif (is_month()) {
-                    echo esc_html__('Archive for', 'lime-blog') . ' ' . get_the_date('F Y'); // Archive for month
-                } elseif (is_year()) {
-                    echo esc_html__('Archive for', 'lime-blog') . ' ' . get_the_date('Y'); // Archive for year
-                } else {
-                    echo esc_html__('Archive', 'lime-blog'); // default
-                }
-                ?>
+                <?php echo $lime_blog_archive_title; ?>
             </h1>
         </header>
     </section>
@@ -36,9 +58,7 @@
     $author_roles = get_the_author_meta('roles');
 
     $user_registered = get_the_author_meta('user_registered');
-    // Convert the date to a timestamp
     $timestamp = strtotime($user_registered);
-    // Format the date using date_i18n() into the national representation
     $formatted_date = date_i18n(get_option('date_format'), $timestamp);
 
     // Avatar
@@ -66,24 +86,24 @@
                             </li>
                         <?php } ?>
                         <?php if (get_theme_mod('author_registration_date', true)) { ?>
-                        <li>
-                            <div class="lime_blog_author_stats_data">
-                                <?php
-                                $registration_date = get_the_author_meta('user_registered', $author_id);
-                                $formatted_date = date_i18n('d.m.Y', strtotime($registration_date));
-                                ?>
-                                <time datetime="<?php echo date('Y-m-d', strtotime($registration_date)); ?>"><?php echo $formatted_date; ?></time>
-                            </div>
-                            <label class="lime_blog_author_stats_label">
-                                <?php echo esc_html(__('Registration date', 'lime-blog')); ?>
-                            </label>
-                        </li>
+                            <li>
+                                <div class="lime_blog_author_stats_data">
+                                    <?php
+                                    $registration_date = get_the_author_meta('user_registered', $author_id);
+                                    $formatted_date = date_i18n('d.m.Y', strtotime($registration_date));
+                                    ?>
+                                    <time datetime="<?php echo date('Y-m-d', strtotime($registration_date)); ?>"><?php echo $formatted_date; ?></time>
+                                </div>
+                                <label class="lime_blog_author_stats_label">
+                                    <?php echo esc_html(__('Registration date', 'lime-blog')); ?>
+                                </label>
+                            </li>
                         <?php } ?>
                         <?php if (get_theme_mod('author_number_of_posts', true)) { ?>
-                        <li>
-                            <div class="lime_blog_author_stats_data"> <?php echo $author_posts_count ?></div>
-                            <label class="lime_blog_author_stats_label"><?php echo esc_html(__('Number of posts', 'lime-blog')) ?></label>
-                        </li>
+                            <li>
+                                <div class="lime_blog_author_stats_data"> <?php echo $author_posts_count ?></div>
+                                <label class="lime_blog_author_stats_label"><?php echo esc_html(__('Number of posts', 'lime-blog')) ?></label>
+                            </li>
                         <?php } ?>
                     </ul>
                 </div>
@@ -106,7 +126,7 @@
                 <div class="lime_blog_author_bio">
                     <h2><?php printf(esc_html__('About %s:', 'lime-blog'), get_the_author()); ?></h2>
                     <p><?php echo $author_description; ?></p>
-                    <?php if (get_theme_mod('author_website', true) && $author_website){ ?>
+                    <?php if (get_theme_mod('author_website', true) && $author_website) { ?>
                         <a class="lime_blog_author_website" href="<?php echo $author_website; ?>" target="_blank">🌐
                             <?php echo esc_html(__('Website', 'lime-blog')) ?></a>
                     <?php } ?>
@@ -116,10 +136,6 @@
 
     </section>
 <?php } ?>
-
-<?php
-$lime_blog_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', true));
-?>
 
 <main role="main" <?php if ($lime_blog_side_bar) echo 'class="lime_blog_has_sidebar"' ?>>
     <section class="lime_blog_content_spacer lime_blog_content_spacer_feed lime_blog_content_and_sidebar_grid">
@@ -160,25 +176,17 @@ $lime_blog_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', true)
                     </ol>
                 <?php } ?>
                 </div>
-                <!-- Show latest comments -->
 
                 <?php
                 if (have_posts()) {
-                    echo '<div class="lime_blog_feed">';
-                    while (have_posts()) {
-                        the_post();
-                        $post_classes = array('lime_blog_post_card lime_blog_shadow');
-                        if (is_sticky()) {
-                            $post_classes[] = 'lime_blog_sticky_post';
-                        }
+                    global $wp_query;
+                    $wp_query->set('paged', 1);
 
-                        // Show cards
-                        require_once get_template_directory() . '/template-parts/post-card.php';
-                        echo lime_blog_display_post_card($post_classes);
-                    }
+                    echo '<div class="lime_blog_feed">';
+                    require_once get_template_directory() . '/template-parts/post-list.php';
+                    echo lime_blog_display_post_list($wp_query, $lime_blog_archive_post_list_style);
 
                     // Pagination 
-                    global $wp_query;
                     $total_pages = $wp_query->max_num_pages;
                     if ($total_pages > 1) {
                         echo '<div class="lime_blog_pagination lime_blog_shadow">';
@@ -214,6 +222,6 @@ $lime_blog_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', true)
 <?php
 if ($lime_blog_side_bar) {
     get_sidebar();
-    if (!is_active_sidebar('my-sidebar')) echo '<aside id="lime_blog_sidebar" class="lime_blog_empty_sidebar"><div class="widget"><p>' . esc_html__('Fill the sidebar in the customizer', 'lime-blog') .'</p></div></aside>';
+    if (!is_active_sidebar('my-sidebar')) echo '<aside id="lime_blog_sidebar" class="lime_blog_empty_sidebar"><div class="widget"><p>' . esc_html__('Fill the sidebar in the customizer', 'lime-blog') . '</p></div></aside>';
 }
 get_footer(); ?>

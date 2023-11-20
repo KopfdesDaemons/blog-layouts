@@ -30,17 +30,9 @@
             $query = new WP_Query($args);
 
             if ($query->have_posts()) {
-                while ($query->have_posts()) {
-                    $query->the_post();
-                    $post_classes = array('lime_blog_post_card lime_blog_shadow');
-                    if (is_sticky()) {
-                        $post_classes[] = 'lime_blog_sticky_post';
-                    }
-
-                    // Show Cards
-                    require_once get_template_directory() . '/template-parts/post-card.php';
-                    echo lime_blog_display_post_card($post_classes);
-                }
+                $searchresults_style = get_theme_mod('feed_style', 'cards');
+                require_once get_template_directory() . '/template-parts/post-list.php';
+                echo lime_blog_display_post_list($query, $searchresults_style);
             } else {
                 echo esc_html__('No posts found.', 'lime-blog');
             }

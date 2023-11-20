@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-11-20 16:34+0100\n"
-"PO-Revision-Date: 2023-11-20 16:35+0100\n"
+"POT-Creation-Date: 2023-11-20 22:49+0100\n"
+"PO-Revision-Date: 2023-11-20 22:50+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -31,64 +31,64 @@ msgstr ""
 msgid "Go to the home page"
 msgstr "Gehe zur Startseite"
 
-#: archive.php:14 archive.php:16 archive.php:18
-msgid "Archive for"
-msgstr "Archive für"
-
-#: archive.php:20
+#: archive.php:4
 msgid "Archive"
 msgstr "Archive"
 
-#: archive.php:65
+#: archive.php:22 archive.php:24 archive.php:26
+msgid "Archive for"
+msgstr "Archive für"
+
+#: archive.php:85
 msgid "Role"
 msgstr "Rolle"
 
-#: archive.php:78
+#: archive.php:98
 msgid "Registration date"
 msgstr "Registrierungsdatum"
 
-#: archive.php:85
+#: archive.php:105
 msgid "Number of posts"
 msgstr "Anzahl der Beiträge"
 
-#: archive.php:95 customizer-options/posts-options.php:6
+#: archive.php:115 customizer-options/posts-options.php:6
 msgid "Posts"
 msgstr "Beiträge"
 
-#: archive.php:99 template-parts/post-card.php:25
+#: archive.php:119 template-parts/post-card.php:25
 msgid "Comments"
 msgstr "Kommentare"
 
-#: archive.php:107
+#: archive.php:127
 #, php-format
 msgid "About %s:"
 msgstr "Über %s:"
 
-#: archive.php:111
+#: archive.php:131
 msgid "Website"
 msgstr "Webseite"
 
-#: archive.php:137
+#: archive.php:153
 msgid "Last comments from"
 msgstr "Letzte Kommentare von"
 
-#: archive.php:157
+#: archive.php:173
 msgid "No comments found."
 msgstr "Keine Kommentare gefunden."
 
-#: archive.php:188 home.php:57 search.php:37
+#: archive.php:196 home.php:48 search.php:29
 msgid "« Previous"
 msgstr "« Vorherige"
 
-#: archive.php:200 home.php:69 search.php:49
+#: archive.php:208 home.php:60 search.php:41
 msgid "Next »"
 msgstr "Weiter »"
 
-#: archive.php:207 home.php:46 search.php:58
+#: archive.php:215 home.php:37 search.php:50
 msgid "No posts found."
 msgstr "Keine Beiträge gefunden."
 
-#: archive.php:216 home.php:84 page.php:41 search.php:66 single.php:129
+#: archive.php:225 home.php:75 page.php:43 search.php:58 single.php:131
 msgid "Fill the sidebar in the customizer"
 msgstr "Befülle die Sidebar im Customizer"
 
@@ -118,8 +118,13 @@ msgid "Author Page"
 msgstr "Autorseite"
 
 #: customizer-options/author-page-options.php:19
-#: customizer-options/feed-options.php:88
+#: customizer-options/category-list-options.php:20
+#: customizer-options/date-list-options.php:20
+#: customizer-options/feed-options.php:91
+#: customizer-options/pages-options.php:39
 #: customizer-options/posts-options.php:83
+#: customizer-options/searchresults-options.php:20
+#: customizer-options/tag-list-options.php:20
 msgid "Show sidebar"
 msgstr "Zeige Sidebar"
 
@@ -143,9 +148,78 @@ msgstr "Zeige Anzahl der Beiträge"
 msgid "Show author website"
 msgstr "Zeige Autorenwebseite"
 
-#: customizer-options/author-page-options.php:98
+#: customizer-options/author-page-options.php:97
 msgid "Image size"
 msgstr "Bildgröße"
+
+#: customizer-options/author-page-options.php:117
+msgid "Posts list style"
+msgstr "Beitragsliste Style"
+
+#: customizer-options/cards-options.php:6
+msgid "Cards"
+msgstr "Cards"
+
+#: customizer-options/cards-options.php:17
+msgid "Cards background color"
+msgstr "Cards Hintergundfarbe"
+
+#: customizer-options/cards-options.php:32
+msgid "Spacing between posts"
+msgstr "Abstand zwischen den Beiträgen"
+
+#: customizer-options/cards-options.php:49
+msgid "Number of words in the snippet"
+msgstr "Anzahl der Wörter im Textausschnitt"
+
+#: customizer-options/cards-options.php:68
+#: customizer-options/posts-options.php:135
+msgid "Show tags"
+msgstr "Zeige Tags"
+
+#: customizer-options/cards-options.php:81
+msgid "Tags border radius"
+msgstr "Tags Rahmenradius"
+
+#: customizer-options/cards-options.php:100
+msgid "Show read more button"
+msgstr "Zeige mehr lesen Button"
+
+#: customizer-options/cards-options.php:113
+msgid "Show comments"
+msgstr "Zeige Kommentare"
+
+#: customizer-options/cards-options.php:127
+msgid "Line height in text snippet"
+msgstr "Zeilenhöhe im Textausschnitt"
+
+#: customizer-options/cards-options.php:145
+msgid "Border radius"
+msgstr "Rahmenradius"
+
+#: customizer-options/cards-options.php:163
+msgid "Padding"
+msgstr "Padding"
+
+#: customizer-options/cards-options.php:181
+msgid "Show image"
+msgstr "Zeige Bild"
+
+#: customizer-options/cards-options.php:194
+msgid "Image radius"
+msgstr "Bildradius"
+
+#: customizer-options/category-list-options.php:6
+msgid "Category Results List"
+msgstr "Kategorie Ergebnisliste"
+
+#: customizer-options/category-list-options.php:8
+msgid "Settings for the results when calling a category."
+msgstr "Einstellungen für die Ergebnisse beim Aufruf einer Kategorie."
+
+#: customizer-options/category-list-options.php:35
+msgid "Category results style"
+msgstr "Kategorie Ergebnisliste Style"
 
 #: customizer-options/colors-options.php:7
 msgid "Colors"
@@ -156,6 +230,7 @@ msgid "Primary color"
 msgstr "Primärfarbe"
 
 #: customizer-options/colors-options.php:30
+#: customizer-options/pages-options.php:50
 msgid "Background color"
 msgstr "Hintergrundfarbe"
 
@@ -170,6 +245,18 @@ msgstr "Tags und Chips Farbe"
 #: customizer-options/colors-options.php:66
 msgid "Comments background color"
 msgstr "Kommentare Hintergrundfarbe"
+
+#: customizer-options/date-list-options.php:6
+msgid "Date Results List"
+msgstr "Datum Ergebnisliste"
+
+#: customizer-options/date-list-options.php:8
+msgid "Settings for the results when calling a date."
+msgstr "Einstellungen für die Ergebnisse beim Aufruf eines Datums."
+
+#: customizer-options/date-list-options.php:35
+msgid "Date results style"
+msgstr "Datum Ergebnisliste Style"
 
 #: customizer-options/feed-options.php:6
 msgid "Feed"
@@ -187,54 +274,9 @@ msgstr "Minimale Höhe der Landingpage"
 msgid "Maximum width of the feed"
 msgstr "Maximale Breite des Feeds"
 
-#: customizer-options/feed-options.php:74
-msgid "Cards background color"
-msgstr "Cards Hintergundfarbe"
-
-#: customizer-options/feed-options.php:102
-msgid "Spacing between posts"
-msgstr "Abstand zwischen den Beiträgen"
-
-#: customizer-options/feed-options.php:119
-msgid "Number of words in the snippet"
-msgstr "Anzahl der Wörter im Textausschnitt"
-
-#: customizer-options/feed-options.php:138
-#: customizer-options/posts-options.php:135
-msgid "Show tags"
-msgstr "Zeige Tags"
-
-#: customizer-options/feed-options.php:152
-msgid "Tags border radius"
-msgstr "Tags Rahmenradius"
-
-#: customizer-options/feed-options.php:171
-msgid "Show read more button"
-msgstr "Zeige mehr lesen Button"
-
-#: customizer-options/feed-options.php:184
-msgid "Show comments"
-msgstr "Zeige Kommentare"
-
-#: customizer-options/feed-options.php:198
-msgid "Line height in text snippet"
-msgstr "Zeilenhöhe im Textausschnitt"
-
-#: customizer-options/feed-options.php:216
-msgid "Border radius"
-msgstr "Rahmenradius"
-
-#: customizer-options/feed-options.php:234
-msgid "Padding"
-msgstr "Padding"
-
-#: customizer-options/feed-options.php:252
-msgid "Show image"
-msgstr "Zeige Bild"
-
-#: customizer-options/feed-options.php:266
-msgid "Image radius"
-msgstr "Bildradius"
+#: customizer-options/feed-options.php:78
+msgid "Feed style"
+msgstr "Feed Style"
 
 #: customizer-options/fonts-options.php:6
 msgid "Font"
@@ -276,6 +318,18 @@ msgstr "Zeige Suchleiste"
 msgid "Menu font size"
 msgstr "Menü Schriftgröße"
 
+#: customizer-options/pages-options.php:6
+msgid "Pages"
+msgstr "Seiten"
+
+#: customizer-options/pages-options.php:8
+msgid "Options for WordPress \"Pages\"."
+msgstr "Optionen für WordPress „Seiten“."
+
+#: customizer-options/pages-options.php:21
+msgid "Maximum width of pages"
+msgstr "Maximale Breite der Seiten"
+
 #: customizer-options/posts-options.php:8
 msgid "Settings of the individual posts."
 msgstr "Einstellungen der einzelnen Beiträge."
@@ -316,25 +370,57 @@ msgstr "Zeige Autor Details"
 msgid "Show post pagination"
 msgstr "Zeige Postpaginierung"
 
-#: footer.php:11 header.php:78
+#: customizer-options/searchresults-options.php:6
+msgid "Search Results"
+msgstr "Suchergebnisse"
+
+#: customizer-options/searchresults-options.php:8
+msgid "Options for the search results."
+msgstr "Optionen für die Suchergebnisse."
+
+#: customizer-options/searchresults-options.php:35
+msgid "Search results style"
+msgstr "Suchergebnisse Style"
+
+#: customizer-options/tag-list-options.php:6
+msgid "Tag Results List"
+msgstr "Tags Ergebnisliste"
+
+#: customizer-options/tag-list-options.php:8
+msgid "Settings for the results when calling a tag."
+msgstr "Einstellungen für die Ergebnisse beim Aufruf eines Tags."
+
+#: customizer-options/tag-list-options.php:35
+msgid "Tag results style"
+msgstr "Tags Ergebnisliste Style"
+
+#: footer.php:11 header.php:79
 msgid "Select a menu in the customizer"
 msgstr "Wähle ein Menü im Customizer"
 
-#: functions.php:90
+#: functions.php:93
 msgid "Header Menu"
 msgstr "Header Menü"
 
-#: functions.php:91
+#: functions.php:94
 msgid "Footer Menu"
 msgstr "Footer Menü"
 
-#: functions.php:100
+#: functions.php:103
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:113
+#: functions.php:116
 msgid "Landingpage Widget Area"
 msgstr "Landingpage Widget Area"
+
+#: functions.php:167
+msgid "search engine"
+msgstr "suchmaschine"
+
+#: functions.php:168
+msgid "cards"
+msgstr "cards"
 
 #: header.php:47
 msgid "Skip to main content"
@@ -344,15 +430,11 @@ msgstr "Springe zum Hauptinhalt"
 msgid "Fill the landing page in the customizer"
 msgstr "Befülle die Landingpage im Customizer"
 
-#: home.php:20
-msgid "Latest Posts"
-msgstr "Letzte Beiträge"
-
 #: page.php:20 single.php:58
 msgid "Pages:"
 msgstr "Seiten:"
 
-#: search.php:9
+#: search.php:16
 #, php-format
 msgid "Search results for \"%s\""
 msgstr "Suchergebnisse für \"%s\""
@@ -368,3 +450,11 @@ msgstr "Nächster Beitrag &raquo;"
 #: template-parts/post-card.php:31
 msgid "read more"
 msgstr "mehr lesen"
+
+#, fuzzy
+#~| msgid "Show sidebar"
+#~ msgid "Show Sidebar"
+#~ msgstr "Zeige Sidebar"
+
+#~ msgid "Latest Posts"
+#~ msgstr "Letzte Beiträge"

@@ -48,7 +48,7 @@ main {
   grid-area: main;
   padding: 2vw;
   padding-top: 2em;
-  margin-top: var(--lime_blog_home_margin_to_header);
+  margin-top: 0;
 }
 @media only screen and (min-width: 1300px) {
   main.lime_blog_has_sidebar {
@@ -56,11 +56,10 @@ main {
   }
 }
 
-@media only screen and (min-width: 800px) {
-  .home #lime_blog_sidebar {
-    margin-top: var(--lime_blog_home_margin_to_header);
-  }
+.home main, .home #lime_blog_sidebar {
+  margin-top: var(--lime_blog_home_margin_to_header);
 }
+
 h1,
 h2,
 h3,
@@ -165,7 +164,7 @@ iframe {
   border: 6px solid var(--lime_blog_primary_variant_darker);
   animation: wobble 5s linear infinite;
 }
-.lime_blog_landing_page_section + main {
+.lime_blog_landing_page_section + main, .lime_blog_landing_page_section + #lime_blog_sidebar {
   margin-top: 0;
 }
 

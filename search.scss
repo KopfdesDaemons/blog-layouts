@@ -13,61 +13,8 @@
         text-align: center;
     }
 
-    .lime_blog_searchresult {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        position: relative;
-        gap: 1em;
-        padding: 2em 1.5em;
-
-        .lime_blog_searchresult_image_a {
-            margin: 1em 1em 1em 0;
-            img {
-                aspect-ratio: 1 / 1;
-                border-radius: 4px;
-                max-height: 8em;
-                object-fit: cover;
-            }
-        }
-
-        .lime_blog_searchresult_content {
-            flex: 1 0 60%;
-
-            a {
-                text-decoration: none;
-            }
-            
-            h2 {
-                color: var(--lime_blog_primary_color);
-    
-                &:hover {
-                    color:  var(--lime_blog_primary_variant_brighter);
-                }
-            }
-
-            p {
-                line-height: 1.5em;
-            }
-        }
-    }
-
-    .lime_blog_searchresults {
-        padding: 0;
-    }
-
     .lime_blog_feed {
         margin-top: 3em;
-    }
-
-    .lime_blog_searchresult::after {
-        content: ' ';
-        position: absolute;
-        border-bottom: 1px solid;
-        height: 20px;
-        width: 90%;
-        bottom: 0;
-        color: gray;
     }
 
     .lime_blog_pagination {

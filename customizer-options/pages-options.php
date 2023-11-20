@@ -36,7 +36,7 @@ function lime_blog_custom_pages($wp_customize)
 
     $wp_customize->add_control('pages_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show Sidebar', 'lime-blog'),
+        'label' => __('Show sidebar', 'lime-blog'),
         'section' => 'custom_theme_pages',
     ));
 

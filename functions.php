@@ -4,7 +4,6 @@ function enqueue_custom_styles()
     $theme_directory = get_stylesheet_directory_uri();
 
     $styles = array(
-        'post-card' => '/template-parts/post-card.css',
         'animations' => "/animations.css",
         'custom-font' => '/fonts/fonts.css',
         'custom-styles' => '/style.css',
@@ -19,6 +18,10 @@ function enqueue_custom_styles()
         'paginantion-style' => '/pagination.css',
         '404-styles' => '/404.css',
         'fontawesome' => '/fonts/fontawesome/css/all.min.css',
+
+        //  template-parts
+        'post-card' => '/template-parts/post-card.css',
+        'searchresult' => '/template-parts/searchresult.css',
     );
 
     foreach ($styles as $handle => $file) {
@@ -149,9 +152,18 @@ require_once get_template_directory() . '/customizer-options/fonts-options.php';
 require_once get_template_directory() . '/customizer-options/author-page-options.php';
 require_once get_template_directory() . '/customizer-options/pages-options.php';
 require_once get_template_directory() . '/customizer-options/searchresults-options.php';
+require_once get_template_directory() . '/customizer-options/cards-options.php';
+require_once get_template_directory() . '/customizer-options/tag-list-options.php';
+require_once get_template_directory() . '/customizer-options/category-list-options.php';
+require_once get_template_directory() . '/customizer-options/date-list-options.php';
 
 // Sanitize function to check checkbox value (true/false)
 function lime_blog_sanitize_checkbox($input)
 {
     return (isset($input) && true === $input) ? true : false;
 }
+
+$searchresults_styles = array(
+    'search_engine' => __('search engine', 'lime-blog'),
+    'cards' => __('cards', 'lime-blog'),
+);

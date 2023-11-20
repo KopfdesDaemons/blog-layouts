@@ -51,7 +51,7 @@ main {
     grid-area: main;
     padding: 2vw;
     padding-top: 2em;
-    margin-top: var(--lime_blog_home_margin_to_header);
+    margin-top: 0;
 
     @media only screen and (min-width: 1300px) {
         &.lime_blog_has_sidebar {
@@ -59,10 +59,9 @@ main {
         }
     }
 }
-@media only screen and (min-width: 800px) {
-    .home #lime_blog_sidebar{
-        margin-top: var(--lime_blog_home_margin_to_header);
-    }
+
+.home main, .home #lime_blog_sidebar {
+    margin-top: var(--lime_blog_home_margin_to_header);
 }
 
 h1,
@@ -174,7 +173,7 @@ iframe {
         }
     }
 
-    &+main {
+    &+main, &+#lime_blog_sidebar {
         margin-top: 0;
     }
 }

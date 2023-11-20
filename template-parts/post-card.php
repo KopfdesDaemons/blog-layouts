@@ -1,9 +1,9 @@
 <?php
-function lime_blog_display_post_card($post_classes)
+function lime_blog_display_post_card($show_sticky)
 {
     ob_start(); // Start output buffering
 ?>
-    <li class="<?php echo implode(' ', $post_classes) ?>">
+    <li class="lime_blog_post_card lime_blog_shadow <?php if($show_sticky && is_sticky()) echo 'lime_blog_sticky_post' ?>">
         <div class="lime_blog_post_card_row_1">
             <?php if (has_post_thumbnail() && get_theme_mod('feed_post_card_image', true)) { ?>
                 <a class="lime_blog_post_card_image_container" href="<?php the_permalink(); ?>">

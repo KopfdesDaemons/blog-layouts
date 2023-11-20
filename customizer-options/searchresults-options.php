@@ -5,7 +5,7 @@ function lime_blog_custom_searchresults($wp_customize)
     $wp_customize->add_section('searchresults', array(
         'title' => __('Search Results', 'lime-blog'),
         'priority' => 30,
-        'description' => __('Options for WordPress "Pages".', 'lime-blog'),
+        'description' => __('Options for the search results.', 'lime-blog'),
     ));
 
     // Sidebar
@@ -17,7 +17,7 @@ function lime_blog_custom_searchresults($wp_customize)
 
     $wp_customize->add_control('pages_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show Sidebar', 'lime-blog'),
+        'label' => __('Show sidebar', 'lime-blog'),
         'section' => 'searchresults',
     ));
 
@@ -28,14 +28,12 @@ function lime_blog_custom_searchresults($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
+    global $searchresults_styles;
     $wp_customize->add_control('searchresults_style', array(
         'type' => 'select',
         'section' => 'searchresults',
         'label' => __('Search results style', 'lime-blog'),
-        'choices' => array(
-            'search_engine' => __('search engine', 'lime-blog'),
-            'cards' => __('cards', 'lime-blog'),
-        ),
+        'choices' => $searchresults_styles,
     ));
 }
 add_action('customize_register', 'lime_blog_custom_searchresults');

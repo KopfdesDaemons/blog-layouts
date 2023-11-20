@@ -9,53 +9,8 @@
 .search h1 {
   text-align: center;
 }
-.search .lime_blog_searchresult {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
-  gap: 1em;
-  padding: 2em 1.5em;
-}
-.search .lime_blog_searchresult .lime_blog_searchresult_image_a {
-  margin: 1em 1em 1em 0;
-}
-.search .lime_blog_searchresult .lime_blog_searchresult_image_a img {
-  aspect-ratio: 1/1;
-  border-radius: 4px;
-  max-height: 8em;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.search .lime_blog_searchresult .lime_blog_searchresult_content {
-  flex: 1 0 60%;
-}
-.search .lime_blog_searchresult .lime_blog_searchresult_content a {
-  text-decoration: none;
-}
-.search .lime_blog_searchresult .lime_blog_searchresult_content h2 {
-  color: var(--lime_blog_primary_color);
-}
-.search .lime_blog_searchresult .lime_blog_searchresult_content h2:hover {
-  color: var(--lime_blog_primary_variant_brighter);
-}
-.search .lime_blog_searchresult .lime_blog_searchresult_content p {
-  line-height: 1.5em;
-}
-.search .lime_blog_searchresults {
-  padding: 0;
-}
 .search .lime_blog_feed {
   margin-top: 3em;
-}
-.search .lime_blog_searchresult::after {
-  content: " ";
-  position: absolute;
-  border-bottom: 1px solid;
-  height: 20px;
-  width: 90%;
-  bottom: 0;
-  color: gray;
 }
 .search .lime_blog_pagination {
   margin-top: 1em;
