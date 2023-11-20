@@ -51,6 +51,7 @@ main {
     grid-area: main;
     padding: 2vw;
     padding-top: 2em;
+    margin-top: var(--lime_blog_home_margin_to_header);
 
     @media only screen and (min-width: 1300px) {
         &.lime_blog_has_sidebar {
@@ -59,10 +60,8 @@ main {
     }
 }
 @media only screen and (min-width: 800px) {
-    .home {
-        main, #lime_blog_sidebar {
-            margin-top: var(--lime_blog_home_margin_to_header);
-        }
+    .home #lime_blog_sidebar{
+        margin-top: var(--lime_blog_home_margin_to_header);
     }
 }
 
@@ -173,6 +172,10 @@ iframe {
             border: 6px solid var(--lime_blog_primary_variant_darker);
             animation: wobble 5s linear infinite;
         }
+    }
+
+    &+main {
+        margin-top: 0;
     }
 }
 

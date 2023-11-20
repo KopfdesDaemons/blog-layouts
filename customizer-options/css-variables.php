@@ -94,6 +94,10 @@ $lime_blog_hero_background = get_theme_mod('hero_background', true);
         --lime_blog_gradient: linear-gradient(90deg, var(--lime_blog_primary_variant_darker) 0%, var(--lime_blog_primary_color) 75%, var(--lime_blog_primary_variant_darker) 100%);
         --lime_blog_hero_background: <?php echo $lime_blog_hero_background ? 'var(--lime_blog_gradient)' : 'none'; ?>;
 
+        /* Pages Settings */
+        --lime_blog_max_page_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_pages', '70')) . 'em'; ?>;
+        --lime_blog_background_color_pages: <?php echo esc_attr(get_theme_mod('background_color_pages', '')); ?>;
+
         /* Feed Setting */
         --lime_blog_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_height', '20')) . 'px'; ?>;
         --lime_blog_feed_landingpage_minimal_height: <?php echo esc_attr(get_theme_mod('minimal_height_of_the_landingpage', '80')) . 'vh'; ?>;

@@ -1,7 +1,7 @@
 .search main, .search #lime_blog_sidebar {
   margin-top: var(--lime_blog_margin_to_header);
 }
-.search .lime_blog_searchresults {
+.search .lime_blog_search_container {
   display: flex;
   flex-direction: column;
   min-height: 70vh;
@@ -41,6 +41,12 @@
 }
 .search .lime_blog_searchresult .lime_blog_searchresult_content p {
   line-height: 1.5em;
+}
+.search .lime_blog_searchresults {
+  padding: 0;
+}
+.search .lime_blog_feed {
+  margin-top: 3em;
 }
 .search .lime_blog_searchresult::after {
   content: " ";

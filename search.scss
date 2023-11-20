@@ -3,7 +3,7 @@
         margin-top: var(--lime_blog_margin_to_header);
     }
     
-    .lime_blog_searchresults {
+    .lime_blog_search_container {
         display: flex;
         flex-direction: column;
         min-height: 70vh;
@@ -50,6 +50,14 @@
                 line-height: 1.5em;
             }
         }
+    }
+
+    .lime_blog_searchresults {
+        padding: 0;
+    }
+
+    .lime_blog_feed {
+        margin-top: 3em;
     }
 
     .lime_blog_searchresult::after {

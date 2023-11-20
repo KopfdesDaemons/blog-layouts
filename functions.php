@@ -147,6 +147,8 @@ require_once get_template_directory() . '/customizer-options/posts-options.php';
 require_once get_template_directory() . '/customizer-options/feed-options.php';
 require_once get_template_directory() . '/customizer-options/fonts-options.php';
 require_once get_template_directory() . '/customizer-options/author-page-options.php';
+require_once get_template_directory() . '/customizer-options/pages-options.php';
+require_once get_template_directory() . '/customizer-options/searchresults-options.php';
 
 // Sanitize function to check checkbox value (true/false)
 function lime_blog_sanitize_checkbox($input)
