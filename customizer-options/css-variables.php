@@ -96,6 +96,7 @@ $lime_blog_hero_background = get_theme_mod('hero_background', true);
 
         /* Feed Setting */
         --lime_blog_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_height', '20')) . 'px'; ?>;
+        --lime_blog_feed_landingpage_minimal_height: <?php echo esc_attr(get_theme_mod('minimal_height_of_the_landingpage', '80')) . 'vh'; ?>;
         --lime_blog_feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius', '12')) . 'px'; ?>;
         --lime_blog_feed_post_card_padding: <?php echo esc_attr(get_theme_mod('feed_post_card_padding', '1')) . 'em'; ?>;
         --lime_blog_feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image', '6')) . 'px'; ?>;

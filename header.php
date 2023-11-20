@@ -67,15 +67,17 @@
 
         <!-- desktop -->
         <?php
-        if (get_theme_mod('header_menu', true) && has_nav_menu('header-menu')) {
-            wp_nav_menu(array(
-                'theme_location' => 'header-menu',
-                'menu_class' => 'lime_blog_header_menu',
-                'container' => false,
-                'walker' => new lime_blog_menu_walker(),
-            ));
-        } else {
-            echo '<div class="lime_blog_header_menu">'. esc_html__('Select a menu in the customizer', 'lime-blog') .'</div>';
+        if (get_theme_mod('header_menu', true)) {
+            if (has_nav_menu('header-menu')) {
+                wp_nav_menu(array(
+                    'theme_location' => 'header-menu',
+                    'menu_class' => 'lime_blog_header_menu',
+                    'container' => false,
+                    'walker' => new lime_blog_menu_walker(),
+                ));
+            } else {
+                echo '<div class="lime_blog_header_menu">' . esc_html__('Select a menu in the customizer', 'lime-blog') . '</div>';
+            }
         }
         ?>
         <div class="lime_blog_header_content">

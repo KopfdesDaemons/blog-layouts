@@ -212,6 +212,8 @@ $lime_blog_side_bar = (!is_author() | get_theme_mod('author_page_sidebar', true)
     </section>
 </main>
 <?php
-if ($lime_blog_side_bar) get_sidebar();
-if (!is_active_sidebar('my-sidebar')) echo '<aside id="lime_blog_sidebar" class="lime_blog_empty_sidebar"><div class="widget"><p>' . esc_html__('Fill the sidebar in the customizer', 'lime-blog') .'</p></div></aside>';
+if ($lime_blog_side_bar) {
+    get_sidebar();
+    if (!is_active_sidebar('my-sidebar')) echo '<aside id="lime_blog_sidebar" class="lime_blog_empty_sidebar"><div class="widget"><p>' . esc_html__('Fill the sidebar in the customizer', 'lime-blog') .'</p></div></aside>';
+}
 get_footer(); ?>

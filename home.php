@@ -17,7 +17,6 @@
 <?php } ?>
 <main role="main" <?php if (get_theme_mod('feed_sidebar', true)) echo 'class="lime_blog_has_sidebar"' ?>>
     <section class="lime_blog_content_spacer">
-        <h2 class="lime_blog_h2_latest_posts"><?php echo esc_html(__('Latest Posts', 'lime-blog')) ?></h2>
         <ul class="lime_blog_feed" id="lime_blog_main_content">
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

@@ -143,10 +143,11 @@ iframe {
 }
 
 .lime_blog_feed {
-  padding: 0.5em;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: var(--lime_blog_feed_post_card_spacing);
+  margin-top: 0;
 }
 
 .lime_blog_landing_page_section {
@@ -154,7 +155,7 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: var(--lime_blog_feed_landingpage_minimal_height);
   padding: clamp(0.5em, 5vw, 2em);
   padding-top: var(--lime_blog_margin_to_header);
   background: var(--lime_blog_gradient);
