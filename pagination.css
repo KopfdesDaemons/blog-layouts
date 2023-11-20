@@ -31,6 +31,7 @@
   padding: 0 0.1em;
 }
 
+.wp-polls-paging a, .wp-polls-paging span,
 .wp-block-query-pagination-next,
 .wp-block-query-pagination-previous,
 .lime_blog_pagination_controls a,
@@ -38,7 +39,7 @@
 .page-numbers {
   border-radius: 4px;
   padding: 0.8em 1.2em;
-  background: black;
+  background-color: black;
   border: solid 1px gray;
   white-space: nowrap;
   -webkit-user-select: none;
@@ -46,6 +47,7 @@
           user-select: none;
 }
 
+.wp-polls-paging .current,
 .current {
   background-color: var(--lime_blog_primary_variant_darker);
 }
@@ -69,5 +71,13 @@
 }
 
 .wp-block-query-pagination-numbers {
+  overflow-x: auto;
+}
+
+.wp-polls-paging {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  font-size: clamp(12px, 1.5vw, 16px);
   overflow-x: auto;
 }/*# sourceMappingURL=pagination.css.map */
