@@ -24,6 +24,7 @@ function enqueue_custom_styles()
         'searchresult' => '/template-parts/post-list-layouts/searchresult.css',
         'frameless-post-list' => '/template-parts/post-list-layouts/frameless-post-list.css',
         'social-post-list' => '/template-parts/post-list-layouts/social-posts-list.css',
+        'material2-post-list' => '/template-parts/post-list-layouts/material2-posts-list.css',
     );
 
     foreach ($styles as $handle => $file) {
@@ -168,8 +169,9 @@ function lime_blog_sanitize_checkbox($input)
 }
 
 $searchresults_styles = array(
-    'search_engine' => __('search engine', 'lime-blog'),
-    'cards' => __('cards', 'lime-blog'),
-    'frameless' => __('frameless', 'lime-blog'),
-    'social' => __('social', 'lime-blog'),
+    'search_engine' => 'search engine',
+    'cards' => 'cards',
+    'frameless' => 'frameless',
+    'social' => 'social',
+    'material2' => 'material2',
 );

@@ -1,0 +1,57 @@
+.material2_post_list {
+    padding: 0 0.5em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-bottom: 2em;
+
+    li {
+        list-style: none;
+    }
+
+    @media only screen and (min-width: 800px) {
+        padding: 0 2vw;
+    }
+}
+
+.lime_blog_material2_post_list_item {
+    max-width: 30em;
+    background-color: #46464d;
+    border-radius: 4px;
+    overflow: hidden;
+
+    .lime_blog_material2_post_list_item_headline_row {
+        text-decoration: none;
+        display: flex;
+        margin-top: 0.5em;
+
+        h2 {
+            font-size: 1.1em;
+            padding: 0.5em 2em;
+            line-height: 0.95em;
+        }
+    }
+
+    .lime_blog_material2_post_list_item_excerpt {
+        padding: 0 2em;
+    }
+
+    .lime_blog_materiale_post_list_item_icon_row {
+        display: flex;
+        padding: 0 2em;
+        margin-bottom: 1em;
+        gap: 1em;
+
+        a {
+            text-decoration: none;
+            color: var(--lime_blog_primary_color);
+            border-radius: 4px;
+            padding: 0.5em 0.3em;
+
+            &:hover {
+                background-color: var(--lime_blog_primary_variant_darker);
+            }
+        }
+    }
+}
