@@ -59,7 +59,7 @@ function lime_blog_custom_feed($wp_customize)
         'section' => 'custom_feed',
         'input_attrs' => array(
             'min' => 50,
-            'max' => 100,
+            'max' => 150,
             'step' => 1,
         ),
     ));

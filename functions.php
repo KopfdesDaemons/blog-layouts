@@ -25,6 +25,7 @@ function enqueue_custom_styles()
         'frameless-post-list' => '/template-parts/post-list-layouts/frameless-post-list.css',
         'social-post-list' => '/template-parts/post-list-layouts/social-posts-list.css',
         'material2-post-list' => '/template-parts/post-list-layouts/material2-posts-list.css',
+        'material3-post-list' => '/template-parts/post-list-layouts/material3-posts-list.css',
     );
 
     foreach ($styles as $handle => $file) {
@@ -174,4 +175,5 @@ $searchresults_styles = array(
     'frameless' => 'frameless',
     'social' => 'social',
     'material2' => 'material2',
+    'material3' => 'material3',
 );

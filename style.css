@@ -114,7 +114,7 @@ a:hover {
   background: #555;
 }
 
-.home .lime_blog_content_spacer:has(.lime_blog_feed) {
+.home .lime_blog_content_spacer {
   max-width: var(--lime_blog_max_feed_width);
 }
 

@@ -149,6 +149,7 @@
 }
 .author .lime_blog_autor_content {
   min-height: 70vh;
+  max-width: 100%;
 }
 .author .lime_blog_author_comments_container {
   display: none;

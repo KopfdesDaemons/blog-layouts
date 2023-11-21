@@ -32,6 +32,12 @@ function lime_blog_display_post_list($query, $style, $show_sticky_posts = false)
             require_once $template_path . 'material2-posts-list.php';
             break;
 
+            case 'material3':
+                $container_class = 'material3_post_list';
+                $display_function = 'lime_blog_display_material3_post_list';
+                require_once $template_path . 'material3-posts-list.php';
+                break;
+
         default:
             $container_class = 'lime_blog_cards_post_list';
             $display_function = 'lime_blog_display_post_card';

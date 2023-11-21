@@ -2,7 +2,8 @@
   padding: 0 0.5em;
   margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2em;
   margin-bottom: 2em;
 }
@@ -17,9 +18,20 @@
 
 .lime_blog_material2_post_list_item {
   max-width: 30em;
-  background-color: #46464d;
+  background-color: #212121;
   border-radius: 4px;
   overflow: hidden;
+  flex: 1 0 auto;
+}
+.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_image_container {
+  display: flex;
+  justify-content: center;
+}
+.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_image_container img {
+  max-height: 20em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 .lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_headline_row {
   text-decoration: none;
@@ -47,5 +59,5 @@
   padding: 0.5em 0.3em;
 }
 .lime_blog_material2_post_list_item .lime_blog_materiale_post_list_item_icon_row a:hover {
-  background-color: var(--lime_blog_primary_variant_darker);
+  background-color: var(--lime_blog_primary_variant_much_darker);
 }/*# sourceMappingURL=material2-posts-list.css.map */
