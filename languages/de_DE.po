@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-11-20 22:49+0100\n"
-"PO-Revision-Date: 2023-11-20 22:50+0100\n"
+"POT-Creation-Date: 2023-11-21 10:54+0100\n"
+"PO-Revision-Date: 2023-11-21 10:54+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -55,7 +55,8 @@ msgstr "Anzahl der Beiträge"
 msgid "Posts"
 msgstr "Beiträge"
 
-#: archive.php:119 template-parts/post-card.php:25
+#: archive.php:119 template-parts/post-list-layouts/frameless-posts-list.php:26
+#: template-parts/post-list-layouts/post-card.php:25
 msgid "Comments"
 msgstr "Kommentare"
 
@@ -76,19 +77,19 @@ msgstr "Letzte Kommentare von"
 msgid "No comments found."
 msgstr "Keine Kommentare gefunden."
 
-#: archive.php:196 home.php:48 search.php:29
+#: archive.php:195 home.php:46 search.php:29
 msgid "« Previous"
 msgstr "« Vorherige"
 
-#: archive.php:208 home.php:60 search.php:41
+#: archive.php:207 home.php:58 search.php:41
 msgid "Next »"
 msgstr "Weiter »"
 
-#: archive.php:215 home.php:37 search.php:50
+#: archive.php:213 home.php:36 search.php:50
 msgid "No posts found."
 msgstr "Keine Beiträge gefunden."
 
-#: archive.php:225 home.php:75 page.php:43 search.php:58 single.php:131
+#: archive.php:223 home.php:73 page.php:43 search.php:58 single.php:131
 msgid "Fill the sidebar in the customizer"
 msgstr "Befülle die Sidebar im Customizer"
 
@@ -153,61 +154,12 @@ msgid "Image size"
 msgstr "Bildgröße"
 
 #: customizer-options/author-page-options.php:117
-msgid "Posts list style"
-msgstr "Beitragsliste Style"
-
-#: customizer-options/cards-options.php:6
-msgid "Cards"
-msgstr "Cards"
-
-#: customizer-options/cards-options.php:17
-msgid "Cards background color"
-msgstr "Cards Hintergundfarbe"
-
-#: customizer-options/cards-options.php:32
-msgid "Spacing between posts"
-msgstr "Abstand zwischen den Beiträgen"
-
-#: customizer-options/cards-options.php:49
-msgid "Number of words in the snippet"
-msgstr "Anzahl der Wörter im Textausschnitt"
-
-#: customizer-options/cards-options.php:68
-#: customizer-options/posts-options.php:135
-msgid "Show tags"
-msgstr "Zeige Tags"
-
-#: customizer-options/cards-options.php:81
-msgid "Tags border radius"
-msgstr "Tags Rahmenradius"
-
-#: customizer-options/cards-options.php:100
-msgid "Show read more button"
-msgstr "Zeige mehr lesen Button"
-
-#: customizer-options/cards-options.php:113
-msgid "Show comments"
-msgstr "Zeige Kommentare"
-
-#: customizer-options/cards-options.php:127
-msgid "Line height in text snippet"
-msgstr "Zeilenhöhe im Textausschnitt"
-
-#: customizer-options/cards-options.php:145
-msgid "Border radius"
-msgstr "Rahmenradius"
-
-#: customizer-options/cards-options.php:163
-msgid "Padding"
-msgstr "Padding"
-
-#: customizer-options/cards-options.php:181
-msgid "Show image"
-msgstr "Zeige Bild"
-
-#: customizer-options/cards-options.php:194
-msgid "Image radius"
-msgstr "Bildradius"
+#: customizer-options/category-list-options.php:35
+#: customizer-options/feed-options.php:78
+#: customizer-options/searchresults-options.php:35
+#: customizer-options/tag-list-options.php:35
+msgid "Layout"
+msgstr "Layout"
 
 #: customizer-options/category-list-options.php:6
 msgid "Category Results List"
@@ -216,10 +168,6 @@ msgstr "Kategorie Ergebnisliste"
 #: customizer-options/category-list-options.php:8
 msgid "Settings for the results when calling a category."
 msgstr "Einstellungen für die Ergebnisse beim Aufruf einer Kategorie."
-
-#: customizer-options/category-list-options.php:35
-msgid "Category results style"
-msgstr "Kategorie Ergebnisliste Style"
 
 #: customizer-options/colors-options.php:7
 msgid "Colors"
@@ -274,10 +222,6 @@ msgstr "Minimale Höhe der Landingpage"
 msgid "Maximum width of the feed"
 msgstr "Maximale Breite des Feeds"
 
-#: customizer-options/feed-options.php:78
-msgid "Feed style"
-msgstr "Feed Style"
-
 #: customizer-options/fonts-options.php:6
 msgid "Font"
 msgstr "Schrift"
@@ -318,6 +262,22 @@ msgstr "Zeige Suchleiste"
 msgid "Menu font size"
 msgstr "Menü Schriftgröße"
 
+#: customizer-options/layout-options.php:6
+msgid "Layouts"
+msgstr "Layouts"
+
+#: customizer-options/layout-options.php:8
+msgid "Settings for the individual layouts."
+msgstr "Einstellungen der einzelnen Layouts."
+
+#: customizer-options/layout-options.php:13
+msgid "Cards"
+msgstr "Cards"
+
+#: customizer-options/layout-options.php:19
+msgid "Frameless posts list"
+msgstr "Rahmenlose Beitragsliste"
+
 #: customizer-options/pages-options.php:6
 msgid "Pages"
 msgstr "Seiten"
@@ -329,6 +289,66 @@ msgstr "Optionen für WordPress „Seiten“."
 #: customizer-options/pages-options.php:21
 msgid "Maximum width of pages"
 msgstr "Maximale Breite der Seiten"
+
+#: customizer-options/post-list-layouts/cards-options.php:11
+#: customizer-options/post-list-layouts/frameless-post-list.php:11
+msgid "Cards background color"
+msgstr "Cards Hintergundfarbe"
+
+#: customizer-options/post-list-layouts/cards-options.php:26
+#: customizer-options/post-list-layouts/frameless-post-list.php:25
+msgid "Spacing between posts"
+msgstr "Abstand zwischen den Beiträgen"
+
+#: customizer-options/post-list-layouts/cards-options.php:43
+#: customizer-options/post-list-layouts/frameless-post-list.php:42
+msgid "Number of words in the snippet"
+msgstr "Anzahl der Wörter im Textausschnitt"
+
+#: customizer-options/post-list-layouts/cards-options.php:62
+#: customizer-options/post-list-layouts/frameless-post-list.php:61
+#: customizer-options/posts-options.php:135
+msgid "Show tags"
+msgstr "Zeige Tags"
+
+#: customizer-options/post-list-layouts/cards-options.php:75
+#: customizer-options/post-list-layouts/frameless-post-list.php:74
+msgid "Tags border radius"
+msgstr "Tags Rahmenradius"
+
+#: customizer-options/post-list-layouts/cards-options.php:94
+#: customizer-options/post-list-layouts/frameless-post-list.php:93
+msgid "Show read more button"
+msgstr "Zeige mehr lesen Button"
+
+#: customizer-options/post-list-layouts/cards-options.php:107
+#: customizer-options/post-list-layouts/frameless-post-list.php:106
+msgid "Show comments"
+msgstr "Zeige Kommentare"
+
+#: customizer-options/post-list-layouts/cards-options.php:121
+#: customizer-options/post-list-layouts/frameless-post-list.php:119
+msgid "Line height in text snippet"
+msgstr "Zeilenhöhe im Textausschnitt"
+
+#: customizer-options/post-list-layouts/cards-options.php:139
+msgid "Border radius"
+msgstr "Rahmenradius"
+
+#: customizer-options/post-list-layouts/cards-options.php:157
+#: customizer-options/post-list-layouts/frameless-post-list.php:137
+msgid "Padding"
+msgstr "Padding"
+
+#: customizer-options/post-list-layouts/cards-options.php:175
+#: customizer-options/post-list-layouts/frameless-post-list.php:155
+msgid "Show image"
+msgstr "Zeige Bild"
+
+#: customizer-options/post-list-layouts/cards-options.php:188
+#: customizer-options/post-list-layouts/frameless-post-list.php:168
+msgid "Image radius"
+msgstr "Bildradius"
 
 #: customizer-options/posts-options.php:8
 msgid "Settings of the individual posts."
@@ -378,10 +398,6 @@ msgstr "Suchergebnisse"
 msgid "Options for the search results."
 msgstr "Optionen für die Suchergebnisse."
 
-#: customizer-options/searchresults-options.php:35
-msgid "Search results style"
-msgstr "Suchergebnisse Style"
-
 #: customizer-options/tag-list-options.php:6
 msgid "Tag Results List"
 msgstr "Tags Ergebnisliste"
@@ -390,37 +406,37 @@ msgstr "Tags Ergebnisliste"
 msgid "Settings for the results when calling a tag."
 msgstr "Einstellungen für die Ergebnisse beim Aufruf eines Tags."
 
-#: customizer-options/tag-list-options.php:35
-msgid "Tag results style"
-msgstr "Tags Ergebnisliste Style"
-
 #: footer.php:11 header.php:79
 msgid "Select a menu in the customizer"
 msgstr "Wähle ein Menü im Customizer"
 
-#: functions.php:93
+#: functions.php:94
 msgid "Header Menu"
 msgstr "Header Menü"
 
-#: functions.php:94
+#: functions.php:95
 msgid "Footer Menu"
 msgstr "Footer Menü"
 
-#: functions.php:103
+#: functions.php:104
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:116
+#: functions.php:117
 msgid "Landingpage Widget Area"
 msgstr "Landingpage Widget Area"
 
-#: functions.php:167
+#: functions.php:170
 msgid "search engine"
 msgstr "suchmaschine"
 
-#: functions.php:168
+#: functions.php:171
 msgid "cards"
 msgstr "cards"
+
+#: functions.php:172
+msgid "frameless"
+msgstr "rahmenlos"
 
 #: header.php:47
 msgid "Skip to main content"
@@ -447,9 +463,25 @@ msgstr "&laquo; Vorheriger Beitrag"
 msgid "Next Post &raquo;"
 msgstr "Nächster Beitrag &raquo;"
 
-#: template-parts/post-card.php:31
+#: template-parts/post-list-layouts/frameless-posts-list.php:32
+#: template-parts/post-list-layouts/post-card.php:31
 msgid "read more"
 msgstr "mehr lesen"
+
+#~ msgid "Posts list style"
+#~ msgstr "Beitragsliste Style"
+
+#~ msgid "Category results style"
+#~ msgstr "Kategorie Ergebnisliste Style"
+
+#~ msgid "Feed style"
+#~ msgstr "Feed Style"
+
+#~ msgid "Search results style"
+#~ msgstr "Suchergebnisse Style"
+
+#~ msgid "Tag results style"
+#~ msgstr "Tags Ergebnisliste Style"
 
 #, fuzzy
 #~| msgid "Show sidebar"

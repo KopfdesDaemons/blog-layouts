@@ -21,7 +21,7 @@ function lime_blog_display_post_list($query, $style, $show_sticky_posts = false)
             break;
 
         default:
-            $container_class = 'lime_blog_feed';
+            $container_class = 'lime_blog_cards_post_list';
             $display_function = 'lime_blog_display_post_card';
             require_once $template_path . 'post-card.php';
             break;

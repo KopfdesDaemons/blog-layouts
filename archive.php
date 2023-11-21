@@ -182,7 +182,6 @@
                     global $wp_query;
                     $wp_query->set('paged', 1);
 
-                    echo '<div class="lime_blog_feed">';
                     require_once get_template_directory() . '/template-parts/post-list.php';
                     echo lime_blog_display_post_list($wp_query, $lime_blog_archive_post_list_style);
 
@@ -208,7 +207,6 @@
                         next_posts_link(__('Next »', 'lime-blog'), $wp_query->max_num_pages);
                         echo '</div>';
 
-                        echo '</div>';
                         echo '</div>';
                     }
                 } else {

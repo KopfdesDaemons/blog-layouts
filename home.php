@@ -17,8 +17,7 @@
 <?php } ?>
 <main role="main" <?php if (get_theme_mod('feed_sidebar', true)) echo 'class="lime_blog_has_sidebar"' ?>>
     <section class="lime_blog_content_spacer">
-        <ul class="lime_blog_feed" id="lime_blog_main_content">
-            <?php
+    <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $posts_per_page = get_option('posts_per_page');
             $args = array(
@@ -37,7 +36,6 @@
                 echo esc_html__('No posts found.', 'lime-blog');
             }
             ?>
-        </ul>
         <?php
         // Pagination only if needed
         if ($query->max_num_pages > 1) {

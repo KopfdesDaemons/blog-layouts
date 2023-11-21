@@ -46,7 +46,6 @@ main {
   flex-direction: column;
   align-items: center;
   grid-area: main;
-  padding: 2vw;
   padding-top: 2em;
   margin-top: 0;
 }
@@ -140,14 +139,6 @@ img {
 
 iframe {
   max-width: 100%;
-}
-
-.lime_blog_feed {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--lime_blog_feed_post_card_spacing);
-  margin-top: 0;
 }
 
 .lime_blog_landing_page_section {

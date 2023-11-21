@@ -1,5 +1,9 @@
 .lime_blog_searchresults {
   padding: 0;
+  margin: 0 0 1em 0;
+}
+.lime_blog_searchresults > .lime_blog_searchresult {
+  padding-top: 0;
 }
 
 .lime_blog_searchresult {
@@ -43,4 +47,10 @@
   width: 90%;
   bottom: 0;
   color: gray;
+}
+.lime_blog_searchresult .lime_blog_searchresult_sticky_pin {
+  display: none;
+}
+.lime_blog_searchresult.lime_blog_sticky_post .lime_blog_searchresult_sticky_pin {
+  display: inline;
 }/*# sourceMappingURL=searchresult.css.map */

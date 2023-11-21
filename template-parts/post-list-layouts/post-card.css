@@ -1,3 +1,11 @@
+.lime_blog_cards_post_list {
+  gap: var(--lime_blog_feed_post_card_spacing);
+  display: flex;
+  flex-direction: column;
+  padding: 0 2vw;
+  margin: 0;
+}
+
 .lime_blog_post_card {
   display: flex;
   flex-direction: column;

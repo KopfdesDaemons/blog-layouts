@@ -50,9 +50,6 @@ $lime_blog_primary_variant_darker = "hsl($primary_hue, " . (max(0, $saturation -
 $lime_blog_primary_variant_much_darker = "hsl($primary_hue, " . (max(0, $saturation - 35)) . "%, " . (max(0, $lightness - 35)) . "%)";
 $lime_blog_primary_variant_brighter = "hsl($primary_hue, " . (min(100, $saturation + 20)) . "%, " . (min(100, $lightness + 20)) . "%)";
 $lime_blog_primary_variant_much_brighter = "hsl($primary_hue, " . (min(100, $saturation + 25)) . "%, " . (min(100, $lightness + 25)) . "%)";
-$lime_blog_background_inputfield = "hsl($primary_hue, " . (min(100, $saturation + 45)) . "%, " . (min(100, $lightness + 45)) . "%)";
-$lime_blog_background_variant = "hsl($primary_hue, " . (min(100, $saturation + 45)) . "%, " . (min(100, $lightness + 45)) . "%)";
-$lime_blog_background_variant_darker = "hsl($primary_hue, " . (min(100, $saturation + 35)) . "%, " . (min(100, $lightness + 35)) . "%)";
 
 $lime_blog_search_row = (get_theme_mod('searchbar', true) || get_theme_mod('logo', true));
 $lime_blog_header_menu = get_theme_mod('header_menu', true);
@@ -72,9 +69,6 @@ $lime_blog_hero_background = get_theme_mod('hero_background', true);
         --lime_blog_primary_variant_much_darker: <?php echo $lime_blog_primary_variant_much_darker; ?>;
         --lime_blog_primary_variant_brighter: <?php echo $lime_blog_primary_variant_brighter; ?>;
         --lime_blog_primary_variant_much_brighter: <?php echo $lime_blog_primary_variant_much_brighter; ?>;
-        --lime_blog_element_background_inputfeld: <?php echo $lime_blog_background_inputfield; ?>;
-        --lime_blog_element_background_variant: <?php echo $lime_blog_background_variant; ?>;
-        --lime_blog_element_background_variant_darker: <?php echo $lime_blog_background_variant_darker; ?>;
 
         --lime_blog_background_color_sidebar_widget_blocks: <?php echo esc_attr(get_theme_mod('body_background_color_sidebar_widget_blocks', '#303030')); ?>;
         --lime_blog_tag_color: <?php echo esc_attr(get_theme_mod('tags_color', '#303030')); ?>;
