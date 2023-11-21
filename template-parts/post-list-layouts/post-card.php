@@ -22,13 +22,13 @@ function lime_blog_display_post_card($show_sticky)
 
                             <a href="<?php comments_link(); ?>" class="lime_blog_post_card_comments_count">
                                 <?php
-                                echo get_comments_number() . ' ' . __('Comments', 'lime-blog')
+                                echo get_comments_number() . ' ' . esc_html__('Comments', 'lime-blog')
                                 ?>
                             </a>
                         <?php } ?>
 
                         <?php if (get_theme_mod('feed_post_card_read_more', true)) {
-                            echo '<a class="lime_blog_post_card_read_more" href="' . esc_url(get_permalink()) . '">' . __('read more', 'lime-blog') . '</a>';
+                            echo '<a class="lime_blog_post_card_read_more" href="' . esc_url(get_permalink()) . '">' . esc_html__('read more', 'lime-blog') . '</a>';
                         } ?>
                     </div>
                 </div>

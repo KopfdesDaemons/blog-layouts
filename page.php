@@ -8,7 +8,7 @@ get_header();
             while (have_posts()) {
                 the_post();
             ?>
-                <article id="post-<?php the_ID(); ?>" <?php post_class('lime_blog_content_container'); ?>>
+                <article id="post-<?php the_ID(); ?>" <?php post_class('lime_blog_user_content_container'); ?>>
                     <h1><?php the_title(); ?></h1>
                     <?php the_content(); ?>
                 </article>

@@ -23,6 +23,7 @@ function enqueue_custom_styles()
         'post-card' => '/template-parts/post-list-layouts/post-card.css',
         'searchresult' => '/template-parts/post-list-layouts/searchresult.css',
         'frameless-post-list' => '/template-parts/post-list-layouts/frameless-post-list.css',
+        'social-post-list' => '/template-parts/post-list-layouts/social-posts-list.css',
     );
 
     foreach ($styles as $handle => $file) {
@@ -170,4 +171,5 @@ $searchresults_styles = array(
     'search_engine' => __('search engine', 'lime-blog'),
     'cards' => __('cards', 'lime-blog'),
     'frameless' => __('frameless', 'lime-blog'),
+    'social' => __('social', 'lime-blog'),
 );

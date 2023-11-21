@@ -46,7 +46,7 @@
                     <?php } ?>
                 </div>
 
-                <article class="lime_blog_content_container" id="lime_blog_main_content">
+                <article class="lime_blog_user_content_container" id="lime_blog_main_content">
                     <?php the_content(); ?>
                 </article>
 

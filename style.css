@@ -126,18 +126,55 @@ a:hover {
   width: 100%;
 }
 
-.lime_blog_content_container {
+.lime_blog_content {
+  width: 95%;
+}
+
+.lime_blog_user_content_container {
   min-height: 60vh;
   margin: 2em 0;
   padding: 0 clamp(1em, 2vw, 5em);
   overflow: hidden;
+  background-color: var(--lime_blog_background_color_posts);
 }
-
-img {
-  max-width: 100%;
+.lime_blog_user_content_container .wp-block-columns {
+  margin: 1em 0 0 0;
+}
+.lime_blog_user_content_container .wp-block-columns p {
+  margin: 0;
+}
+.lime_blog_user_content_container li {
+  margin: 3px;
+}
+.lime_blog_user_content_container .wp-caption {
+  font-size: 0.8em;
+  font-style: italic;
+}
+.lime_blog_user_content_container figure {
+  margin: 0;
+}
+.lime_blog_user_content_container img {
+  margin: 0.6em 0;
+}
+.lime_blog_user_content_container .alignleft {
+  float: left;
+  margin: 0 1.5em 1em 0;
+}
+.lime_blog_user_content_container .alignright {
+  float: right;
+  margin: 0 0 1em 1.5em;
+}
+.lime_blog_user_content_container .aligncenter {
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 iframe {
+  max-width: 100%;
+}
+
+img {
   max-width: 100%;
 }
 
@@ -267,7 +304,7 @@ input[type=submit]:hover {
 #lime_blog_sidebar {
   width: 20em;
   overflow: hidden;
-  padding: 2em;
+  padding: 2vw;
   grid-area: sidebar;
 }
 @media only screen and (max-width: 800px) {
@@ -335,43 +372,4 @@ input[type=submit]:hover {
 .attachment img {
   width: 95%;
   height: auto;
-}
-
-.lime_blog_content {
-  width: 100%;
-}
-.lime_blog_content > article {
-  background-color: var(--lime_blog_background_color_posts);
-}
-.lime_blog_content > article .wp-block-columns {
-  margin: 1em 0 0 0;
-}
-.lime_blog_content > article .wp-block-columns p {
-  margin: 0;
-}
-.lime_blog_content > article li {
-  margin: 3px;
-}
-.lime_blog_content > article .wp-caption {
-  font-size: 0.8em;
-  font-style: italic;
-}
-.lime_blog_content > article figure {
-  margin: 0;
-}
-.lime_blog_content > article img {
-  margin: 0.6em 0;
-}
-.lime_blog_content > article .alignleft {
-  float: left;
-  margin: 0 1.5em 1em 0;
-}
-.lime_blog_content > article .alignright {
-  float: right;
-  margin: 0 0 1em 1.5em;
-}
-.lime_blog_content > article .aligncenter {
-  clear: both;
-  margin-left: auto;
-  margin-right: auto;
 }/*# sourceMappingURL=style.css.map */

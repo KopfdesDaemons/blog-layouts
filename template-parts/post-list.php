@@ -20,6 +20,12 @@ function lime_blog_display_post_list($query, $style, $show_sticky_posts = false)
             require_once $template_path . 'frameless-posts-list.php';
             break;
 
+        case 'social':
+            $container_class = 'social_post_list';
+            $display_function = 'lime_blog_display_social_post_list';
+            require_once $template_path . 'social-posts-list.php';
+            break;
+
         default:
             $container_class = 'lime_blog_cards_post_list';
             $display_function = 'lime_blog_display_post_card';

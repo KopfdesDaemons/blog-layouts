@@ -132,18 +132,70 @@ a {
     width: 100%;
 }
 
-.lime_blog_content_container {
+// page and post layout including categories, author box and tags
+.lime_blog_content {
+    width: 95%;
+}
+
+// user content in posts and pages
+.lime_blog_user_content_container {
     min-height: 60vh;
     margin: 2em 0;
     padding: 0 clamp(1em, 2vw, 5em);
     overflow: hidden;
-}
 
-img {
-    max-width: 100%;
+    background-color: var(--lime_blog_background_color_posts);
+
+    .wp-block-columns {
+        margin: 1em 0 0 0;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    li {
+        margin: 3px;
+    }
+
+    .wp-caption {
+        font-size: 0.8em;
+        font-style: italic;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    img {
+        margin: 0.6em 0;
+    }
+
+    $ImageSpacing: 1.5em;
+    $ImageSpacingButtom: 1em;
+
+    .alignleft {
+        float: left;
+        margin: 0 $ImageSpacing $ImageSpacingButtom 0;
+    }
+
+    .alignright {
+        float: right;
+        margin: 0 0 $ImageSpacingButtom $ImageSpacing;
+    }
+
+    .aligncenter {
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 iframe {
+    max-width: 100%;
+}
+
+img {
     max-width: 100%;
 }
 
@@ -249,7 +301,7 @@ input[type=submit] {
 #lime_blog_sidebar {
     width: 20em;
     overflow: hidden;
-    padding: 2em;
+    padding: 2vw;
     grid-area: sidebar;
 
     @media only screen and (max-width: 800px) {
@@ -324,58 +376,5 @@ input[type=submit] {
     img {
         width: 95%;
         height: auto;
-    }
-}
-
-// user content in posts and pages
-.lime_blog_content {
-    width: 100%;
-
-    >article {
-        background-color: var(--lime_blog_background_color_posts);
-
-        .wp-block-columns {
-            margin: 1em 0 0 0;
-    
-            p {
-                margin: 0;
-            }
-        }
-    
-        li {
-            margin: 3px;
-        }
-    
-        .wp-caption {
-            font-size: 0.8em;
-            font-style: italic;
-        }
-    
-        figure {
-            margin: 0;
-        }
-    
-        img {
-            margin: 0.6em 0;
-        }
-    
-        $ImageSpacing: 1.5em;
-        $ImageSpacingButtom: 1em;
-    
-        .alignleft {
-            float: left;
-            margin: 0 $ImageSpacing $ImageSpacingButtom 0;
-        }
-    
-        .alignright {
-            float: right;
-            margin: 0 0 $ImageSpacingButtom $ImageSpacing;
-        }
-    
-        .aligncenter {
-            clear: both;
-            margin-left: auto;
-            margin-right: auto;
-        }
     }
 }
