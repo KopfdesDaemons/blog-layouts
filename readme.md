@@ -1,12 +1,13 @@
 # Wordpress theme
 
-Lime Blog is a modern theme for blogs. The primary color is customizable.
-It has a tidy, wide layout with a sidebar, which is right at the edge and 
-doesn't get in the way. The author page is particularly extensive. 
-There is a landing page with a widget area.
+Lime Blog is a modern theme for blogs. A core feature is swapping layouts. 
+The primary color is customizable. It has a tidy, wide layout with a sidebar,
+which is right at the edge and doesn't get in the way. The author page is
+particularly extensive. There is a landing page with a widget area.
 
 ## Features
 
+- swapping layouts
 - gradient hero and landingpage
 - extensive author page
 - custom color

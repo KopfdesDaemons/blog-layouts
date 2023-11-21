@@ -1,7 +1,7 @@
 <?php
 // Widget area
 if (is_active_sidebar('my-sidebar')) {
-    echo '<aside id="lime_blog_sidebar">';
     dynamic_sidebar('my-sidebar');
-    echo '</aside>';
+} else {
+    echo '<div class="widget"><p>' . esc_html__('Fill the sidebar in the customizer', 'lime-blog') . '</p></div>';
 }

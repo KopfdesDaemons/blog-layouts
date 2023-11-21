@@ -32,18 +32,6 @@ function lime_blog_custom_colors($wp_customize)
         'settings' => 'body_background_color'
     )));
 
-    // Background color sidebar widget blocks
-    $wp_customize->add_setting('body_background_color_sidebar_widget_blocks', array(
-        'default' => '#303030',
-        'sanitize_callback' => 'sanitize_hex_color',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'body_background_color_sidebar_widget_blocks', array(
-        'label' => __('Widget blocks sidebar background color', 'lime-blog'),
-        'section' => 'custom_theme_colors',
-        'settings' => 'body_background_color_sidebar_widget_blocks'
-    )));
-
     // Tags color
     $wp_customize->add_setting('tags_color', array(
         'default' => '#303030',

@@ -84,6 +84,21 @@ function lime_blog_custom_posts($wp_customize)
         'section' => 'custom_theme_article',
     ));
 
+    // Sidebar Layout
+    $wp_customize->add_setting('posts_sidebar_layout', array(
+        'default' => 'blocks',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    global $sidebar_layouts;
+    $wp_customize->add_control('posts_sidebar_layout', array(
+        'type' => 'select',
+        'section' => 'custom_theme_article',
+        'label' => __('Layout Sidebar', 'lime-blog'),
+        'choices' => $sidebar_layouts,
+    ));
+
     // Post Image
     $wp_customize->add_setting('post_image', array(
         'default' => true,

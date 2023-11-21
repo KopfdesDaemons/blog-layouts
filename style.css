@@ -3,7 +3,7 @@ Theme Name: Lime Blog
 Author: Rico
 Author URI: https://ricoswebsite.com/
 Text Domain: lime-blog
-Description: Lime Blog is a modern theme for blogs. The primary color is customizable. It has a tidy, wide layout with a sidebar, which is right at the edge and doesn't get in the way. The author page is particularly extensive. There is a landing page with a widget area.
+Description: Lime Blog is a modern theme for blogs. A core feature is swapping layouts. The primary color is customizable. It has a tidy, wide layout with a sidebar, which is right at the edge and doesn't get in the way. The author page is particularly extensive. There is a landing page with a widget area.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Version: 1.0.0
 Requires at least: 5.0
@@ -46,8 +46,7 @@ main {
   flex-direction: column;
   align-items: center;
   grid-area: main;
-  padding-top: 2em;
-  margin-top: 0;
+  margin-top: 2em;
 }
 @media only screen and (min-width: 1300px) {
   main.lime_blog_has_sidebar {
@@ -192,8 +191,8 @@ img {
   border: 6px solid var(--lime_blog_primary_variant_darker);
   animation: wobble 5s linear infinite;
 }
-.lime_blog_landing_page_section + main, .lime_blog_landing_page_section + #lime_blog_sidebar {
-  margin-top: 0;
+.lime_blog_landing_page_section + main, .lime_blog_landing_page_section + main + #lime_blog_sidebar {
+  margin-top: 2em;
 }
 
 .lime_blog_h2_latest_posts {
@@ -299,22 +298,6 @@ input[type=submit] {
 }
 input[type=submit]:hover {
   background-color: rgb(41, 41, 41);
-}
-
-#lime_blog_sidebar {
-  width: 20em;
-  overflow: hidden;
-  padding: 2em 2vw;
-  grid-area: sidebar;
-}
-@media only screen and (max-width: 800px) {
-  #lime_blog_sidebar {
-    width: unset;
-  }
-}
-#lime_blog_sidebar .widget {
-  background-color: var(--lime_blog_background_color_sidebar_widget_blocks);
-  border: 1px solid rgb(95, 95, 95);
 }
 
 .gallery {

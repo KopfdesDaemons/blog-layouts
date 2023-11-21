@@ -126,9 +126,8 @@
         </section>
 </main>
 <?php if(get_theme_mod('post_sidebar', true)) {
-    get_sidebar(); 
-    if (!is_active_sidebar('my-sidebar')){
-        echo '<aside id="lime_blog_sidebar" class="lime_blog_empty_sidebar"><div class="widget"><p>' . esc_html__('Fill the sidebar in the customizer', 'lime-blog') .'</p></div></aside>';
-    } 
+    echo '<aside id="lime_blog_sidebar" class="' . 'lime_blog_sidebar_layout_' . get_theme_mod('posts_sidebar_layout', 'blocks') . '">';
+    get_sidebar();
+    echo '</aside>';
 };?>
 <?php get_footer(); ?>

@@ -28,12 +28,27 @@ function lime_blog_custom_date_list($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    global $searchresults_styles;
+    global $post_list_layouts;
     $wp_customize->add_control('date_list_style', array(
         'type' => 'select',
         'section' => 'date_list',
         'label' => __('Date results style', 'lime-blog'),
-        'choices' => $searchresults_styles,
+        'choices' => $post_list_layouts,
+    ));
+
+    // Sidebar Layout
+    $wp_customize->add_setting('date_sidebar_layout', array(
+        'default' => 'blocks',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    global $sidebar_layouts;
+    $wp_customize->add_control('date_sidebar_layout', array(
+        'type' => 'select',
+        'section' => 'date_list',
+        'label' => __('Layout Sidebar', 'lime-blog'),
+        'choices' => $sidebar_layouts,
     ));
 }
 add_action('customize_register', 'lime_blog_custom_date_list');

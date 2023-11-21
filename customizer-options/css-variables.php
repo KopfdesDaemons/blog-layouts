@@ -70,7 +70,6 @@ $lime_blog_hero_background = get_theme_mod('hero_background', true);
         --lime_blog_primary_variant_brighter: <?php echo $lime_blog_primary_variant_brighter; ?>;
         --lime_blog_primary_variant_much_brighter: <?php echo $lime_blog_primary_variant_much_brighter; ?>;
 
-        --lime_blog_background_color_sidebar_widget_blocks: <?php echo esc_attr(get_theme_mod('body_background_color_sidebar_widget_blocks', '#303030')); ?>;
         --lime_blog_tag_color: <?php echo esc_attr(get_theme_mod('tags_color', '#303030')); ?>;
         --lime_blog_font_color: <?php echo esc_attr(get_theme_mod('font_color', '#eeeeee')); ?>;
         --lime_blog_body_font: <?php echo esc_attr(get_theme_mod('body_font', 'Fragment Mono')); ?>;

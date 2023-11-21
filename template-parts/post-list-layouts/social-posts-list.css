@@ -22,7 +22,7 @@
   border: 1px solid gray;
   overflow: hidden;
   max-width: 50em;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
 }
 .lime_blog_social_post_list_item .lime_blog_social_post_list_item_row_1 {
   padding: 0.5em;

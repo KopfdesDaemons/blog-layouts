@@ -21,7 +21,7 @@
   background-color: var(--lime_blog_primary_variant_much_darker);
   border-radius: 16px;
   overflow: hidden;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
 }
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_image_container {
   display: flex;

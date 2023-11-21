@@ -6,18 +6,22 @@
 
     if (is_author()) {
         $lime_blog_side_bar = get_theme_mod('author_page_sidebar', true);
+        $lime_blog_sidebar_layout_setting = get_theme_mod('author_page_sidebar_layout', 'blocks');
         $lime_blog_archive_title = get_the_author();
         $lime_blog_archive_post_list_style = get_theme_mod('author_posts_style', 'cards');
     } elseif (is_tag()) {
         $lime_blog_side_bar = get_theme_mod('tags_sidebar', true);
+        $lime_blog_sidebar_layout_setting = get_theme_mod('tags_sidebar_layout', 'blocks');
         $lime_blog_archive_title = single_tag_title('', false);
         $lime_blog_archive_post_list_style = get_theme_mod('tag_list_style', 'cards');
     } elseif (is_category()) {
         $lime_blog_side_bar = get_theme_mod('category_sidebar', true);
+        $lime_blog_sidebar_layout_setting = get_theme_mod('category_sidebar_layout', 'blocks');
         $lime_blog_archive_title = single_cat_title('', false);
         $lime_blog_archive_post_list_style = get_theme_mod('category_list_style', 'cards');
     } elseif (is_date()) {
         $lime_blog_side_bar = get_theme_mod('date_sidebar', true);
+        $lime_blog_sidebar_layout_setting = get_theme_mod('date_sidebar_layout', 'blocks');
         if (is_day()) {
             $lime_blog_archive_title = esc_html__('Archive for', 'lime-blog') . ' ' . get_the_date();
         } elseif (is_month()) {
@@ -28,6 +32,7 @@
         $lime_blog_archive_post_list_style = get_theme_mod('date_list_style', 'cards');
     } elseif (is_search()) {
         $lime_blog_side_bar = get_theme_mod('search_sidebar', true);
+        $lime_blog_sidebar_layout_setting = get_theme_mod('search_sidebar_layout', 'blocks');
         $lime_blog_archive_post_list_style = get_theme_mod('searchresults_style', 'cards');
     } elseif (is_archive()) {
         $lime_blog_side_bar = get_theme_mod('archive_sidebar', true);
@@ -219,7 +224,8 @@
 </main>
 <?php
 if ($lime_blog_side_bar) {
+    echo '<aside id="lime_blog_sidebar" class="' . 'lime_blog_sidebar_layout_' . $lime_blog_sidebar_layout_setting . '">';
     get_sidebar();
-    if (!is_active_sidebar('my-sidebar')) echo '<aside id="lime_blog_sidebar" class="lime_blog_empty_sidebar"><div class="widget"><p>' . esc_html__('Fill the sidebar in the customizer', 'lime-blog') . '</p></div></aside>';
+    echo '</aside>';
 }
 get_footer(); ?>

@@ -9,6 +9,7 @@ function enqueue_custom_styles()
         'custom-styles' => '/style.css',
         'header-styles' => '/header.css',
         'footer-styles' => '/footer.css',
+        'sidebar-styles' => '/sidebar.css',
         'comments-styles' => '/comments.css',
         'archive-styles' => '/archive.css',
         'single-styles' => '/single.css',
@@ -49,46 +50,32 @@ add_theme_support('html5', array(
 add_theme_support('align-wide');
 add_theme_support('responsive-embeds');
 
-// Author Script
-function lime_blog_author_script()
+function lime_blog_enqueue_scripts()
 {
-    wp_enqueue_script('lime_blog_author_script', get_template_directory_uri() . '/js/lime_blog_author_page.js', null, '1.0', true);
-}
-if(get_theme_mod('author_page_latest_comments', true)) add_action('wp_enqueue_scripts', 'lime_blog_author_script');
-
-// Load the wordpress comment script from the “\wordpress\wp-includes\js” directory.
-// This allows the comment response form to be located below the corresponding comment
-// and not at the very bottom of the page.
-function lime_blog_enqueue_comments_reply()
-{
+    // Load the wordpress comment script from the “\wordpress\wp-includes\js” directory.
+    // This allows the comment response form to be located below the corresponding comment
+    // and not at the very bottom of the page.
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
+    // Header Script
+    wp_enqueue_script('lime_blog_header_script', get_template_directory_uri() . '/js/lime_blog_header_script.js', null, '1.0', true);
+    
+    // Author Script
+    if(get_theme_mod('author_page_latest_comments', true)) {
+        wp_enqueue_script('lime_blog_author_script', get_template_directory_uri() . '/js/lime_blog_author_page.js', null, '1.0', true);
+    }
 }
-add_action('wp_enqueue_scripts', 'lime_blog_enqueue_comments_reply');
+add_action('wp_enqueue_scripts', 'lime_blog_enqueue_scripts');
 
-
-// For the translation
-function lime_blog_load_theme_textdomain()
+function lime_blog_after_setup_theme()
 {
+    // For the translation
     load_theme_textdomain('lime-blog', get_template_directory() . '/languages');
-}
-add_action('after_setup_theme', 'lime_blog_load_theme_textdomain');
-
-
-// defaults to the feed as the homepage
-function lime_blog_set_default_front_page()
-{
+    // defaults to the feed as the homepage
     update_option('show_on_front', 'posts');
 }
-add_action('after_setup_theme', 'lime_blog_set_default_front_page');
-
-// Header Script
-function lime_blog_header_script()
-{
-    wp_enqueue_script('lime_blog_header_script', get_template_directory_uri() . '/js/lime_blog_header_script.js', null, '1.0', true);
-}
-add_action('wp_enqueue_scripts', 'lime_blog_header_script');
+add_action('after_setup_theme', 'lime_blog_after_setup_theme');
 
 function lime_blog_register_menus()
 {
@@ -147,21 +134,27 @@ class lime_blog_menu_walker extends Walker_Nav_Menu
     }
 }
 
-// Custom Settings
-require_once get_template_directory() . '/customizer-options/colors-options.php';
-require_once get_template_directory() . '/customizer-options/header-options.php';
-require_once get_template_directory() . '/customizer-options/posts-options.php';
-require_once get_template_directory() . '/customizer-options/feed-options.php';
-require_once get_template_directory() . '/customizer-options/fonts-options.php';
-require_once get_template_directory() . '/customizer-options/author-page-options.php';
-require_once get_template_directory() . '/customizer-options/pages-options.php';
-require_once get_template_directory() . '/customizer-options/searchresults-options.php';
-require_once get_template_directory() . '/customizer-options/layout-options.php';
-require_once get_template_directory() . '/customizer-options/post-list-layouts/cards-options.php';
-require_once get_template_directory() . '/customizer-options/post-list-layouts/frameless-post-list.php';
-require_once get_template_directory() . '/customizer-options/tag-list-options.php';
-require_once get_template_directory() . '/customizer-options/category-list-options.php';
-require_once get_template_directory() . '/customizer-options/date-list-options.php';
+// customizer settings
+$customizer_options = [
+    'colors-options.php',
+    'header-options.php',
+    'posts-options.php',
+    'feed-options.php',
+    'fonts-options.php',
+    'author-page-options.php',
+    'pages-options.php',
+    'searchresults-options.php',
+    'layout-options.php',
+    'post-list-layouts/cards-options.php',
+    'post-list-layouts/frameless-post-list.php',
+    'tag-list-options.php',
+    'category-list-options.php',
+    'date-list-options.php'
+];
+
+foreach ($customizer_options as $option) {
+    require_once get_template_directory() . '/customizer-options/' . $option;
+}
 
 // Sanitize function to check checkbox value (true/false)
 function lime_blog_sanitize_checkbox($input)
@@ -169,11 +162,19 @@ function lime_blog_sanitize_checkbox($input)
     return (isset($input) && true === $input) ? true : false;
 }
 
-$searchresults_styles = array(
-    'search_engine' => 'search engine',
+$post_list_layouts = array(
     'cards' => 'cards',
     'frameless' => 'frameless',
-    'social' => 'social',
     'material2' => 'material2',
     'material3' => 'material3',
+    'search_engine' => 'search engine',
+    'social' => 'social',
+);
+
+$sidebar_layouts = array(
+    'blocks' => 'blocks',
+    'frameless' => 'frameless',
+    'material2' => 'material2',
+    'material3' => 'material3',
+    'social' => 'social',
 );

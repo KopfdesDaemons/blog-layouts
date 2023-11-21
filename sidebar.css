@@ -1,0 +1,33 @@
+#lime_blog_sidebar {
+  width: 20em;
+  overflow: hidden;
+  margin: 2em 2vw;
+  grid-area: sidebar;
+}
+@media only screen and (max-width: 800px) {
+  #lime_blog_sidebar {
+    width: unset;
+  }
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_blocks .widget {
+  border: 1px solid rgb(95, 95, 95);
+  background-color: #3d3d3d;
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_material2 {
+  background-color: #212121;
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_material2 .widget {
+  margin-bottom: 0;
+  border-bottom: solid 1px;
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_material3 .widget {
+  background-color: #212121;
+  border-radius: 16px;
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_framless .widget {
+  background-color: unset;
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_social {
+  border: 1px solid gray;
+  background-color: rgb(51, 52, 61);
+}/*# sourceMappingURL=sidebar.css.map */

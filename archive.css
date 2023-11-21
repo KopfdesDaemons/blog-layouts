@@ -148,7 +148,6 @@
   background-color: rgb(41, 41, 41);
 }
 .author .lime_blog_autor_content {
-  min-height: 70vh;
   max-width: 100%;
 }
 .author .lime_blog_author_comments_container {
@@ -163,7 +162,9 @@
 }
 .lime_blog_comments .lime_blog_author_comments_container {
   display: block;
+  min-height: 70vh;
 }
-.lime_blog_comments .lime_blog_feed {
+.lime_blog_comments .lime_blog_author_comments_container + ul {
   display: none;
+  min-height: 70vh;
 }/*# sourceMappingURL=archive.css.map */

@@ -158,7 +158,6 @@
     }
 
     .lime_blog_autor_content {
-        min-height: 70vh;
         max-width: 100%;
     }
 
@@ -178,9 +177,11 @@
 
     .lime_blog_author_comments_container {
         display: block;
-    }
+        min-height: 70vh;
 
-    .lime_blog_feed {
-        display: none;
+        &+ ul {
+            display: none;
+            min-height: 70vh;
+        }
     }
 }

@@ -1,4 +1,21 @@
 <?php
+
+function enqueue_post_list_styles()
+{
+    global $post_list_layouts; 
+    $theme_directory = get_stylesheet_directory_uri();
+
+    // Add the appropriate stylesheet based on the name
+    foreach ($post_list_layouts as $style_key => $style_name) {
+        $handle = sanitize_title($style_key);
+        $file = '/template-parts/post-list-layouts/' . $style_key . '-post-list' . '.css';
+
+        wp_enqueue_style($handle, $theme_directory . $file, array(), '1', 'all');
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_post_list_styles');
+
+
 function lime_blog_display_post_list($query, $style, $show_sticky_posts = false)
 {
     ob_start(); // Start output buffering
