@@ -58,7 +58,7 @@ function lime_blog_custom_feed($wp_customize)
         'label' => __('Maximum width of the feed', 'lime-blog'),
         'section' => 'custom_feed',
         'input_attrs' => array(
-            'min' => 50,
+            'min' => 30,
             'max' => 150,
             'step' => 1,
         ),

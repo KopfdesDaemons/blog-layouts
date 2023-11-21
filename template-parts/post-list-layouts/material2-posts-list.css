@@ -3,7 +3,6 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2em;
   margin-bottom: 2em;
 }
@@ -15,6 +14,11 @@
     padding: 0 2vw;
   }
 }
+@media only screen and (max-width: 1250px) {
+  .material2_post_list {
+    justify-content: center;
+  }
+}
 
 .lime_blog_material2_post_list_item {
   max-width: 30em;
@@ -22,6 +26,8 @@
   border-radius: 4px;
   overflow: hidden;
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 .lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_image_container {
   display: flex;
@@ -45,6 +51,7 @@
 }
 .lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_excerpt {
   padding: 0 2em;
+  margin-bottom: auto;
 }
 .lime_blog_material2_post_list_item .lime_blog_materiale_post_list_item_icon_row {
   display: flex;

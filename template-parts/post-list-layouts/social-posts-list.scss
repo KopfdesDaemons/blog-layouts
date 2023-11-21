@@ -3,14 +3,14 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 2em;
     margin-bottom: 2em;
-
+    justify-content: center;
+    
     li {
         list-style: none;
     }
-
+    
     @media only screen and (min-width: 800px) {
         padding: 0 2vw;
     }
@@ -23,6 +23,8 @@
     overflow: hidden;
     max-width: 50em;
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 
     .lime_blog_social_post_list_item_row_1 {
         padding: 0.5em;

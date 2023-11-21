@@ -2,7 +2,7 @@
 
 function enqueue_post_list_styles()
 {
-    global $post_list_layouts; 
+    global $post_list_layouts;
     $theme_directory = get_stylesheet_directory_uri();
 
     // Add the appropriate stylesheet based on the name
@@ -49,11 +49,11 @@ function lime_blog_display_post_list($query, $style, $show_sticky_posts = false)
             require_once $template_path . 'material2-posts-list.php';
             break;
 
-            case 'material3':
-                $container_class = 'material3_post_list';
-                $display_function = 'lime_blog_display_material3_post_list';
-                require_once $template_path . 'material3-posts-list.php';
-                break;
+        case 'material3':
+            $container_class = 'material3_post_list';
+            $display_function = 'lime_blog_display_material3_post_list';
+            require_once $template_path . 'material3-posts-list.php';
+            break;
 
         default:
             $container_class = 'lime_blog_cards_post_list';

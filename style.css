@@ -48,9 +48,9 @@ main {
   grid-area: main;
   margin-top: 2em;
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1600px) {
   main.lime_blog_has_sidebar {
-    padding-left: 20em;
+    padding-left: 27em;
   }
 }
 
