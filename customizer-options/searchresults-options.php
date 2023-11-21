@@ -32,7 +32,7 @@ function lime_blog_custom_searchresults($wp_customize)
     $wp_customize->add_control('searchresults_style', array(
         'type' => 'select',
         'section' => 'searchresults',
-        'label' => __('Search results style', 'lime-blog'),
+        'label' => __('Layout', 'lime-blog'),
         'choices' => $searchresults_styles,
     ));
 }

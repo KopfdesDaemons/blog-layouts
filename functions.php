@@ -20,8 +20,9 @@ function enqueue_custom_styles()
         'fontawesome' => '/fonts/fontawesome/css/all.min.css',
 
         //  template-parts
-        'post-card' => '/template-parts/post-card.css',
-        'searchresult' => '/template-parts/searchresult.css',
+        'post-card' => '/template-parts/post-list-layouts/post-card.css',
+        'searchresult' => '/template-parts/post-list-layouts/searchresult.css',
+        'frameless-post-list' => '/template-parts/post-list-layouts/frameless-post-list.css',
     );
 
     foreach ($styles as $handle => $file) {
@@ -152,7 +153,9 @@ require_once get_template_directory() . '/customizer-options/fonts-options.php';
 require_once get_template_directory() . '/customizer-options/author-page-options.php';
 require_once get_template_directory() . '/customizer-options/pages-options.php';
 require_once get_template_directory() . '/customizer-options/searchresults-options.php';
-require_once get_template_directory() . '/customizer-options/cards-options.php';
+require_once get_template_directory() . '/customizer-options/layout-options.php';
+require_once get_template_directory() . '/customizer-options/post-list-layouts/cards-options.php';
+require_once get_template_directory() . '/customizer-options/post-list-layouts/frameless-post-list.php';
 require_once get_template_directory() . '/customizer-options/tag-list-options.php';
 require_once get_template_directory() . '/customizer-options/category-list-options.php';
 require_once get_template_directory() . '/customizer-options/date-list-options.php';
@@ -166,4 +169,5 @@ function lime_blog_sanitize_checkbox($input)
 $searchresults_styles = array(
     'search_engine' => __('search engine', 'lime-blog'),
     'cards' => __('cards', 'lime-blog'),
+    'frameless' => __('frameless', 'lime-blog'),
 );

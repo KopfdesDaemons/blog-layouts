@@ -1,12 +1,6 @@
 <?php
 function lime_blog_cards($wp_customize)
 {
-    // Section
-    $wp_customize->add_section('custom_theme_cards', array(
-        'title' => __('Cards', 'lime-blog'),
-        'priority' => 30,
-    ));
-
     // Background color
     $wp_customize->add_setting('feed_post_card_color', array(
         'default' => '#000000',

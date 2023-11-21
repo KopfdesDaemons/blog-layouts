@@ -32,7 +32,7 @@ function lime_blog_custom_category_list($wp_customize)
     $wp_customize->add_control('category_list_style', array(
         'type' => 'select',
         'section' => 'category_list',
-        'label' => __('Category results style', 'lime-blog'),
+        'label' => __('Layout', 'lime-blog'),
         'choices' => $searchresults_styles,
     ));
 }

@@ -75,7 +75,7 @@ function lime_blog_custom_feed($wp_customize)
     $wp_customize->add_control('feed_style', array(
         'type' => 'select',
         'section' => 'custom_feed',
-        'label' => __('Feed style', 'lime-blog'),
+        'label' => __('Layout', 'lime-blog'),
         'choices' => $searchresults_styles,
     ));
 

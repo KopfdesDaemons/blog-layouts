@@ -98,9 +98,11 @@ $lime_blog_hero_background = get_theme_mod('hero_background', true);
         --lime_blog_max_page_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_pages', '70')) . 'em'; ?>;
         --lime_blog_background_color_pages: <?php echo esc_attr(get_theme_mod('background_color_pages', '')); ?>;
 
-        /* Feed Setting */
-        --lime_blog_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_height', '20')) . 'px'; ?>;
+        /* Feed Settings */
         --lime_blog_feed_landingpage_minimal_height: <?php echo esc_attr(get_theme_mod('minimal_height_of_the_landingpage', '80')) . 'vh'; ?>;
+
+        /* Post List Cards */
+        --lime_blog_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_height', '20')) . 'px'; ?>;
         --lime_blog_feed_post_card_border_radius: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius', '12')) . 'px'; ?>;
         --lime_blog_feed_post_card_padding: <?php echo esc_attr(get_theme_mod('feed_post_card_padding', '1')) . 'em'; ?>;
         --lime_blog_feed_post_card_border_radius_image: <?php echo esc_attr(get_theme_mod('feed_post_card_border_radius_image', '6')) . 'px'; ?>;
@@ -108,5 +110,13 @@ $lime_blog_hero_background = get_theme_mod('hero_background', true);
         --lime_blog_tags_border_radius: <?php echo esc_attr(get_theme_mod('tags_border_radius', '4')) . 'px'; ?>;
         --lime_blog_max_feed_width: <?php echo esc_attr(get_theme_mod('maximum_width_of_the_feed', '70')) . 'em'; ?>;
         --lime_blog_feed_post_card_background_color: <?php echo esc_attr(get_theme_mod('feed_post_card_color', '#000000')); ?>;
+
+        /* Post List Frameless */
+        --lime_blog_frameless_post_list_line_height: <?php echo esc_attr(get_theme_mod('frameless_post_list_line_height', '20')) . 'px'; ?>;
+        --lime_blog_frameless_post_list_padding: <?php echo esc_attr(get_theme_mod('frameless_post_list_padding', '1')) . 'em'; ?>;
+        --lime_blog_frameless_post_list_border_radius_image: <?php echo esc_attr(get_theme_mod('frameless_post_list_border_radius_image', '6')) . 'px'; ?>;
+        --lime_blog_frameless_post_list_spacing: <?php echo esc_attr(get_theme_mod('frameless_post_list_spacing', '3')) . 'em'; ?>;
+        --lime_blog_frameless_post_list_tags_border_radius: <?php echo esc_attr(get_theme_mod('frameless_post_list_tags_border_radius', '4')) . 'px'; ?>;
+        --lime_blog_frameless_post_list_color: <?php echo esc_attr(get_theme_mod('frameless_post_list_color', '')); ?>;
     }
 </style>

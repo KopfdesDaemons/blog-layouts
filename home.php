@@ -32,7 +32,7 @@
             if ($query->have_posts()) {
                 $searchresults_style = get_theme_mod('feed_style', 'cards');
                 require_once get_template_directory() . '/template-parts/post-list.php';
-                echo lime_blog_display_post_list($query, $searchresults_style);
+                echo lime_blog_display_post_list($query, $searchresults_style, true);
             } else {
                 echo esc_html__('No posts found.', 'lime-blog');
             }

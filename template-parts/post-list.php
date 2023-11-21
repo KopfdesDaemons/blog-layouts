@@ -5,13 +5,19 @@ function lime_blog_display_post_list($query, $style, $show_sticky_posts = false)
 
     $container_class = '';
     $display_function = '';
-    $template_path = get_template_directory() . '/template-parts/';
+    $template_path = get_template_directory() . '/template-parts/post-list-layouts/';
 
     switch ($style) {
         case 'search_engine':
             $container_class = 'lime_blog_searchresults';
             $display_function = 'lime_blog_display_searchresult';
             require_once $template_path . 'searchresult.php';
+            break;
+
+        case 'frameless':
+            $container_class = 'lime_blog_framless_post_list';
+            $display_function = 'lime_blog_display_frameless';
+            require_once $template_path . 'frameless-posts-list.php';
             break;
 
         default:
@@ -32,4 +38,3 @@ function lime_blog_display_post_list($query, $style, $show_sticky_posts = false)
 
     return ob_get_clean(); // Return the buffered output as a string
 }
-?>

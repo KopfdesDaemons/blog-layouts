@@ -114,7 +114,7 @@ function lime_blog_custom_author_page($wp_customize)
     $wp_customize->add_control('author_posts_style', array(
         'type' => 'select',
         'section' => 'custom_author_page',
-        'label' => __('Posts list style', 'lime-blog'),
+        'label' => __('Layout', 'lime-blog'),
         'choices' => $searchresults_styles,
     ));
 }

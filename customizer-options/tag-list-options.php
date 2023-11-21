@@ -32,7 +32,7 @@ function lime_blog_custom_tag_list($wp_customize)
     $wp_customize->add_control('tag_list_style', array(
         'type' => 'select',
         'section' => 'tag_list',
-        'label' => __('Tag results style', 'lime-blog'),
+        'label' => __('Layout', 'lime-blog'),
         'choices' => $searchresults_styles,
     ));
 }
