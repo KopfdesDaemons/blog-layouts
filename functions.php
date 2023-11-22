@@ -167,8 +167,8 @@ function lime_blog_sanitize_checkbox($input)
 $lime_blog_post_list_layouts = array(
     'cards' => 'cards',
     'frameless' => 'frameless',
-    'material2' => 'material2',
-    'material3' => 'material3',
+    'material2' => 'material 2',
+    'material3' => 'material 3',
     'search-engine' => 'search engine',
     'social' => 'social',
 );
@@ -176,7 +176,9 @@ $lime_blog_post_list_layouts = array(
 $lime_blog_sidebar_layouts = array(
     'blocks' => 'blocks',
     'frameless' => 'frameless',
-    'material2' => 'material2',
-    'material3' => 'material3',
+    'frames' => 'frames',
+    'material2' => 'material 2',
+    'material3' => 'material 3',
+    'neon' => 'neon',
     'social' => 'social',
 );

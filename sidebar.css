@@ -9,6 +9,9 @@
     width: unset;
   }
 }
+#lime_blog_sidebar .widget-title {
+  text-align: center;
+}
 #lime_blog_sidebar.lime_blog_sidebar_layout_blocks .widget {
   border: 1px solid rgb(95, 95, 95);
   background-color: #3d3d3d;
@@ -24,10 +27,45 @@
   background-color: #212121;
   border-radius: 16px;
 }
+#lime_blog_sidebar.lime_blog_sidebar_layout_material3 .widget .widget-title {
+  text-decoration: underline;
+  margin: 0.4em 0;
+}
 #lime_blog_sidebar.lime_blog_sidebar_layout_frameless .widget {
   background-color: unset;
+  border-radius: 16px;
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_frameless .widget:hover {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 #lime_blog_sidebar.lime_blog_sidebar_layout_social {
+  gap: 0;
   border: 1px solid gray;
   background-color: rgb(51, 52, 61);
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_social .widget:not(:last-of-type) {
+  margin-bottom: 0;
+  border-bottom: 1px solid gray;
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_social .widget-title {
+  border-bottom: 1px solid gray;
+  margin: -0.9rem -1rem 0.5rem -1rem;
+  background-color: #56585d;
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_neon .widget {
+  border-radius: 4px;
+  background-color: var(--lime_blog_primary_variant_much_darker);
+  box-shadow: inset 0px 0px 20px 0px var(--lime_blog_primary_color);
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_neon .widget:hover {
+  background-color: var(--lime_blog_primary_variant_darker);
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_frames .widget {
+  border-radius: 4px;
+  border: 1px solid grey;
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_frames .widget .widget-title {
+  border-bottom: 1px solid gray;
+  margin: -1rem -1rem 0.5rem -1rem;
+  background-color: #212121;
 }/*# sourceMappingURL=sidebar.css.map */

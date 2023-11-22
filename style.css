@@ -187,7 +187,7 @@ img {
   padding-top: var(--lime_blog_margin_to_header);
   background: var(--lime_blog_gradient);
 }
-.lime_blog_landing_page_section .wp-block-image.size-full img {
+.lime_blog_landing_page_section.lime_blog_landing_page_image_animation .wp-block-image.size-full img {
   border: 6px solid var(--lime_blog_primary_variant_darker);
   animation: wobble 5s linear infinite;
 }

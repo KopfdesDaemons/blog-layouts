@@ -47,7 +47,7 @@
   padding: 0 clamp(1em, 2vw, 2em);
 }
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_headline_row h2 {
-  line-height: 0.95em;
+  line-height: 1.1em;
 }
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_date {
   padding: 0 clamp(1em, 2vw, 2em);
@@ -73,12 +73,13 @@
   gap: 0.3em;
 }
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_tags a {
-  padding: 0.4em;
+  padding: 0.6em;
   border: 1px solid gray;
   border-radius: 8px;
   color: var(--lime_blog_font_color);
   text-decoration: none;
   display: flex;
+  font-size: 0.8em;
 }
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_tags a:hover {
   background-color: var(--lime_blog_primary_variant_darker);

@@ -20,6 +20,20 @@ function lime_blog_custom_feed($wp_customize)
         'section' => 'custom_feed',
     ));
 
+    // Landingpage area
+    $wp_customize->add_setting('landingpage_image_animation', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('landingpage_image_animation', array(
+        'type' => 'checkbox',
+        'label' => __('Landingpage image animation', 'lime-blog'),
+        'section' => 'custom_feed',
+        'active_callback' => 'landingpage_active_callback',
+    ));
+
     // Minimal height landingpage
     $wp_customize->add_setting('minimal_height_of_the_landingpage', array(
         'default' => '80',

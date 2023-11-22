@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php if (get_theme_mod('landingpage_section')) { ?>
-    <section class="lime_blog_landing_page_section">
+    <section class="lime_blog_landing_page_section <?php if(get_theme_mod('landingpage_image_animation', true)) echo 'lime_blog_landing_page_image_animation' ?>">
         <div class="lime_blog_content_spacer">
             <?php
             if (is_active_sidebar('landingpage-widget-area')) {
