@@ -3,7 +3,7 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
+  gap: var(--lime_blog_material2_post_list_spacing);
   margin-bottom: 2em;
 }
 .material2_post_list li {
@@ -22,7 +22,7 @@
 
 .lime_blog_material2_post_list_item {
   max-width: 30em;
-  background-color: #212121;
+  background-color: var(--lime_blog_material2_post_list_color);
   border-radius: 4px;
   overflow: hidden;
   flex: 1 1 auto;
@@ -49,9 +49,40 @@
   padding: 0.5em 2em;
   line-height: 0.95em;
 }
+.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_date {
+  padding: 0 2em;
+}
+.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_categorys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 0 2em;
+}
 .lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_excerpt {
   padding: 0 2em;
   margin-bottom: auto;
+}
+.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_excerpt p {
+  line-height: var(--lime_blog_material2_post_list_line_height);
+}
+.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_tags {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+  padding: 0 2em;
+}
+.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_tags a {
+  font-size: 0.8em;
+  padding: 0.8em;
+  border-radius: 5em;
+  color: #fafafa;
+  background-color: #595959;
+  text-decoration: none;
+  transition: all 200ms;
+}
+.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_tags a:hover {
+  background-color: rgba(255, 255, 255, 0.329);
 }
 .lime_blog_material2_post_list_item .lime_blog_materiale_post_list_item_icon_row {
   display: flex;
@@ -63,7 +94,7 @@
   text-decoration: none;
   color: var(--lime_blog_primary_color);
   border-radius: 4px;
-  padding: 0.5em 0.3em;
+  padding: 0.7em 0.4em;
 }
 .lime_blog_material2_post_list_item .lime_blog_materiale_post_list_item_icon_row a:hover {
   background-color: var(--lime_blog_primary_variant_much_darker);

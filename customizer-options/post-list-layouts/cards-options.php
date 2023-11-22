@@ -22,7 +22,6 @@ function lime_blog_cards($wp_customize)
 
     $wp_customize->add_control('feed_post_card_spacing', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Spacing between posts', 'lime-blog'),
         'section' => 'custom_theme_cards',
         'input_attrs' => array(
@@ -117,7 +116,6 @@ function lime_blog_cards($wp_customize)
 
     $wp_customize->add_control('feed_post_card_line_height', array(
         'type' => 'range',
-        'section' => 'title_tagline',
         'label' => __('Line height in text snippet', 'lime-blog'),
         'section' => 'custom_theme_cards',
         'input_attrs' => array(

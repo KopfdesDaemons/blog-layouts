@@ -10,13 +10,19 @@ function lime_blog_layout_options($wp_customize)
 
     // Section
     $wp_customize->add_section('custom_theme_cards', array(
-        'title' => __('Cards', 'lime-blog'),
+        'title' => 'Cards',
         'priority' => 30,
         'panel' => 'layouts',
     ));
 
     $wp_customize->add_section('frameless_post_list', array(
-        'title' => __('Frameless posts list', 'lime-blog'),
+        'title' => 'Frameless',
+        'priority' => 30,
+        'panel' => 'layouts',
+    ));
+
+    $wp_customize->add_section('material2_post_list', array(
+        'title' => 'Material2',
         'priority' => 30,
         'panel' => 'layouts',
     ));

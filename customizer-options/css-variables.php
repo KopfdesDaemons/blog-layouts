@@ -111,5 +111,10 @@ $lime_blog_hero_background = get_theme_mod('hero_background', true);
         --lime_blog_frameless_post_list_spacing: <?php echo esc_attr(get_theme_mod('frameless_post_list_spacing', '3')) . 'em'; ?>;
         --lime_blog_frameless_post_list_tags_border_radius: <?php echo esc_attr(get_theme_mod('frameless_post_list_tags_border_radius', '4')) . 'px'; ?>;
         --lime_blog_frameless_post_list_color: <?php echo esc_attr(get_theme_mod('frameless_post_list_color', '')); ?>;
+
+        /* Material2 List Frameless */
+        --lime_blog_material2_post_list_line_height: <?php echo esc_attr(get_theme_mod('material2_post_list_line_height', '20')) . 'px'; ?>;
+        --lime_blog_material2_post_list_spacing: <?php echo esc_attr(get_theme_mod('material2_post_list_spacing', '3')) . 'em'; ?>;
+        --lime_blog_material2_post_list_color: <?php echo esc_attr(get_theme_mod('material2_post_list_color', '#212121')); ?>;
     }
 </style>

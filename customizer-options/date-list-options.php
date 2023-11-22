@@ -32,7 +32,7 @@ function lime_blog_custom_date_list($wp_customize)
     $wp_customize->add_control('date_list_style', array(
         'type' => 'select',
         'section' => 'date_list',
-        'label' => __('Date results style', 'lime-blog'),
+        'label' => __('Layout', 'lime-blog'),
         'choices' => $post_list_layouts,
     ));
 
