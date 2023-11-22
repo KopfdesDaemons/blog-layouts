@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-11-21 10:54+0100\n"
-"PO-Revision-Date: 2023-11-21 10:54+0100\n"
+"POT-Creation-Date: 2023-11-22 19:51+0100\n"
+"PO-Revision-Date: 2023-11-22 19:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -35,63 +35,63 @@ msgstr "Gehe zur Startseite"
 msgid "Archive"
 msgstr "Archive"
 
-#: archive.php:22 archive.php:24 archive.php:26
+#: archive.php:26 archive.php:28 archive.php:30
 msgid "Archive for"
 msgstr "Archive für"
 
-#: archive.php:85
+#: archive.php:90
 msgid "Role"
 msgstr "Rolle"
 
-#: archive.php:98
+#: archive.php:103
 msgid "Registration date"
 msgstr "Registrierungsdatum"
 
-#: archive.php:105
+#: archive.php:110
 msgid "Number of posts"
 msgstr "Anzahl der Beiträge"
 
-#: archive.php:115 customizer-options/posts-options.php:6
+#: archive.php:120 customizer-options/posts-options.php:6
 msgid "Posts"
 msgstr "Beiträge"
 
-#: archive.php:119 template-parts/post-list-layouts/frameless-posts-list.php:26
-#: template-parts/post-list-layouts/post-card.php:25
+#: archive.php:124 template-parts/post-list-layouts/cards-posts-list.php:25
+#: template-parts/post-list-layouts/frameless-posts-list.php:26
+#: template-parts/post-list-layouts/material2-posts-list.php:47
+#: template-parts/post-list-layouts/material3-posts-list.php:46
+#: template-parts/post-list-layouts/social-posts-list.php:35
+#: template-parts/post-list-layouts/social-posts-list.php:44
 msgid "Comments"
 msgstr "Kommentare"
 
-#: archive.php:127
+#: archive.php:132
 #, php-format
 msgid "About %s:"
 msgstr "Über %s:"
 
-#: archive.php:131
+#: archive.php:136
 msgid "Website"
 msgstr "Webseite"
 
-#: archive.php:153
+#: archive.php:158
 msgid "Last comments from"
 msgstr "Letzte Kommentare von"
 
-#: archive.php:173
+#: archive.php:178
 msgid "No comments found."
 msgstr "Keine Kommentare gefunden."
 
-#: archive.php:195 home.php:46 search.php:29
+#: archive.php:200 home.php:46 search.php:29
 msgid "« Previous"
 msgstr "« Vorherige"
 
-#: archive.php:207 home.php:58 search.php:41
+#: archive.php:212 home.php:58 search.php:41
 msgid "Next »"
 msgstr "Weiter »"
 
-#: archive.php:213 home.php:36 search.php:50
+#: archive.php:218 home.php:36 search.php:50
 msgid "No posts found."
 msgstr "Keine Beiträge gefunden."
-
-#: archive.php:223 home.php:73 page.php:43 search.php:58 single.php:131
-msgid "Fill the sidebar in the customizer"
-msgstr "Befülle die Sidebar im Customizer"
 
 #: comments.php:15
 msgid "One Comment"
@@ -155,11 +155,23 @@ msgstr "Bildgröße"
 
 #: customizer-options/author-page-options.php:117
 #: customizer-options/category-list-options.php:35
+#: customizer-options/date-list-options.php:35
 #: customizer-options/feed-options.php:78
 #: customizer-options/searchresults-options.php:35
 #: customizer-options/tag-list-options.php:35
 msgid "Layout"
 msgstr "Layout"
+
+#: customizer-options/author-page-options.php:132
+#: customizer-options/category-list-options.php:50
+#: customizer-options/date-list-options.php:50
+#: customizer-options/feed-options.php:106
+#: customizer-options/pages-options.php:54
+#: customizer-options/posts-options.php:98
+#: customizer-options/searchresults-options.php:50
+#: customizer-options/tag-list-options.php:50
+msgid "Layout Sidebar"
+msgstr "Layout Sidebar"
 
 #: customizer-options/category-list-options.php:6
 msgid "Category Results List"
@@ -178,19 +190,15 @@ msgid "Primary color"
 msgstr "Primärfarbe"
 
 #: customizer-options/colors-options.php:30
-#: customizer-options/pages-options.php:50
+#: customizer-options/pages-options.php:65
 msgid "Background color"
 msgstr "Hintergrundfarbe"
 
 #: customizer-options/colors-options.php:42
-msgid "Widget blocks sidebar background color"
-msgstr "Widget Blocks Sidebar Hintergrundfarbe"
-
-#: customizer-options/colors-options.php:54
 msgid "Tags and chips color"
 msgstr "Tags und Chips Farbe"
 
-#: customizer-options/colors-options.php:66
+#: customizer-options/colors-options.php:54
 msgid "Comments background color"
 msgstr "Kommentare Hintergrundfarbe"
 
@@ -201,10 +209,6 @@ msgstr "Datum Ergebnisliste"
 #: customizer-options/date-list-options.php:8
 msgid "Settings for the results when calling a date."
 msgstr "Einstellungen für die Ergebnisse beim Aufruf eines Datums."
-
-#: customizer-options/date-list-options.php:35
-msgid "Date results style"
-msgstr "Datum Ergebnisliste Style"
 
 #: customizer-options/feed-options.php:6
 msgid "Feed"
@@ -270,14 +274,6 @@ msgstr "Layouts"
 msgid "Settings for the individual layouts."
 msgstr "Einstellungen der einzelnen Layouts."
 
-#: customizer-options/layout-options.php:13
-msgid "Cards"
-msgstr "Cards"
-
-#: customizer-options/layout-options.php:19
-msgid "Frameless posts list"
-msgstr "Rahmenlose Beitragsliste"
-
 #: customizer-options/pages-options.php:6
 msgid "Pages"
 msgstr "Seiten"
@@ -292,63 +288,92 @@ msgstr "Maximale Breite der Seiten"
 
 #: customizer-options/post-list-layouts/cards-options.php:11
 #: customizer-options/post-list-layouts/frameless-post-list.php:11
+#: customizer-options/post-list-layouts/material2-post-list.php:11
+#: customizer-options/post-list-layouts/material3-post-list.php:11
 msgid "Cards background color"
 msgstr "Cards Hintergundfarbe"
 
-#: customizer-options/post-list-layouts/cards-options.php:26
+#: customizer-options/post-list-layouts/cards-options.php:25
 #: customizer-options/post-list-layouts/frameless-post-list.php:25
+#: customizer-options/post-list-layouts/material2-post-list.php:25
+#: customizer-options/post-list-layouts/material3-post-list.php:25
 msgid "Spacing between posts"
 msgstr "Abstand zwischen den Beiträgen"
 
-#: customizer-options/post-list-layouts/cards-options.php:43
+#: customizer-options/post-list-layouts/cards-options.php:42
 #: customizer-options/post-list-layouts/frameless-post-list.php:42
+#: customizer-options/post-list-layouts/material2-post-list.php:81
+#: customizer-options/post-list-layouts/material3-post-list.php:81
 msgid "Number of words in the snippet"
 msgstr "Anzahl der Wörter im Textausschnitt"
 
-#: customizer-options/post-list-layouts/cards-options.php:62
+#: customizer-options/post-list-layouts/cards-options.php:61
 #: customizer-options/post-list-layouts/frameless-post-list.php:61
-#: customizer-options/posts-options.php:135
+#: customizer-options/post-list-layouts/material2-post-list.php:118
+#: customizer-options/post-list-layouts/material3-post-list.php:118
+#: customizer-options/posts-options.php:150
 msgid "Show tags"
 msgstr "Zeige Tags"
 
-#: customizer-options/post-list-layouts/cards-options.php:75
+#: customizer-options/post-list-layouts/cards-options.php:74
 #: customizer-options/post-list-layouts/frameless-post-list.php:74
 msgid "Tags border radius"
 msgstr "Tags Rahmenradius"
 
-#: customizer-options/post-list-layouts/cards-options.php:94
+#: customizer-options/post-list-layouts/cards-options.php:93
 #: customizer-options/post-list-layouts/frameless-post-list.php:93
+#: customizer-options/post-list-layouts/material2-post-list.php:144
+#: customizer-options/post-list-layouts/material3-post-list.php:144
 msgid "Show read more button"
 msgstr "Zeige mehr lesen Button"
 
-#: customizer-options/post-list-layouts/cards-options.php:107
+#: customizer-options/post-list-layouts/cards-options.php:106
 #: customizer-options/post-list-layouts/frameless-post-list.php:106
+#: customizer-options/post-list-layouts/material2-post-list.php:131
+#: customizer-options/post-list-layouts/material3-post-list.php:131
 msgid "Show comments"
 msgstr "Zeige Kommentare"
 
-#: customizer-options/post-list-layouts/cards-options.php:121
+#: customizer-options/post-list-layouts/cards-options.php:119
 #: customizer-options/post-list-layouts/frameless-post-list.php:119
+#: customizer-options/post-list-layouts/material2-post-list.php:100
+#: customizer-options/post-list-layouts/material3-post-list.php:100
 msgid "Line height in text snippet"
 msgstr "Zeilenhöhe im Textausschnitt"
 
-#: customizer-options/post-list-layouts/cards-options.php:139
+#: customizer-options/post-list-layouts/cards-options.php:137
 msgid "Border radius"
 msgstr "Rahmenradius"
 
-#: customizer-options/post-list-layouts/cards-options.php:157
+#: customizer-options/post-list-layouts/cards-options.php:155
 #: customizer-options/post-list-layouts/frameless-post-list.php:137
 msgid "Padding"
 msgstr "Padding"
 
-#: customizer-options/post-list-layouts/cards-options.php:175
+#: customizer-options/post-list-layouts/cards-options.php:173
 #: customizer-options/post-list-layouts/frameless-post-list.php:155
+#: customizer-options/post-list-layouts/material2-post-list.php:43
+#: customizer-options/post-list-layouts/material3-post-list.php:43
 msgid "Show image"
 msgstr "Zeige Bild"
 
-#: customizer-options/post-list-layouts/cards-options.php:188
+#: customizer-options/post-list-layouts/cards-options.php:186
 #: customizer-options/post-list-layouts/frameless-post-list.php:168
 msgid "Image radius"
 msgstr "Bildradius"
+
+#: customizer-options/post-list-layouts/material2-post-list.php:56
+#: customizer-options/post-list-layouts/material3-post-list.php:56
+#: customizer-options/posts-options.php:124
+msgid "Show date"
+msgstr "Zeige Datum"
+
+#: customizer-options/post-list-layouts/material2-post-list.php:69
+#: customizer-options/post-list-layouts/material3-post-list.php:69
+#, fuzzy
+#| msgid "Show categories"
+msgid "Show categorys"
+msgstr "Zeige Kategorien"
 
 #: customizer-options/posts-options.php:8
 msgid "Settings of the individual posts."
@@ -370,23 +395,19 @@ msgstr "Maximale Breite der Beiträge"
 msgid "Posts background color"
 msgstr "Beiträge Hintergundfarbe"
 
-#: customizer-options/posts-options.php:96
+#: customizer-options/posts-options.php:111
 msgid "Show post image"
 msgstr "Zeige Beitragsbild"
 
-#: customizer-options/posts-options.php:109
-msgid "Show date"
-msgstr "Zeige Datum"
-
-#: customizer-options/posts-options.php:122
+#: customizer-options/posts-options.php:137
 msgid "Show categories"
 msgstr "Zeige Kategorien"
 
-#: customizer-options/posts-options.php:148
+#: customizer-options/posts-options.php:163
 msgid "Show author details"
 msgstr "Zeige Autor Details"
 
-#: customizer-options/posts-options.php:161
+#: customizer-options/posts-options.php:176
 msgid "Show post pagination"
 msgstr "Zeige Postpaginierung"
 
@@ -410,33 +431,26 @@ msgstr "Einstellungen für die Ergebnisse beim Aufruf eines Tags."
 msgid "Select a menu in the customizer"
 msgstr "Wähle ein Menü im Customizer"
 
-#: functions.php:94
+#: footer.php:20
+#, php-format
+msgid "created by %1$s"
+msgstr "erstellt von %1$s"
+
+#: functions.php:84
 msgid "Header Menu"
 msgstr "Header Menü"
 
-#: functions.php:95
+#: functions.php:85
 msgid "Footer Menu"
 msgstr "Footer Menü"
 
-#: functions.php:104
+#: functions.php:94
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:117
+#: functions.php:107
 msgid "Landingpage Widget Area"
 msgstr "Landingpage Widget Area"
-
-#: functions.php:170
-msgid "search engine"
-msgstr "suchmaschine"
-
-#: functions.php:171
-msgid "cards"
-msgstr "cards"
-
-#: functions.php:172
-msgid "frameless"
-msgstr "rahmenlos"
 
 #: header.php:47
 msgid "Skip to main content"
@@ -455,6 +469,10 @@ msgstr "Seiten:"
 msgid "Search results for \"%s\""
 msgstr "Suchergebnisse für \"%s\""
 
+#: sidebar.php:6
+msgid "Fill the sidebar in the customizer"
+msgstr "Befülle die Sidebar im Customizer"
+
 #: single.php:111
 msgid "&laquo; Previous Post"
 msgstr "&laquo; Vorheriger Beitrag"
@@ -463,10 +481,34 @@ msgstr "&laquo; Vorheriger Beitrag"
 msgid "Next Post &raquo;"
 msgstr "Nächster Beitrag &raquo;"
 
+#: template-parts/post-list-layouts/cards-posts-list.php:31
 #: template-parts/post-list-layouts/frameless-posts-list.php:32
-#: template-parts/post-list-layouts/post-card.php:31
+#: template-parts/post-list-layouts/material2-posts-list.php:54
+#: template-parts/post-list-layouts/material3-posts-list.php:52
+#: template-parts/post-list-layouts/social-posts-list.php:50
 msgid "read more"
 msgstr "mehr lesen"
+
+#~ msgid "Widget blocks sidebar background color"
+#~ msgstr "Widget Blocks Sidebar Hintergrundfarbe"
+
+#~ msgid "Date results style"
+#~ msgstr "Datum Ergebnisliste Style"
+
+#~ msgid "Cards"
+#~ msgstr "Cards"
+
+#~ msgid "Frameless posts list"
+#~ msgstr "Rahmenlose Beitragsliste"
+
+#~ msgid "search engine"
+#~ msgstr "suchmaschine"
+
+#~ msgid "cards"
+#~ msgstr "cards"
+
+#~ msgid "frameless"
+#~ msgstr "rahmenlos"
 
 #~ msgid "Posts list style"
 #~ msgstr "Beitragsliste Style"
@@ -482,11 +524,6 @@ msgstr "mehr lesen"
 
 #~ msgid "Tag results style"
 #~ msgstr "Tags Ergebnisliste Style"
-
-#, fuzzy
-#~| msgid "Show sidebar"
-#~ msgid "Show Sidebar"
-#~ msgstr "Zeige Sidebar"
 
 #~ msgid "Latest Posts"
 #~ msgstr "Letzte Beiträge"

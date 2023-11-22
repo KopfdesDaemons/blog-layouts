@@ -164,7 +164,7 @@ function lime_blog_sanitize_checkbox($input)
     return (isset($input) && true === $input) ? true : false;
 }
 
-$post_list_layouts = array(
+$lime_blog_post_list_layouts = array(
     'cards' => 'cards',
     'frameless' => 'frameless',
     'material2' => 'material2',
@@ -173,7 +173,7 @@ $post_list_layouts = array(
     'social' => 'social',
 );
 
-$sidebar_layouts = array(
+$lime_blog_sidebar_layouts = array(
     'blocks' => 'blocks',
     'frameless' => 'frameless',
     'material2' => 'material2',

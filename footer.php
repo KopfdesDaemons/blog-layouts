@@ -12,6 +12,17 @@
         }
         ?>
     </nav>
+    <div class="lime_blog_footer_info">
+        <div>
+            <a href="https://wordpress.org/themes/lime-blog/" target="_blank">Lime Blog WordPress Theme</a>
+        <?php
+                printf(
+                    esc_html__('created by %1$s', 'lime-blog'),
+                    '<a href="https://ricoswebsite.com/" target="_blank" rel="designer">Rico</a>'
+                );
+            ?>
+        </div>
+    </div>
 </footer>
 <?php wp_footer(); ?>
 </body>

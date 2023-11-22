@@ -47,12 +47,12 @@ function lime_blog_custom_pages($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    global $sidebar_layouts;
+    global $lime_blog_sidebar_layouts;
     $wp_customize->add_control('pages_sidebar_layout', array(
         'type' => 'select',
         'section' => 'custom_theme_pages',
         'label' => __('Layout Sidebar', 'lime-blog'),
-        'choices' => $sidebar_layouts,
+        'choices' => $lime_blog_sidebar_layouts,
     ));
 
     // Background color

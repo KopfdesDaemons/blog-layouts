@@ -1,10 +1,12 @@
 #lime_blog_footer {
   background-color: var(--lime_blog_primary_variant_darker);
-  padding: 5vw;
+  padding: clamp(0em, 5vw, 5em);
+  padding-bottom: 0;
   grid-area: footer;
-  font-size: clamp(0.6em, 2vw, 1em);
+  font-size: clamp(0.8em, 2vw, 1em);
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 1em;
 }
 #lime_blog_footer ul {
@@ -31,4 +33,11 @@
   font-size: 1.3em;
   color: var(--lime_blog_font_color);
   text-decoration: underline;
+}
+#lime_blog_footer .lime_blog_footer_info {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+#lime_blog_footer .lime_blog_footer_info a {
+  color: var(--lime_blog_primary_color);
 }/*# sourceMappingURL=footer.css.map */

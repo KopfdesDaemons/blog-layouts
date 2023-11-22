@@ -56,7 +56,7 @@ $padding: 0 clamp(1em, 2vw, 2em);
         padding: $padding;
     }
 
-    .lime_blog_material3_post_list_item_categorys {
+    .lime_blog_material3_post_list_item_categories {
         padding: $padding;
         display: flex;
         gap: 0.5em;
@@ -100,6 +100,14 @@ $padding: 0 clamp(1em, 2vw, 2em);
         gap: 0.5em;
         justify-content: flex-end;
 
+        .lime_blog_material3_post_list_item_sticky_pin {
+            margin: 1em 0 0 1em;
+            color: var(--lime_blog_font_color);
+            display: none;
+            margin-right: auto;
+        }
+    
+        
         a {
             text-decoration: none;
             color: var(--lime_blog_primary_color);
@@ -108,16 +116,22 @@ $padding: 0 clamp(1em, 2vw, 2em);
             font-size: 0.8em;
             color: var(--lime_blog_font_color);
             background-color: var(--lime_blog_primary_variant_darker);
-
+            
             &:hover {
                 background-color: rgba(0, 0, 0, 0.4);
             }
         }
-
+        
         .lime_blog_materiale_post_list_item_comments {
             background-color: unset;
             outline: 1px solid var(--lime_blog_font_color);
             color: var(--lime_blog_primary_color);
+        }
+    }
+
+    &.lime_blog_sticky_post {
+        .lime_blog_material3_post_list_item_sticky_pin {
+            display: block;
         }
     }
 }

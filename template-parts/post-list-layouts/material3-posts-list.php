@@ -20,8 +20,8 @@ function lime_blog_display_material3_posts_list($show_sticky)
             </div>
         <?php } ?>
         <?php
-        if (get_theme_mod('material3_post_list_categorys', true) && !empty($categories)) {
-            echo '<ul class="lime_blog_material3_post_list_item_categorys">';
+        if (get_theme_mod('material3_post_list_categories', true) && !empty($categories)) {
+            echo '<ul class="lime_blog_material3_post_list_item_categories">';
             foreach ($categories as $category) {
                 echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
             }
@@ -39,17 +39,18 @@ function lime_blog_display_material3_posts_list($show_sticky)
             echo '</ul>';
         } ?>
         <div class="lime_blog_materiale_post_list_item_icon_row">
-            <?php if(get_theme_mod('material3_post_list_comments')) { ?>
-            <a href="<?php comments_link(); ?>" class="lime_blog_materiale_post_list_item_comments">
+            <i class="lime_blog_material3_post_list_item_sticky_pin fa-solid fa-thumbtack"></i>
+            <?php if (get_theme_mod('material3_post_list_comments')) { ?>
+                <a href="<?php comments_link(); ?>" class="lime_blog_materiale_post_list_item_comments">
                     <?php
                     echo  esc_html__('Comments', 'lime-blog')
                     ?>
-            </a>
+                </a>
             <?php } ?>
-            <?php if(get_theme_mod('material3_post_list_read_more')) { ?>
-            <a href="<?php the_permalink(); ?>">
-                <?php echo esc_html__('read more', 'lime-blog') ?>
-            </a>
+            <?php if (get_theme_mod('material3_post_list_read_more')) { ?>
+                <a href="<?php the_permalink(); ?>">
+                    <?php echo esc_html__('read more', 'lime-blog') ?>
+                </a>
             <?php } ?>
         </div>
     </li>

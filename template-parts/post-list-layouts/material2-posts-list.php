@@ -11,6 +11,7 @@ function lime_blog_display_material2_posts_list($show_sticky)
                 <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
             </a>
         <?php } ?>
+        <i class="lime_blog_material2_post_list_item_sticky_pin fa-solid fa-thumbtack"></i>
         <a href="<?php the_permalink(); ?>" class="lime_blog_material2_post_list_item_headline_row">
             <h2><?php echo the_title() ?></h2>
         </a>
@@ -20,8 +21,8 @@ function lime_blog_display_material2_posts_list($show_sticky)
             </div>
         <?php } ?>
         <?php
-        if (get_theme_mod('material2_post_list_categorys', true) && !empty($categories)) {
-            echo '<ul class="lime_blog_material2_post_list_item_categorys">';
+        if (get_theme_mod('material2_post_list_categories', true) && !empty($categories)) {
+            echo '<ul class="lime_blog_material2_post_list_item_categories">';
             foreach ($categories as $category) {
                 echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
             }

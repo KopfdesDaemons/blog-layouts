@@ -58,15 +58,15 @@ function lime_blog_material3_post_list($wp_customize)
     ));
 
     // Categorys
-    $wp_customize->add_setting('material3_post_list_categorys', array(
+    $wp_customize->add_setting('material3_post_list_categories', array(
         'default' => true,
         'transport' => 'refresh',
         'sanitize_callback' => 'lime_blog_sanitize_checkbox',
     ));
 
-    $wp_customize->add_control('material3_post_list_categorys', array(
+    $wp_customize->add_control('material3_post_list_categories', array(
         'type' => 'checkbox',
-        'label' => __('Show categorys', 'lime-blog'),
+        'label' => __('Show categories', 'lime-blog'),
         'section' => 'material3_post_list',
     ));
 
