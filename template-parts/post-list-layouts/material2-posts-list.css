@@ -80,6 +80,7 @@
   background-color: #595959;
   text-decoration: none;
   transition: all 200ms;
+  display: flex;
 }
 .lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_tags a:hover {
   background-color: rgba(255, 255, 255, 0.329);
@@ -88,6 +89,7 @@
   display: flex;
   padding: 0 2em;
   margin-bottom: 1em;
+  flex-wrap: wrap;
   gap: 1em;
 }
 .lime_blog_material2_post_list_item .lime_blog_materiale_post_list_item_icon_row a {

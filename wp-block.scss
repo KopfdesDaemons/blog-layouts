@@ -93,7 +93,7 @@
     th,
     td {
         padding: 1em 1em;
-        color: whitesmoke;
+        color: var(--lime_blog_font_color);
         border-color: #555;
         border: 1px solid;
     }
@@ -194,7 +194,7 @@ blockquote {
     }
 
     .wp-block-latest-comments__comment-link {
-        color: whitesmoke;
+        color: var(--lime_blog_font_color);
     }
 }
 
@@ -232,7 +232,7 @@ blockquote {
     }
 
     table:where(:not(.has-text-color)) {
-        color: whitesmoke;
+        color: var(--lime_blog_font_color);
     }
 
     th,
@@ -243,7 +243,7 @@ blockquote {
             padding: 0.2em;
             background-color: var(--lime_blog_primary_variant_darker);
             border-radius: 4px;
-            color: whitesmoke;
+            color: var(--lime_blog_font_color);
 
             &:hover {
                 background-color: var(--lime_blog_primary_color);
@@ -373,7 +373,7 @@ blockquote {
     border: 1px solid rgb(56, 56, 56);
     padding: 1em;
     background-color: rgb(22, 22, 24);
-    color: whitesmoke;
+    color: var(--lime_blog_font_color);
 }
 
 .wp-block-search {

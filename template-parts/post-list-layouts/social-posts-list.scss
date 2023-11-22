@@ -100,6 +100,7 @@
     .lime_blog_social_post_list_item_icon_row {        
         display: flex;
         padding: 0.5em;
+        flex-wrap: wrap;
 
         a {
             flex: 1 0 50%;

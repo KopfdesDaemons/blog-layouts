@@ -26,5 +26,11 @@ function lime_blog_layout_options($wp_customize)
         'priority' => 30,
         'panel' => 'layouts',
     ));
+
+    $wp_customize->add_section('material3_post_list', array(
+        'title' => 'Material3',
+        'priority' => 30,
+        'panel' => 'layouts',
+    ));
 }
 add_action('customize_register', 'lime_blog_layout_options');

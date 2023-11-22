@@ -29,6 +29,6 @@
 }
 #lime_blog_footer ul li li a {
   font-size: 1.3em;
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
   text-decoration: underline;
 }/*# sourceMappingURL=footer.css.map */

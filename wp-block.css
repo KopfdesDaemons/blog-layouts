@@ -22,7 +22,7 @@
   font-size: 0.8em;
 }
 .wp-block-post-terms a a {
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -50,7 +50,7 @@
   background-color: #28282d;
 }
 .wp-block-tag-cloud a a {
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -128,7 +128,7 @@
 .wp-block-table th,
 .wp-block-table td {
   padding: 1em 1em;
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
   border-color: #555;
   border: 1px solid;
 }
@@ -211,7 +211,7 @@ blockquote {
   background-color: var(--lime_blog_comments_background_color);
 }
 .wp-block-latest-comments .wp-block-latest-comments__comment-link, .wp-block-comment-template .wp-block-latest-comments__comment-link {
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
 }
 
 .has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt,
@@ -255,7 +255,7 @@ blockquote {
   display: table;
 }
 .wp-block-calendar table:where(:not(.has-text-color)) {
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
 }
 .wp-block-calendar th,
 .wp-block-calendar td {
@@ -266,7 +266,7 @@ blockquote {
   padding: 0.2em;
   background-color: var(--lime_blog_primary_variant_darker);
   border-radius: 4px;
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
 }
 .wp-block-calendar th a:hover,
 .wp-block-calendar td a:hover {
@@ -391,7 +391,7 @@ blockquote {
   border: 1px solid rgb(56, 56, 56);
   padding: 1em;
   background-color: rgb(22, 22, 24);
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
 }
 
 .wp-block-search {

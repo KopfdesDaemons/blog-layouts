@@ -75,7 +75,7 @@
   border: 1px solid;
   padding: 1em;
   border-radius: 4px;
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
 }
 .lime_blog_post_card .lime_blog_post_card_row_1 .lime_blog_post_card_content_div .lime_blog_post_card_buttom_row .lime_blog_post_card_link_div .lime_blog_post_card_read_more:hover {
   border-color: var(--lime_blog_primary_color);

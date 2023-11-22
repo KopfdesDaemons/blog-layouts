@@ -148,6 +148,7 @@ $customizer_options = [
     'post-list-layouts/cards-options.php',
     'post-list-layouts/frameless-post-list.php',
     'post-list-layouts/material2-post-list.php',
+    'post-list-layouts/material3-post-list.php',
     'tag-list-options.php',
     'category-list-options.php',
     'date-list-options.php'

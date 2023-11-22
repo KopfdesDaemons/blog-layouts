@@ -124,7 +124,7 @@
   max-width: 30em;
   min-width: 20em;
   background-color: rgb(22, 22, 24);
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
 }
 @media only screen and (max-width: 800px) {
   #lime_blog_header .lime_blog_header_mobile_content .search-field,
@@ -137,7 +137,7 @@
   border-radius: 2em;
   border: none;
   padding: 0 2em;
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
   background-color: var(--lime_blog_primary_variant_darker);
   cursor: pointer;
 }

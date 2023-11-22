@@ -211,7 +211,7 @@ img {
   font-size: 0.8em;
 }
 .lime_blog_tag a {
-  color: whitesmoke;
+  color: var(--lime_blog_font_color);
   text-decoration: none;
   white-space: nowrap;
 }
