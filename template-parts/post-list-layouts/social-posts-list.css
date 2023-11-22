@@ -1,4 +1,4 @@
-.social_post_list {
+.lime_blog_social_posts_list {
   padding: 0 0.5em;
   margin: 0;
   display: flex;
@@ -7,11 +7,11 @@
   margin-bottom: 2em;
   justify-content: center;
 }
-.social_post_list li {
+.lime_blog_social_posts_list li {
   list-style: none;
 }
 @media only screen and (min-width: 800px) {
-  .social_post_list {
+  .lime_blog_social_posts_list {
     padding: 0 2vw;
   }
 }

@@ -1,5 +1,5 @@
 <?php
-function lime_blog_display_searchresult($show_sticky)
+function lime_blog_display_search_engine_posts_list($show_sticky)
 {
     ob_start(); // Start output buffering
 ?>

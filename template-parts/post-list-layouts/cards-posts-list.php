@@ -1,5 +1,5 @@
 <?php
-function lime_blog_display_post_card($show_sticky)
+function lime_blog_display_cards_posts_list($show_sticky)
 {
     ob_start(); // Start output buffering
 ?>

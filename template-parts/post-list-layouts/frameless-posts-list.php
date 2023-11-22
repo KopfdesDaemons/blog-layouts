@@ -1,27 +1,27 @@
 <?php
-function lime_blog_display_frameless($show_sticky)
+function lime_blog_display_frameless_posts_list($show_sticky)
 {
     ob_start(); // Start output buffering
 ?>
-    <li class="lime_blog_framless_post_list_item <?php if ($show_sticky && is_sticky()) echo 'lime_blog_sticky_post' ?>">
-        <i class="lime_blog_framless_post_list_item_sticky_pin fa-solid fa-thumbtack"></i>
-        <div class="lime_blog_framless_post_list_item_row_1">
+    <li class="lime_blog_frameless_post_list_item <?php if ($show_sticky && is_sticky()) echo 'lime_blog_sticky_post' ?>">
+        <i class="lime_blog_frameless_post_list_item_sticky_pin fa-solid fa-thumbtack"></i>
+        <div class="lime_blog_frameless_post_list_item_row_1">
             <?php if (has_post_thumbnail() && get_theme_mod('frameless_post_list_image', true)) { ?>
-                <a class="lime_blog_framless_post_list_item_image_container" href="<?php the_permalink(); ?>">
+                <a class="lime_blog_frameless_post_list_item_image_container" href="<?php the_permalink(); ?>">
                     <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
                 </a>
             <?php } ?>
-            <div class="lime_blog_framless_post_list_item_content_div">
+            <div class="lime_blog_frameless_post_list_item_content_div">
                 <a href="<?php the_permalink(); ?>">
                     <h2><?php the_title(); ?></h2>
                 </a>
-                <span class="lime_blog_framless_post_list_item_image_date"><?php the_date(); ?></span>
+                <span class="lime_blog_frameless_post_list_item_image_date"><?php the_date(); ?></span>
                 <?php the_excerpt(); ?>
-                <div class="lime_blog_framless_post_list_item_buttom_row">
-                    <div class="lime_blog_framless_post_list_item_link_div">
+                <div class="lime_blog_frameless_post_list_item_buttom_row">
+                    <div class="lime_blog_frameless_post_list_item_link_div">
                         <?php if (get_theme_mod('frameless_post_list_comments', true)) { ?>
 
-                            <a href="<?php comments_link(); ?>" class="lime_blog_framless_post_list_item_comments_count">
+                            <a href="<?php comments_link(); ?>" class="lime_blog_frameless_post_list_item_comments_count">
                                 <?php
                                 echo get_comments_number() . ' ' . __('Comments', 'lime-blog')
                                 ?>
@@ -29,14 +29,14 @@ function lime_blog_display_frameless($show_sticky)
                         <?php } ?>
 
                         <?php if (get_theme_mod('frameless_post_list_read_more', true)) {
-                            echo '<a class="lime_blog_framless_post_list_item_read_more" href="' . esc_url(get_permalink()) . '">' . __('read more', 'lime-blog') . '</a>';
+                            echo '<a class="lime_blog_frameless_post_list_item_read_more" href="' . esc_url(get_permalink()) . '">' . __('read more', 'lime-blog') . '</a>';
                         } ?>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lime_blog_framless_post_list_item_footer_row">
-            <div class="lime_blog_framless_post_list_item_tags_div">
+        <div class="lime_blog_frameless_post_list_item_footer_row">
+            <div class="lime_blog_frameless_post_list_item_tags_div">
                 <?php
                 if (get_theme_mod('frameless_post_list_tags', true)) {
                     $tags = get_the_tags();

@@ -1,4 +1,4 @@
-.lime_blog_framless_post_list {
+.lime_blog_frameless_posts_list {
     display: flex;
     flex-direction: column;
     gap: var(--lime_blog_frameless_post_list_spacing);
@@ -10,17 +10,17 @@
     }
 }
 
-.lime_blog_framless_post_list_item {
+.lime_blog_frameless_post_list_item {
     padding: var(--lime_blog_frameless_post_list_padding);
     background-color: var(--lime_blog_frameless_post_list_color);
 
-    .lime_blog_framless_post_list_item_row_1 {
+    .lime_blog_frameless_post_list_item_row_1 {
         display: flex;
         flex-wrap: wrap;
         gap: 2em;
     }
 
-    .lime_blog_framless_post_list_item_tags_div {
+    .lime_blog_frameless_post_list_item_tags_div {
         ul {
             display: flex;
             gap: 0.5em;
@@ -32,16 +32,16 @@
         }
     }
 
-    .lime_blog_framless_post_list_item_link_div {
+    .lime_blog_frameless_post_list_item_link_div {
         display: flex;
         margin-bottom: 0.5em;
 
-        .lime_blog_framless_post_list_item_read_more {
+        .lime_blog_frameless_post_list_item_read_more {
             margin-left: auto;
         }
     }
 
-    .lime_blog_framless_post_list_item_image_container {
+    .lime_blog_frameless_post_list_item_image_container {
         flex: 1 0 40%;
         img {
             max-height: 25em;
@@ -49,7 +49,7 @@
         }
     }
 
-    .lime_blog_framless_post_list_item_content_div {
+    .lime_blog_frameless_post_list_item_content_div {
         flex: 1 0 50%;
         min-width: 20em;
 
@@ -62,14 +62,14 @@
         border-radius: var(--lime_blog_frameless_post_list_tags_border_radius);
     }
 
-    .lime_blog_framless_post_list_item_sticky_pin {
+    .lime_blog_frameless_post_list_item_sticky_pin {
         margin: 0.5em;
         color: var(--lime_blog_primary_color);
         display: none;
     }
 
     &.lime_blog_sticky_post {
-        .lime_blog_framless_post_list_item_sticky_pin {
+        .lime_blog_frameless_post_list_item_sticky_pin {
             display: block;
         }
     }

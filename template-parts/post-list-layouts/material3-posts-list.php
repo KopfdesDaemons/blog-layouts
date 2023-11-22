@@ -1,5 +1,5 @@
 <?php
-function lime_blog_display_material3_post_list($show_sticky)
+function lime_blog_display_material3_posts_list($show_sticky)
 {
     $categories = get_the_category();
     $tags = get_the_tags();

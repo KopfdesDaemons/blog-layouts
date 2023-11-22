@@ -187,8 +187,8 @@
                     global $wp_query;
                     $wp_query->set('paged', 1);
 
-                    require_once get_template_directory() . '/template-parts/post-list.php';
-                    echo lime_blog_display_post_list($wp_query, $lime_blog_archive_post_list_style);
+                    require_once get_template_directory() . '/template-parts/posts-list.php';
+                    echo lime_blog_display_posts_list($wp_query, $lime_blog_archive_post_list_style);
 
                     // Pagination 
                     $total_pages = $wp_query->max_num_pages;

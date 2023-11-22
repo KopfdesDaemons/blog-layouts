@@ -1,5 +1,5 @@
 <?php
-function lime_blog_display_social_post_list($show_sticky)
+function lime_blog_display_social_posts_list($show_sticky)
 {
     ob_start(); // Start output buffering
     $author_id = get_the_author_meta('ID');

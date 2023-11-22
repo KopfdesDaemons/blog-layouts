@@ -21,9 +21,9 @@ function enqueue_custom_styles()
         'fontawesome' => '/fonts/fontawesome/css/all.min.css',
 
         //  template-parts
-        'post-card' => '/template-parts/post-list-layouts/post-card.css',
-        'searchresult' => '/template-parts/post-list-layouts/searchresult.css',
-        'frameless-post-list' => '/template-parts/post-list-layouts/frameless-post-list.css',
+        'post-card' => '/template-parts/post-list-layouts/cards-posts-list.css',
+        'searchresult' => '/template-parts/post-list-layouts/search-engine-posts-list.css',
+        'frameless-post-list' => '/template-parts/post-list-layouts/frameless-posts-list.css',
         'social-post-list' => '/template-parts/post-list-layouts/social-posts-list.css',
         'material2-post-list' => '/template-parts/post-list-layouts/material2-posts-list.css',
         'material3-post-list' => '/template-parts/post-list-layouts/material3-posts-list.css',
@@ -169,7 +169,7 @@ $post_list_layouts = array(
     'frameless' => 'frameless',
     'material2' => 'material2',
     'material3' => 'material3',
-    'search_engine' => 'search engine',
+    'search-engine' => 'search engine',
     'social' => 'social',
 );
 

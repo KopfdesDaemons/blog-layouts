@@ -1,4 +1,4 @@
-.material3_post_list {
+.lime_blog_material3_posts_list {
   padding: 0 0.5em;
   margin: 0;
   display: flex;
@@ -6,16 +6,16 @@
   gap: var(--lime_blog_material3_post_list_spacing);
   margin-bottom: 2em;
 }
-.material3_post_list li {
+.lime_blog_material3_posts_list li {
   list-style: none;
 }
 @media only screen and (min-width: 800px) {
-  .material3_post_list {
+  .lime_blog_material3_posts_list {
     padding: 0 2vw;
   }
 }
 @media only screen and (max-width: 1250px) {
-  .material3_post_list {
+  .lime_blog_material3_posts_list {
     justify-content: center;
   }
 }
@@ -75,7 +75,7 @@
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_tags a {
   padding: 0.4em;
   border: 1px solid gray;
-  border-radius: 4px;
+  border-radius: 8px;
   color: var(--lime_blog_font_color);
   text-decoration: none;
   display: flex;
