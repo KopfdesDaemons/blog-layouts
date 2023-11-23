@@ -99,6 +99,36 @@ function lime_blog_custom_posts($wp_customize)
         'choices' => $lime_blog_sidebar_layouts,
     ));
 
+    // Categories Layout
+    $wp_customize->add_setting('posts_categories_layout', array(
+        'default' => 'blocks',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    global $lime_blog_chips_layouts;
+    $wp_customize->add_control('posts_categories_layout', array(
+        'type' => 'select',
+        'section' => 'custom_theme_article',
+        'label' => __('Layout Categories', 'lime-blog'),
+        'choices' => $lime_blog_chips_layouts,
+    ));
+
+        // Categories Layout
+        $wp_customize->add_setting('posts_tags_layout', array(
+            'default' => 'blocks',
+            'transport' => 'refresh',
+            'sanitize_callback' => 'sanitize_text_field',
+        ));
+    
+        global $lime_blog_chips_layouts;
+        $wp_customize->add_control('posts_tags_layout', array(
+            'type' => 'select',
+            'section' => 'custom_theme_article',
+            'label' => __('Tags Layout', 'lime-blog'),
+            'choices' => $lime_blog_chips_layouts,
+        ));
+
     // Post Image
     $wp_customize->add_setting('post_image', array(
         'default' => true,

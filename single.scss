@@ -107,7 +107,7 @@
     padding: 2%;
     display: flex;
     flex-wrap: wrap;
-    margin: 3em 0;
+    margin: 2em 0 3em 0;
     border-radius: 0.3em;
     background-color: black;
 
@@ -204,5 +204,193 @@
 
     input[type=submit] {
         @include color_button;
+    }
+}
+
+.lime_blog_chips_layout_blocks {
+    @include tag;
+}
+
+.lime_blog_chips_layout_content_creator {
+    a {
+        padding: 3px 6px;
+        font-size: 13px;
+        line-height: 1.5;
+        border-radius: 3px;
+        color: #424246;
+        background-color: var(--lime_blog_primary_color);
+        border-color: #ccc;
+        display: inline-block;
+        margin-bottom: 4px;
+        margin-top: 4px;
+        font-weight: 700;
+        background-image: none;
+        border: none;
+        white-space: nowrap;
+        font-family: "Open Sans", sans-serif;
+        text-decoration: none;
+
+        &:hover {
+            background-color: var(--lime_blog_primary_variant_darker);
+        }
+    }
+}
+
+.lime_blog_chips_layout_links {
+    padding: 0 0.3em
+}
+
+.lime_blog_chips_layout_hashtag {
+    padding: 0 0.3em;
+
+    a {
+        text-decoration: none;
+
+        &::before {
+            content: '#';
+        }
+    }
+}
+
+.lime_blog_chips_layout_frames {
+    a {
+        display: flex;
+        border-radius: 4px;
+        border: 1px solid grey;
+        padding: 0.3em 0.5em;
+        color: var(--lime_blog_font_color);
+        text-decoration: none;
+    }
+}
+
+.lime_blog_chips_layout_material2 {
+    a {
+        display: flex;
+        padding: 7px 12px;
+        background-color: var(--lime_blog_primary_variant_darker);
+        color: var(--lime_blog_font_color);
+        text-decoration: none;
+        border-radius: 24px;
+        font-weight: 400;
+        font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+        
+        &:hover {
+            background-color: var(--lime_blog_primary_color);
+        }
+    }
+}
+
+.lime_blog_chips_layout_color_blocks {
+    a {
+        display: flex;
+        padding: 7px 12px;
+        background-color: var(--lime_blog_primary_variant_darker);
+        color: var(--lime_blog_font_color);
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 400;
+        font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+        
+        &:hover {
+            background-color: var(--lime_blog_primary_color);
+        }
+    }
+}
+
+.lime_blog_chips_layout_material3 {
+    a {
+        padding: 0.6em;
+        border: 1px solid gray;
+        border-radius: 8px;
+        color: var(--lime_blog_font_color);
+        text-decoration: none;
+        display: flex;
+        font-size: 0.8em;
+
+        &:hover {
+            background-color: var(--lime_blog_primary_variant_darker);
+        }
+    }
+}
+
+.lime_blog_chips_layout_neon {
+    a {
+        display: flex;
+        padding: 0.6em;
+        border-radius: 4px;
+        box-shadow: inset 0px 0px 15px 0px var(--lime_blog_primary_color);
+    }
+}
+
+.lime_blog_chips_layout_social {
+    a {
+        display: flex;
+        background-color: rgb(51, 52, 61);
+        padding: 0.5em;
+        border-radius: 4px;
+        border: 1px solid gray;
+    }
+}
+
+.lime_blog_chips_layout_github {
+    a {
+        display: flex;
+        padding: 0 7px;
+        font-size: 12px;
+        white-space: nowrap;
+        border-radius: 2em;
+        line-height: 22px;
+        color: var(--lime_blog_primary_variant_much_brighter);
+        background-color: var(--lime_blog_primary_variant_much_darker);
+        text-decoration: none;
+
+        &:hover {
+            background-color: var(--lime_blog_primary_variant_brighter);
+            color: var(--lime_blog_font_color);
+        }
+    }
+}
+
+.lime_blog_chips_layout_reddit {
+    a {
+        display: flex;
+        font-family: Noto Sans,Arial,sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: unset;
+        line-height: 16px;
+        text-transform: unset;
+        min-height: 24px;
+        min-width: 24px;
+        padding: 4px 16px;
+        text-decoration: none;
+        background-color: #d7dadc;
+        color: #1a1a1b;
+        border-radius: 9999px;
+        align-items: center;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
+}
+
+.lime_blog_chips_layout_the_hub {
+    a {
+        display: flex;
+        padding: 8px 18px;
+        background-color: #1b1b1b;
+        font-size: 14px;
+        color: #fff;
+        white-space: nowrap;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-family: Arial,Helvetica,sans-serif;
+        text-decoration: none;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: #2f2f2f;
+        }
     }
 }

@@ -37,7 +37,7 @@
                             if (!empty($categories)) {
                                 echo '<ul>';
                                 foreach ($categories as $category) {
-                                    echo '<li class="lime_blog_tag"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . $category->name . '</a></li>';
+                                    echo '<li class="' . 'lime_blog_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_categories_layout', 'blocks')) . '"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . $category->name . '</a></li>';
                                 }
                                 echo '</ul>';
                             }
@@ -70,7 +70,7 @@
                     if ($tags_options & !empty($tags)) {
                         echo '<div class="lime_blog_post_tags"><ul>';
                         foreach ($tags as $tag) {
-                            echo '<li class="lime_blog_tag"><a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . $tag->name . '</a></li>';
+                            echo '<li class="' . 'lime_blog_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_tags_layout', 'blocks')) . '"><a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . $tag->name . '</a></li>';
                         }
                         echo '</ul></div>';
                     }

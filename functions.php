@@ -182,5 +182,22 @@ $lime_blog_sidebar_layouts = array(
     'material2' => 'material 2',
     'material3' => 'material 3',
     'neon' => 'neon',
+    'reddit' => 'Reddit',
     'social' => 'social',
+);
+
+$lime_blog_chips_layouts = array(
+    'blocks' => 'blocks',
+    'color-blocks' => 'color blocks',
+    'content-creator' => 'content creator',
+    'github' => 'github',
+    'hashtag' => 'hashtag',
+    'frames' => 'frames',
+    'links' => 'links',
+    'material2' => 'material 2',
+    'material3' => 'material 3',
+    'neon' => 'neon',
+    'reddit' => 'Reddit',
+    'social' => 'social',
+    'the_hub' => 'The Hub',
 );

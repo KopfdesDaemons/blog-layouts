@@ -91,4 +91,21 @@
             }
         }
     }
+
+    &.lime_blog_sidebar_layout_reddit {
+        color: rgb(255, 255, 255);
+        
+        .widget {
+            background-color: #1a1a1b; 
+            border: 1px solid #474748;
+            border-radius: 5px 5px 4px 4px;
+            padding: 12px;
+
+            .widget-title {
+                text-transform: uppercase;
+                text-align: start;
+                font-size: 10px;
+            }
+        }
+    }
 }
