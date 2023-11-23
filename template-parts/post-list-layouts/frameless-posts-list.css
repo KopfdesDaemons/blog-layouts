@@ -4,6 +4,7 @@
   gap: var(--lime_blog_frameless_post_list_spacing);
   padding: 0 2vw;
   margin: 0;
+  max-width: 80em;
 }
 .lime_blog_frameless_posts_list li {
   list-style: none;

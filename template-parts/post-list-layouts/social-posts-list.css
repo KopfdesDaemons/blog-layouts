@@ -2,10 +2,9 @@
   padding: 0 0.5em;
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2em;
   margin-bottom: 2em;
-  justify-content: center;
 }
 .lime_blog_social_posts_list li {
   list-style: none;

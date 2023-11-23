@@ -20,7 +20,7 @@ function lime_blog_custom_feed($wp_customize)
         'section' => 'custom_feed',
     ));
 
-    // Landingpage area
+    // Landingpage image animation
     $wp_customize->add_setting('landingpage_image_animation', array(
         'default' => true,
         'transport' => 'refresh',
@@ -58,26 +58,6 @@ function lime_blog_custom_feed($wp_customize)
     {
         return $control->manager->get_setting('landingpage_section')->value();
     }
-
-
-    // Maximum width of the feed
-    $wp_customize->add_setting('maximum_width_of_the_feed', array(
-        'default' => '70',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'absint',
-    ));
-
-    $wp_customize->add_control('maximum_width_of_the_feed', array(
-        'type' => 'range',
-        'section' => 'title_tagline',
-        'label' => __('Maximum width of the feed', 'lime-blog'),
-        'section' => 'custom_feed',
-        'input_attrs' => array(
-            'min' => 30,
-            'max' => 150,
-            'step' => 1,
-        ),
-    ));
 
     // Style
     $wp_customize->add_setting('feed_style', array(
