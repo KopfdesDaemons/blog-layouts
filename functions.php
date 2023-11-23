@@ -137,13 +137,12 @@ class lime_blog_menu_walker extends Walker_Nav_Menu
 
 // customizer settings
 $customizer_options = [
-    'colors-options.php',
+    'global-options.php',
     'header-options.php',
-    'posts-options.php',
     'feed-options.php',
-    'fonts-options.php',
-    'author-page-options.php',
     'pages-options.php',
+    'posts-options.php',
+    'author-page-options.php',
     'searchresults-options.php',
     'layout-options.php',
     'post-list-layouts/cards-options.php',

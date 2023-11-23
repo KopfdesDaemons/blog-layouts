@@ -43,7 +43,7 @@ function lime_blog_custom_date_list($wp_customize)
 
     // Sidebar Layout
     $wp_customize->add_setting('date_sidebar_layout', array(
-        'default' => 'blocks',
+        'default' => 'social',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));

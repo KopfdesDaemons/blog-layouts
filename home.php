@@ -16,7 +16,7 @@
     </section>
 <?php } ?>
 <main role="main" <?php if (get_theme_mod('feed_sidebar', true)) echo 'class="lime_blog_has_sidebar"' ?>>
-    <section class="lime_blog_content_spacer">
+    <section class="lime_blog_content_spacer lime_blog_feed">
     <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $posts_per_page = get_option('posts_per_page');

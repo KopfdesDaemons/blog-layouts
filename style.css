@@ -18,6 +18,7 @@ body {
   font-family: var(--lime_blog_body_font);
   font-size: 14px;
   display: grid;
+  align-items: flex-start;
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas: "landingpagesection landingpagesection" "main sidebar" "footer footer";
 }
@@ -48,9 +49,15 @@ main {
   grid-area: main;
   margin-top: 2em;
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1570px) {
   main.lime_blog_has_sidebar {
-    padding-left: 27em;
+    padding-left: 24em;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .home main.lime_blog_has_sidebar {
+    padding-left: 24em;
   }
 }
 
@@ -203,7 +210,7 @@ img {
   border: 1px solid rgb(95, 95, 95);
   padding: 0.8em;
   border-radius: 4px;
-  background-color: var(--lime_blog_tag_color);
+  background-color: #303030;
   cursor: pointer;
   color: rgb(177, 177, 177);
   text-decoration: none;

@@ -43,7 +43,7 @@ function lime_blog_custom_category_list($wp_customize)
 
     // Sidebar Layout
     $wp_customize->add_setting('category_sidebar_layout', array(
-        'default' => 'blocks',
+        'default' => 'social',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));

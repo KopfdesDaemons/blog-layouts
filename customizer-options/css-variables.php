@@ -40,7 +40,7 @@ function lime_blog_hex2hsl($hex)
 }
 
 // Get the primary color from the Customizer
-$lime_blog_primary_color = esc_attr(get_theme_mod('primary_color', '#81d742'));
+$lime_blog_primary_color = esc_attr(get_theme_mod('primary_color', '#1e73be'));
 // Convert the primary color to HSL
 list($primary_hue, $saturation, $lightness) = lime_blog_hex2hsl($lime_blog_primary_color);
 $lightness = 50;
@@ -92,7 +92,7 @@ $lime_blog_hero_background = get_theme_mod('hero_background', true);
         --lime_blog_background_color_pages: <?php echo esc_attr(get_theme_mod('background_color_pages', '')); ?>;
 
         /* Feed Settings */
-        --lime_blog_feed_landingpage_minimal_height: <?php echo esc_attr(get_theme_mod('minimal_height_of_the_landingpage', '80')) . 'vh'; ?>;
+        --lime_blog_feed_landingpage_minimal_height: <?php echo esc_attr(get_theme_mod('minimal_height_of_the_landingpage', '60')) . 'vh'; ?>;
 
         /* Post List Cards */
         --lime_blog_feed_post_card_line_height: <?php echo esc_attr(get_theme_mod('feed_post_card_line_height', '20')) . 'px'; ?>;

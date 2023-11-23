@@ -36,7 +36,7 @@ function lime_blog_custom_feed($wp_customize)
 
     // Minimal height landingpage
     $wp_customize->add_setting('minimal_height_of_the_landingpage', array(
-        'default' => '80',
+        'default' => '60',
         'transport' => 'refresh',
         'sanitize_callback' => 'absint',
     ));
@@ -94,7 +94,7 @@ function lime_blog_custom_feed($wp_customize)
 
     // Sidebar Layout
     $wp_customize->add_setting('feed_sidebar_layout', array(
-        'default' => 'blocks',
+        'default' => 'social',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));

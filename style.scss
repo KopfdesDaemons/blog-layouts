@@ -21,6 +21,7 @@ body {
     font-family: var(--lime_blog_body_font);
     font-size: 14px;
     display: grid;
+    align-items: flex-start;
     grid-template-columns: minmax(0, 1fr) auto;
 
     @media only screen and (max-width: 800px) {
@@ -51,9 +52,18 @@ main {
     grid-area: main;
     margin-top: 2em;
 
+    @media only screen and (min-width: 1570px) {
+        &.lime_blog_has_sidebar {
+            padding-left: 24em; // Sidebar width
+        }
+    }
+}
+
+// Better breakpoint for open costumizer
+.home main {
     @media only screen and (min-width: 1600px) {
         &.lime_blog_has_sidebar {
-            padding-left: 27em;
+            padding-left: 24em; // Sidebar width
         }
     }
 }

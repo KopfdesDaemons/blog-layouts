@@ -126,7 +126,7 @@
         </section>
 </main>
 <?php if(get_theme_mod('post_sidebar', true)) {
-    echo '<aside id="lime_blog_sidebar" class="' . 'lime_blog_sidebar_layout_' . get_theme_mod('posts_sidebar_layout', 'blocks') . '">';
+    echo '<aside id="lime_blog_sidebar" class="' . 'lime_blog_sidebar_layout_' . get_theme_mod('posts_sidebar_layout', 'social') . '">';
     get_sidebar();
     echo '</aside>';
 };?>

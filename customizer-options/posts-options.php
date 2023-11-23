@@ -104,7 +104,7 @@ function lime_blog_custom_posts($wp_customize)
 
     // Sidebar Layout
     $wp_customize->add_setting('posts_sidebar_layout', array(
-        'default' => 'blocks',
+        'default' => 'social',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));

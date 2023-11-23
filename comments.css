@@ -14,10 +14,14 @@
 }
 .lime_blog_comments_area .comment li, .lime_blog_comments_area .children li, .lime_blog_comments_area .pingback li {
   border-radius: 4px;
-  padding: 2%;
 }
 .lime_blog_comments_area .comment li ol, .lime_blog_comments_area .children li ol, .lime_blog_comments_area .pingback li ol {
   padding-left: 0.5em;
+}
+.lime_blog_comments_area .comment-body {
+  background-color: black;
+  padding: 1em;
+  border-radius: 16px;
 }
 .lime_blog_comments_area .comment-content {
   background-color: var(--lime_blog_comments_background_color);
@@ -57,7 +61,6 @@
   text-decoration: none;
   color: rgb(177, 177, 177);
   cursor: pointer;
-  padding: 0.4em 1.2em;
 }
 .lime_blog_comments_area .reply a:hover {
   background-color: rgb(41, 41, 41);
@@ -83,7 +86,7 @@
   padding: 0.8em 1em 0.3em 1em;
 }
 .lime_blog_comments_area .comment-form {
-  padding: 3%;
+  padding: 0 3%;
 }
 .lime_blog_comments_area .comment-form .comment-form-comment {
   display: flex;
@@ -104,6 +107,7 @@
   flex-wrap: wrap;
   gap: 0.5em;
   margin-top: 0.5em;
+  padding: 0 3%;
 }
 .lime_blog_comments_area .lime_blog_comment_reply_title small {
   margin-left: auto;

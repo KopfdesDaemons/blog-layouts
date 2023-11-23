@@ -36,6 +36,7 @@
 }
 .lime_blog_searchresult .lime_blog_searchresult_content h2:hover {
   color: var(--lime_blog_primary_variant_brighter);
+  text-decoration: underline;
 }
 .lime_blog_searchresult .lime_blog_searchresult_content p {
   line-height: 1.5em;
