@@ -4,7 +4,6 @@ function lime_blog_display_social_posts_list($show_sticky)
     ob_start(); // Start output buffering
     $author_id = get_the_author_meta('ID');
     $author_name = esc_html(get_the_author_meta('display_name'));
-    $author_website = esc_url(get_the_author_meta('user_url'));
     $author_avatar = get_avatar($author_id, 100);
 ?>
     <li class="lime_blog_social_post_list_item <?php if ($show_sticky && is_sticky()) echo 'lime_blog_sticky_post' ?>">
@@ -13,7 +12,9 @@ function lime_blog_display_social_posts_list($show_sticky)
                 <?php echo $author_avatar; ?>
             </a>
             <div class="lime_blog_social_post_list_item_name_div">
-                <span class="lime_blog_social_post_list_item_name"><?php echo $author_name ?></span>
+                <a class="lime_blog_social_post_list_item_name" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
+                        <?php echo get_the_author(); ?>
+                    </a>
                 <span class="lime_blog_social_post_list_item_date"><?php echo get_the_date() ?></span>
             </div>
             <i class="lime_blog_social_post_list_item_sticky_pin fa-solid fa-thumbtack"></i>

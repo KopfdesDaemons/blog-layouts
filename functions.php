@@ -21,12 +21,13 @@ function enqueue_custom_styles()
         'fontawesome' => '/fonts/fontawesome/css/all.min.css',
 
         //  template-parts
-        'post-card' => '/template-parts/post-list-layouts/cards-posts-list.css',
-        'searchresult' => '/template-parts/post-list-layouts/search-engine-posts-list.css',
+        'card-posts-list' => '/template-parts/post-list-layouts/cards-posts-list.css',
+        'content-creator-posts-list' => '/template-parts/post-list-layouts/content-creator-posts-list.css',
         'frameless-post-list' => '/template-parts/post-list-layouts/frameless-posts-list.css',
-        'social-post-list' => '/template-parts/post-list-layouts/social-posts-list.css',
         'material2-post-list' => '/template-parts/post-list-layouts/material2-posts-list.css',
         'material3-post-list' => '/template-parts/post-list-layouts/material3-posts-list.css',
+        'search-engine-post-list' => '/template-parts/post-list-layouts/search-engine-posts-list.css',
+        'social-post-list' => '/template-parts/post-list-layouts/social-posts-list.css',
     );
 
     foreach ($styles as $handle => $file) {
@@ -166,6 +167,7 @@ function lime_blog_sanitize_checkbox($input)
 
 $lime_blog_post_list_layouts = array(
     'cards' => 'cards',
+    'content-creator' => 'content creator',
     'frameless' => 'frameless',
     'material2' => 'material 2',
     'material3' => 'material 3',
