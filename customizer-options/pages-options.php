@@ -40,6 +40,11 @@ function lime_blog_custom_pages($wp_customize)
         'section' => 'custom_theme_pages',
     ));
 
+    function pages_sidebar_active_callback($control)
+    {
+        return $control->manager->get_setting('pages_sidebar')->value();
+    }
+
     // Sidebar Layout
     $wp_customize->add_setting('pages_sidebar_layout', array(
         'default' => 'blocks',
@@ -53,6 +58,7 @@ function lime_blog_custom_pages($wp_customize)
         'section' => 'custom_theme_pages',
         'label' => __('Layout Sidebar', 'lime-blog'),
         'choices' => $lime_blog_sidebar_layouts,
+        'active_callback' => 'pages_sidebar_active_callback',
     ));
 
     // Background color

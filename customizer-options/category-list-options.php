@@ -8,20 +8,7 @@ function lime_blog_custom_category_list($wp_customize)
         'description' => __('Settings for the results when calling a category.', 'lime-blog'),
     ));
 
-    // Sidebar
-    $wp_customize->add_setting('category_sidebar', array(
-        'default' => true,
-        'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
-    ));
-
-    $wp_customize->add_control('category_sidebar', array(
-        'type' => 'checkbox',
-        'label' => __('Show sidebar', 'lime-blog'),
-        'section' => 'category_list',
-    ));
-
-    // Style
+    // Layout
     $wp_customize->add_setting('category_list_style', array(
         'default' => 'cards',
         'transport' => 'refresh',
@@ -36,6 +23,24 @@ function lime_blog_custom_category_list($wp_customize)
         'choices' => $lime_blog_post_list_layouts,
     ));
 
+    // Sidebar
+    $wp_customize->add_setting('category_sidebar', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('category_sidebar', array(
+        'type' => 'checkbox',
+        'label' => __('Show sidebar', 'lime-blog'),
+        'section' => 'category_list',
+    ));
+
+    function category_sidebar_active_callback($control)
+    {
+        return $control->manager->get_setting('category_sidebar')->value();
+    }
+
     // Sidebar Layout
     $wp_customize->add_setting('category_sidebar_layout', array(
         'default' => 'blocks',
@@ -49,6 +54,7 @@ function lime_blog_custom_category_list($wp_customize)
         'section' => 'category_list',
         'label' => __('Layout Sidebar', 'lime-blog'),
         'choices' => $lime_blog_sidebar_layouts,
+        'active_callback' => 'category_sidebar_active_callback',
     ));
 }
 add_action('customize_register', 'lime_blog_custom_category_list');

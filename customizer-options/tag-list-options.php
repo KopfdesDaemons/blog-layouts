@@ -8,19 +8,6 @@ function lime_blog_custom_tag_list($wp_customize)
         'description' => __('Settings for the results when calling a tag.', 'lime-blog'),
     ));
 
-    // Sidebar
-    $wp_customize->add_setting('tags_sidebar', array(
-        'default' => true,
-        'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
-    ));
-
-    $wp_customize->add_control('tags_sidebar', array(
-        'type' => 'checkbox',
-        'label' => __('Show sidebar', 'lime-blog'),
-        'section' => 'tag_list',
-    ));
-
     // Style
     $wp_customize->add_setting('tag_list_style', array(
         'default' => 'cards',
@@ -36,6 +23,24 @@ function lime_blog_custom_tag_list($wp_customize)
         'choices' => $lime_blog_post_list_layouts,
     ));
 
+    // Sidebar
+    $wp_customize->add_setting('tags_sidebar', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('tags_sidebar', array(
+        'type' => 'checkbox',
+        'label' => __('Show sidebar', 'lime-blog'),
+        'section' => 'tag_list',
+    ));
+
+    function tags_sidebar_active_callback($control)
+    {
+        return $control->manager->get_setting('tags_sidebar')->value();
+    }
+
     // Sidebar Layout
     $wp_customize->add_setting('tags_sidebar_layout', array(
         'default' => 'blocks',
@@ -49,6 +54,7 @@ function lime_blog_custom_tag_list($wp_customize)
         'section' => 'tag_list',
         'label' => __('Layout Sidebar', 'lime-blog'),
         'choices' => $lime_blog_sidebar_layouts,
+        'active_callback' => 'tags_sidebar_active_callback',
     ));
 }
 add_action('customize_register', 'lime_blog_custom_tag_list');

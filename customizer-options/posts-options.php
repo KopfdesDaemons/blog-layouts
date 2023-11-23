@@ -40,6 +40,19 @@ function lime_blog_custom_posts($wp_customize)
         'section' => 'custom_theme_article',
     ));
 
+    // Post Image
+    $wp_customize->add_setting('post_image', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('post_image', array(
+        'type' => 'checkbox',
+        'label' => __('Show post image', 'lime-blog'),
+        'section' => 'custom_theme_article',
+    ));
+
     // Maximum width of the post
     $wp_customize->add_setting('maximum_width_of_posts', array(
         'default' => '70',
@@ -84,6 +97,11 @@ function lime_blog_custom_posts($wp_customize)
         'section' => 'custom_theme_article',
     ));
 
+    function post_sidebar_active_callback($control)
+    {
+        return $control->manager->get_setting('post_sidebar')->value();
+    }
+
     // Sidebar Layout
     $wp_customize->add_setting('posts_sidebar_layout', array(
         'default' => 'blocks',
@@ -97,49 +115,7 @@ function lime_blog_custom_posts($wp_customize)
         'section' => 'custom_theme_article',
         'label' => __('Layout Sidebar', 'lime-blog'),
         'choices' => $lime_blog_sidebar_layouts,
-    ));
-
-    // Categories Layout
-    $wp_customize->add_setting('posts_categories_layout', array(
-        'default' => 'blocks',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-
-    global $lime_blog_chips_layouts;
-    $wp_customize->add_control('posts_categories_layout', array(
-        'type' => 'select',
-        'section' => 'custom_theme_article',
-        'label' => __('Layout Categories', 'lime-blog'),
-        'choices' => $lime_blog_chips_layouts,
-    ));
-
-        // Categories Layout
-        $wp_customize->add_setting('posts_tags_layout', array(
-            'default' => 'blocks',
-            'transport' => 'refresh',
-            'sanitize_callback' => 'sanitize_text_field',
-        ));
-    
-        global $lime_blog_chips_layouts;
-        $wp_customize->add_control('posts_tags_layout', array(
-            'type' => 'select',
-            'section' => 'custom_theme_article',
-            'label' => __('Tags Layout', 'lime-blog'),
-            'choices' => $lime_blog_chips_layouts,
-        ));
-
-    // Post Image
-    $wp_customize->add_setting('post_image', array(
-        'default' => true,
-        'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
-    ));
-
-    $wp_customize->add_control('post_image', array(
-        'type' => 'checkbox',
-        'label' => __('Show post image', 'lime-blog'),
-        'section' => 'custom_theme_article',
+        'active_callback' => 'post_sidebar_active_callback',
     ));
 
     // Date
@@ -168,6 +144,27 @@ function lime_blog_custom_posts($wp_customize)
         'section' => 'custom_theme_article',
     ));
 
+    function post_categories_active_callback($control)
+    {
+        return $control->manager->get_setting('post_categories')->value();
+    }
+
+    // Categories Layout
+    $wp_customize->add_setting('posts_categories_layout', array(
+        'default' => 'blocks',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    global $lime_blog_chips_layouts;
+    $wp_customize->add_control('posts_categories_layout', array(
+        'type' => 'select',
+        'section' => 'custom_theme_article',
+        'label' => __('Layout Categories', 'lime-blog'),
+        'choices' => $lime_blog_chips_layouts,
+        'active_callback' => 'post_categories_active_callback',
+    ));
+
     // Tags
     $wp_customize->add_setting('tags', array(
         'default' => true,
@@ -180,6 +177,27 @@ function lime_blog_custom_posts($wp_customize)
         'label' => __('Show tags', 'lime-blog'),
         'section' => 'custom_theme_article',
     ));
+
+    // Tags Layout
+    $wp_customize->add_setting('posts_tags_layout', array(
+        'default' => 'blocks',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    global $lime_blog_chips_layouts;
+    $wp_customize->add_control('posts_tags_layout', array(
+        'type' => 'select',
+        'section' => 'custom_theme_article',
+        'label' => __('Tags Layout', 'lime-blog'),
+        'choices' => $lime_blog_chips_layouts,
+        'active_callback' => 'post_tags_active_callback',
+    ));
+
+    function post_tags_active_callback($control)
+    {
+        return $control->manager->get_setting('tags')->value();
+    }
 
     // Author details
     $wp_customize->add_setting('author_details', array(

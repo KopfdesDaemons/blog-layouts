@@ -59,6 +59,7 @@ function lime_blog_custom_feed($wp_customize)
         return $control->manager->get_setting('landingpage_section')->value();
     }
 
+
     // Maximum width of the feed
     $wp_customize->add_setting('maximum_width_of_the_feed', array(
         'default' => '70',
@@ -93,7 +94,7 @@ function lime_blog_custom_feed($wp_customize)
         'choices' => $lime_blog_post_list_layouts,
     ));
 
-    // Feed Layout
+    // Sidebar
     $wp_customize->add_setting('feed_sidebar', array(
         'default' => true,
         'transport' => 'refresh',
@@ -105,6 +106,11 @@ function lime_blog_custom_feed($wp_customize)
         'label' => __('Show sidebar', 'lime-blog'),
         'section' => 'custom_feed',
     ));
+
+    function feed_sidebar_active_callback($control)
+    {
+        return $control->manager->get_setting('feed_sidebar')->value();
+    }
 
     // Sidebar Layout
     $wp_customize->add_setting('feed_sidebar_layout', array(
@@ -119,6 +125,7 @@ function lime_blog_custom_feed($wp_customize)
         'section' => 'custom_feed',
         'label' => __('Layout Sidebar', 'lime-blog'),
         'choices' => $lime_blog_sidebar_layouts,
+        'active_callback' => 'feed_sidebar_active_callback',
     ));
 }
 add_action('customize_register', 'lime_blog_custom_feed');
