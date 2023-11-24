@@ -1,7 +1,6 @@
 <?php
 function lime_blog_display_posts_list($query, $layout, $show_sticky_posts = false)
 {
-    
     $layout_name_underscore = str_replace("-", "_", $layout);
     $template_path = get_template_directory() . '/template-parts/post-list-layouts/';
     $container_class = 'lime_blog_' . $layout_name_underscore . '_posts_list';
@@ -19,5 +18,23 @@ function lime_blog_display_posts_list($query, $layout, $show_sticky_posts = fals
 
     echo '</ul>';
 
+    return ob_get_clean(); // Return the buffered output as a string
+}
+
+function lime_blog_display_header($layout)
+{
+    $layout_name_underscore = str_replace("-", "_", $layout);
+    $template_path = get_template_directory() . '/template-parts/header-layouts/';
+    $container_class = 'lime_blog_' . $layout_name_underscore . '_header';
+    $display_function = 'lime_blog_display_' .$layout_name_underscore . '_header';
+    
+    require_once $template_path . $layout . '-header.php';
+    
+    ob_start(); // Start output buffering
+    echo '<header class="' . esc_attr($container_class) . '" id="lime_blog_header">';
+
+    echo call_user_func($display_function);
+
+    echo '</header>';
     return ob_get_clean(); // Return the buffered output as a string
 }

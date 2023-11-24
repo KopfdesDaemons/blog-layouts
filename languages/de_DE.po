@@ -55,12 +55,12 @@ msgstr "Anzahl der Beiträge"
 msgid "Posts"
 msgstr "Beiträge"
 
-#: archive.php:124 template-parts/post-list-layouts/cards-posts-list.php:25
-#: template-parts/post-list-layouts/frameless-posts-list.php:26
-#: template-parts/post-list-layouts/material2-posts-list.php:47
-#: template-parts/post-list-layouts/material3-posts-list.php:46
-#: template-parts/post-list-layouts/social-posts-list.php:35
-#: template-parts/post-list-layouts/social-posts-list.php:44
+#: archive.php:124 template-parts/post-list-layouts/cards-layout-manager.php:25
+#: template-parts/post-list-layouts/frameless-layout-manager.php:26
+#: template-parts/post-list-layouts/material2-layout-manager.php:47
+#: template-parts/post-list-layouts/material3-layout-manager.php:46
+#: template-parts/post-list-layouts/social-layout-manager.php:35
+#: template-parts/post-list-layouts/social-layout-manager.php:44
 msgid "Comments"
 msgstr "Kommentare"
 
@@ -481,11 +481,11 @@ msgstr "&laquo; Vorheriger Beitrag"
 msgid "Next Post &raquo;"
 msgstr "Nächster Beitrag &raquo;"
 
-#: template-parts/post-list-layouts/cards-posts-list.php:31
-#: template-parts/post-list-layouts/frameless-posts-list.php:32
-#: template-parts/post-list-layouts/material2-posts-list.php:54
-#: template-parts/post-list-layouts/material3-posts-list.php:52
-#: template-parts/post-list-layouts/social-posts-list.php:50
+#: template-parts/post-list-layouts/cards-layout-manager.php:31
+#: template-parts/post-list-layouts/frameless-layout-manager.php:32
+#: template-parts/post-list-layouts/material2-layout-manager.php:54
+#: template-parts/post-list-layouts/material3-layout-manager.php:52
+#: template-parts/post-list-layouts/social-layout-manager.php:50
 msgid "read more"
 msgstr "mehr lesen"
 

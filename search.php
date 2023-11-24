@@ -16,7 +16,7 @@
                 echo '<h1 class="lime_blog_search_headline">' . sprintf(esc_html__('Search results for "%s"', 'lime-blog'), esc_html($search_query)) . '</h1>';
 
                 $searchresults_style = get_theme_mod('searchresults_style', 'search-engine');
-                require_once get_template_directory() . '/template-parts/posts-list.php';
+                require_once get_template_directory() . '/template-parts/layout-manager.php';
                 echo lime_blog_display_posts_list($query, $searchresults_style);
 
                 

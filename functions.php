@@ -28,6 +28,9 @@ function enqueue_custom_styles()
         'material3-post-list' => '/template-parts/post-list-layouts/material3-posts-list.css',
         'search-engine-post-list' => '/template-parts/post-list-layouts/search-engine-posts-list.css',
         'social-post-list' => '/template-parts/post-list-layouts/social-posts-list.css',
+
+        'clean-header' => '/template-parts/header-layouts/clean-header.css',
+        'material2-header' => '/template-parts/header-layouts/material2-header.css',
     );
 
     foreach ($styles as $handle => $file) {
@@ -200,4 +203,9 @@ $lime_blog_chips_layouts = array(
     'social' => 'Social',
     'the-hub' => 'The Hub',
     'youtube-music' => 'Youtube Music',
+);
+
+$lime_blog_header_layouts = array(
+    'clean' => 'Clean',
+    'material2' => 'Material 2',
 );

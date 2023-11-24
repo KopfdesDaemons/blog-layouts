@@ -7,6 +7,21 @@ function lime_blog_header($wp_customize)
         'priority' => 30,
     ));
 
+    // Header Layout
+    $wp_customize->add_setting('header_layout', array(
+        'default' => 'clean',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    global $lime_blog_header_layouts;
+    $wp_customize->add_control('header_layout', array(
+        'type' => 'select',
+        'section' => 'custom_theme_header',
+        'label' => __('Layout', 'lime-blog'),
+        'choices' => $lime_blog_header_layouts,
+    ));
+
     // Header menu
     $wp_customize->add_setting('header_menu', array(
         'default' => true,

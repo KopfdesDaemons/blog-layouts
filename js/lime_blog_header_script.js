@@ -40,4 +40,33 @@ function toggleSubMenu(event) {
     listItem.classList.toggle('lime_blog_submenu_open');
 }
 
+const headerSearchIcon = document.querySelector('#lime_blog_header_search_icon');
+
+if (headerSearchIcon) {
+    headerSearchIcon.addEventListener('click', toggleSearch);
+    headerSearchIcon.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            toggleSearch(event);
+        }
+    });
+
+    window.addEventListener('click', closeSearchWhenOpen);
+}
+
+let searchOpen = false;
+
+function toggleSearch() {
+    const parent = headerSearchIcon.parentElement;
+    parent.classList.toggle('lime_blog_header_search_open');
+    searchOpen = !searchOpen;
+}
+
+function closeSearchWhenOpen(event) {
+    const isInSearch = headerSearchIcon.parentElement.contains(event.target);
+    if (!isInSearch && headerSearchIcon && searchOpen) {
+        toggleSearch();
+    }
+}
+
+
 }, false);

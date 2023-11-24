@@ -1,0 +1,131 @@
+.lime_blog_material2_header {
+    background-color: var(--lime_blog_primary_variant_much_darker);
+
+    .lime_blog_material2_header_content {
+        display: flex;
+        align-items: center;
+
+        .lime_blog_header_menu {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 0;
+            margin: 0;
+            // max-height: 4em;
+
+            a:hover {
+                border-bottom: 4px solid;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--lime_blog_font_color);
+                border-bottom: 4px solid transparent;
+                display: flex;
+                padding: 1.3em;
+                font-weight: 600;
+                box-sizing: border-box;
+                width: 100%;
+                white-space: nowrap;
+            }
+
+            li {
+                list-style: none;
+                display: flex;
+                position: relative;
+                
+                .lime_blog_menuitem_container {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5em;
+                    width: 100%;
+
+                    .lime_blog_submenu_toggle {
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+
+                ul {
+                    display: none;
+                    // display: flex;
+                    flex-direction: column;
+                    overflow: visible;
+                    background-color: var(--lime_blog_primary_variant_much_darker);
+                    top: 100%;
+                    padding: 0;
+                    z-index: 5;
+                    position: absolute;
+                    
+                    li {
+                        transition: all 100ms;
+                    }
+                    
+                    ul {
+                        left: 100%;
+                        top: 0;
+                    }
+                }
+                
+                @media only screen and (min-width: 600px) {
+                    >ul .lime_blog_submenu_toggle{
+                        transform: rotate(-90deg);
+                    }
+    
+                    &:hover, &:focus-within {
+                        background-color: var(--lime_blog_primary_variant_darker);
+                        >ul {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+
+        .lime_blog_material2_header_search_div {
+            display: flex;
+            align-items: center;
+            margin: 0 1em;
+            gap: 0.5em;
+
+            #lime_blog_header_search_icon {
+                margin: 0;
+                padding: 0.5em;
+                background-color: var(--lime_blog_primary_variant_darker);
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                border-radius: 4px;
+                height: 1.5em;
+                width: 1.5em;
+                text-align: center;
+
+                &:hover {
+                    background-color: var(--lime_blog_primary_color);
+                }
+            }
+
+            form {
+                display: flex;
+                width: 0;
+                overflow: hidden;
+                transition: all 200ms;
+
+                label {
+                    display: flex;
+                }
+
+                input {
+                    margin: 0;
+                }
+            }
+
+            &.lime_blog_header_search_open {
+                form {
+                    width: 8em;
+                }
+            }
+        }
+    }
+}
