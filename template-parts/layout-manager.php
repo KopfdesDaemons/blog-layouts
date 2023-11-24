@@ -32,7 +32,7 @@ function lime_blog_display_header($layout)
     
     ob_start(); // Start output buffering
     echo '<header class="' . esc_attr($container_class) . '" id="lime_blog_header">';
-
+    echo ' <a href="#lime_blog_main_content" class="lime_blog_skip_link">' . esc_html__('Skip to main content', 'lime-blog') . '</a>';
     echo call_user_func($display_function);
 
     echo '</header>';

@@ -1,72 +1,94 @@
-function lime_blog_toggle_menu() {
-    var menu = document.querySelector('#lime_blog_header');
-    menu.classList.toggle('lime_blog_header_menu_open');
-}
+window.addEventListener("DOMContentLoaded", function () {
 
-window.addEventListener("DOMContentLoaded", function() {
+    // header mobile submenu toggle
+    const header_submenu_toggle = document.querySelectorAll('.lime_blog_submenu_toggle');
 
-// header mobile submenu toggle
-const header_submenu_toggle = document.querySelectorAll('.lime_blog_submenu_toggle');
+    for (const toggle of header_submenu_toggle) {
+        toggle.addEventListener('click', toggleSubMenu);
+        toggle.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                toggleSubMenu(event);
+            }
+        });
+    }
 
-for (const toggle of header_submenu_toggle) {
-    toggle.addEventListener('click', toggleSubMenu);
-    toggle.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-            toggleSubMenu(event);
+    function toggleSubMenu(event) {
+        event.stopPropagation();
+
+        const toggleButton = event.target;
+        const listItemContainer = toggleButton.parentElement;
+        const listItem = listItemContainer.parentElement;
+        const submenu = listItemContainer.parentElement.querySelector('.sub-menu');
+
+        // close all open menus
+        const allOpenMenus = document.querySelectorAll('.lime_blog_submenu_open');
+        const parentListItem = listItem.parentElement.parentElement;
+        const isInOpenSubmenu = parentListItem.classList.contains('lime_blog_submenu_open');
+
+        if (!isInOpenSubmenu) {
+            for (const menu of allOpenMenus) {
+                if (menu === submenu.parentElement) continue;
+                menu.classList.remove('lime_blog_submenu_open');
+            }
         }
-    });
-}
 
-function toggleSubMenu(event) {
-    event.stopPropagation();
+        listItem.classList.toggle('lime_blog_submenu_open');
+    }
 
-    const toggleButton = event.target;
-    const listItemContainer = toggleButton.parentElement;
-    const listItem = listItemContainer.parentElement;
-    const submenu = listItemContainer.parentElement.querySelector('.sub-menu');
+    const headerSearchIcon = document.querySelector('#lime_blog_header_search_icon');
 
-    // close all open menus
-    const allOpenMenus = document.querySelectorAll('.lime_blog_submenu_open');
-    const parentListItem = listItem.parentElement.parentElement;
-    const isInOpenSubmenu = parentListItem.classList.contains('lime_blog_submenu_open');
-    
-    if (!isInOpenSubmenu) {
-        for (const menu of allOpenMenus) {
-            if (menu === submenu.parentElement) continue;
-            menu.classList.remove('lime_blog_submenu_open');
+    if (headerSearchIcon) {
+        headerSearchIcon.addEventListener('click', toggleSearch);
+        headerSearchIcon.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                toggleSearch(event);
+            }
+        });
+
+        window.addEventListener('click', closeSearchWhenOpen);
+    }
+
+    let searchOpen = false;
+
+    function toggleSearch(event) {
+        const parent = headerSearchIcon.parentElement;
+        parent.classList.toggle('lime_blog_header_search_open');
+        const input = parent.querySelector('.search-field');
+        searchOpen = !searchOpen;
+        if (searchOpen) {
+            input.focus();
+            event.preventDefault();
         }
     }
 
-    listItem.classList.toggle('lime_blog_submenu_open');
-}
+    const mobileMenu = this.document.querySelector('#lime_blog_header_mobile_menu');
+    const mobileMenuToggleButton = this.document.querySelector('#lime_blog_mobile_menu_toggle_button');
+    let headerMenuOpen = false;
 
-const headerSearchIcon = document.querySelector('#lime_blog_header_search_icon');
+    if (mobileMenuToggleButton) mobileMenuToggleButton.addEventListener('click', toggleMobileMenu);
 
-if (headerSearchIcon) {
-    headerSearchIcon.addEventListener('click', toggleSearch);
-    headerSearchIcon.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-            toggleSearch(event);
-        }
-    });
-
-    window.addEventListener('click', closeSearchWhenOpen);
-}
-
-let searchOpen = false;
-
-function toggleSearch() {
-    const parent = headerSearchIcon.parentElement;
-    parent.classList.toggle('lime_blog_header_search_open');
-    searchOpen = !searchOpen;
-}
-
-function closeSearchWhenOpen(event) {
-    const isInSearch = headerSearchIcon.parentElement.contains(event.target);
-    if (!isInSearch && headerSearchIcon && searchOpen) {
-        toggleSearch();
+    function toggleMobileMenu() {
+        var header = document.querySelector('#lime_blog_header');
+        header.classList.toggle('lime_blog_header_menu_open');
+        headerMenuOpen = !headerMenuOpen;
+        if(headerMenuOpen) mobileMenu.focus();
     }
-}
 
+    function closeSearchWhenOpen(event) {
+        if (searchOpen) {
+            const isInSearch = headerSearchIcon.parentElement.contains(event.target);
+            if (!isInSearch && headerSearchIcon && searchOpen) {
+                toggleSearch();
+            }
+        }
+
+        if (headerMenuOpen) {
+            const isInSidMenu = mobileMenu.contains(event.target);
+            const isToggleButon = mobileMenuToggleButton.contains(event.target);
+            if (!isInSidMenu && !isToggleButon) {
+                toggleMobileMenu();
+            }
+        }
+    }
 
 }, false);

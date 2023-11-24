@@ -3,9 +3,6 @@ function lime_blog_display_clean_header()
 {
     ob_start(); // Start output buffering
 ?>
-
-    <a href="#lime_blog_main_content" class="lime_blog_skip_link"><?php echo esc_html__('Skip to main content', 'lime-blog') ?></a>
-
     <!-- Mobile -->
     <div class="lime_blog_header_mobile_content">
         <?php
@@ -21,7 +18,7 @@ function lime_blog_display_clean_header()
     </div>
     <?php
     if (get_theme_mod('header_menu', true)) { ?>
-        <button id="lime_blog_header_menu_button" onclick="lime_blog_toggle_menu()" aria-label="<?php echo esc_attr('open menu', 'lime-blog') ?>"><i class="fa-solid fa-bars"></i></button>
+        <button id="lime_blog_mobile_menu_toggle_button" aria-label="<?php echo esc_attr('open menu', 'lime-blog') ?>"><i class="fa-solid fa-bars"></i></button>
     <?php } ?>
 
 
@@ -52,7 +49,6 @@ function lime_blog_display_clean_header()
         if (get_theme_mod('searchbar', true)) get_search_form(array('button_text' => 's'));
         ?>
     </div>
-
 
 <?php
     return ob_get_clean(); // Return the buffered output as a string

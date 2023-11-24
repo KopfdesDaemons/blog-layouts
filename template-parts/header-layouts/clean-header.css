@@ -1,7 +1,7 @@
 .lime_blog_clean_header {
   background: var(--lime_blog_gradient);
 }
-.lime_blog_clean_header #lime_blog_header_menu_button {
+.lime_blog_clean_header #lime_blog_mobile_menu_toggle_button {
   border: none;
   display: none;
   margin: 0.5em;
@@ -14,7 +14,7 @@
   border: 1px solid;
 }
 @media only screen and (max-width: 600px) {
-  .lime_blog_clean_header #lime_blog_header_menu_button {
+  .lime_blog_clean_header #lime_blog_mobile_menu_toggle_button {
     display: block;
   }
 }
