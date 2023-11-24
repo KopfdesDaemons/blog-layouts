@@ -53,8 +53,6 @@ $lime_blog_primary_variant_much_brighter = "hsl($primary_hue, " . (min(100, $sat
 
 $lime_blog_search_row = (get_theme_mod('searchbar', true) || get_theme_mod('logo', true));
 $lime_blog_header_menu = get_theme_mod('header_menu', true);
-$lime_blog_margin_to_header = !$lime_blog_search_row || !$lime_blog_header_menu ? '5em' : '10em';
-$lime_blog_home_margin_to_header = get_theme_mod('landingpage_section', true) ? 0 : $lime_blog_margin_to_header;
 
 $lime_blog_hero_background = get_theme_mod('hero_background', true);
 ?>
@@ -77,7 +75,6 @@ $lime_blog_hero_background = get_theme_mod('hero_background', true);
 
         /* Header Settings */
         --lime_blog_header_menu_font_size: <?php echo esc_attr(get_theme_mod('header_menu_font_size_setting', '14')) . 'px'; ?>;
-        --lime_blog_margin_to_header: <?php echo $lime_blog_margin_to_header; ?>;
         --lime_blog_home_margin_to_header: <?php echo $lime_blog_home_margin_to_header; ?>;
         
         /* Post Settings */

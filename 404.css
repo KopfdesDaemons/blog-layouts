@@ -34,7 +34,4 @@
 }
 .error404 .lime_blog_error a:hover {
   background-color: rgb(41, 41, 41);
-}
-.error404 #lime_blog_sidebar {
-  margin-top: var(--lime_blog_margin_to_header);
 }/*# sourceMappingURL=404.css.map */

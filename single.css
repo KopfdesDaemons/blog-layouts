@@ -2,7 +2,6 @@
   background: var(--lime_blog_hero_background);
   grid-area: landingpagesection;
   min-height: 20vh;
-  padding-top: var(--lime_blog_margin_to_header);
   display: flex;
   align-items: center;
   justify-content: center;

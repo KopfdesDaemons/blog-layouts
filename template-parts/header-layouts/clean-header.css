@@ -1,3 +1,6 @@
+.lime_blog_clean_header {
+  background: var(--lime_blog_gradient);
+}
 .lime_blog_clean_header #lime_blog_header_menu_button {
   border: none;
   display: none;
@@ -152,9 +155,6 @@
   }
   .lime_blog_clean_header .lime_blog_header_mobile_content {
     display: flex;
-  }
-  .lime_blog_clean_header.lime_blog_header_menu_open {
-    background: var(--lime_blog_gradient);
   }
   .lime_blog_clean_header.lime_blog_header_menu_open .lime_blog_header_menu {
     transition: max-height 300ms;

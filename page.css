@@ -1,6 +1,3 @@
-.page main, .page #lime_blog_sidebar {
-  margin-top: var(--lime_blog_margin_to_header);
-}
 .page h1 {
   font-size: clamp(21px, 4vw, 26px);
 }

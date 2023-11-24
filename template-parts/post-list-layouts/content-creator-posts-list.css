@@ -5,7 +5,7 @@
   gap: 0;
   margin-bottom: 2em;
   padding: 0;
-  border: 1px solid #41454b;
+  border: 1px solid #575b61;
 }
 .lime_blog_content_creator_posts_list li {
   list-style: none;
@@ -25,7 +25,7 @@
   flex-direction: column;
 }
 .lime_blog_content_creator_post_list_item:not(:last-child) {
-  border-bottom: 1px solid #41454b;
+  border-bottom: 1px solid #575b61;
 }
 .lime_blog_content_creator_post_list_item .lime_blog_content_creator_post_list_item_headline_div {
   display: flex;
@@ -68,7 +68,7 @@
 .lime_blog_content_creator_post_list_item .lime_blog_content_creator_post_list_item_headline_div .lime_blog_content_creator_post_list_item_headline_div_right .lime_blog_content_creator_post_list_item_headline_and_name h2 {
   font-size: 0.8em;
   font-weight: 100;
-  filter: brightness(0.8);
+  filter: brightness(0.9);
 }
 .lime_blog_content_creator_post_list_item .lime_blog_content_creator_post_list_item_headline_div .lime_blog_content_creator_post_list_item_headline_div_right .lime_blog_content_creator_post_list_date {
   display: flex;

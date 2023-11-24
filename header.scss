@@ -1,8 +1,7 @@
 #lime_blog_header {
-    position: absolute;
+    grid-area: header;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 20;
 }

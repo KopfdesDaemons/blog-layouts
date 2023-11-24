@@ -20,11 +20,11 @@ body {
   display: grid;
   align-items: flex-start;
   grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-areas: "landingpagesection landingpagesection" "main sidebar" "footer footer";
+  grid-template-areas: "header header" "landingpagesection landingpagesection" "main sidebar" "footer footer";
 }
 @media only screen and (max-width: 800px) {
   body {
-    grid-template-areas: "landingpagesection" "main" "sidebar" "footer";
+    grid-template-areas: "header" "landingpagesection" "main" "sidebar" "footer";
   }
 }
 
@@ -59,10 +59,6 @@ main {
   .home main.lime_blog_has_sidebar {
     padding-left: 24em;
   }
-}
-
-.home main, .home #lime_blog_sidebar {
-  margin-top: var(--lime_blog_home_margin_to_header);
 }
 
 h1,
@@ -191,7 +187,6 @@ img {
   justify-content: center;
   min-height: var(--lime_blog_feed_landingpage_minimal_height);
   padding: clamp(0.5em, 5vw, 2em);
-  padding-top: var(--lime_blog_margin_to_header);
   background: var(--lime_blog_gradient);
 }
 .lime_blog_landing_page_section.lime_blog_landing_page_image_animation .wp-block-image.size-full img {

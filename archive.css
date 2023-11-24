@@ -8,7 +8,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: var(--lime_blog_margin_to_header);
   background: var(--lime_blog_gradient);
 }
 .author .lime_blog_post_author_headline_section header {
