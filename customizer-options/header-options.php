@@ -23,6 +23,19 @@ function lime_blog_header($wp_customize)
     ));
 
     // Header menu
+    $wp_customize->add_setting('fixed_header', array(
+        'default' => false,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('fixed_header', array(
+        'type' => 'checkbox',
+        'label' => __('Fix Header', 'lime-blog'),
+        'section' => 'custom_theme_header',
+    ));
+
+    // Header menu
     $wp_customize->add_setting('header_menu', array(
         'default' => true,
         'transport' => 'refresh',
@@ -90,11 +103,11 @@ function lime_blog_header($wp_customize)
             'max' => 25,
             'step' => 1,
         ),
-        'active_callback' => function( $control ) {
-            return ( 
-                header_menu_callback( $control )
+        'active_callback' => function ($control) {
+            return (
+                header_menu_callback($control)
                 &&
-                clean_header_active_callback( $control )
+                clean_header_active_callback($control)
             );
         },
     ));

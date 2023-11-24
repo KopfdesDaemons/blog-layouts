@@ -133,7 +133,8 @@
                 border-bottom: 4px solid transparent;
                 display: flex;
                 padding: 1.3em;
-                font-weight: 600;
+                font-weight: 100;
+                font-family: Roboto,sans-serif;
                 box-sizing: border-box;
                 width: 100%;
                 white-space: nowrap;
@@ -207,6 +208,10 @@
             }
         }
 
+        .lime_blog_material2_header_home_link {
+            color: var(--lime_blog_font_color);
+        }
+
         .lime_blog_material2_header_search_div {
             display: flex;
             align-items: center;
@@ -215,20 +220,21 @@
 
             #lime_blog_header_search_icon {
                 all: revert;
-                font-size: 1.5em;
-                background-color: var(--lime_blog_primary_variant_darker);
+                font-size: 1.2em;
+                // background-color: var(--lime_blog_primary_variant_darker);
+                background-color: transparent;
                 border: none;
                 cursor: pointer;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border-radius: 4px;
-                height: 1.5em;
-                width: 1.5em;
+                border-radius: 5em;
+                height: 2em;
+                width: 2em;
                 color: var(--lime_blog_font_color);
 
                 &:hover {
-                    background-color: var(--lime_blog_primary_color);
+                    background-color: var(--lime_blog_primary_variant_darker);
                 }
             }
 

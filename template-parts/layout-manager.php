@@ -26,12 +26,13 @@ function lime_blog_display_header($layout)
     $layout_name_underscore = str_replace("-", "_", $layout);
     $template_path = get_template_directory() . '/template-parts/header-layouts/';
     $container_class = 'lime_blog_' . $layout_name_underscore . '_header';
+    $fixed_header = (get_theme_mod('fixed_header', false)) ? 'lime_blog_fixed_header' : '';
     $display_function = 'lime_blog_display_' .$layout_name_underscore . '_header';
     
     require_once $template_path . $layout . '-header.php';
     
     ob_start(); // Start output buffering
-    echo '<header class="' . esc_attr($container_class) . '" id="lime_blog_header">';
+    echo '<header class="' . esc_attr($container_class) . ' ' . $fixed_header. '" id="lime_blog_header">';
     echo ' <a href="#lime_blog_main_content" class="lime_blog_skip_link">' . esc_html__('Skip to main content', 'lime-blog') . '</a>';
     echo call_user_func($display_function);
 
