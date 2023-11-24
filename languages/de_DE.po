@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-11-22 19:51+0100\n"
-"PO-Revision-Date: 2023-11-22 19:53+0100\n"
+"POT-Creation-Date: 2023-11-24 18:11+0100\n"
+"PO-Revision-Date: 2023-11-24 18:12+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -55,12 +55,12 @@ msgstr "Anzahl der Beiträge"
 msgid "Posts"
 msgstr "Beiträge"
 
-#: archive.php:124 template-parts/post-list-layouts/cards-layout-manager.php:25
-#: template-parts/post-list-layouts/frameless-layout-manager.php:26
-#: template-parts/post-list-layouts/material2-layout-manager.php:47
-#: template-parts/post-list-layouts/material3-layout-manager.php:46
-#: template-parts/post-list-layouts/social-layout-manager.php:35
-#: template-parts/post-list-layouts/social-layout-manager.php:44
+#: archive.php:124 template-parts/post-list-layouts/cards-posts-list.php:25
+#: template-parts/post-list-layouts/frameless-posts-list.php:26
+#: template-parts/post-list-layouts/material2-posts-list.php:47
+#: template-parts/post-list-layouts/material3-posts-list.php:46
+#: template-parts/post-list-layouts/social-posts-list.php:36
+#: template-parts/post-list-layouts/social-posts-list.php:45
 msgid "Comments"
 msgstr "Kommentare"
 
@@ -119,59 +119,60 @@ msgid "Author Page"
 msgstr "Autorseite"
 
 #: customizer-options/author-page-options.php:19
-#: customizer-options/category-list-options.php:20
-#: customizer-options/date-list-options.php:20
-#: customizer-options/feed-options.php:91
+#: customizer-options/category-list-options.php:35
+#: customizer-options/date-list-options.php:35
+#: customizer-options/feed-options.php:86
 #: customizer-options/pages-options.php:39
-#: customizer-options/posts-options.php:83
-#: customizer-options/searchresults-options.php:20
-#: customizer-options/tag-list-options.php:20
+#: customizer-options/posts-options.php:96
+#: customizer-options/searchresults-options.php:35
+#: customizer-options/tag-list-options.php:35
 msgid "Show sidebar"
 msgstr "Zeige Sidebar"
 
-#: customizer-options/author-page-options.php:32
+#: customizer-options/author-page-options.php:39
+#: customizer-options/category-list-options.php:55
+#: customizer-options/date-list-options.php:55
+#: customizer-options/feed-options.php:106
+#: customizer-options/pages-options.php:59
+#: customizer-options/posts-options.php:116
+#: customizer-options/searchresults-options.php:55
+#: customizer-options/tag-list-options.php:55
+msgid "Layout Sidebar"
+msgstr "Layout Sidebar"
+
+#: customizer-options/author-page-options.php:53
 msgid "Show recent comments"
 msgstr "Zeige letzte Kommentare"
 
-#: customizer-options/author-page-options.php:45
+#: customizer-options/author-page-options.php:66
 msgid "Show author role"
 msgstr "Zeige Autorenrolle"
 
-#: customizer-options/author-page-options.php:58
+#: customizer-options/author-page-options.php:79
 msgid "Show registration date"
 msgstr "Zeige Registrierungsdatum"
 
-#: customizer-options/author-page-options.php:71
+#: customizer-options/author-page-options.php:92
 msgid "Show number of posts"
 msgstr "Zeige Anzahl der Beiträge"
 
-#: customizer-options/author-page-options.php:84
+#: customizer-options/author-page-options.php:105
 msgid "Show author website"
 msgstr "Zeige Autorenwebseite"
 
-#: customizer-options/author-page-options.php:97
+#: customizer-options/author-page-options.php:118
 msgid "Image size"
 msgstr "Bildgröße"
 
-#: customizer-options/author-page-options.php:117
-#: customizer-options/category-list-options.php:35
-#: customizer-options/date-list-options.php:35
-#: customizer-options/feed-options.php:78
-#: customizer-options/searchresults-options.php:35
-#: customizer-options/tag-list-options.php:35
+#: customizer-options/author-page-options.php:138
+#: customizer-options/category-list-options.php:22
+#: customizer-options/date-list-options.php:22
+#: customizer-options/feed-options.php:73
+#: customizer-options/header-options.php:21
+#: customizer-options/searchresults-options.php:22
+#: customizer-options/tag-list-options.php:22
 msgid "Layout"
 msgstr "Layout"
-
-#: customizer-options/author-page-options.php:132
-#: customizer-options/category-list-options.php:50
-#: customizer-options/date-list-options.php:50
-#: customizer-options/feed-options.php:106
-#: customizer-options/pages-options.php:54
-#: customizer-options/posts-options.php:98
-#: customizer-options/searchresults-options.php:50
-#: customizer-options/tag-list-options.php:50
-msgid "Layout Sidebar"
-msgstr "Layout Sidebar"
 
 #: customizer-options/category-list-options.php:6
 msgid "Category Results List"
@@ -180,27 +181,6 @@ msgstr "Kategorie Ergebnisliste"
 #: customizer-options/category-list-options.php:8
 msgid "Settings for the results when calling a category."
 msgstr "Einstellungen für die Ergebnisse beim Aufruf einer Kategorie."
-
-#: customizer-options/colors-options.php:7
-msgid "Colors"
-msgstr "Farben"
-
-#: customizer-options/colors-options.php:18
-msgid "Primary color"
-msgstr "Primärfarbe"
-
-#: customizer-options/colors-options.php:30
-#: customizer-options/pages-options.php:65
-msgid "Background color"
-msgstr "Hintergrundfarbe"
-
-#: customizer-options/colors-options.php:42
-msgid "Tags and chips color"
-msgstr "Tags und Chips Farbe"
-
-#: customizer-options/colors-options.php:54
-msgid "Comments background color"
-msgstr "Kommentare Hintergrundfarbe"
 
 #: customizer-options/date-list-options.php:6
 msgid "Date Results List"
@@ -218,19 +198,19 @@ msgstr "Feed"
 msgid "Show landingpage section"
 msgstr "Zeige Landingpage Section"
 
-#: customizer-options/feed-options.php:33
+#: customizer-options/feed-options.php:32
+msgid "Landingpage image animation"
+msgstr "Landingpage Bild Animation"
+
+#: customizer-options/feed-options.php:47
 msgid "Minimal height of the landingpage"
 msgstr "Minimale Höhe der Landingpage"
 
-#: customizer-options/feed-options.php:58
-msgid "Maximum width of the feed"
-msgstr "Maximale Breite des Feeds"
+#: customizer-options/global-options.php:6
+msgid "Global"
+msgstr "Global"
 
-#: customizer-options/fonts-options.php:6
-msgid "Font"
-msgstr "Schrift"
-
-#: customizer-options/fonts-options.php:7
+#: customizer-options/global-options.php:18
 msgid ""
 "All fonts are hosted locally. Consent according to the GDPR is not required "
 "for this theme (cookie banner)."
@@ -238,11 +218,24 @@ msgstr ""
 "Alle Schriften werden lokal gehostet. Eine Einwilligung gemäß der DSGVO ist "
 "für dieses Theme nicht erforderlich (Cookie Banner)"
 
-#: customizer-options/fonts-options.php:19
+#: customizer-options/global-options.php:19
 msgid "Main text font"
 msgstr "Hauptschrift"
 
-#: customizer-options/fonts-options.php:50
+#: customizer-options/global-options.php:50
+msgid "Primary color"
+msgstr "Primärfarbe"
+
+#: customizer-options/global-options.php:62
+#: customizer-options/pages-options.php:71
+msgid "Background color"
+msgstr "Hintergrundfarbe"
+
+#: customizer-options/global-options.php:74
+msgid "Comments background color"
+msgstr "Kommentare Hintergrundfarbe"
+
+#: customizer-options/global-options.php:86
 msgid "Font color"
 msgstr "Schriftfarbe"
 
@@ -250,19 +243,19 @@ msgstr "Schriftfarbe"
 msgid "Header"
 msgstr "Header"
 
-#: customizer-options/header-options.php:19
+#: customizer-options/header-options.php:34
 msgid "Show menu in header"
 msgstr "Zeige Menü im Header"
 
-#: customizer-options/header-options.php:32
+#: customizer-options/header-options.php:47
 msgid "Show logo with link to home page"
 msgstr "Zeige Logo mit Link zur Startseite"
 
-#: customizer-options/header-options.php:45
+#: customizer-options/header-options.php:60
 msgid "Show search bar"
 msgstr "Zeige Suchleiste"
 
-#: customizer-options/header-options.php:63
+#: customizer-options/header-options.php:78
 msgid "Menu font size"
 msgstr "Menü Schriftgröße"
 
@@ -311,7 +304,7 @@ msgstr "Anzahl der Wörter im Textausschnitt"
 #: customizer-options/post-list-layouts/frameless-post-list.php:61
 #: customizer-options/post-list-layouts/material2-post-list.php:118
 #: customizer-options/post-list-layouts/material3-post-list.php:118
-#: customizer-options/posts-options.php:150
+#: customizer-options/posts-options.php:177
 msgid "Show tags"
 msgstr "Zeige Tags"
 
@@ -364,15 +357,14 @@ msgstr "Bildradius"
 
 #: customizer-options/post-list-layouts/material2-post-list.php:56
 #: customizer-options/post-list-layouts/material3-post-list.php:56
-#: customizer-options/posts-options.php:124
+#: customizer-options/posts-options.php:130
 msgid "Show date"
 msgstr "Zeige Datum"
 
 #: customizer-options/post-list-layouts/material2-post-list.php:69
 #: customizer-options/post-list-layouts/material3-post-list.php:69
-#, fuzzy
-#| msgid "Show categories"
-msgid "Show categorys"
+#: customizer-options/posts-options.php:143
+msgid "Show categories"
 msgstr "Zeige Kategorien"
 
 #: customizer-options/posts-options.php:8
@@ -387,27 +379,31 @@ msgstr "Maximale Hero Breite"
 msgid "Show hero gradient background"
 msgstr "Zeige Hero Farbverlaufhintergrund"
 
-#: customizer-options/posts-options.php:53
-msgid "Maximum width of posts"
-msgstr "Maximale Breite der Beiträge"
-
-#: customizer-options/posts-options.php:69
-msgid "Posts background color"
-msgstr "Beiträge Hintergundfarbe"
-
-#: customizer-options/posts-options.php:111
+#: customizer-options/posts-options.php:52
 msgid "Show post image"
 msgstr "Zeige Beitragsbild"
 
-#: customizer-options/posts-options.php:137
-msgid "Show categories"
-msgstr "Zeige Kategorien"
+#: customizer-options/posts-options.php:66
+msgid "Maximum width of posts"
+msgstr "Maximale Breite der Beiträge"
+
+#: customizer-options/posts-options.php:82
+msgid "Posts background color"
+msgstr "Beiträge Hintergundfarbe"
 
 #: customizer-options/posts-options.php:163
+msgid "Layout Categories"
+msgstr "Layout Kategorien"
+
+#: customizer-options/posts-options.php:192
+msgid "Tags Layout"
+msgstr "Tags Layout"
+
+#: customizer-options/posts-options.php:211
 msgid "Show author details"
 msgstr "Zeige Autor Details"
 
-#: customizer-options/posts-options.php:176
+#: customizer-options/posts-options.php:224
 msgid "Show post pagination"
 msgstr "Zeige Postpaginierung"
 
@@ -427,7 +423,9 @@ msgstr "Tags Ergebnisliste"
 msgid "Settings for the results when calling a tag."
 msgstr "Einstellungen für die Ergebnisse beim Aufruf eines Tags."
 
-#: footer.php:11 header.php:79
+#: footer.php:11 template-parts/header-layouts/clean-header.php:36
+#: template-parts/header-layouts/material2-header.php:22
+#: template-parts/header-layouts/material2-header.php:36
 msgid "Select a menu in the customizer"
 msgstr "Wähle ein Menü im Customizer"
 
@@ -436,25 +434,21 @@ msgstr "Wähle ein Menü im Customizer"
 msgid "created by %1$s"
 msgstr "erstellt von %1$s"
 
-#: functions.php:84
+#: functions.php:88
 msgid "Header Menu"
 msgstr "Header Menü"
 
-#: functions.php:85
+#: functions.php:89
 msgid "Footer Menu"
 msgstr "Footer Menü"
 
-#: functions.php:94
+#: functions.php:98
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:107
+#: functions.php:111
 msgid "Landingpage Widget Area"
 msgstr "Landingpage Widget Area"
-
-#: header.php:47
-msgid "Skip to main content"
-msgstr "Springe zum Hauptinhalt"
 
 #: home.php:11
 msgid "Fill the landing page in the customizer"
@@ -481,13 +475,35 @@ msgstr "&laquo; Vorheriger Beitrag"
 msgid "Next Post &raquo;"
 msgstr "Nächster Beitrag &raquo;"
 
-#: template-parts/post-list-layouts/cards-layout-manager.php:31
-#: template-parts/post-list-layouts/frameless-layout-manager.php:32
-#: template-parts/post-list-layouts/material2-layout-manager.php:54
-#: template-parts/post-list-layouts/material3-layout-manager.php:52
-#: template-parts/post-list-layouts/social-layout-manager.php:50
+#: template-parts/layout-manager.php:35
+msgid "Skip to main content"
+msgstr "Springe zum Hauptinhalt"
+
+#: template-parts/post-list-layouts/cards-posts-list.php:31
+#: template-parts/post-list-layouts/content-creator-posts-list.php:45
+#: template-parts/post-list-layouts/frameless-posts-list.php:32
+#: template-parts/post-list-layouts/material2-posts-list.php:54
+#: template-parts/post-list-layouts/material3-posts-list.php:52
+#: template-parts/post-list-layouts/social-posts-list.php:51
 msgid "read more"
 msgstr "mehr lesen"
+
+#~ msgid "Colors"
+#~ msgstr "Farben"
+
+#~ msgid "Tags and chips color"
+#~ msgstr "Tags und Chips Farbe"
+
+#~ msgid "Maximum width of the feed"
+#~ msgstr "Maximale Breite des Feeds"
+
+#~ msgid "Font"
+#~ msgstr "Schrift"
+
+#, fuzzy
+#~| msgid "Show categories"
+#~ msgid "Show categorys"
+#~ msgstr "Zeige Kategorien"
 
 #~ msgid "Widget blocks sidebar background color"
 #~ msgstr "Widget Blocks Sidebar Hintergrundfarbe"

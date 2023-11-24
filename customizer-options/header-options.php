@@ -33,6 +33,7 @@ function lime_blog_header($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show menu in header', 'lime-blog'),
         'section' => 'custom_theme_header',
+        'active_callback' => 'clean_header_active_callback'
     ));
 
     // Home page link
@@ -46,6 +47,7 @@ function lime_blog_header($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show logo with link to home page', 'lime-blog'),
         'section' => 'custom_theme_header',
+        'active_callback' => 'clean_header_active_callback'
     ));
 
     // Searchbar
@@ -59,11 +61,17 @@ function lime_blog_header($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show search bar', 'lime-blog'),
         'section' => 'custom_theme_header',
+        'active_callback' => 'clean_header_active_callback'
     ));
 
     function searchbar_active_callback($control)
     {
         return $control->manager->get_setting('searchbar')->value();
+    }
+
+    function clean_header_active_callback($control)
+    {
+        return $control->manager->get_setting('header_layout', 'clean')->value() == 'clean';
     }
 
     // Title size setting
@@ -82,7 +90,13 @@ function lime_blog_header($wp_customize)
             'max' => 25,
             'step' => 1,
         ),
-        'active_callback' => 'header_menu_callback'
+        'active_callback' => function( $control ) {
+            return ( 
+                header_menu_callback( $control )
+                &&
+                clean_header_active_callback( $control )
+            );
+        },
     ));
 
     function header_menu_callback($control)

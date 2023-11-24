@@ -2,7 +2,7 @@
   background-color: var(--lime_blog_primary_variant_much_darker);
 }
 .lime_blog_material2_header .lime_blog_material2_header_sidemenu {
-  position: absolute;
+  position: fixed;
   height: 100%;
   transform: translateX(-100%);
   width: 0;
@@ -16,6 +16,10 @@
   display: flex;
   flex-direction: column;
   /* development */
+  /* Track */
+}
+.lime_blog_material2_header .lime_blog_material2_header_sidemenu ::-webkit-scrollbar-track {
+  background: transparent;
 }
 .lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_material2_header_sidemenu_close_button {
   all: revert;
@@ -27,6 +31,7 @@
   color: var(--lime_blog_font_color);
   display: flex;
   cursor: pointer;
+  padding: 0.5em 0.6em;
 }
 .lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_material2_header_sidemenu_close_button:hover, .lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_material2_header_sidemenu_close_button:focus {
   background-color: var(--lime_blog_primary_color);
@@ -35,6 +40,7 @@
 .lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_header_menu {
   margin: 0.2em;
   padding: 0;
+  overflow-y: auto;
 }
 .lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_header_menu li {
   list-style: none;
