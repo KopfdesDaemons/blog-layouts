@@ -31,11 +31,12 @@ body {
 
 .lime_blog_skip_link {
   position: absolute;
-  top: -40px;
+  top: -50px;
   left: 0;
-  background-color: #333;
+  background-color: var(--lime_blog_background_color);
   color: #fff;
-  padding: 5px;
+  padding: 1em;
+  border: 1px solid var(--lime_blog_primary_color);
   z-index: 999;
 }
 

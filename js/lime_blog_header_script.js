@@ -63,10 +63,11 @@ window.addEventListener("DOMContentLoaded", function () {
 
     const mobileMenu = this.document.querySelector('#lime_blog_header_mobile_menu');
     const mobileMenuToggleButton = this.document.querySelector('#lime_blog_mobile_menu_toggle_button');
-    let headerMenuOpen = false;
-
     if (mobileMenuToggleButton) mobileMenuToggleButton.addEventListener('click', toggleMobileMenu);
-
+    const mobileMenuCloseButton = this.document.querySelector('#lime_blog_mobile_menu_close_button');
+    if(mobileMenuCloseButton) mobileMenuCloseButton.addEventListener('click', toggleMobileMenu);
+    
+    let headerMenuOpen = false;
     function toggleMobileMenu() {
         var header = document.querySelector('#lime_blog_header');
         header.classList.toggle('lime_blog_header_menu_open');
