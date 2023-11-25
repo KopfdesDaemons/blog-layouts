@@ -9,7 +9,7 @@ function lime_blog_header($wp_customize)
 
     // Header Layout
     $wp_customize->add_setting('header_layout', array(
-        'default' => 'clean',
+        'default' => 'gradient',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));
@@ -46,7 +46,7 @@ function lime_blog_header($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show menu in header', 'lime-blog'),
         'section' => 'custom_theme_header',
-        'active_callback' => 'clean_header_active_callback'
+        'active_callback' => 'gradient_header_active_callback'
     ));
 
     // Home page link
@@ -60,7 +60,7 @@ function lime_blog_header($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show logo with link to home page', 'lime-blog'),
         'section' => 'custom_theme_header',
-        'active_callback' => 'clean_header_active_callback'
+        'active_callback' => 'gradient_header_active_callback'
     ));
 
     // Searchbar
@@ -74,7 +74,7 @@ function lime_blog_header($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show search bar', 'lime-blog'),
         'section' => 'custom_theme_header',
-        'active_callback' => 'clean_header_active_callback'
+        'active_callback' => 'gradient_header_active_callback'
     ));
 
     function searchbar_active_callback($control)
@@ -82,9 +82,9 @@ function lime_blog_header($wp_customize)
         return $control->manager->get_setting('searchbar')->value();
     }
 
-    function clean_header_active_callback($control)
+    function gradient_header_active_callback($control)
     {
-        return $control->manager->get_setting('header_layout', 'clean')->value() == 'clean';
+        return $control->manager->get_setting('header_layout', 'gradient')->value() == 'gradient';
     }
 
     // Title size setting
@@ -107,7 +107,7 @@ function lime_blog_header($wp_customize)
             return (
                 header_menu_callback($control)
                 &&
-                clean_header_active_callback($control)
+                gradient_header_active_callback($control)
             );
         },
     ));

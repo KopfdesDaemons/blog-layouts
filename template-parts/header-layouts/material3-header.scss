@@ -1,7 +1,8 @@
-.lime_blog_material2_header {
-    background-color: var(--lime_blog_primary_variant_much_darker);
-
+.lime_blog_material3_header {
+    transition: background-color 150ms ease-in;
+    
     .lime_blog_material_header_sidemenu {
+        background-color: var(--lime_blog_primary_variant_much_darker);
         position: fixed;
         height: 100%;
         transform: translateX(-100%);
@@ -9,12 +10,12 @@
         left: 0;
         top: 0;
         overflow: hidden;
-        background-color: var(--lime_blog_primary_variant_darker);
         z-index: 10;
         transition: transform 200ms ease-in;
         visibility: hidden;
         display: flex;
         flex-direction: column;
+        border-radius: 0 16px 16px 0;
 
         /* development */
         // transform: translateX(0);
@@ -46,13 +47,14 @@
         }
 
         .lime_blog_header_menu {
-            margin: 0.2em;
+            margin: 1em;
             padding: 0;
             overflow-y: auto;
 
             li {
                 list-style: none;
                 overflow: hidden;
+                border-top: 1px solid;
 
                 a {
                     padding: 1.2em;
@@ -60,10 +62,11 @@
                     color: var(--lime_blog_font_color);
                     text-decoration: none;
                     font-weight: bold;
+                    border-radius: 5em;
 
                     &:hover,
                     &:focus {
-                        background-color: var(--lime_blog_primary_variant_much_darker);
+                        background-color: var(--lime_blog_primary_variant_darker);
                         outline: none;
                     }
                 }
@@ -73,6 +76,7 @@
 
                     li {
                         margin: 0;
+                        border: none;
 
                         a {
                             font-weight: unset;
@@ -117,12 +121,7 @@
             flex-flow: row wrap;
             padding: 0;
             margin: 0;
-
-
-            a:hover {
-                border-bottom: 4px solid;
-            }
-
+            
             a {
                 text-decoration: none;
                 color: var(--lime_blog_font_color);
@@ -140,6 +139,7 @@
                 list-style: none;
                 display: flex;
                 position: relative;
+                border-radius: 12px;
 
                 .lime_blog_menuitem_container {
                     display: flex;

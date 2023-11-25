@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main role="main" class="lime_blog_has_sidebar">
+<main role="main" <?php if (get_theme_mod('searchresults_sidebar', true)) echo 'class="lime_blog_has_sidebar"' ?>>
     <section class="lime_blog_content_spacer">
         <div class="lime_blog_search_container" id="lime_blog_main_content">
             <?php

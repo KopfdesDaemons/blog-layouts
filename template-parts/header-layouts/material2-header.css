@@ -1,7 +1,7 @@
 .lime_blog_material2_header {
   background-color: var(--lime_blog_primary_variant_much_darker);
 }
-.lime_blog_material2_header .lime_blog_material2_header_sidemenu {
+.lime_blog_material2_header .lime_blog_material_header_sidemenu {
   position: fixed;
   height: 100%;
   transform: translateX(-100%);
@@ -18,10 +18,10 @@
   /* development */
   /* Track */
 }
-.lime_blog_material2_header .lime_blog_material2_header_sidemenu ::-webkit-scrollbar-track {
+.lime_blog_material2_header .lime_blog_material_header_sidemenu ::-webkit-scrollbar-track {
   background: transparent;
 }
-.lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_material2_header_sidemenu_close_button {
+.lime_blog_material2_header .lime_blog_material_header_sidemenu .lime_blog_material_header_sidemenu_close_button {
   all: revert;
   border: none;
   border-radius: 4px;
@@ -33,49 +33,49 @@
   cursor: pointer;
   padding: 0.5em 0.6em;
 }
-.lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_material2_header_sidemenu_close_button:hover, .lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_material2_header_sidemenu_close_button:focus {
+.lime_blog_material2_header .lime_blog_material_header_sidemenu .lime_blog_material_header_sidemenu_close_button:hover, .lime_blog_material2_header .lime_blog_material_header_sidemenu .lime_blog_material_header_sidemenu_close_button:focus {
   background-color: var(--lime_blog_primary_color);
   outline: none;
 }
-.lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_header_menu {
+.lime_blog_material2_header .lime_blog_material_header_sidemenu .lime_blog_header_menu {
   margin: 0.2em;
   padding: 0;
   overflow-y: auto;
 }
-.lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_header_menu li {
+.lime_blog_material2_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li {
   list-style: none;
   overflow: hidden;
 }
-.lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_header_menu li a {
+.lime_blog_material2_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li a {
   padding: 1.2em;
   display: flex;
   color: var(--lime_blog_font_color);
   text-decoration: none;
   font-weight: bold;
 }
-.lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_header_menu li a:hover, .lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_header_menu li a:focus {
+.lime_blog_material2_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li a:hover, .lime_blog_material2_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li a:focus {
   background-color: var(--lime_blog_primary_variant_much_darker);
   outline: none;
 }
-.lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_header_menu li ul {
+.lime_blog_material2_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li ul {
   padding-left: 0.5em;
 }
-.lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_header_menu li ul li {
+.lime_blog_material2_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li ul li {
   margin: 0;
 }
-.lime_blog_material2_header .lime_blog_material2_header_sidemenu .lime_blog_header_menu li ul li a {
+.lime_blog_material2_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li ul li a {
   font-weight: unset;
 }
-.lime_blog_material2_header.lime_blog_header_menu_open .lime_blog_material2_header_sidemenu {
+.lime_blog_material2_header.lime_blog_header_menu_open .lime_blog_material_header_sidemenu {
   transform: translateX(0);
   visibility: visible;
   width: 20em;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content {
+.lime_blog_material2_header .lime_blog_material_header_content {
   display: flex;
   align-items: center;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content #lime_blog_mobile_menu_toggle_button {
+.lime_blog_material2_header .lime_blog_material_header_content #lime_blog_mobile_menu_toggle_button {
   all: revert;
   display: none;
   padding: 0.5em;
@@ -84,26 +84,23 @@
   border: none;
   color: var(--lime_blog_font_color);
 }
-.lime_blog_material2_header .lime_blog_material2_header_content #lime_blog_mobile_menu_toggle_button:focus-visible {
+.lime_blog_material2_header .lime_blog_material_header_content #lime_blog_mobile_menu_toggle_button:focus-visible {
   outline-offset: 1px;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_home_link {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_material_header_home_link {
   display: none;
   text-decoration: none;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_home_link:visited {
-  color: var(--lime_blog_primary_color);
-}
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop {
   display: flex;
   flex-flow: row wrap;
   padding: 0;
   margin: 0;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop a:hover {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop a:hover {
   border-bottom: 4px solid;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop a {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop a {
   text-decoration: none;
   color: var(--lime_blog_font_color);
   border-bottom: 4px solid transparent;
@@ -115,22 +112,22 @@
   width: 100%;
   white-space: nowrap;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop li {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li {
   list-style: none;
   display: flex;
   position: relative;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop li .lime_blog_menuitem_container {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li .lime_blog_menuitem_container {
   display: flex;
   align-items: center;
   gap: 0.5em;
   width: 100%;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop li .lime_blog_menuitem_container .lime_blog_submenu_toggle {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li .lime_blog_menuitem_container .lime_blog_submenu_toggle {
   position: absolute;
   right: 0;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop li ul {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li ul {
   display: none;
   flex-direction: column;
   overflow: visible;
@@ -140,47 +137,47 @@
   z-index: 5;
   position: absolute;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop li ul li {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li ul li {
   transition: all 100ms;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop li ul ul {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li ul ul {
   left: 100%;
   top: 0;
 }
 @media only screen and (min-width: 600px) {
-  .lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop li > ul .lime_blog_submenu_toggle {
+  .lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li > ul .lime_blog_submenu_toggle {
     transform: rotate(-90deg);
   }
-  .lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop li:hover, .lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop li:focus-within {
+  .lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li:hover, .lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li:focus-within {
     background-color: var(--lime_blog_primary_variant_darker);
   }
-  .lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop li:hover > ul, .lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop li:focus-within > ul {
+  .lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li:hover > ul, .lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li:focus-within > ul {
     display: flex;
   }
 }
 @media only screen and (max-width: 800px) {
-  .lime_blog_material2_header .lime_blog_material2_header_content {
+  .lime_blog_material2_header .lime_blog_material_header_content {
     width: 100%;
     justify-content: space-between;
   }
-  .lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_header_menu_desktop {
+  .lime_blog_material2_header .lime_blog_material_header_content .lime_blog_header_menu_desktop {
     display: none;
   }
-  .lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_home_link,
-  .lime_blog_material2_header .lime_blog_material2_header_content #lime_blog_mobile_menu_toggle_button {
+  .lime_blog_material2_header .lime_blog_material_header_content .lime_blog_material_header_home_link,
+  .lime_blog_material2_header .lime_blog_material_header_content #lime_blog_mobile_menu_toggle_button {
     display: flex;
   }
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_home_link {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_material_header_home_link {
   color: var(--lime_blog_font_color);
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_search_div {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_material_header_search_div {
   display: flex;
   align-items: center;
   margin: 0 1em;
   gap: 0.5em;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_search_div #lime_blog_header_search_icon {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_material_header_search_div #lime_blog_header_search_icon {
   all: revert;
   font-size: 1.2em;
   background-color: transparent;
@@ -194,28 +191,28 @@
   width: 2em;
   color: var(--lime_blog_font_color);
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_search_div #lime_blog_header_search_icon:hover {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_material_header_search_div #lime_blog_header_search_icon:hover {
   background-color: var(--lime_blog_primary_variant_darker);
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_search_div form {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_material_header_search_div form {
   display: flex;
   width: 0;
   overflow: hidden;
   transition: all 200ms;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_search_div form label {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_material_header_search_div form label {
   display: flex;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_search_div form input {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_material_header_search_div form input {
   all: unset;
   margin: 0;
   padding-left: 1em;
   width: 10em;
   box-sizing: border-box;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_search_div form .search-submit {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_material_header_search_div form .search-submit {
   display: none;
 }
-.lime_blog_material2_header .lime_blog_material2_header_content .lime_blog_material2_header_search_div.lime_blog_header_search_open form {
+.lime_blog_material2_header .lime_blog_material_header_content .lime_blog_material_header_search_div.lime_blog_header_search_open form {
   width: 10em;
 }/*# sourceMappingURL=material2-header.css.map */

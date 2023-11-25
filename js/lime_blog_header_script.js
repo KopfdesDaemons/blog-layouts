@@ -92,4 +92,16 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    var material3Header = document.querySelector('.lime_blog_material3_header');
+    var fixedHeader = this.document.querySelector('.lime_blog_fixed_header');
+    if(material3Header && fixedHeader) {
+        window.onscroll = function () {
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            material3Header.style.backgroundColor = "var(--lime_blog_primary_variant_much_darker)"; // Hintergrundfarbe ändern
+        } else {
+            material3Header.style.backgroundColor = "transparent"; // Zurück zur Originalfarbe
+          }
+        };
+    }
+
 }, false);

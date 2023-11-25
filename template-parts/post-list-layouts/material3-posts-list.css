@@ -44,29 +44,29 @@
   text-decoration: none;
   display: flex;
   margin-top: 0.5em;
-  padding: 0 clamp(1em, 2vw, 2em);
+  padding: 0 2em;
 }
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_headline_row h2 {
   line-height: 1.1em;
 }
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_date {
-  padding: 0 clamp(1em, 2vw, 2em);
+  padding: 0 2em;
 }
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_categories {
-  padding: 0 clamp(1em, 2vw, 2em);
+  padding: 0 2em;
   display: flex;
   gap: 0.5em;
   flex-wrap: wrap;
 }
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_excerpt {
-  padding: 0 clamp(1em, 2vw, 2em);
+  padding: 0 2em;
   margin-bottom: auto;
 }
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_excerpt p {
   line-height: var(--lime_blog_material3_post_list_line_height);
 }
 .lime_blog_material3_post_list_item .lime_blog_material3_post_list_item_tags {
-  padding: 0 clamp(1em, 2vw, 2em);
+  padding: 0 2em;
   margin-bottom: 1em;
   display: flex;
   flex-wrap: wrap;
@@ -86,7 +86,7 @@
 }
 .lime_blog_material3_post_list_item .lime_blog_materiale_post_list_item_icon_row {
   display: flex;
-  padding: 0 clamp(1em, 2vw, 2em);
+  padding: 0 2em;
   margin-bottom: 1em;
   gap: 0.5em;
   justify-content: flex-end;

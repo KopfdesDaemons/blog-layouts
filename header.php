@@ -46,5 +46,5 @@
         <?php
         wp_body_open();
         require_once get_template_directory() . '/template-parts/layout-manager.php';
-        echo lime_blog_display_header(get_theme_mod('header_layout', 'clean'));
+        echo lime_blog_display_header(get_theme_mod('header_layout', 'gradient'));
         ?>

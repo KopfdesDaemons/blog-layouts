@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-11-24 18:11+0100\n"
-"PO-Revision-Date: 2023-11-24 18:12+0100\n"
+"POT-Creation-Date: 2023-11-25 01:07+0100\n"
+"PO-Revision-Date: 2023-11-25 01:08+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -244,24 +244,28 @@ msgid "Header"
 msgstr "Header"
 
 #: customizer-options/header-options.php:34
+msgid "Fix Header"
+msgstr "Fixiere Header"
+
+#: customizer-options/header-options.php:47
 msgid "Show menu in header"
 msgstr "Zeige Menü im Header"
 
-#: customizer-options/header-options.php:47
+#: customizer-options/header-options.php:61
 msgid "Show logo with link to home page"
 msgstr "Zeige Logo mit Link zur Startseite"
 
-#: customizer-options/header-options.php:60
+#: customizer-options/header-options.php:75
 msgid "Show search bar"
 msgstr "Zeige Suchleiste"
 
-#: customizer-options/header-options.php:78
+#: customizer-options/header-options.php:99
 msgid "Menu font size"
 msgstr "Menü Schriftgröße"
 
 #: customizer-options/layout-options.php:6
-msgid "Layouts"
-msgstr "Layouts"
+msgid "Posts List Layouts"
+msgstr "Beitragsliste Layouts"
 
 #: customizer-options/layout-options.php:8
 msgid "Settings for the individual layouts."
@@ -423,7 +427,7 @@ msgstr "Tags Ergebnisliste"
 msgid "Settings for the results when calling a tag."
 msgstr "Einstellungen für die Ergebnisse beim Aufruf eines Tags."
 
-#: footer.php:11 template-parts/header-layouts/clean-header.php:36
+#: footer.php:11 template-parts/header-layouts/gradient-header.php:36
 #: template-parts/header-layouts/material2-header.php:22
 #: template-parts/header-layouts/material2-header.php:36
 msgid "Select a menu in the customizer"
@@ -434,19 +438,19 @@ msgstr "Wähle ein Menü im Customizer"
 msgid "created by %1$s"
 msgstr "erstellt von %1$s"
 
-#: functions.php:88
+#: functions.php:89
 msgid "Header Menu"
 msgstr "Header Menü"
 
-#: functions.php:89
+#: functions.php:90
 msgid "Footer Menu"
 msgstr "Footer Menü"
 
-#: functions.php:98
+#: functions.php:99
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:111
+#: functions.php:112
 msgid "Landingpage Widget Area"
 msgstr "Landingpage Widget Area"
 
@@ -475,7 +479,7 @@ msgstr "&laquo; Vorheriger Beitrag"
 msgid "Next Post &raquo;"
 msgstr "Nächster Beitrag &raquo;"
 
-#: template-parts/layout-manager.php:35
+#: template-parts/layout-manager.php:36
 msgid "Skip to main content"
 msgstr "Springe zum Hauptinhalt"
 
@@ -487,6 +491,9 @@ msgstr "Springe zum Hauptinhalt"
 #: template-parts/post-list-layouts/social-posts-list.php:51
 msgid "read more"
 msgstr "mehr lesen"
+
+#~ msgid "Layouts"
+#~ msgstr "Layouts"
 
 #~ msgid "Colors"
 #~ msgstr "Farben"
@@ -525,9 +532,6 @@ msgstr "mehr lesen"
 
 #~ msgid "frameless"
 #~ msgstr "rahmenlos"
-
-#~ msgid "Posts list style"
-#~ msgstr "Beitragsliste Style"
 
 #~ msgid "Category results style"
 #~ msgstr "Kategorie Ergebnisliste Style"

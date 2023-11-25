@@ -3,7 +3,7 @@ function lime_blog_layout_options($wp_customize)
 {
     // Section
     $wp_customize->add_panel('layouts', array(
-        'title' => __('Layouts', 'lime-blog'),
+        'title' => __('Posts List Layouts', 'lime-blog'),
         'priority' => 31,
         'description' => __('Settings for the individual layouts.', 'lime-blog'),
     ));

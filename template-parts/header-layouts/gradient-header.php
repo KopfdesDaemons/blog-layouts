@@ -1,5 +1,5 @@
 <?php
-function lime_blog_display_clean_header()
+function lime_blog_display_gradient_header()
 {
     ob_start(); // Start output buffering
 ?>
