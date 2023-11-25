@@ -12,7 +12,7 @@
         <?php endif; ?>
     </header>
 </section>
-<main <?php if(get_theme_mod('post_sidebar', true)) echo 'class="lime_blog_has_sidebar"'?>>
+<main <?php if (get_theme_mod('post_sidebar', true)) echo 'class="lime_blog_has_sidebar"' ?>>
     <?php
     while (have_posts()) :
         the_post();
@@ -37,7 +37,7 @@
                             if (!empty($categories)) {
                                 echo '<ul>';
                                 foreach ($categories as $category) {
-                                    echo '<li class="' . 'lime_blog_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_categories_layout', 'blocks')) . '"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . $category->name . '</a></li>';
+                                    echo '<li class="' . 'lime_blog_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_categories_layout', 'color-blocks')) . '"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . $category->name . '</a></li>';
                                 }
                                 echo '</ul>';
                             }
@@ -70,7 +70,7 @@
                     if ($tags_options & !empty($tags)) {
                         echo '<div class="lime_blog_post_tags"><ul>';
                         foreach ($tags as $tag) {
-                            echo '<li class="' . 'lime_blog_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_tags_layout', 'blocks')) . '"><a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . $tag->name . '</a></li>';
+                            echo '<li class="' . 'lime_blog_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_tags_layout', 'youtube-music')) . '"><a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . $tag->name . '</a></li>';
                         }
                         echo '</ul></div>';
                     }
@@ -82,9 +82,9 @@
                         $author_name = esc_html(get_the_author_meta('display_name'));
                         $author_description = esc_html(get_the_author_meta('description'));
                         $author_website = esc_url(get_the_author_meta('user_url'));
-                        $author_avatar = get_avatar($author_id, 100);
+                        $author_avatar = get_avatar($author_id, 500);
                     ?>
-                        <div class="lime_blog_author_card">
+                        <div <?php echo 'class="' . 'lime_blog_authobox_layout_' . str_replace("-", "_", get_theme_mod('posts_authorbox_layout', 'neon')) . '"'; ?>>
                             <div class="lime_blog_author_avatar">
                                 <a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>">
                                     <?php echo $author_avatar; ?>
@@ -95,7 +95,9 @@
                                     <h3><a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>"><?php echo $author_name; ?></a>
                                     </h3>
                                     <?php if ($author_website) : ?>
-                                        <a href="<?php echo $author_website; ?>" target="_blank">🌐</a>
+                                        <a href="<?php echo $author_website; ?>" target="_blank">
+                                            <i class="fa-solid fa-globe"></i>
+                                        </a>
                                     <?php endif; ?>
                                 </div>
                                 <p><?php echo $author_description; ?></p>
@@ -108,9 +110,9 @@
                     if ($post_pagination) { ?>
                         <div class="lime_blog_post_pagination">
                             <div class="lime_blog_post_pagination_prev">
-                            <?php previous_post_link('%link', __('&laquo; Previous Post', 'lime-blog')); ?>                            </div>
+                                <?php previous_post_link('%link', __('&laquo; Previous Post', 'lime-blog')); ?> </div>
                             <div class="lime_blog_post_pagination_next">
-                            <?php next_post_link('%link', __('Next Post &raquo;', 'lime-blog')); ?>                            </div>
+                                <?php next_post_link('%link', __('Next Post &raquo;', 'lime-blog')); ?> </div>
                         </div>
                     <?php } ?>
 
@@ -125,9 +127,9 @@
             </div>
         </section>
 </main>
-<?php if(get_theme_mod('post_sidebar', true)) {
+<?php if (get_theme_mod('post_sidebar', true)) {
     echo '<aside id="lime_blog_sidebar" class="' . 'lime_blog_sidebar_layout_' . get_theme_mod('posts_sidebar_layout', 'social') . '">';
     get_sidebar();
     echo '</aside>';
-};?>
+}; ?>
 <?php get_footer(); ?>

@@ -16,12 +16,11 @@
   border: 1px solid rgb(95, 95, 95);
   background-color: #3d3d3d;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_material2 {
-  background-color: #212121;
-}
 #lime_blog_sidebar.lime_blog_sidebar_layout_material2 .widget {
+  background-color: #212121;
   margin-bottom: 0;
   border-bottom: solid 1px;
+  margin-bottom: 2em;
 }
 #lime_blog_sidebar.lime_blog_sidebar_layout_material3 .widget {
   background-color: #212121;
@@ -30,6 +29,9 @@
 #lime_blog_sidebar.lime_blog_sidebar_layout_material3 .widget .widget-title {
   text-decoration: underline;
   margin: 0.4em 0;
+}
+#lime_blog_sidebar.lime_blog_sidebar_layout_material3 .widget:hover {
+  background-color: #292929;
 }
 #lime_blog_sidebar.lime_blog_sidebar_layout_frameless .widget {
   background-color: unset;

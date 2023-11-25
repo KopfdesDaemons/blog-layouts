@@ -20,11 +20,12 @@
     }
 
     &.lime_blog_sidebar_layout_material2 {
-        background-color: #212121;
-
+        
         .widget {
+            background-color: #212121;
             margin-bottom: 0;
             border-bottom: solid 1px;
+            margin-bottom: 2em;
         }
     }
 
@@ -36,6 +37,10 @@
             .widget-title {
                 text-decoration: underline;
                 margin: 0.4em 0;
+            }
+
+            &:hover {
+                background-color: #292929;
             }
         }
     }
