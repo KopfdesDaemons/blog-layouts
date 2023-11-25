@@ -55,7 +55,7 @@ add_theme_support('html5', array(
 add_theme_support('align-wide');
 add_theme_support('responsive-embeds');
 
-function lime_blog_enqueue_scripts()
+function blog_layouts_enqueue_scripts()
 {
     // Load the wordpress comment script from the “\wordpress\wp-includes\js” directory.
     // This allows the comment response form to be located below the corresponding comment
@@ -64,39 +64,39 @@ function lime_blog_enqueue_scripts()
         wp_enqueue_script('comment-reply');
     }
     // Header Script
-    wp_enqueue_script('lime_blog_header_script', get_template_directory_uri() . '/js/lime_blog_header_script.js', null, '1.0', true);
+    wp_enqueue_script('blog_layouts_header_script', get_template_directory_uri() . '/js/blog_layouts_header_script.js', null, '1.0', true);
     
     // Author Script
     if(get_theme_mod('author_page_latest_comments', true)) {
-        wp_enqueue_script('lime_blog_author_script', get_template_directory_uri() . '/js/lime_blog_author_page.js', null, '1.0', true);
+        wp_enqueue_script('blog_layouts_author_script', get_template_directory_uri() . '/js/blog_layouts_author_page.js', null, '1.0', true);
     }
 }
-add_action('wp_enqueue_scripts', 'lime_blog_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'blog_layouts_enqueue_scripts');
 
-function lime_blog_after_setup_theme()
+function blog_layouts_after_setup_theme()
 {
     // For the translation
-    load_theme_textdomain('lime-blog', get_template_directory() . '/languages');
+    load_theme_textdomain('blog-layouts', get_template_directory() . '/languages');
     // defaults to the feed as the homepage
     update_option('show_on_front', 'posts');
 }
-add_action('after_setup_theme', 'lime_blog_after_setup_theme');
+add_action('after_setup_theme', 'blog_layouts_after_setup_theme');
 
-function lime_blog_register_menus()
+function blog_layouts_register_menus()
 {
     register_nav_menus(
         array(
-            'header-menu' => __('Header Menu', 'lime-blog'),
-            'footer-menu' => __('Footer Menu', 'lime-blog')
+            'header-menu' => __('Header Menu', 'blog-layouts'),
+            'footer-menu' => __('Footer Menu', 'blog-layouts')
         )
     );
 }
-add_action('init', 'lime_blog_register_menus');
+add_action('init', 'blog_layouts_register_menus');
 
-function lime_blog_register_sidebar()
+function blog_layouts_register_sidebar()
 {
     register_sidebar(array(
-        'name' => __('Sidebar', 'lime-blog'),
+        'name' => __('Sidebar', 'blog-layouts'),
         'id' => 'my-sidebar',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
@@ -104,12 +104,12 @@ function lime_blog_register_sidebar()
         'after_title' => '</h2>',
     ));
 }
-add_action('widgets_init', 'lime_blog_register_sidebar');
+add_action('widgets_init', 'blog_layouts_register_sidebar');
 
-function lime_blog_register_landigpage_widget_area()
+function blog_layouts_register_landigpage_widget_area()
 {
     register_sidebar(array(
-        'name' => __('Landingpage Widget Area', 'lime-blog'),
+        'name' => __('Landingpage Widget Area', 'blog-layouts'),
         'id' => 'landingpage-widget-area',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
@@ -117,23 +117,23 @@ function lime_blog_register_landigpage_widget_area()
         'after_title' => '</h2>',
     ));
 }
-add_action('widgets_init', 'lime_blog_register_landigpage_widget_area');
+add_action('widgets_init', 'blog_layouts_register_landigpage_widget_area');
 
 // Custom menu structure
-class lime_blog_menu_walker extends Walker_Nav_Menu
+class blog_layouts_menu_walker extends Walker_Nav_Menu
 {
     function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
     {
         if (empty($item->title)) return;
 
         $output .= "<li class='" .  implode(" ", (array)$item->classes) . "'>";
-        $output .= "<div class='lime_blog_menuitem_container'>";
+        $output .= "<div class='blog_layouts_menuitem_container'>";
         $output .= '<a href="' . esc_url($item->url) . '">';
         $output .= $item->title;
         $output .= '</a>';
 
         if ($args->walker->has_children) {
-            $output .= '<i tabindex="0" class="lime_blog_submenu_toggle fa fa-caret-down"></i>';
+            $output .= '<i tabindex="0" class="blog_layouts_submenu_toggle fa fa-caret-down"></i>';
         }
         $output .= "</div>";
     }
@@ -163,12 +163,12 @@ foreach ($customizer_options as $option) {
 }
 
 // Sanitize function to check checkbox value (true/false)
-function lime_blog_sanitize_checkbox($input)
+function blog_layouts_sanitize_checkbox($input)
 {
     return (isset($input) && true === $input) ? true : false;
 }
 
-$lime_blog_post_list_layouts = array(
+$blog_layouts_post_list_layouts = array(
     'cards' => 'Cards',
     'content-creator' => 'Content Creator',
     'frameless' => 'Frameless',
@@ -178,7 +178,7 @@ $lime_blog_post_list_layouts = array(
     'social' => 'Social',
 );
 
-$lime_blog_sidebar_layouts = array(
+$blog_layouts_sidebar_layouts = array(
     'blocks' => 'Blocks',
     'frameless' => 'Frameless',
     'frames' => 'Frames',
@@ -189,7 +189,7 @@ $lime_blog_sidebar_layouts = array(
     'social' => 'Social',
 );
 
-$lime_blog_chips_layouts = array(
+$blog_layouts_chips_layouts = array(
     'blocks' => 'Blocks',
     'color-blocks' => 'Color Blocks',
     'content-creator' => 'Content Creator',
@@ -206,19 +206,19 @@ $lime_blog_chips_layouts = array(
     'youtube-music' => 'Youtube Music',
 );
 
-$lime_blog_header_layouts = array(
+$blog_layouts_header_layouts = array(
     'gradient' => 'Gradient',
     'material2' => 'Material 2',
     'material3' => 'Material 3',
 );
 
-$lime_blog_authorbox_layouts = array(
+$blog_layouts_authorbox_layouts = array(
     'neon' => 'Neon',
     'material2' => 'Material 2',
     'material3' => 'Material 3',
 );
 
-$lime_blog_comments_layouts = array(
+$blog_layouts_comments_layouts = array(
     'material2' => 'Material 2',
     'material3' => 'Material 3',
 );

@@ -1,4 +1,4 @@
-#lime_blog_header {
+#blog_layouts_header {
   grid-area: header;
   width: 100%;
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
   z-index: 30;
 }
-#lime_blog_header.lime_blog_fixed_header {
+#blog_layouts_header.blog_layouts_fixed_header {
   position: sticky;
   top: 0;
 }/*# sourceMappingURL=header.css.map */

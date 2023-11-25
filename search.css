@@ -1,4 +1,4 @@
-.search .lime_blog_search_container {
+.search .blog_layouts_search_container {
   display: flex;
   flex-direction: column;
   min-height: 70vh;
@@ -6,9 +6,9 @@
 .search h1 {
   text-align: center;
 }
-.search .lime_blog_feed {
+.search .blog_layouts_feed {
   margin-top: 3em;
 }
-.search .lime_blog_pagination {
+.search .blog_layouts_pagination {
   margin-top: 1em;
 }/*# sourceMappingURL=search.css.map */

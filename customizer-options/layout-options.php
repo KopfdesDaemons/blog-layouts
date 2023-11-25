@@ -1,11 +1,11 @@
 <?php
-function lime_blog_layout_options($wp_customize)
+function blog_layouts_layout_options($wp_customize)
 {
     // Section
     $wp_customize->add_panel('layouts', array(
-        'title' => __('Posts List Layouts', 'lime-blog'),
+        'title' => __('Posts List Layouts', 'blog-layouts'),
         'priority' => 31,
-        'description' => __('Settings for the individual layouts.', 'lime-blog'),
+        'description' => __('Settings for the individual layouts.', 'blog-layouts'),
     ));
 
     // Section
@@ -33,4 +33,4 @@ function lime_blog_layout_options($wp_customize)
         'panel' => 'layouts',
     ));
 }
-add_action('customize_register', 'lime_blog_layout_options');
+add_action('customize_register', 'blog_layouts_layout_options');

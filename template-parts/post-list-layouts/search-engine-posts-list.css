@@ -1,13 +1,13 @@
-.lime_blog_search_engine_posts_list {
+.blog_layouts_search_engine_posts_list {
   padding: 0;
   margin: 0 0 1em 0;
   max-width: 80em;
 }
-.lime_blog_search_engine_posts_list > .lime_blog_searchresult {
+.blog_layouts_search_engine_posts_list > .blog_layouts_searchresult {
   padding-top: 0;
 }
 
-.lime_blog_searchresult {
+.blog_layouts_searchresult {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -15,33 +15,33 @@
   gap: 1em;
   padding: 2em 1.5em;
 }
-.lime_blog_searchresult .lime_blog_searchresult_image_a {
+.blog_layouts_searchresult .blog_layouts_searchresult_image_a {
   margin: 1em 1em 1em 0;
 }
-.lime_blog_searchresult .lime_blog_searchresult_image_a img {
+.blog_layouts_searchresult .blog_layouts_searchresult_image_a img {
   aspect-ratio: 1/1;
   border-radius: 4px;
   max-height: 8em;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.lime_blog_searchresult .lime_blog_searchresult_content {
+.blog_layouts_searchresult .blog_layouts_searchresult_content {
   flex: 1 0 60%;
 }
-.lime_blog_searchresult .lime_blog_searchresult_content a {
+.blog_layouts_searchresult .blog_layouts_searchresult_content a {
   text-decoration: none;
 }
-.lime_blog_searchresult .lime_blog_searchresult_content h2 {
-  color: var(--lime_blog_primary_color);
+.blog_layouts_searchresult .blog_layouts_searchresult_content h2 {
+  color: var(--blog_layouts_primary_color);
 }
-.lime_blog_searchresult .lime_blog_searchresult_content h2:hover {
-  color: var(--lime_blog_primary_variant_brighter);
+.blog_layouts_searchresult .blog_layouts_searchresult_content h2:hover {
+  color: var(--blog_layouts_primary_variant_brighter);
   text-decoration: underline;
 }
-.lime_blog_searchresult .lime_blog_searchresult_content p {
+.blog_layouts_searchresult .blog_layouts_searchresult_content p {
   line-height: 1.5em;
 }
-.lime_blog_searchresult::after {
+.blog_layouts_searchresult::after {
   content: " ";
   position: absolute;
   border-bottom: 1px solid;
@@ -50,9 +50,9 @@
   bottom: 0;
   color: gray;
 }
-.lime_blog_searchresult .lime_blog_searchresult_sticky_pin {
+.blog_layouts_searchresult .blog_layouts_searchresult_sticky_pin {
   display: none;
 }
-.lime_blog_searchresult.lime_blog_sticky_post .lime_blog_searchresult_sticky_pin {
+.blog_layouts_searchresult.blog_layouts_sticky_post .blog_layouts_searchresult_sticky_pin {
   display: inline;
 }/*# sourceMappingURL=search-engine-posts-list.css.map */

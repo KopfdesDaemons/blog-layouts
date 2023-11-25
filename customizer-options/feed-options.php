@@ -1,9 +1,9 @@
 <?php
-function lime_blog_custom_feed($wp_customize)
+function blog_layouts_custom_feed($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_feed', array(
-        'title' => __('Feed', 'lime-blog'),
+        'title' => __('Feed', 'blog-layouts'),
         'priority' => 30,
     ));
 
@@ -11,12 +11,12 @@ function lime_blog_custom_feed($wp_customize)
     $wp_customize->add_setting('landingpage_section', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('landingpage_section', array(
         'type' => 'checkbox',
-        'label' => __('Show landingpage section', 'lime-blog'),
+        'label' => __('Show landingpage section', 'blog-layouts'),
         'section' => 'custom_feed',
     ));
 
@@ -24,12 +24,12 @@ function lime_blog_custom_feed($wp_customize)
     $wp_customize->add_setting('landingpage_image_animation', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('landingpage_image_animation', array(
         'type' => 'checkbox',
-        'label' => __('Landingpage image animation', 'lime-blog'),
+        'label' => __('Landingpage image animation', 'blog-layouts'),
         'section' => 'custom_feed',
         'active_callback' => 'landingpage_active_callback',
     ));
@@ -44,7 +44,7 @@ function lime_blog_custom_feed($wp_customize)
     $wp_customize->add_control('minimal_height_of_the_landingpage', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Minimal height of the landingpage', 'lime-blog'),
+        'label' => __('Minimal height of the landingpage', 'blog-layouts'),
         'section' => 'custom_feed',
         'active_callback' => 'landingpage_active_callback',
         'input_attrs' => array(
@@ -66,24 +66,24 @@ function lime_blog_custom_feed($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    global $lime_blog_post_list_layouts;
+    global $blog_layouts_post_list_layouts;
     $wp_customize->add_control('feed_style', array(
         'type' => 'select',
         'section' => 'custom_feed',
-        'label' => __('Layout', 'lime-blog'),
-        'choices' => $lime_blog_post_list_layouts,
+        'label' => __('Layout', 'blog-layouts'),
+        'choices' => $blog_layouts_post_list_layouts,
     ));
 
     // Sidebar
     $wp_customize->add_setting('feed_sidebar', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('feed_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show sidebar', 'lime-blog'),
+        'label' => __('Show sidebar', 'blog-layouts'),
         'section' => 'custom_feed',
     ));
 
@@ -99,13 +99,13 @@ function lime_blog_custom_feed($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    global $lime_blog_sidebar_layouts;
+    global $blog_layouts_sidebar_layouts;
     $wp_customize->add_control('feed_sidebar_layout', array(
         'type' => 'select',
         'section' => 'custom_feed',
-        'label' => __('Layout Sidebar', 'lime-blog'),
-        'choices' => $lime_blog_sidebar_layouts,
+        'label' => __('Layout Sidebar', 'blog-layouts'),
+        'choices' => $blog_layouts_sidebar_layouts,
         'active_callback' => 'feed_sidebar_active_callback',
     ));
 }
-add_action('customize_register', 'lime_blog_custom_feed');
+add_action('customize_register', 'blog_layouts_custom_feed');

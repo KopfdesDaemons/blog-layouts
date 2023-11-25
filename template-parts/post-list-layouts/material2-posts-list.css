@@ -1,86 +1,86 @@
-.lime_blog_material2_posts_list {
+.blog_layouts_material2_posts_list {
   padding: 0 0.5em;
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--lime_blog_material2_post_list_spacing);
+  gap: var(--blog_layouts_material2_post_list_spacing);
   margin-bottom: 2em;
 }
-.lime_blog_material2_posts_list li {
+.blog_layouts_material2_posts_list li {
   list-style: none;
 }
 @media only screen and (min-width: 800px) {
-  .lime_blog_material2_posts_list {
+  .blog_layouts_material2_posts_list {
     padding: 0 2vw;
   }
 }
 @media only screen and (max-width: 1250px) {
-  .lime_blog_material2_posts_list {
+  .blog_layouts_material2_posts_list {
     justify-content: center;
   }
 }
 
-.lime_blog_material2_post_list_item {
+.blog_layouts_material2_post_list_item {
   max-width: 30em;
-  background-color: var(--lime_blog_material2_post_list_color);
+  background-color: var(--blog_layouts_material2_post_list_color);
   border-radius: 4px;
   overflow: hidden;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_image_container {
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_image_container {
   display: flex;
   justify-content: center;
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_image_container img {
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_image_container img {
   max-height: 20em;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_sticky_pin {
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_sticky_pin {
   margin: 1em 0 0 1em;
-  color: var(--lime_blog_font_color);
+  color: var(--blog_layouts_font_color);
   display: none;
 }
-.lime_blog_material2_post_list_item.lime_blog_sticky_post .lime_blog_material2_post_list_item_sticky_pin {
+.blog_layouts_material2_post_list_item.blog_layouts_sticky_post .blog_layouts_material2_post_list_item_sticky_pin {
   display: block;
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_headline_row {
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_headline_row {
   text-decoration: none;
   display: flex;
   margin-top: 0.5em;
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_headline_row h2 {
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_headline_row h2 {
   font-size: 1.1em;
   padding: 0.5em 2em;
   line-height: 0.95em;
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_date {
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_date {
   padding: 0 2em;
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_categories {
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_categories {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
   padding: 0 2em;
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_excerpt {
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_excerpt {
   padding: 0 2em;
   margin-bottom: auto;
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_excerpt p {
-  line-height: var(--lime_blog_material2_post_list_line_height);
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_excerpt p {
+  line-height: var(--blog_layouts_material2_post_list_line_height);
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_tags {
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_tags {
   display: flex;
   gap: 0.5em;
   flex-wrap: wrap;
   margin-bottom: 1em;
   padding: 0 2em;
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_tags a {
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_tags a {
   font-size: 0.8em;
   padding: 0.8em;
   border-radius: 5em;
@@ -90,22 +90,22 @@
   transition: all 200ms;
   display: flex;
 }
-.lime_blog_material2_post_list_item .lime_blog_material2_post_list_item_tags a:hover {
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_tags a:hover {
   background-color: rgba(255, 255, 255, 0.329);
 }
-.lime_blog_material2_post_list_item .lime_blog_materiale_post_list_item_icon_row {
+.blog_layouts_material2_post_list_item .blog_layouts_materiale_post_list_item_icon_row {
   display: flex;
   padding: 0 2em;
   margin-bottom: 1em;
   flex-wrap: wrap;
   gap: 1em;
 }
-.lime_blog_material2_post_list_item .lime_blog_materiale_post_list_item_icon_row a {
+.blog_layouts_material2_post_list_item .blog_layouts_materiale_post_list_item_icon_row a {
   text-decoration: none;
-  color: var(--lime_blog_primary_color);
+  color: var(--blog_layouts_primary_color);
   border-radius: 4px;
   padding: 0.7em 0.4em;
 }
-.lime_blog_material2_post_list_item .lime_blog_materiale_post_list_item_icon_row a:hover {
-  background-color: var(--lime_blog_primary_variant_much_darker);
+.blog_layouts_material2_post_list_item .blog_layouts_materiale_post_list_item_icon_row a:hover {
+  background-color: var(--blog_layouts_primary_variant_much_darker);
 }/*# sourceMappingURL=material2-posts-list.css.map */

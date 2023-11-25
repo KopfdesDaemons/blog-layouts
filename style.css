@@ -1,9 +1,9 @@
 /*
-Theme Name: Lime Blog
+Theme Name: Blog Layouts
 Author: Rico
 Author URI: https://ricoswebsite.com/
-Text Domain: lime-blog
-Description: Lime Blog is a modern theme for blogs. A core feature is swapping layouts. The primary color is customizable. It has a tidy, wide layout with a sidebar, which is right at the edge and doesn't get in the way. The author page is particularly extensive. There is a landing page with a widget area.
+Text Domain: blog-layouts
+Description: Blog Layouts is a modern theme for blogs. A core feature is swapping layouts. The primary color is customizable. It has a tidy, wide layout with a sidebar, which is right at the edge and doesn't get in the way. The author page is particularly extensive. There is a landing page with a widget area.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Version: 1.0.0
 Requires at least: 5.0
@@ -14,8 +14,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 body {
   margin: 0;
-  background-color: var(--lime_blog_background_color);
-  font-family: var(--lime_blog_body_font);
+  background-color: var(--blog_layouts_background_color);
+  font-family: var(--blog_layouts_body_font);
   font-size: 14px;
   display: grid;
   position: relative;
@@ -29,18 +29,18 @@ body {
   }
 }
 
-.lime_blog_skip_link {
+.blog_layouts_skip_link {
   position: absolute;
   top: -50px;
   left: 0;
-  background-color: var(--lime_blog_background_color);
+  background-color: var(--blog_layouts_background_color);
   color: #fff;
   padding: 1em;
-  border: 1px solid var(--lime_blog_primary_color);
+  border: 1px solid var(--blog_layouts_primary_color);
   z-index: 999;
 }
 
-.lime_blog_skip_link:focus {
+.blog_layouts_skip_link:focus {
   top: 0;
 }
 
@@ -52,13 +52,13 @@ main {
   margin-top: 2em;
 }
 @media only screen and (min-width: 1570px) {
-  main.lime_blog_has_sidebar {
+  main.blog_layouts_has_sidebar {
     padding-left: 24em;
   }
 }
 
 @media only screen and (min-width: 1600px) {
-  .home main.lime_blog_has_sidebar {
+  .home main.blog_layouts_has_sidebar {
     padding-left: 24em;
   }
 }
@@ -83,17 +83,17 @@ table,
 label,
 div,
 button {
-  color: var(--lime_blog_font_color);
+  color: var(--blog_layouts_font_color);
 }
 
 a {
-  color: var(--lime_blog_primary_color);
+  color: var(--blog_layouts_primary_color);
 }
 a:visited {
-  color: var(--lime_blog_primary_variant_darker);
+  color: var(--blog_layouts_primary_variant_darker);
 }
 a:hover {
-  color: var(--lime_blog_primary_variant_brighter);
+  color: var(--blog_layouts_primary_variant_brighter);
 }
 
 /* width */
@@ -118,11 +118,11 @@ a:hover {
   background: #555;
 }
 
-.home main .lime_blog_content_spacer {
+.home main .blog_layouts_content_spacer {
   max-width: unset;
 }
 
-.lime_blog_content_spacer {
+.blog_layouts_content_spacer {
   max-width: 70em;
   display: flex;
   flex-direction: column;
@@ -130,45 +130,45 @@ a:hover {
   width: 100%;
 }
 
-.lime_blog_content {
+.blog_layouts_content {
   width: 95%;
 }
 
-.lime_blog_user_content_container {
+.blog_layouts_user_content_container {
   min-height: 60vh;
   margin: 2em 0;
   padding: 0 clamp(1em, 2vw, 5em);
   overflow: hidden;
-  background-color: var(--lime_blog_background_color_posts);
+  background-color: var(--blog_layouts_background_color_posts);
 }
-.lime_blog_user_content_container .wp-block-columns {
+.blog_layouts_user_content_container .wp-block-columns {
   margin: 1em 0 0 0;
 }
-.lime_blog_user_content_container .wp-block-columns p {
+.blog_layouts_user_content_container .wp-block-columns p {
   margin: 0;
 }
-.lime_blog_user_content_container li {
+.blog_layouts_user_content_container li {
   margin: 3px;
 }
-.lime_blog_user_content_container .wp-caption {
+.blog_layouts_user_content_container .wp-caption {
   font-size: 0.8em;
   font-style: italic;
 }
-.lime_blog_user_content_container figure {
+.blog_layouts_user_content_container figure {
   margin: 0;
 }
-.lime_blog_user_content_container img {
+.blog_layouts_user_content_container img {
   margin: 0.6em 0;
 }
-.lime_blog_user_content_container .alignleft {
+.blog_layouts_user_content_container .alignleft {
   float: left;
   margin: 0 1.5em 1em 0;
 }
-.lime_blog_user_content_container .alignright {
+.blog_layouts_user_content_container .alignright {
   float: right;
   margin: 0 0 1em 1.5em;
 }
-.lime_blog_user_content_container .aligncenter {
+.blog_layouts_user_content_container .aligncenter {
   clear: both;
   margin-left: auto;
   margin-right: auto;
@@ -182,24 +182,24 @@ img {
   max-width: 100%;
 }
 
-.lime_blog_landing_page_section {
+.blog_layouts_landing_page_section {
   grid-area: landingpagesection;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: var(--lime_blog_feed_landingpage_minimal_height);
+  min-height: var(--blog_layouts_feed_landingpage_minimal_height);
   padding: clamp(0.5em, 5vw, 2em);
-  background: var(--lime_blog_gradient);
+  background: var(--blog_layouts_gradient);
 }
-.lime_blog_landing_page_section.lime_blog_landing_page_image_animation .wp-block-image.size-full img {
-  border: 6px solid var(--lime_blog_primary_variant_darker);
+.blog_layouts_landing_page_section.blog_layouts_landing_page_image_animation .wp-block-image.size-full img {
+  border: 6px solid var(--blog_layouts_primary_variant_darker);
   animation: wobble 5s linear infinite;
 }
-.lime_blog_landing_page_section + main, .lime_blog_landing_page_section + main + #lime_blog_sidebar {
+.blog_layouts_landing_page_section + main, .blog_layouts_landing_page_section + main + #blog_layouts_sidebar {
   margin-top: 2em;
 }
 
-.lime_blog_h2_latest_posts {
+.blog_layouts_h2_latest_posts {
   font-size: 2em;
 }
 
@@ -229,7 +229,7 @@ figcaption {
 }
 
 dt {
-  color: var(--lime_blog_primary_color);
+  color: var(--blog_layouts_primary_color);
   margin: 0.5em 0;
   font-weight: bold;
 }
@@ -260,8 +260,8 @@ textarea:-webkit-autofill:focus {
   border: none;
   background-color: black;
   box-shadow: 0 0 0px 1000px black inset;
-  color: var(--lime_blog_font_color);
-  -webkit-text-fill-color: var(--lime_blog_font_color);
+  color: var(--blog_layouts_font_color);
+  -webkit-text-fill-color: var(--blog_layouts_font_color);
 }
 
 .gallery {

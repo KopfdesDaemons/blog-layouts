@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<section class="lime_blog_hero">
+<section class="blog_layouts_hero">
     <header>
         <h1 class="title"><?php the_title(); ?></h1>
         <?php if (get_theme_mod('post_image', true) & has_post_thumbnail()) : ?>
-            <div class="lime_blog_post_thumbnail">
+            <div class="blog_layouts_post_thumbnail">
                 <div>
                     <?php the_post_thumbnail(); ?>
                 </div>
@@ -12,32 +12,32 @@
         <?php endif; ?>
     </header>
 </section>
-<main <?php if (get_theme_mod('post_sidebar', true)) echo 'class="lime_blog_has_sidebar"' ?>>
+<main <?php if (get_theme_mod('post_sidebar', true)) echo 'class="blog_layouts_has_sidebar"' ?>>
     <?php
     while (have_posts()) :
         the_post();
     ?>
-        <section class="lime_blog_content_spacer" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-            <div class="lime_blog_content">
+        <section class="blog_layouts_content_spacer" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <div class="blog_layouts_content">
 
-                <div class="lime_blog_post_row_1">
+                <div class="blog_layouts_post_row_1">
                     <!-- Date -->
                     <?php
                     $post_date = get_theme_mod('post_date', true);
                     if ($post_date) { ?>
-                        <time class="lime_blog_post_date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('d.m.Y'); ?></time>
+                        <time class="blog_layouts_post_date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('d.m.Y'); ?></time>
 
                         <!-- Categories -->
                     <?php }
                     $post_categories = get_theme_mod('post_categories', true);
                     if ($post_categories) { ?>
-                        <div class="lime_blog_post_categories">
+                        <div class="blog_layouts_post_categories">
                             <?php
                             $categories = get_the_category();
                             if (!empty($categories)) {
                                 echo '<ul>';
                                 foreach ($categories as $category) {
-                                    echo '<li class="' . 'lime_blog_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_categories_layout', 'color-blocks')) . '"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . $category->name . '</a></li>';
+                                    echo '<li class="' . 'blog_layouts_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_categories_layout', 'color-blocks')) . '"><a href="' . esc_url(get_category_link($category->term_id)) . '">' . $category->name . '</a></li>';
                                 }
                                 echo '</ul>';
                             }
@@ -46,16 +46,16 @@
                     <?php } ?>
                 </div>
 
-                <article class="lime_blog_user_content_container" id="lime_blog_main_content">
+                <article class="blog_layouts_user_content_container" id="blog_layouts_main_content">
                     <?php the_content(); ?>
                 </article>
 
-                <footer class="lime_blog_post_footer">
+                <footer class="blog_layouts_post_footer">
                     <!-- Pagination-->
                     <?php
                     wp_link_pages(
                         array(
-                            'before'         => '<div class="page-links"><span class="page-links-title">' . esc_html__('Pages:', 'lime-blog') . '</span>',
+                            'before'         => '<div class="page-links"><span class="page-links-title">' . esc_html__('Pages:', 'blog-layouts') . '</span>',
                             'after'       => '</div>',
                             'link_before' => '<span class="page-number">',
                             'link_after'  => '</span>',
@@ -68,9 +68,9 @@
                     $tags_options = get_theme_mod('tags', true);
                     $tags = get_the_tags();
                     if ($tags_options & !empty($tags)) {
-                        echo '<div class="lime_blog_post_tags"><ul>';
+                        echo '<div class="blog_layouts_post_tags"><ul>';
                         foreach ($tags as $tag) {
-                            echo '<li class="' . 'lime_blog_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_tags_layout', 'youtube-music')) . '"><a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . $tag->name . '</a></li>';
+                            echo '<li class="' . 'blog_layouts_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_tags_layout', 'youtube-music')) . '"><a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . $tag->name . '</a></li>';
                         }
                         echo '</ul></div>';
                     }
@@ -84,14 +84,14 @@
                         $author_website = esc_url(get_the_author_meta('user_url'));
                         $author_avatar = get_avatar($author_id, 500);
                     ?>
-                        <div <?php echo 'class="' . 'lime_blog_authobox_layout_' . str_replace("-", "_", get_theme_mod('posts_authorbox_layout', 'neon')) . '"'; ?>>
-                            <div class="lime_blog_author_avatar">
+                        <div <?php echo 'class="' . 'blog_layouts_authobox_layout_' . str_replace("-", "_", get_theme_mod('posts_authorbox_layout', 'neon')) . '"'; ?>>
+                            <div class="blog_layouts_author_avatar">
                                 <a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>">
                                     <?php echo $author_avatar; ?>
                                 </a>
                             </div>
-                            <div class="lime_blog_author_details">
-                                <div class="lime_blog_author_name_row">
+                            <div class="blog_layouts_author_details">
+                                <div class="blog_layouts_author_name_row">
                                     <h3><a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>"><?php echo $author_name; ?></a>
                                     </h3>
                                     <?php if ($author_website) : ?>
@@ -108,11 +108,11 @@
                     <?php
                     $post_pagination = get_theme_mod('post_pagination', true);
                     if ($post_pagination) { ?>
-                        <div class="lime_blog_post_pagination">
-                            <div class="lime_blog_post_pagination_prev">
-                                <?php previous_post_link('%link', __('&laquo; Previous Post', 'lime-blog')); ?> </div>
-                            <div class="lime_blog_post_pagination_next">
-                                <?php next_post_link('%link', __('Next Post &raquo;', 'lime-blog')); ?> </div>
+                        <div class="blog_layouts_post_pagination">
+                            <div class="blog_layouts_post_pagination_prev">
+                                <?php previous_post_link('%link', __('&laquo; Previous Post', 'blog-layouts')); ?> </div>
+                            <div class="blog_layouts_post_pagination_next">
+                                <?php next_post_link('%link', __('Next Post &raquo;', 'blog-layouts')); ?> </div>
                         </div>
                     <?php } ?>
 
@@ -128,7 +128,7 @@
         </section>
 </main>
 <?php if (get_theme_mod('post_sidebar', true)) {
-    echo '<aside id="lime_blog_sidebar" class="' . 'lime_blog_sidebar_layout_' . get_theme_mod('posts_sidebar_layout', 'social') . '">';
+    echo '<aside id="blog_layouts_sidebar" class="' . 'blog_layouts_sidebar_layout_' . get_theme_mod('posts_sidebar_layout', 'social') . '">';
     get_sidebar();
     echo '</aside>';
 }; ?>

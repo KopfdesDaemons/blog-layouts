@@ -1,5 +1,5 @@
 <?php
-function lime_blog_frameless_post_list($wp_customize)
+function blog_layouts_frameless_post_list($wp_customize)
 {
     // Background color
     $wp_customize->add_setting('frameless_post_list_color', array(
@@ -8,7 +8,7 @@ function lime_blog_frameless_post_list($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'frameless_post_list_color', array(
-        'label' => __('Cards background color', 'lime-blog'),
+        'label' => __('Cards background color', 'blog-layouts'),
         'section' => 'frameless_post_list',
         'settings' => 'frameless_post_list_color'
     )));
@@ -22,7 +22,7 @@ function lime_blog_frameless_post_list($wp_customize)
 
     $wp_customize->add_control('frameless_post_list_spacing', array(
         'type' => 'range',
-        'label' => __('Spacing between posts', 'lime-blog'),
+        'label' => __('Spacing between posts', 'blog-layouts'),
         'section' => 'frameless_post_list',
         'input_attrs' => array(
             'min' => 0,
@@ -39,7 +39,7 @@ function lime_blog_frameless_post_list($wp_customize)
 
     $wp_customize->add_control('frameless_post_list_words_in_snippet', array(
         'type' => 'number',
-        'label' => __('Number of words in the snippet', 'lime-blog'),
+        'label' => __('Number of words in the snippet', 'blog-layouts'),
         'section' => 'frameless_post_list',
         'priority' => 10,
         'input_attrs' => array(
@@ -53,12 +53,12 @@ function lime_blog_frameless_post_list($wp_customize)
     $wp_customize->add_setting('frameless_post_list_tags', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('frameless_post_list_tags', array(
         'type' => 'checkbox',
-        'label' => __('Show tags', 'lime-blog'),
+        'label' => __('Show tags', 'blog-layouts'),
         'section' => 'frameless_post_list',
     ));
 
@@ -71,7 +71,7 @@ function lime_blog_frameless_post_list($wp_customize)
 
     $wp_customize->add_control('frameless_post_list_tags_border_radius', array(
         'type' => 'range',
-        'label' => __('Tags border radius', 'lime-blog'),
+        'label' => __('Tags border radius', 'blog-layouts'),
         'section' => 'frameless_post_list',
         'active_callback' => 'tags_active_callback_frameless_post_list',
         'input_attrs' => array(
@@ -85,12 +85,12 @@ function lime_blog_frameless_post_list($wp_customize)
     $wp_customize->add_setting('frameless_post_list_read_more', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('frameless_post_list_read_more', array(
         'type' => 'checkbox',
-        'label' => __('Show read more button', 'lime-blog'),
+        'label' => __('Show read more button', 'blog-layouts'),
         'section' => 'frameless_post_list',
     ));
 
@@ -98,12 +98,12 @@ function lime_blog_frameless_post_list($wp_customize)
     $wp_customize->add_setting('frameless_post_list_comments', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('frameless_post_list_comments', array(
         'type' => 'checkbox',
-        'label' => __('Show comments', 'lime-blog'),
+        'label' => __('Show comments', 'blog-layouts'),
         'section' => 'frameless_post_list',
     ));
 
@@ -116,7 +116,7 @@ function lime_blog_frameless_post_list($wp_customize)
 
     $wp_customize->add_control('frameless_post_list_line_height', array(
         'type' => 'range',
-        'label' => __('Line height in text snippet', 'lime-blog'),
+        'label' => __('Line height in text snippet', 'blog-layouts'),
         'section' => 'frameless_post_list',
         'input_attrs' => array(
             'min' => 15,
@@ -134,7 +134,7 @@ function lime_blog_frameless_post_list($wp_customize)
 
     $wp_customize->add_control('frameless_post_list_padding', array(
         'type' => 'range',
-        'label' => __('Padding', 'lime-blog'),
+        'label' => __('Padding', 'blog-layouts'),
         'section' => 'frameless_post_list',
         'input_attrs' => array(
             'min' => 0,
@@ -147,12 +147,12 @@ function lime_blog_frameless_post_list($wp_customize)
     $wp_customize->add_setting('frameless_post_list_image', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('frameless_post_list_image', array(
         'type' => 'checkbox',
-        'label' => __('Show image', 'lime-blog'),
+        'label' => __('Show image', 'blog-layouts'),
         'section' => 'frameless_post_list',
     ));
 
@@ -165,7 +165,7 @@ function lime_blog_frameless_post_list($wp_customize)
 
     $wp_customize->add_control('frameless_post_list_border_radius_image', array(
         'type' => 'range',
-        'label' => __('Image radius', 'lime-blog'),
+        'label' => __('Image radius', 'blog-layouts'),
         'section' => 'frameless_post_list',
         'active_callback' => 'image_active_callback_frameless_post_list',
         'input_attrs' => array(
@@ -185,11 +185,11 @@ function lime_blog_frameless_post_list($wp_customize)
         return $control->manager->get_setting('frameless_post_list_tags')->value();
     }
 }
-add_action('customize_register', 'lime_blog_frameless_post_list');
+add_action('customize_register', 'blog_layouts_frameless_post_list');
 
 // Number of words previewed in the feed
-function lime_blog_custom_excerpt_length_frameless_post_list($length)
+function blog_layouts_custom_excerpt_length_frameless_post_list($length)
 {
     return get_theme_mod('frameless_post_list_words_in_snippet', 30);
 }
-add_filter('excerpt_length', 'lime_blog_custom_excerpt_length_frameless_post_list', 999);
+add_filter('excerpt_length', 'blog_layouts_custom_excerpt_length_frameless_post_list', 999);

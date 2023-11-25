@@ -1,9 +1,9 @@
-.lime_blog_material3_posts_list {
+.blog_layouts_material3_posts_list {
     padding: 0 0.5em;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--lime_blog_material3_post_list_spacing);
+    gap: var(--blog_layouts_material3_post_list_spacing);
     margin-bottom: 2em;
     
     li {
@@ -20,16 +20,16 @@
 }
 
 $padding: 0 2em;
-.lime_blog_material3_post_list_item {
+.blog_layouts_material3_post_list_item {
     max-width: 30em;
-    background-color: var(--lime_blog_material3_post_list_color);
+    background-color: var(--blog_layouts_material3_post_list_color);
     border-radius: 16px;
     overflow: hidden;
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
 
-    .lime_blog_material3_post_list_item_image_container {
+    .blog_layouts_material3_post_list_item_image_container {
         display: flex;
         justify-content: center;
 
@@ -41,7 +41,7 @@ $padding: 0 2em;
         }
     }
 
-    .lime_blog_material3_post_list_item_headline_row {
+    .blog_layouts_material3_post_list_item_headline_row {
         text-decoration: none;
         display: flex;
         margin-top: 0.5em;
@@ -52,27 +52,27 @@ $padding: 0 2em;
         }
     }
 
-    .lime_blog_material3_post_list_item_date {
+    .blog_layouts_material3_post_list_item_date {
         padding: $padding;
     }
 
-    .lime_blog_material3_post_list_item_categories {
+    .blog_layouts_material3_post_list_item_categories {
         padding: $padding;
         display: flex;
         gap: 0.5em;
         flex-wrap: wrap;
     }
 
-    .lime_blog_material3_post_list_item_excerpt {
+    .blog_layouts_material3_post_list_item_excerpt {
         padding: $padding;
         margin-bottom: auto;
 
         p {
-            line-height: var(--lime_blog_material3_post_list_line_height);
+            line-height: var(--blog_layouts_material3_post_list_line_height);
         }
     }
 
-    .lime_blog_material3_post_list_item_tags {
+    .blog_layouts_material3_post_list_item_tags {
         padding: $padding;
         margin-bottom: 1em;
         display: flex;
@@ -83,27 +83,27 @@ $padding: 0 2em;
             padding: 0.6em;
             border: 1px solid gray;
             border-radius: 8px;
-            color: var(--lime_blog_font_color);
+            color: var(--blog_layouts_font_color);
             text-decoration: none;
             display: flex;
             font-size: 0.8em;
 
             &:hover {
-                background-color: var(--lime_blog_primary_variant_darker);
+                background-color: var(--blog_layouts_primary_variant_darker);
             }
         }
     }
 
-    .lime_blog_materiale_post_list_item_icon_row {
+    .blog_layouts_materiale_post_list_item_icon_row {
         display: flex;
         padding: $padding;
         margin-bottom: 1em;
         gap: 0.5em;
         justify-content: flex-end;
 
-        .lime_blog_material3_post_list_item_sticky_pin {
+        .blog_layouts_material3_post_list_item_sticky_pin {
             margin: 1em 0 0 1em;
-            color: var(--lime_blog_font_color);
+            color: var(--blog_layouts_font_color);
             display: none;
             margin-right: auto;
         }
@@ -111,27 +111,27 @@ $padding: 0 2em;
         
         a {
             text-decoration: none;
-            color: var(--lime_blog_primary_color);
+            color: var(--blog_layouts_primary_color);
             border-radius: 5em;
             padding: 1em;
             font-size: 0.8em;
-            color: var(--lime_blog_font_color);
-            background-color: var(--lime_blog_primary_variant_darker);
+            color: var(--blog_layouts_font_color);
+            background-color: var(--blog_layouts_primary_variant_darker);
             
             &:hover {
                 background-color: rgba(0, 0, 0, 0.4);
             }
         }
         
-        .lime_blog_materiale_post_list_item_comments {
+        .blog_layouts_materiale_post_list_item_comments {
             background-color: unset;
-            outline: 1px solid var(--lime_blog_font_color);
-            color: var(--lime_blog_primary_color);
+            outline: 1px solid var(--blog_layouts_font_color);
+            color: var(--blog_layouts_primary_color);
         }
     }
 
-    &.lime_blog_sticky_post {
-        .lime_blog_material3_post_list_item_sticky_pin {
+    &.blog_layouts_sticky_post {
+        .blog_layouts_material3_post_list_item_sticky_pin {
             display: block;
         }
     }

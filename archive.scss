@@ -8,13 +8,13 @@
 
 .author {
 
-    .lime_blog_post_author_headline_section {
+    .blog_layouts_post_author_headline_section {
         grid-area: landingpagesection;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background: var(--lime_blog_gradient);
+        background: var(--blog_layouts_gradient);
         
         header{
             width: 80vw;
@@ -28,18 +28,18 @@
                 width: 90vw;
             }
     
-            .lime_blog_author_row_1 {
+            .blog_layouts_author_row_1 {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 margin-top: 1em;
     
                 img {
-                    border: 2px solid var(--lime_blog_primary_color);
+                    border: 2px solid var(--blog_layouts_primary_color);
                     margin-right: 1em;
                 }
 
-                .lime_blog_author_headline_container {
+                .blog_layouts_author_headline_container {
                     display: flex;
                     justify-content: space-between;
                     flex-wrap: wrap;
@@ -61,7 +61,7 @@
                         }
                     }
         
-                    .lime_blog_author_stats{
+                    .blog_layouts_author_stats{
                         white-space: nowrap;
                         text-align: center;
                         list-style: none;
@@ -73,13 +73,13 @@
                         font-size: clamp(8px, 1.5vw, 14px);
         
                         li {
-                            .lime_blog_author_stats_data{
+                            .blog_layouts_author_stats_data{
                                 font-weight: bold;
                                 font-size: 1.2em;
                                 color: black;
                             }
 
-                            .lime_blog_author_stats_label {
+                            .blog_layouts_author_stats_label {
                                 color: black;
                             }
                         }
@@ -89,7 +89,7 @@
         }
 
         // Navigation
-        .lime_blog_author_nav {
+        .blog_layouts_author_nav {
             width: 100%;
             margin-top: 2em;
             background-color: rgb(25, 25, 32);
@@ -121,21 +121,21 @@
                         cursor: pointer;
                     }
 
-                    #lime_blog_author_posts {
-                        border-bottom: 1px solid var(--lime_blog_primary_color);
+                    #blog_layouts_author_posts {
+                        border-bottom: 1px solid var(--blog_layouts_primary_color);
                     }
                 }
             }
         }
 
-        .lime_blog_author_bio_container {
+        .blog_layouts_author_bio_container {
             display: flex;
             justify-content: center;
             background-color: black;
             width: 100%;
             font-size: clamp(0.8em, 1vw, 1em);
             
-            .lime_blog_author_bio {
+            .blog_layouts_author_bio {
                 position: relative;
                 width: 80vw;
                 max-width: 80em;
@@ -147,7 +147,7 @@
                 }
             }
 
-            .lime_blog_author_website{
+            .blog_layouts_author_website{
                 @include button;
                 position: absolute;
                 right: 2em;
@@ -156,25 +156,25 @@
         }
     }
 
-    .lime_blog_autor_content {
+    .blog_layouts_autor_content {
         max-width: 100%;
     }
 
-    .lime_blog_author_comments_container{
+    .blog_layouts_author_comments_container{
         display: none;
     }
 } 
 
-.lime_blog_comments {
-    #lime_blog_author_comments {
-        border-bottom: 1px solid var(--lime_blog_primary_color);
+.blog_layouts_comments {
+    #blog_layouts_author_comments {
+        border-bottom: 1px solid var(--blog_layouts_primary_color);
     }
 
-    #lime_blog_author_posts {
+    #blog_layouts_author_posts {
         border-bottom: 1px solid transparent !important;
     }
 
-    .lime_blog_author_comments_container {
+    .blog_layouts_author_comments_container {
         display: block;
         min-height: 70vh;
 

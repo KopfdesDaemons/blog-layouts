@@ -1,22 +1,22 @@
 <?php get_header(); ?>
 <?php if (get_theme_mod('landingpage_section', true)) { ?>
-    <section class="lime_blog_landing_page_section <?php if(get_theme_mod('landingpage_image_animation', true)) echo 'lime_blog_landing_page_image_animation' ?>">
-        <div class="lime_blog_content_spacer">
+    <section class="blog_layouts_landing_page_section <?php if(get_theme_mod('landingpage_image_animation', true)) echo 'blog_layouts_landing_page_image_animation' ?>">
+        <div class="blog_layouts_content_spacer">
             <?php
             if (is_active_sidebar('landingpage-widget-area')) {
-                echo '<div id="lime_blog_landingpage_widget_area">';
+                echo '<div id="blog_layouts_landingpage_widget_area">';
                 dynamic_sidebar('landingpage-widget-area');
                 echo '</div>';
             } else {
-                echo '<div>' . esc_html__('Fill the landing page in the customizer', 'lime-blog') .'</div>';
+                echo '<div>' . esc_html__('Fill the landing page in the customizer', 'blog-layouts') .'</div>';
             }
             ?>
 
         </div>
     </section>
 <?php } ?>
-<main role="main" <?php if (get_theme_mod('feed_sidebar', true)) echo 'class="lime_blog_has_sidebar"' ?>>
-    <section class="lime_blog_content_spacer lime_blog_feed">
+<main role="main" <?php if (get_theme_mod('feed_sidebar', true)) echo 'class="blog_layouts_has_sidebar"' ?>>
+    <section class="blog_layouts_content_spacer blog_layouts_feed">
     <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $posts_per_page = get_option('posts_per_page');
@@ -31,22 +31,22 @@
             if ($query->have_posts()) {
                 $searchresults_style = get_theme_mod('feed_style', 'cards');
                 require_once get_template_directory() . '/template-parts/layout-manager.php';
-                echo lime_blog_display_posts_list($query, $searchresults_style, true);
+                echo blog_layouts_display_posts_list($query, $searchresults_style, true);
             } else {
-                echo esc_html__('No posts found.', 'lime-blog');
+                echo esc_html__('No posts found.', 'blog-layouts');
             }
             ?>
         <?php
         // Pagination only if needed
         if ($query->max_num_pages > 1) {
-            echo '<div class="lime_blog_pagination">';
-            echo '<div class="lime_blog_pagination_content">';
+            echo '<div class="blog_layouts_pagination">';
+            echo '<div class="blog_layouts_pagination_content">';
 
-            echo '<div class="lime_blog_pagination_controls">';
-            previous_posts_link(__('« Previous', 'lime-blog'));
+            echo '<div class="blog_layouts_pagination_controls">';
+            previous_posts_link(__('« Previous', 'blog-layouts'));
             echo '</div>';
 
-            echo '<div class="lime_blog_pagination_pages">';
+            echo '<div class="blog_layouts_pagination_pages">';
             echo paginate_links(array(
                 'total' => $query->max_num_pages,
                 'current' => $paged,
@@ -54,8 +54,8 @@
             ));
             echo '</div>';
 
-            echo '<div class="lime_blog_pagination_controls">';
-            next_posts_link(__('Next »', 'lime-blog'), $query->max_num_pages);
+            echo '<div class="blog_layouts_pagination_controls">';
+            next_posts_link(__('Next »', 'blog-layouts'), $query->max_num_pages);
             echo '</div>';
 
             echo '</div>';
@@ -68,7 +68,7 @@
 </main>
 <?php
 if (get_theme_mod('feed_sidebar', true)) {
-    echo '<aside id="lime_blog_sidebar" class="' . 'lime_blog_sidebar_layout_' . get_theme_mod('feed_sidebar_layout', 'social') . '">';
+    echo '<aside id="blog_layouts_sidebar" class="' . 'blog_layouts_sidebar_layout_' . get_theme_mod('feed_sidebar_layout', 'social') . '">';
     get_sidebar();
     echo '</aside>';
 }

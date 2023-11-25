@@ -1,5 +1,5 @@
-#lime_blog_footer {
-    background-color: var(--lime_blog_primary_variant_darker);
+#blog_layouts_footer {
+    background-color: var(--blog_layouts_primary_variant_darker);
     padding-bottom: 0;
     grid-area: footer;
     font-size: clamp(0.8em, 2vw, 1em);
@@ -35,21 +35,21 @@
 
                 a {
                     font-size: 1.3em;
-                    color: var(--lime_blog_font_color);
+                    color: var(--blog_layouts_font_color);
                     text-decoration: underline;
                 }
             }
         }
     }
 
-    .lime_blog_footer_info {
+    .blog_layouts_footer_info {
         display: flex;
         justify-content: center;
         width: 100%;
-        background-color: var(--lime_blog_primary_variant_much_darker);
+        background-color: var(--blog_layouts_primary_variant_much_darker);
 
         a {
-            color: var(--lime_blog_primary_color);
+            color: var(--blog_layouts_primary_color);
         }
     }
 }

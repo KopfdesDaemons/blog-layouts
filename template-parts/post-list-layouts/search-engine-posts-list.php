@@ -1,19 +1,19 @@
 <?php
-function lime_blog_display_search_engine_posts_list($show_sticky)
+function blog_layouts_display_search_engine_posts_list($show_sticky)
 {
     ob_start(); // Start output buffering
 ?>
-    <li class="lime_blog_searchresult <?php if ($show_sticky && is_sticky()) echo 'lime_blog_sticky_post' ?>">
+    <li class="blog_layouts_searchresult <?php if ($show_sticky && is_sticky()) echo 'blog_layouts_sticky_post' ?>">
         <?php if (has_post_thumbnail()) : ?>
-            <a href="<?php the_permalink(); ?>" class="lime_blog_searchresult_image_a">
+            <a href="<?php the_permalink(); ?>" class="blog_layouts_searchresult_image_a">
                 <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
             </a>
         <?php endif; ?>
-        <div class="lime_blog_searchresult_content">
+        <div class="blog_layouts_searchresult_content">
             <a href="<?php the_permalink(); ?>">
                 <h2><?php the_title(); ?></h2>
             </a>
-            <i class="lime_blog_searchresult_sticky_pin fa-solid fa-thumbtack"></i>
+            <i class="blog_layouts_searchresult_sticky_pin fa-solid fa-thumbtack"></i>
             <span><?php the_date(); ?></span>
             <?php the_excerpt(); ?>
         </div>

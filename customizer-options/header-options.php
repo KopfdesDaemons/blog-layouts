@@ -1,9 +1,9 @@
 <?php
-function lime_blog_header($wp_customize)
+function blog_layouts_header($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_header', array(
-        'title' => __('Header', 'lime-blog'),
+        'title' => __('Header', 'blog-layouts'),
         'priority' => 30,
     ));
 
@@ -14,24 +14,24 @@ function lime_blog_header($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    global $lime_blog_header_layouts;
+    global $blog_layouts_header_layouts;
     $wp_customize->add_control('header_layout', array(
         'type' => 'select',
         'section' => 'custom_theme_header',
-        'label' => __('Layout', 'lime-blog'),
-        'choices' => $lime_blog_header_layouts,
+        'label' => __('Layout', 'blog-layouts'),
+        'choices' => $blog_layouts_header_layouts,
     ));
 
     // Header menu
     $wp_customize->add_setting('fixed_header', array(
         'default' => false,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('fixed_header', array(
         'type' => 'checkbox',
-        'label' => __('Fix Header', 'lime-blog'),
+        'label' => __('Fix Header', 'blog-layouts'),
         'section' => 'custom_theme_header',
     ));
 
@@ -39,12 +39,12 @@ function lime_blog_header($wp_customize)
     $wp_customize->add_setting('header_menu', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('header_menu', array(
         'type' => 'checkbox',
-        'label' => __('Show menu in header', 'lime-blog'),
+        'label' => __('Show menu in header', 'blog-layouts'),
         'section' => 'custom_theme_header',
         'active_callback' => 'gradient_header_active_callback'
     ));
@@ -53,12 +53,12 @@ function lime_blog_header($wp_customize)
     $wp_customize->add_setting('logo', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('logo', array(
         'type' => 'checkbox',
-        'label' => __('Show logo with link to home page', 'lime-blog'),
+        'label' => __('Show logo with link to home page', 'blog-layouts'),
         'section' => 'custom_theme_header',
         'active_callback' => 'gradient_header_active_callback'
     ));
@@ -67,12 +67,12 @@ function lime_blog_header($wp_customize)
     $wp_customize->add_setting('searchbar', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('searchbar', array(
         'type' => 'checkbox',
-        'label' => __('Show search bar', 'lime-blog'),
+        'label' => __('Show search bar', 'blog-layouts'),
         'section' => 'custom_theme_header',
         'active_callback' => 'gradient_header_active_callback'
     ));
@@ -96,7 +96,7 @@ function lime_blog_header($wp_customize)
 
     $wp_customize->add_control('header_menu_font_size_setting', array(
         'type' => 'range',
-        'label' => __('Menu font size', 'lime-blog'),
+        'label' => __('Menu font size', 'blog-layouts'),
         'section' => 'custom_theme_header',
         'input_attrs' => array(
             'min' => 10,
@@ -117,4 +117,4 @@ function lime_blog_header($wp_customize)
         return $control->manager->get_setting('header_menu')->value();
     }
 }
-add_action('customize_register', 'lime_blog_header');
+add_action('customize_register', 'blog_layouts_header');

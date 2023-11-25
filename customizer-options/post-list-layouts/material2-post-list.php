@@ -1,5 +1,5 @@
 <?php
-function lime_blog_material2_post_list($wp_customize)
+function blog_layouts_material2_post_list($wp_customize)
 {
     // Background color
     $wp_customize->add_setting('material2_post_list_color', array(
@@ -8,7 +8,7 @@ function lime_blog_material2_post_list($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'material2_post_list_color', array(
-        'label' => __('Cards background color', 'lime-blog'),
+        'label' => __('Cards background color', 'blog-layouts'),
         'section' => 'material2_post_list',
         'settings' => 'material2_post_list_color'
     )));
@@ -22,7 +22,7 @@ function lime_blog_material2_post_list($wp_customize)
 
     $wp_customize->add_control('material2_post_list_spacing', array(
         'type' => 'range',
-        'label' => __('Spacing between posts', 'lime-blog'),
+        'label' => __('Spacing between posts', 'blog-layouts'),
         'section' => 'material2_post_list',
         'input_attrs' => array(
             'min' => 0,
@@ -35,12 +35,12 @@ function lime_blog_material2_post_list($wp_customize)
     $wp_customize->add_setting('material2_post_list_image', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('material2_post_list_image', array(
         'type' => 'checkbox',
-        'label' => __('Show image', 'lime-blog'),
+        'label' => __('Show image', 'blog-layouts'),
         'section' => 'material2_post_list',
     ));
 
@@ -48,12 +48,12 @@ function lime_blog_material2_post_list($wp_customize)
     $wp_customize->add_setting('material2_post_list_date', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('material2_post_list_date', array(
         'type' => 'checkbox',
-        'label' => __('Show date', 'lime-blog'),
+        'label' => __('Show date', 'blog-layouts'),
         'section' => 'material2_post_list',
     ));
 
@@ -61,12 +61,12 @@ function lime_blog_material2_post_list($wp_customize)
     $wp_customize->add_setting('material2_post_list_categories', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('material2_post_list_categories', array(
         'type' => 'checkbox',
-        'label' => __('Show categories', 'lime-blog'),
+        'label' => __('Show categories', 'blog-layouts'),
         'section' => 'material2_post_list',
     ));
 
@@ -78,7 +78,7 @@ function lime_blog_material2_post_list($wp_customize)
 
     $wp_customize->add_control('material2_post_list_words_in_snippet', array(
         'type' => 'number',
-        'label' => __('Number of words in the snippet', 'lime-blog'),
+        'label' => __('Number of words in the snippet', 'blog-layouts'),
         'section' => 'material2_post_list',
         'priority' => 10,
         'input_attrs' => array(
@@ -97,7 +97,7 @@ function lime_blog_material2_post_list($wp_customize)
 
     $wp_customize->add_control('material2_post_list_line_height', array(
         'type' => 'range',
-        'label' => __('Line height in text snippet', 'lime-blog'),
+        'label' => __('Line height in text snippet', 'blog-layouts'),
         'section' => 'material2_post_list',
         'input_attrs' => array(
             'min' => 15,
@@ -110,12 +110,12 @@ function lime_blog_material2_post_list($wp_customize)
     $wp_customize->add_setting('material2_post_list_tags', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('material2_post_list_tags', array(
         'type' => 'checkbox',
-        'label' => __('Show tags', 'lime-blog'),
+        'label' => __('Show tags', 'blog-layouts'),
         'section' => 'material2_post_list',
     ));
 
@@ -123,12 +123,12 @@ function lime_blog_material2_post_list($wp_customize)
     $wp_customize->add_setting('material2_post_list_comments', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('material2_post_list_comments', array(
         'type' => 'checkbox',
-        'label' => __('Show comments', 'lime-blog'),
+        'label' => __('Show comments', 'blog-layouts'),
         'section' => 'material2_post_list',
     ));
 
@@ -136,20 +136,20 @@ function lime_blog_material2_post_list($wp_customize)
     $wp_customize->add_setting('material2_post_list_read_more', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('material2_post_list_read_more', array(
         'type' => 'checkbox',
-        'label' => __('Show read more button', 'lime-blog'),
+        'label' => __('Show read more button', 'blog-layouts'),
         'section' => 'material2_post_list',
     ));
 }
-add_action('customize_register', 'lime_blog_material2_post_list');
+add_action('customize_register', 'blog_layouts_material2_post_list');
 
 // Number of words previewed in the feed
-function lime_blog_material2_custom_excerpt_length($length)
+function blog_layouts_material2_custom_excerpt_length($length)
 {
     return get_theme_mod('material2_post_list_words_in_snippet', 30);
 }
-add_filter('excerpt_length', 'lime_blog_material2_custom_excerpt_length', 999);
+add_filter('excerpt_length', 'blog_layouts_material2_custom_excerpt_length', 999);

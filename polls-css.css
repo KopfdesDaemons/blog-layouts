@@ -16,13 +16,13 @@ h1 + p:has(+ .wp-polls-archive) code {
 .wp-polls-archive .wp-polls-ans {
   background-color: black;
   padding: 1em;
-  border: 1px solid var(--lime_blog_primary_color);
+  border: 1px solid var(--blog_layouts_primary_color);
   border-radius: 8px;
 }
 .wp-polls-archive .wp-polls-ans + p {
   font-size: 0.8em;
   margin-bottom: 3em;
-  background-color: var(--lime_blog_tag_color);
+  background-color: var(--blog_layouts_tag_color);
   border: 1px solid gray;
   padding: 0.5em;
 }
@@ -49,10 +49,10 @@ h1 + p:has(+ .wp-polls-archive) code {
   display: none;
 }
 .widget_polls-widget .wp-polls-ul input {
-  background-color: var(--lime_blog_primary_variant_darker);
-  box-shadow: 0 0 0px 1000px var(--lime_blog_primary_variant_darker) inset;
+  background-color: var(--blog_layouts_primary_variant_darker);
+  box-shadow: 0 0 0px 1000px var(--blog_layouts_primary_variant_darker) inset;
 }
 .widget_polls-widget .wp-polls-ul input:checked {
-  background-color: var(--lime_blog_primary_color);
-  box-shadow: 0 0 0px 1000px var(--lime_blog_primary_color) inset;
+  background-color: var(--blog_layouts_primary_color);
+  box-shadow: 0 0 0px 1000px var(--blog_layouts_primary_color) inset;
 }/*# sourceMappingURL=polls-css.css.map */

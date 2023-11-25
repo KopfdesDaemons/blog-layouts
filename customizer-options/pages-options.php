@@ -1,11 +1,11 @@
 <?php
-function lime_blog_custom_pages($wp_customize)
+function blog_layouts_custom_pages($wp_customize)
 {
     // Section
     $wp_customize->add_section('custom_theme_pages', array(
-        'title' => __('Pages', 'lime-blog'),
+        'title' => __('Pages', 'blog-layouts'),
         'priority' => 30,
-        'description' => __('Options for WordPress "Pages".', 'lime-blog'),
+        'description' => __('Options for WordPress "Pages".', 'blog-layouts'),
     ));
 
     // Maximum width of the post
@@ -18,7 +18,7 @@ function lime_blog_custom_pages($wp_customize)
     $wp_customize->add_control('maximum_width_of_pages', array(
         'type' => 'range',
         'section' => 'title_tagline',
-        'label' => __('Maximum width of pages', 'lime-blog'),
+        'label' => __('Maximum width of pages', 'blog-layouts'),
         'section' => 'custom_theme_pages',
         'input_attrs' => array(
             'min' => 50,
@@ -31,12 +31,12 @@ function lime_blog_custom_pages($wp_customize)
     $wp_customize->add_setting('pages_sidebar', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('pages_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show sidebar', 'lime-blog'),
+        'label' => __('Show sidebar', 'blog-layouts'),
         'section' => 'custom_theme_pages',
     ));
 
@@ -52,12 +52,12 @@ function lime_blog_custom_pages($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    global $lime_blog_sidebar_layouts;
+    global $blog_layouts_sidebar_layouts;
     $wp_customize->add_control('pages_sidebar_layout', array(
         'type' => 'select',
         'section' => 'custom_theme_pages',
-        'label' => __('Layout Sidebar', 'lime-blog'),
-        'choices' => $lime_blog_sidebar_layouts,
+        'label' => __('Layout Sidebar', 'blog-layouts'),
+        'choices' => $blog_layouts_sidebar_layouts,
         'active_callback' => 'pages_sidebar_active_callback',
     ));
 
@@ -68,9 +68,9 @@ function lime_blog_custom_pages($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'pages_background_color', array(
-        'label' => __('Background color', 'lime-blog'),
+        'label' => __('Background color', 'blog-layouts'),
         'section' => 'custom_theme_pages',
         'settings' => 'background_color_pages'
     )));
 }
-add_action('customize_register', 'lime_blog_custom_pages');
+add_action('customize_register', 'blog_layouts_custom_pages');

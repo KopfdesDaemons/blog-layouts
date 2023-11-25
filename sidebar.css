@@ -1,86 +1,86 @@
-#lime_blog_sidebar {
+#blog_layouts_sidebar {
   width: 20em;
   overflow: hidden;
   margin: 2em;
   grid-area: sidebar;
 }
 @media only screen and (max-width: 800px) {
-  #lime_blog_sidebar {
+  #blog_layouts_sidebar {
     width: unset;
   }
 }
-#lime_blog_sidebar .widget-title {
+#blog_layouts_sidebar .widget-title {
   text-align: center;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_blocks .widget {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_blocks .widget {
   border: 1px solid rgb(95, 95, 95);
   background-color: #3d3d3d;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_material2 .widget {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_material2 .widget {
   background-color: #212121;
   margin-bottom: 0;
   border-bottom: solid 1px;
   margin-bottom: 2em;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_material3 .widget {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_material3 .widget {
   background-color: #212121;
   border-radius: 16px;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_material3 .widget .widget-title {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_material3 .widget .widget-title {
   text-decoration: underline;
   margin: 0.4em 0;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_material3 .widget:hover {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_material3 .widget:hover {
   background-color: #292929;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_frameless .widget {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_frameless .widget {
   background-color: unset;
   border-radius: 16px;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_frameless .widget:hover {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_frameless .widget:hover {
   background-color: rgba(0, 0, 0, 0.15);
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_social {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_social {
   gap: 0;
   border: 1px solid gray;
   background-color: rgb(51, 52, 61);
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_social .widget:not(:last-of-type) {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_social .widget:not(:last-of-type) {
   margin-bottom: 0;
   border-bottom: 1px solid gray;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_social .widget-title {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_social .widget-title {
   border-bottom: 1px solid gray;
   margin: -0.9rem -1rem 0.5rem -1rem;
   background-color: #56585d;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_neon .widget {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_neon .widget {
   border-radius: 4px;
-  background-color: var(--lime_blog_primary_variant_much_darker);
-  box-shadow: inset 0px 0px 20px 0px var(--lime_blog_primary_color);
+  background-color: var(--blog_layouts_primary_variant_much_darker);
+  box-shadow: inset 0px 0px 20px 0px var(--blog_layouts_primary_color);
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_neon .widget:hover {
-  background-color: var(--lime_blog_primary_variant_darker);
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_neon .widget:hover {
+  background-color: var(--blog_layouts_primary_variant_darker);
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_frames .widget {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_frames .widget {
   border-radius: 4px;
   border: 1px solid grey;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_frames .widget .widget-title {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_frames .widget .widget-title {
   border-bottom: 1px solid gray;
   margin: -1rem -1rem 0.5rem -1rem;
   background-color: #212121;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_reddit {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_reddit {
   color: rgb(255, 255, 255);
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_reddit .widget {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_reddit .widget {
   background-color: #1a1a1b;
   border: 1px solid #474748;
   border-radius: 5px 5px 4px 4px;
   padding: 12px;
 }
-#lime_blog_sidebar.lime_blog_sidebar_layout_reddit .widget .widget-title {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_reddit .widget .widget-title {
   text-transform: uppercase;
   text-align: start;
   font-size: 10px;

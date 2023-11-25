@@ -1,8 +1,8 @@
-.lime_blog_material3_header {
+.blog_layouts_material3_header {
   transition: background-color 150ms ease-in;
 }
-.lime_blog_material3_header .lime_blog_material_header_sidemenu {
-  background-color: var(--lime_blog_primary_variant_much_darker);
+.blog_layouts_material3_header .blog_layouts_material_header_sidemenu {
+  background-color: var(--blog_layouts_primary_variant_much_darker);
   position: fixed;
   height: 100%;
   transform: translateX(-100%);
@@ -19,91 +19,91 @@
   /* development */
   /* Track */
 }
-.lime_blog_material3_header .lime_blog_material_header_sidemenu ::-webkit-scrollbar-track {
+.blog_layouts_material3_header .blog_layouts_material_header_sidemenu ::-webkit-scrollbar-track {
   background: transparent;
 }
-.lime_blog_material3_header .lime_blog_material_header_sidemenu .lime_blog_material_header_sidemenu_close_button {
+.blog_layouts_material3_header .blog_layouts_material_header_sidemenu .blog_layouts_material_header_sidemenu_close_button {
   all: revert;
   border: none;
   border-radius: 4px;
   margin: 1em 1em 0 auto;
   font-size: 1.5em;
-  background-color: var(--lime_blog_primary_variant_much_darker);
-  color: var(--lime_blog_font_color);
+  background-color: var(--blog_layouts_primary_variant_much_darker);
+  color: var(--blog_layouts_font_color);
   display: flex;
   cursor: pointer;
   padding: 0.5em 0.6em;
 }
-.lime_blog_material3_header .lime_blog_material_header_sidemenu .lime_blog_material_header_sidemenu_close_button:hover, .lime_blog_material3_header .lime_blog_material_header_sidemenu .lime_blog_material_header_sidemenu_close_button:focus {
-  background-color: var(--lime_blog_primary_color);
+.blog_layouts_material3_header .blog_layouts_material_header_sidemenu .blog_layouts_material_header_sidemenu_close_button:hover, .blog_layouts_material3_header .blog_layouts_material_header_sidemenu .blog_layouts_material_header_sidemenu_close_button:focus {
+  background-color: var(--blog_layouts_primary_color);
   outline: none;
 }
-.lime_blog_material3_header .lime_blog_material_header_sidemenu .lime_blog_header_menu {
+.blog_layouts_material3_header .blog_layouts_material_header_sidemenu .blog_layouts_header_menu {
   margin: 1em;
   padding: 0;
   overflow-y: auto;
 }
-.lime_blog_material3_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li {
+.blog_layouts_material3_header .blog_layouts_material_header_sidemenu .blog_layouts_header_menu li {
   list-style: none;
   overflow: hidden;
   border-top: 1px solid;
 }
-.lime_blog_material3_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li a {
+.blog_layouts_material3_header .blog_layouts_material_header_sidemenu .blog_layouts_header_menu li a {
   padding: 1.2em;
   display: flex;
-  color: var(--lime_blog_font_color);
+  color: var(--blog_layouts_font_color);
   text-decoration: none;
   font-weight: bold;
   border-radius: 5em;
 }
-.lime_blog_material3_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li a:hover, .lime_blog_material3_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li a:focus {
-  background-color: var(--lime_blog_primary_variant_darker);
+.blog_layouts_material3_header .blog_layouts_material_header_sidemenu .blog_layouts_header_menu li a:hover, .blog_layouts_material3_header .blog_layouts_material_header_sidemenu .blog_layouts_header_menu li a:focus {
+  background-color: var(--blog_layouts_primary_variant_darker);
   outline: none;
 }
-.lime_blog_material3_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li ul {
+.blog_layouts_material3_header .blog_layouts_material_header_sidemenu .blog_layouts_header_menu li ul {
   padding-left: 0.5em;
 }
-.lime_blog_material3_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li ul li {
+.blog_layouts_material3_header .blog_layouts_material_header_sidemenu .blog_layouts_header_menu li ul li {
   margin: 0;
   border: none;
 }
-.lime_blog_material3_header .lime_blog_material_header_sidemenu .lime_blog_header_menu li ul li a {
+.blog_layouts_material3_header .blog_layouts_material_header_sidemenu .blog_layouts_header_menu li ul li a {
   font-weight: unset;
 }
-.lime_blog_material3_header.lime_blog_header_menu_open .lime_blog_material_header_sidemenu {
+.blog_layouts_material3_header.blog_layouts_header_menu_open .blog_layouts_material_header_sidemenu {
   transform: translateX(0);
   visibility: visible;
   width: 20em;
 }
-.lime_blog_material3_header .lime_blog_material_header_content {
+.blog_layouts_material3_header .blog_layouts_material_header_content {
   display: flex;
   align-items: center;
 }
-.lime_blog_material3_header .lime_blog_material_header_content #lime_blog_mobile_menu_toggle_button {
+.blog_layouts_material3_header .blog_layouts_material_header_content #blog_layouts_mobile_menu_toggle_button {
   all: revert;
   display: none;
   padding: 0.5em;
   font-size: 2em;
   background-color: unset;
   border: none;
-  color: var(--lime_blog_font_color);
+  color: var(--blog_layouts_font_color);
 }
-.lime_blog_material3_header .lime_blog_material_header_content #lime_blog_mobile_menu_toggle_button:focus-visible {
+.blog_layouts_material3_header .blog_layouts_material_header_content #blog_layouts_mobile_menu_toggle_button:focus-visible {
   outline-offset: 1px;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_material_header_home_link {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_home_link {
   display: none;
   text-decoration: none;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop {
   display: flex;
   flex-flow: row wrap;
   padding: 0;
   margin: 0;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop a {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop a {
   text-decoration: none;
-  color: var(--lime_blog_font_color);
+  color: var(--blog_layouts_font_color);
   border-bottom: 4px solid transparent;
   display: flex;
   padding: 1.3em;
@@ -113,73 +113,73 @@
   width: 100%;
   white-space: nowrap;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop li {
   list-style: none;
   display: flex;
   position: relative;
   border-radius: 12px;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li .lime_blog_menuitem_container {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop li .blog_layouts_menuitem_container {
   display: flex;
   align-items: center;
   gap: 0.5em;
   width: 100%;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li .lime_blog_menuitem_container .lime_blog_submenu_toggle {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop li .blog_layouts_menuitem_container .blog_layouts_submenu_toggle {
   position: absolute;
   right: 0;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li ul {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop li ul {
   display: none;
   flex-direction: column;
   overflow: visible;
-  background-color: var(--lime_blog_primary_variant_much_darker);
+  background-color: var(--blog_layouts_primary_variant_much_darker);
   top: 100%;
   padding: 0;
   z-index: 5;
   position: absolute;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li ul li {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop li ul li {
   transition: all 100ms;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li ul ul {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop li ul ul {
   left: 100%;
   top: 0;
 }
 @media only screen and (min-width: 600px) {
-  .lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li > ul .lime_blog_submenu_toggle {
+  .blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop li > ul .blog_layouts_submenu_toggle {
     transform: rotate(-90deg);
   }
-  .lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li:hover, .lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li:focus-within {
-    background-color: var(--lime_blog_primary_variant_darker);
+  .blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop li:hover, .blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop li:focus-within {
+    background-color: var(--blog_layouts_primary_variant_darker);
   }
-  .lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li:hover > ul, .lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop li:focus-within > ul {
+  .blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop li:hover > ul, .blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop li:focus-within > ul {
     display: flex;
   }
 }
 @media only screen and (max-width: 800px) {
-  .lime_blog_material3_header .lime_blog_material_header_content {
+  .blog_layouts_material3_header .blog_layouts_material_header_content {
     width: 100%;
     justify-content: space-between;
   }
-  .lime_blog_material3_header .lime_blog_material_header_content .lime_blog_header_menu_desktop {
+  .blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_header_menu_desktop {
     display: none;
   }
-  .lime_blog_material3_header .lime_blog_material_header_content .lime_blog_material_header_home_link,
-  .lime_blog_material3_header .lime_blog_material_header_content #lime_blog_mobile_menu_toggle_button {
+  .blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_home_link,
+  .blog_layouts_material3_header .blog_layouts_material_header_content #blog_layouts_mobile_menu_toggle_button {
     display: flex;
   }
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_material_header_home_link {
-  color: var(--lime_blog_font_color);
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_home_link {
+  color: var(--blog_layouts_font_color);
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_material_header_search_div {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div {
   display: flex;
   align-items: center;
   margin: 0 1em;
   gap: 0.5em;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_material_header_search_div #lime_blog_header_search_icon {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div #blog_layouts_header_search_icon {
   all: revert;
   font-size: 1.2em;
   background-color: transparent;
@@ -191,30 +191,30 @@
   border-radius: 5em;
   height: 2em;
   width: 2em;
-  color: var(--lime_blog_font_color);
+  color: var(--blog_layouts_font_color);
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_material_header_search_div #lime_blog_header_search_icon:hover {
-  background-color: var(--lime_blog_primary_variant_darker);
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div #blog_layouts_header_search_icon:hover {
+  background-color: var(--blog_layouts_primary_variant_darker);
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_material_header_search_div form {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div form {
   display: flex;
   width: 0;
   overflow: hidden;
   transition: all 200ms;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_material_header_search_div form label {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div form label {
   display: flex;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_material_header_search_div form input {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div form input {
   all: unset;
   margin: 0;
   padding-left: 1em;
   width: 10em;
   box-sizing: border-box;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_material_header_search_div form .search-submit {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div form .search-submit {
   display: none;
 }
-.lime_blog_material3_header .lime_blog_material_header_content .lime_blog_material_header_search_div.lime_blog_header_search_open form {
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div.blog_layouts_header_search_open form {
   width: 10em;
 }/*# sourceMappingURL=material3-header.css.map */

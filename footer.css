@@ -1,5 +1,5 @@
-#lime_blog_footer {
-  background-color: var(--lime_blog_primary_variant_darker);
+#blog_layouts_footer {
+  background-color: var(--blog_layouts_primary_variant_darker);
   padding-bottom: 0;
   grid-area: footer;
   font-size: clamp(0.8em, 2vw, 1em);
@@ -8,7 +8,7 @@
   flex-direction: column;
   margin-top: 1em;
 }
-#lime_blog_footer .footer-menu {
+#blog_layouts_footer .footer-menu {
   padding: clamp(0em, 5vw, 5em);
   padding-left: 0.5em;
   display: flex;
@@ -16,32 +16,32 @@
   flex-wrap: wrap;
   margin: 0;
 }
-#lime_blog_footer .footer-menu ul {
+#blog_layouts_footer .footer-menu ul {
   display: block;
   padding: 0;
 }
-#lime_blog_footer .footer-menu li {
+#blog_layouts_footer .footer-menu li {
   list-style: none;
 }
-#lime_blog_footer .footer-menu li a {
+#blog_layouts_footer .footer-menu li a {
   font-size: 1.1em;
   color: #cef5f5;
   text-decoration: none;
 }
-#lime_blog_footer .footer-menu li li {
+#blog_layouts_footer .footer-menu li li {
   margin-top: 0.5em;
 }
-#lime_blog_footer .footer-menu li li a {
+#blog_layouts_footer .footer-menu li li a {
   font-size: 1.3em;
-  color: var(--lime_blog_font_color);
+  color: var(--blog_layouts_font_color);
   text-decoration: underline;
 }
-#lime_blog_footer .lime_blog_footer_info {
+#blog_layouts_footer .blog_layouts_footer_info {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: var(--lime_blog_primary_variant_much_darker);
+  background-color: var(--blog_layouts_primary_variant_much_darker);
 }
-#lime_blog_footer .lime_blog_footer_info a {
-  color: var(--lime_blog_primary_color);
+#blog_layouts_footer .blog_layouts_footer_info a {
+  color: var(--blog_layouts_primary_color);
 }/*# sourceMappingURL=footer.css.map */

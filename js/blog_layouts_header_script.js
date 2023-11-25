@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function () {
 
     // header mobile submenu toggle
-    const header_submenu_toggle = document.querySelectorAll('.lime_blog_submenu_toggle');
+    const header_submenu_toggle = document.querySelectorAll('.blog_layouts_submenu_toggle');
 
     for (const toggle of header_submenu_toggle) {
         toggle.addEventListener('click', toggleSubMenu);
@@ -21,21 +21,21 @@ window.addEventListener("DOMContentLoaded", function () {
         const submenu = listItemContainer.parentElement.querySelector('.sub-menu');
 
         // close all open menus
-        const allOpenMenus = document.querySelectorAll('.lime_blog_submenu_open');
+        const allOpenMenus = document.querySelectorAll('.blog_layouts_submenu_open');
         const parentListItem = listItem.parentElement.parentElement;
-        const isInOpenSubmenu = parentListItem.classList.contains('lime_blog_submenu_open');
+        const isInOpenSubmenu = parentListItem.classList.contains('blog_layouts_submenu_open');
 
         if (!isInOpenSubmenu) {
             for (const menu of allOpenMenus) {
                 if (menu === submenu.parentElement) continue;
-                menu.classList.remove('lime_blog_submenu_open');
+                menu.classList.remove('blog_layouts_submenu_open');
             }
         }
 
-        listItem.classList.toggle('lime_blog_submenu_open');
+        listItem.classList.toggle('blog_layouts_submenu_open');
     }
 
-    const headerSearchIcon = document.querySelector('#lime_blog_header_search_icon');
+    const headerSearchIcon = document.querySelector('#blog_layouts_header_search_icon');
 
     if (headerSearchIcon) {
         headerSearchIcon.addEventListener('click', toggleSearch);
@@ -52,7 +52,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     function toggleSearch(event) {
         const parent = headerSearchIcon.parentElement;
-        parent.classList.toggle('lime_blog_header_search_open');
+        parent.classList.toggle('blog_layouts_header_search_open');
         const input = parent.querySelector('.search-field');
         searchOpen = !searchOpen;
         if (searchOpen) {
@@ -61,16 +61,16 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    const mobileMenu = this.document.querySelector('#lime_blog_header_mobile_menu');
-    const mobileMenuToggleButton = this.document.querySelector('#lime_blog_mobile_menu_toggle_button');
+    const mobileMenu = this.document.querySelector('#blog_layouts_header_mobile_menu');
+    const mobileMenuToggleButton = this.document.querySelector('#blog_layouts_mobile_menu_toggle_button');
     if (mobileMenuToggleButton) mobileMenuToggleButton.addEventListener('click', toggleMobileMenu);
-    const mobileMenuCloseButton = this.document.querySelector('#lime_blog_mobile_menu_close_button');
+    const mobileMenuCloseButton = this.document.querySelector('#blog_layouts_mobile_menu_close_button');
     if(mobileMenuCloseButton) mobileMenuCloseButton.addEventListener('click', toggleMobileMenu);
     
     let headerMenuOpen = false;
     function toggleMobileMenu() {
-        var header = document.querySelector('#lime_blog_header');
-        header.classList.toggle('lime_blog_header_menu_open');
+        var header = document.querySelector('#blog_layouts_header');
+        header.classList.toggle('blog_layouts_header_menu_open');
         headerMenuOpen = !headerMenuOpen;
         if(headerMenuOpen) mobileMenu.focus();
     }
@@ -92,12 +92,12 @@ window.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    var material3Header = document.querySelector('.lime_blog_material3_header');
-    var fixedHeader = this.document.querySelector('.lime_blog_fixed_header');
+    var material3Header = document.querySelector('.blog_layouts_material3_header');
+    var fixedHeader = this.document.querySelector('.blog_layouts_fixed_header');
     if(material3Header && fixedHeader) {
         window.onscroll = function () {
           if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            material3Header.style.backgroundColor = "var(--lime_blog_primary_variant_much_darker)"; // Hintergrundfarbe ändern
+            material3Header.style.backgroundColor = "var(--blog_layouts_primary_variant_much_darker)"; // Hintergrundfarbe ändern
         } else {
             material3Header.style.backgroundColor = "transparent"; // Zurück zur Originalfarbe
           }

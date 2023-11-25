@@ -1,4 +1,4 @@
-<footer id="lime_blog_footer">
+<footer id="blog_layouts_footer">
     <nav>
         <?php
         if (has_nav_menu('footer-menu')) {
@@ -8,16 +8,16 @@
                 'menu_class' => 'footer-menu',
             ));
         } else {
-            echo '<div>' . esc_html__('Select a menu in the customizer', 'lime-blog') .'</div>';
+            echo '<div>' . esc_html__('Select a menu in the customizer', 'blog-layouts') .'</div>';
         }
         ?>
     </nav>
-    <div class="lime_blog_footer_info">
+    <div class="blog_layouts_footer_info">
         <div>
-            <a href="https://wordpress.org/themes/lime-blog/" target="_blank">Lime Blog WordPress Theme</a>
+            <a href="https://wordpress.org/themes/blog-layouts/" target="_blank">Blog Layouts WordPress Theme</a>
         <?php
                 printf(
-                    esc_html__('created by %1$s', 'lime-blog'),
+                    esc_html__('created by %1$s', 'blog-layouts'),
                     '<a href="https://ricoswebsite.com/" target="_blank" rel="designer">Rico</a>'
                 );
             ?>

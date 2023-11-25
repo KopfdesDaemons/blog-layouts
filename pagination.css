@@ -1,30 +1,30 @@
 /*
     Contains a uniform style for all pagination: feed, post, author page, search, wp-blocks.
 */
-.lime_blog_pagination {
+.blog_layouts_pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: clamp(12px, 1.5vw, 16px);
   max-width: 100%;
 }
-.lime_blog_pagination ::-webkit-scrollbar {
+.blog_layouts_pagination ::-webkit-scrollbar {
   height: 1px;
 }
-.lime_blog_pagination .lime_blog_pagination_controls a {
-  background-color: var(--lime_blog_primary_color);
+.blog_layouts_pagination .blog_layouts_pagination_controls a {
+  background-color: var(--blog_layouts_primary_color);
   margin: 0 0.5em;
   padding: 0.8em 2em;
   display: flex;
   color: rgb(14, 14, 14);
 }
-.lime_blog_pagination .lime_blog_pagination_content {
+.blog_layouts_pagination .blog_layouts_pagination_content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 100%;
 }
-.lime_blog_pagination .lime_blog_pagination_pages {
+.blog_layouts_pagination .blog_layouts_pagination_pages {
   display: flex;
   overflow-x: auto;
   gap: 0.5em;
@@ -34,7 +34,7 @@
 .wp-polls-paging a, .wp-polls-paging span,
 .wp-block-query-pagination-next,
 .wp-block-query-pagination-previous,
-.lime_blog_pagination_controls a,
+.blog_layouts_pagination_controls a,
 .post-page-numbers,
 .page-numbers {
   border-radius: 4px;
@@ -49,12 +49,12 @@
 
 .wp-polls-paging .current,
 .current {
-  background-color: var(--lime_blog_primary_variant_darker);
+  background-color: var(--blog_layouts_primary_variant_darker);
 }
 
 .wp-block-query-pagination-next:hover,
 .wp-block-query-pagination-previous:hover,
-.lime_blog_pagination_controls a:hover,
+.blog_layouts_pagination_controls a:hover,
 .page-numbers:not(.current, .dots):hover,
 .post-page-numbers:not(.current, .dots):hover {
   background-color: rgb(54, 54, 54);

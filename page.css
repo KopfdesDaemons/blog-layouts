@@ -1,10 +1,10 @@
 .page h1 {
   font-size: clamp(21px, 4vw, 26px);
 }
-.page .lime_blog_user_content_container {
+.page .blog_layouts_user_content_container {
   margin: 0;
-  background-color: var(--lime_blog_background_color_pages);
+  background-color: var(--blog_layouts_background_color_pages);
 }
-.page .lime_blog_content_spacer {
-  max-width: var(--lime_blog_max_page_width);
+.page .blog_layouts_content_spacer {
+  max-width: var(--blog_layouts_max_page_width);
 }/*# sourceMappingURL=page.css.map */

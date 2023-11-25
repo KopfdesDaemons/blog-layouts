@@ -1,11 +1,11 @@
 <?php
-function lime_blog_custom_searchresults($wp_customize)
+function blog_layouts_custom_searchresults($wp_customize)
 {
     // Section
     $wp_customize->add_section('searchresults', array(
-        'title' => __('Search Results', 'lime-blog'),
+        'title' => __('Search Results', 'blog-layouts'),
         'priority' => 30,
-        'description' => __('Options for the search results.', 'lime-blog'),
+        'description' => __('Options for the search results.', 'blog-layouts'),
     ));
 
     // Layout
@@ -15,24 +15,24 @@ function lime_blog_custom_searchresults($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    global $lime_blog_post_list_layouts;
+    global $blog_layouts_post_list_layouts;
     $wp_customize->add_control('searchresults_style', array(
         'type' => 'select',
         'section' => 'searchresults',
-        'label' => __('Layout', 'lime-blog'),
-        'choices' => $lime_blog_post_list_layouts,
+        'label' => __('Layout', 'blog-layouts'),
+        'choices' => $blog_layouts_post_list_layouts,
     ));
 
     // Sidebar
     $wp_customize->add_setting('searchresults_sidebar', array(
         'default' => true,
         'transport' => 'refresh',
-        'sanitize_callback' => 'lime_blog_sanitize_checkbox',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
     $wp_customize->add_control('searchresults_sidebar', array(
         'type' => 'checkbox',
-        'label' => __('Show sidebar', 'lime-blog'),
+        'label' => __('Show sidebar', 'blog-layouts'),
         'section' => 'searchresults',
     ));
 
@@ -48,13 +48,13 @@ function lime_blog_custom_searchresults($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    global $lime_blog_sidebar_layouts;
+    global $blog_layouts_sidebar_layouts;
     $wp_customize->add_control('searchresults_sidebar_layout', array(
         'type' => 'select',
         'section' => 'searchresults',
-        'label' => __('Layout Sidebar', 'lime-blog'),
-        'choices' => $lime_blog_sidebar_layouts,
+        'label' => __('Layout Sidebar', 'blog-layouts'),
+        'choices' => $blog_layouts_sidebar_layouts,
         'active_callback' => 'searchresults_sidebar_active_callback',
     ));
 }
-add_action('customize_register', 'lime_blog_custom_searchresults');
+add_action('customize_register', 'blog_layouts_custom_searchresults');

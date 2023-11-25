@@ -3,7 +3,7 @@
 const body = document.querySelector("body");
 
 function setBodyClass(className) {
-    const classesToRemove = ["lime_blog_comments", "lime_blog_posts"];
+    const classesToRemove = ["blog_layouts_comments", "blog_layouts_posts"];
     classesToRemove.forEach(cls => {
         if (body.classList.contains(cls)) {
             body.classList.remove(cls);
@@ -13,9 +13,9 @@ function setBodyClass(className) {
 }
 
 function click_author_posts() {
-    setBodyClass("lime_blog_posts");
+    setBodyClass("blog_layouts_posts");
 }
 
 function click_author_comments() {
-    setBodyClass("lime_blog_comments");
+    setBodyClass("blog_layouts_comments");
 }

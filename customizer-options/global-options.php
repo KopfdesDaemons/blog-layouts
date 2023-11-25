@@ -1,9 +1,9 @@
 <?php
-function lime_blog_global($wp_customize)
+function blog_layouts_global($wp_customize)
 {
     // Section
     $wp_customize->add_section('global_section', array(
-        'title'      => __('Global', 'lime-blog'),
+        'title'      => __('Global', 'blog-layouts'),
         'priority'   => 30,
     ));
 
@@ -15,8 +15,8 @@ function lime_blog_global($wp_customize)
     ));
 
     $wp_customize->add_control('body_font', array(
-        'description' => __('All fonts are hosted locally. Consent according to the GDPR is not required for this theme (cookie banner).', 'lime-blog'),
-        'label'      => __('Main text font', 'lime-blog'),
+        'description' => __('All fonts are hosted locally. Consent according to the GDPR is not required for this theme (cookie banner).', 'blog-layouts'),
+        'label'      => __('Main text font', 'blog-layouts'),
         'section'    => 'global_section',
         'type'       => 'select',
         'choices'    => array(
@@ -47,7 +47,7 @@ function lime_blog_global($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'primary_color', array(
-        'label' => __('Primary color', 'lime-blog'),
+        'label' => __('Primary color', 'blog-layouts'),
         'section' => 'global_section',
         'settings' => 'primary_color'
     )));
@@ -59,7 +59,7 @@ function lime_blog_global($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'body_background_color', array(
-        'label' => __('Background color', 'lime-blog'),
+        'label' => __('Background color', 'blog-layouts'),
         'section' => 'global_section',
         'settings' => 'body_background_color'
     )));
@@ -71,7 +71,7 @@ function lime_blog_global($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'font_color', array(
-        'label' => __('Font color', 'lime-blog'),
+        'label' => __('Font color', 'blog-layouts'),
         'section' => 'global_section',
         'settings' => 'font_color'
     )));
@@ -83,12 +83,12 @@ function lime_blog_global($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    global $lime_blog_comments_layouts;
+    global $blog_layouts_comments_layouts;
     $wp_customize->add_control('comments_layout', array(
         'type' => 'select',
         'section' => 'global_section',
-        'label' => __('Comments Layout', 'lime-blog'),
-        'choices' => $lime_blog_comments_layouts,
+        'label' => __('Comments Layout', 'blog-layouts'),
+        'choices' => $blog_layouts_comments_layouts,
     ));
 }
-add_action('customize_register', 'lime_blog_global');
+add_action('customize_register', 'blog_layouts_global');
