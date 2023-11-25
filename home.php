@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php if (get_theme_mod('landingpage_section')) { ?>
+<?php if (get_theme_mod('landingpage_section', true)) { ?>
     <section class="lime_blog_landing_page_section <?php if(get_theme_mod('landingpage_image_animation', true)) echo 'lime_blog_landing_page_image_animation' ?>">
         <div class="lime_blog_content_spacer">
             <?php
@@ -68,7 +68,7 @@
 </main>
 <?php
 if (get_theme_mod('feed_sidebar', true)) {
-    echo '<aside id="lime_blog_sidebar" class="' . 'lime_blog_sidebar_layout_' . get_theme_mod('feed_sidebar_layout', 'blocks') . '">';
+    echo '<aside id="lime_blog_sidebar" class="' . 'lime_blog_sidebar_layout_' . get_theme_mod('feed_sidebar_layout', 'social') . '">';
     get_sidebar();
     echo '</aside>';
 }

@@ -33,6 +33,11 @@ particularly extensive. There is a landing page with a widget area.
 
     = Images =
 
+    Profile picture for theme screenshot
+    License: Attribution-NonCommercial 2.0 Generic (CC BY-NC 2.0 DEED)
+    License URL: https://creativecommons.org/licenses/by-nc/2.0/
+    Source: https://www.flickr.com/photos/plasticbag/13183739815/
+
     Image for theme screenshot (Post 1)
     License: Attribution 2.0 Generic (CC BY 2.0)
     License URL: https://creativecommons.org/licenses/by/2.0/
