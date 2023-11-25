@@ -1,6 +1,4 @@
-@use 'mixins' as *; 
-
-.lime_blog_comments_area {
+.lime_blog_comments_layout_material3 {
     margin: 3em 0 10em 0;
     font-size: 0.8em;
 
@@ -18,7 +16,6 @@
 
         li {
             border-radius: 4px;
-            // padding: 2%;
 
             ol {
                 padding-left: 0.5em;
@@ -27,13 +24,16 @@
     }
 
     .comment-body {
-        background-color: black;
+        background-color: var(--lime_blog_primary_variant_much_darker);
         padding: 1em;
         border-radius: 16px;
+
+        &:hover {
+            filter: brightness(1.1);
+        }
     }
 
     .comment-content {
-        background-color: var(--lime_blog_comments_background_color);
         padding: 1em;
         margin: 1em 0.5em;
         border-radius: 4px;
@@ -65,7 +65,15 @@
         display: flex;
 
         a {
-            @include button;
+            border-radius: 5em;
+            padding: 1em;
+            background-color: var(--lime_blog_primary_variant_darker);
+            text-decoration: none;
+            color: var(--lime_blog_font_color);
+
+            &:hover {
+                background-color: var(--lime_blog_primary_color);
+            }
         }
     }
 
@@ -126,19 +134,218 @@
             margin-left: auto;
 
             a {
-                color: rgb(146, 0, 0);
+                color: rgb(172, 0, 0);
             }
+        }
+    }
+
+    input:not([type="submit"], [type="checkbox"]), textarea {
+        border-radius: 4px 4px 0 0;
+        border-bottom: 1px solid var(--lime_blog_primary_variant_darker);
+        padding: 1em 0.5em;
+
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid var(--lime_blog_primary_color);
+        }
+
+        &:hover {
+            background-color: #141414;
+            box-shadow: 0 0 0px 1000px #141414 inset;
+        }
+    }
+
+    #submit {
+        border-radius: 5em;
+        padding: 1em;
+        background-color: var(--lime_blog_primary_variant_darker);
+        text-decoration: none;
+        color: var(--lime_blog_font_color);
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--lime_blog_primary_color);
         }
     }
 }
 
-.wp-block-latest-comments__comment {
-    background-color: black;
-    padding: 0.5em;
-    border-radius: 4px;
 
-    .wp-block-latest-comments__comment-excerpt {
-        overflow-wrap: anywhere;
-        word-wrap: break-all;
+
+
+
+.lime_blog_comments_layout_material2 {
+    margin: 3em 0 10em 0;
+    font-size: 0.8em;
+
+    .lime_blog_comment_list {
+        padding-left: 0;
+    }
+
+    a {
+        color: rgb(177, 177, 177);
+    }
+
+    .comment, .children, .pingback  {
+        list-style: none;
+        padding: 1% 2%;
+
+        li {
+            border-radius: 4px;
+
+            ol {
+                padding-left: 0.5em;
+            }
+        }
+    }
+
+    .comment-body {
+        background-color: #212121;
+        padding: 1em;
+
+        &:hover {
+            filter: brightness(1.1);
+        }
+    }
+
+    .comment-content {
+        padding: 1em;
+        margin: 1em 0.5em;
+        border-radius: 4px;
+        overflow-wrap: break-word;
+        max-height: 40em;
+        overflow-y: auto;
+
+        > p {
+            margin: 0;
+        }
+    }
+
+    .bypostauthor {
+        .url {
+            background-color: var(--lime_blog_primary_color);
+            border-radius: 8px;
+            padding: 0.2em;
+            color: black;
+
+            &:after {
+                content: ' \f4ff';
+                font-family: 'Font Awesome Solid';
+            }
+        }
+    }
+
+    .reply {
+        margin: 0 0.5em;
+        display: flex;
+
+        a {
+            border-radius: 4px;
+            font-family: Roboto, sans-serif;
+            height: 36px;
+            font-size: 14px;
+            display: flex;
+            padding: 0 0.5em;
+            align-items: center;
+            text-transform: uppercase;
+            background-color: var(--lime_blog_primary_variant_darker);
+            text-decoration: none;
+            color: var(--lime_blog_font_color);
+
+            &:hover {
+                background-color: var(--lime_blog_primary_color);
+            }
+        }
+    }
+
+    .says {
+        display: none;
+    }
+
+    .vcard {
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+        font-size: 1.3em;
+
+        .url {
+            text-decoration: none;
+        }
+    }
+
+    .comment-metadata {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.8em 1em 0.3em 1em;
+    }
+
+    .comment-form {
+        padding: 0 3%;
+
+        .comment-form-comment {
+            display: flex;
+            flex-direction: column;
+
+            textarea {
+                resize: vertical;
+                max-width: 90vw;
+            }
+        }
+
+        .comment-form-author,
+        .comment-form-email,
+        .comment-form-url {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .lime_blog_comment_reply_title {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        margin-top: 0.5em;
+        padding: 0 3%;
+
+        small {
+            margin-left: auto;
+
+            a {
+                color: rgb(172, 0, 0);
+            }
+        }
+    }
+
+    input:not([type="submit"], [type="checkbox"]), textarea {
+        border-radius: 4px 4px 0 0;
+        border-bottom: 1px solid var(--lime_blog_primary_variant_darker);
+        padding: 1em 0.5em;
+
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid var(--lime_blog_primary_color);
+        }
+
+        &:hover {
+            background-color: #141414;
+            box-shadow: 0 0 0px 1000px #141414 inset;
+        }
+    }
+
+    #submit {
+        border-radius: 4px;
+        font-family: Roboto, sans-serif;
+        height: 36px;
+        font-size: 14px;
+        text-transform: uppercase;
+        background-color: var(--lime_blog_primary_variant_darker);
+        text-decoration: none;
+        color: var(--lime_blog_font_color);
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--lime_blog_primary_color);
+        }
     }
 }

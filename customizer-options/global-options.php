@@ -64,18 +64,6 @@ function lime_blog_global($wp_customize)
         'settings' => 'body_background_color'
     )));
 
-    // Comments Background color
-    $wp_customize->add_setting('comments_background_color', array(
-        'default' => '#1d2027',
-        'sanitize_callback' => 'sanitize_hex_color',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'comments_background_color', array(
-        'label' => __('Comments background color', 'lime-blog'),
-        'section' => 'global_section',
-        'settings' => 'comments_background_color'
-    )));
-
     // Font color
     $wp_customize->add_setting('font_color', array(
         'default' => '#eeeeee',
@@ -87,5 +75,20 @@ function lime_blog_global($wp_customize)
         'section' => 'global_section',
         'settings' => 'font_color'
     )));
+
+    // Comments Layout
+    $wp_customize->add_setting('comments_layout', array(
+        'default' => 'material3',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    global $lime_blog_comments_layouts;
+    $wp_customize->add_control('comments_layout', array(
+        'type' => 'select',
+        'section' => 'global_section',
+        'label' => __('Comments Layout', 'lime-blog'),
+        'choices' => $lime_blog_comments_layouts,
+    ));
 }
 add_action('customize_register', 'lime_blog_global');

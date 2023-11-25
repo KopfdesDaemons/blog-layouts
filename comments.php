@@ -4,7 +4,7 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="comments" class="lime_blog_comments_area">
+<div id="comments" <?php echo 'class="' . 'lime_blog_comments_layout_' . str_replace("-", "_", get_theme_mod('comments_layout', 'material3')) . '"'; ?>>
 
     <?php if (have_comments()) : ?>
 

@@ -217,3 +217,8 @@ $lime_blog_authorbox_layouts = array(
     'material2' => 'Material 2',
     'material3' => 'Material 3',
 );
+
+$lime_blog_comments_layouts = array(
+    'material2' => 'Material 2',
+    'material3' => 'Material 3',
+);

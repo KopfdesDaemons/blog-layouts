@@ -432,4 +432,16 @@ blockquote {
 .wp-block-rss .wp-block-rss__item-excerpt {
   background-color: #1d2027;
   padding: 0.5em;
+}
+
+.wp-block-latest-comments__comment {
+  background-color: black;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+.wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt {
+  overflow-wrap: anywhere;
+  word-wrap: break-all;
+  background-color: #28282d;
+  border-radius: 4px;
 }/*# sourceMappingURL=wp-block.css.map */

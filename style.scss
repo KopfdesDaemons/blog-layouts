@@ -283,25 +283,19 @@ hr {
     }
 }
 
-input:not([type="submit"]),
+input:not([type="submit"], [type="checkbox"]),
 textarea,
 input:-webkit-autofill,
-input:-webkit-autofill:hover,
+// input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
     border: none;
-    padding: 0.5em;
-    margin-top: 3px;
     background-color: black;
-    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
-    color: rgb(177, 177, 177);
-    -webkit-text-fill-color: rgb(177, 177, 177);;
-}
-
-input[type=submit] {
-    @include button;
+    box-shadow: 0 0 0px 1000px black inset;
+    color: var(--lime_blog_font_color);
+    -webkit-text-fill-color: var(--lime_blog_font_color);
 }
 
 .gallery {
