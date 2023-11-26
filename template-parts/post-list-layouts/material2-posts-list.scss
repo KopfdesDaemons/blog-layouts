@@ -1,21 +1,24 @@
 .blog_layouts_material2_posts_list {
     padding: 0 0.5em;
     margin: 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr));
     flex-wrap: wrap;
     gap: var(--blog_layouts_material2_post_list_spacing);
     margin-bottom: 2em;
+    width: 100%;
+    justify-items: center;
     
     li {
         list-style: none;
     }
     
+    @media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
+
     @media only screen and (min-width: 800px) {
         padding: 0 2vw;
-    }
-    
-    @media only screen and (max-width: 1250px) {
-        justify-content: center;
     }
 }
 

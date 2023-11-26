@@ -57,12 +57,6 @@ main {
   }
 }
 
-@media only screen and (min-width: 1600px) {
-  .home main.blog_layouts_has_sidebar {
-    padding-left: 24em;
-  }
-}
-
 h1,
 h2,
 h3,

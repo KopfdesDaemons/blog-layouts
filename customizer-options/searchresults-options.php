@@ -10,7 +10,7 @@ function blog_layouts_custom_searchresults($wp_customize)
 
     // Layout
     $wp_customize->add_setting('searchresults_style', array(
-        'default' => 'search_engine',
+        'default' => 'search-engine',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));

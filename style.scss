@@ -13,7 +13,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-@use 'mixins' as *; 
+@use 'mixins' as *;
 
 body {
     margin: 0;
@@ -55,15 +55,6 @@ main {
     margin-top: 2em;
 
     @media only screen and (min-width: 1570px) {
-        &.blog_layouts_has_sidebar {
-            padding-left: 24em; // Sidebar width
-        }
-    }
-}
-
-// Better breakpoint for open costumizer
-.home main {
-    @media only screen and (min-width: 1600px) {
         &.blog_layouts_has_sidebar {
             padding-left: 24em; // Sidebar width
         }
@@ -222,7 +213,8 @@ img {
         }
     }
 
-    &+main, &+main+#blog_layouts_sidebar {
+    &+main,
+    &+main+#blog_layouts_sidebar {
         margin-top: 2em;
     }
 }
