@@ -31,6 +31,7 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .blog_layouts_material3_post_list_item .blog_layouts_material3_post_list_item_image_container {
   display: flex;

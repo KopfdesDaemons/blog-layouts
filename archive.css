@@ -147,7 +147,10 @@
   background-color: rgb(41, 41, 41);
 }
 .author .blog_layouts_autor_content {
-  max-width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .author .blog_layouts_author_comments_container {
   display: none;
