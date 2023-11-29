@@ -43,7 +43,7 @@
             echo '<div class="blog_layouts_pagination_content">';
 
             echo '<div class="blog_layouts_pagination_controls">';
-            previous_posts_link(__('« Previous', 'blog-layouts'));
+            previous_posts_link('«');
             echo '</div>';
 
             echo '<div class="blog_layouts_pagination_pages">';
@@ -55,7 +55,7 @@
             echo '</div>';
 
             echo '<div class="blog_layouts_pagination_controls">';
-            next_posts_link(__('Next »', 'blog-layouts'), $query->max_num_pages);
+            next_posts_link('»', $query->max_num_pages);
             echo '</div>';
 
             echo '</div>';

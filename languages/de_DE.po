@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-11-25 01:07+0100\n"
-"PO-Revision-Date: 2023-11-25 01:08+0100\n"
+"POT-Creation-Date: 2023-11-29 18:52+0100\n"
+"PO-Revision-Date: 2023-11-29 18:52+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -81,11 +81,11 @@ msgstr "Letzte Kommentare von"
 msgid "No comments found."
 msgstr "Keine Kommentare gefunden."
 
-#: archive.php:200 home.php:46 search.php:29
+#: archive.php:200 search.php:29
 msgid "« Previous"
 msgstr "« Vorherige"
 
-#: archive.php:212 home.php:58 search.php:41
+#: archive.php:212 search.php:41
 msgid "Next »"
 msgstr "Weiter »"
 
@@ -232,12 +232,12 @@ msgid "Background color"
 msgstr "Hintergrundfarbe"
 
 #: customizer-options/global-options.php:74
-msgid "Comments background color"
-msgstr "Kommentare Hintergrundfarbe"
-
-#: customizer-options/global-options.php:86
 msgid "Font color"
 msgstr "Schriftfarbe"
+
+#: customizer-options/global-options.php:90
+msgid "Comments Layout"
+msgstr "Kommentare Layout"
 
 #: customizer-options/header-options.php:6
 msgid "Header"
@@ -407,7 +407,11 @@ msgstr "Tags Layout"
 msgid "Show author details"
 msgstr "Zeige Autor Details"
 
-#: customizer-options/posts-options.php:224
+#: customizer-options/posts-options.php:231
+msgid "Authorbox Layout"
+msgstr "Autorenbox Layout"
+
+#: customizer-options/posts-options.php:245
 msgid "Show post pagination"
 msgstr "Zeige Postpaginierung"
 
@@ -438,19 +442,19 @@ msgstr "Wähle ein Menü im Customizer"
 msgid "created by %1$s"
 msgstr "erstellt von %1$s"
 
-#: functions.php:89
+#: functions.php:63
 msgid "Header Menu"
 msgstr "Header Menü"
 
-#: functions.php:90
+#: functions.php:64
 msgid "Footer Menu"
 msgstr "Footer Menü"
 
-#: functions.php:99
+#: functions.php:73
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:112
+#: functions.php:86
 msgid "Landingpage Widget Area"
 msgstr "Landingpage Widget Area"
 
@@ -471,11 +475,11 @@ msgstr "Suchergebnisse für \"%s\""
 msgid "Fill the sidebar in the customizer"
 msgstr "Befülle die Sidebar im Customizer"
 
-#: single.php:111
+#: single.php:113
 msgid "&laquo; Previous Post"
 msgstr "&laquo; Vorheriger Beitrag"
 
-#: single.php:113
+#: single.php:115
 msgid "Next Post &raquo;"
 msgstr "Nächster Beitrag &raquo;"
 
@@ -491,6 +495,9 @@ msgstr "Springe zum Hauptinhalt"
 #: template-parts/post-list-layouts/social-posts-list.php:51
 msgid "read more"
 msgstr "mehr lesen"
+
+#~ msgid "Comments background color"
+#~ msgstr "Kommentare Hintergrundfarbe"
 
 #~ msgid "Layouts"
 #~ msgstr "Layouts"

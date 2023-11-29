@@ -2016,11 +2016,6 @@ blockquote {
 .blog_layouts_content_creator_posts_list li {
   list-style: none;
 }
-@media only screen and (max-width: 1250px) {
-  .blog_layouts_content_creator_posts_list {
-    justify-content: center;
-  }
-}
 
 .blog_layouts_content_creator_post_list_item {
   background-color: transparent;
@@ -2160,6 +2155,64 @@ blockquote {
 }
 .blog_layouts_content_creator_post_list_item.blog_layouts_sticky_post .blog_layouts_content_creator_post_list_item_headline_div .blog_layouts_content_creator_post_list_item_headline_div_right .blog_layouts_content_creator_post_list_date .blog_layouts_content_creator_post_list_item_sticky_pin {
   display: block;
+}
+
+.blog_layouts_discover_posts_list {
+  padding: 0 0.5em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+.blog_layouts_discover_posts_list li {
+  list-style: none;
+}
+@media only screen and (min-width: 800px) {
+  .blog_layouts_discover_posts_list {
+    padding: 0 2vw;
+  }
+}
+
+.blog_layouts_discover_post_list_item {
+  display: flex;
+  flex-direction: column;
+  max-width: 50em;
+  gap: 0.5em;
+}
+.blog_layouts_discover_post_list_item a {
+  text-decoration: none;
+}
+.blog_layouts_discover_post_list_item a:hover {
+  text-decoration: underline;
+}
+.blog_layouts_discover_post_list_item .blog_layouts_discover_post_list_item_image_container img {
+  max-height: 20em;
+  border-radius: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.blog_layouts_discover_post_list_item .blog_layouts_discover_post_list_item_image_container img:hover {
+  filter: brightness(0.9);
+}
+.blog_layouts_discover_post_list_item:not(:last-child)::after {
+  content: "";
+  margin-top: 1em;
+  border-bottom: 1px solid gray;
+}
+.blog_layouts_discover_post_list_item .blog_layouts_discover_post_list_item_last_row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.blog_layouts_discover_post_list_item .blog_layouts_discover_post_list_item_last_row img {
+  height: 2em;
+  width: 2em;
+  border-radius: 5em;
+}
+.blog_layouts_discover_post_list_item .blog_layouts_discover_post_list_item_last_row .blog_layouts_discover_post_list_item_date {
+  margin-right: auto;
 }
 
 .blog_layouts_frameless_posts_list {
@@ -2695,7 +2748,7 @@ blockquote {
   padding: 0.8em 0.2em 0.8em 0.5em;
   margin: 0.2em;
   text-decoration: none;
-  color: rgba(238, 238, 238, 0.856);
+  color: var(--blog_layouts_font_color);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8em;
 }

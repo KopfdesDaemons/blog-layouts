@@ -145,6 +145,7 @@ function blog_layouts_sanitize_checkbox($input)
 $blog_layouts_post_list_layouts = array(
     'cards' => 'Cards',
     'content-creator' => 'Content Creator',
+    'discover' => 'Discover',
     'frameless' => 'Frameless',
     'material2' => 'Material 2',
     'material3' => 'Material 3',

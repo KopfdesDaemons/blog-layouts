@@ -3,7 +3,6 @@ function blog_layouts_display_social_posts_list($show_sticky)
 {
     ob_start(); // Start output buffering
     $author_id = get_the_author_meta('ID');
-    $author_name = esc_html(get_the_author_meta('display_name'));
     $author_avatar = get_avatar($author_id, 100);
 ?>
     <li class="blog_layouts_social_post_list_item <?php if ($show_sticky && is_sticky()) echo 'blog_layouts_sticky_post' ?>">
