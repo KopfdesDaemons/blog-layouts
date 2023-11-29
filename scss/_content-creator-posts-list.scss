@@ -105,7 +105,11 @@ $borderColor: #575b61;
         
         img {
             object-fit: cover;
-        };
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
     }
     .blog_layouts_content_creator_post_list_item_icon_row {
         padding: 0.5em 1em;

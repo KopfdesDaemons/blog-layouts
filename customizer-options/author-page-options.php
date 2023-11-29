@@ -24,7 +24,7 @@ function blog_layouts_custom_author_page($wp_customize)
     {
         return $control->manager->get_setting('author_page_sidebar')->value();
     }
-    
+
     // Sidebar Layout
     $wp_customize->add_setting('author_page_sidebar_layout', array(
         'default' => 'social',
@@ -41,17 +41,36 @@ function blog_layouts_custom_author_page($wp_customize)
         'active_callback' => 'author_page_sidebar_active_callback',
     ));
 
+    // Author Header
+    $wp_customize->add_setting('author_header', array(
+        'default' => true,
+        'transport' => 'refresh',
+        'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
+    ));
+
+    $wp_customize->add_control('author_header', array(
+        'type' => 'checkbox',
+        'label' => __('Show author header', 'blog-layouts'),
+        'section' => 'custom_author_page',
+    ));
+
+    function author_header_active_callback($control)
+    {
+        return $control->manager->get_setting('author_header')->value();
+    }
+
     // Comments
     $wp_customize->add_setting('author_page_latest_comments', array(
         'default' => true,
         'transport' => 'refresh',
         'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
-
+    
     $wp_customize->add_control('author_page_latest_comments', array(
         'type' => 'checkbox',
         'label' => __('Show recent comments', 'blog-layouts'),
         'section' => 'custom_author_page',
+        'active_callback' => 'author_header_active_callback',
     ));
 
     // Role
@@ -65,6 +84,7 @@ function blog_layouts_custom_author_page($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show author role', 'blog-layouts'),
         'section' => 'custom_author_page',
+        'active_callback' => 'author_header_active_callback',
     ));
 
     // Registration date
@@ -78,6 +98,7 @@ function blog_layouts_custom_author_page($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show registration date', 'blog-layouts'),
         'section' => 'custom_author_page',
+        'active_callback' => 'author_header_active_callback',
     ));
 
     // Number of posts
@@ -91,6 +112,7 @@ function blog_layouts_custom_author_page($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show number of posts', 'blog-layouts'),
         'section' => 'custom_author_page',
+        'active_callback' => 'author_header_active_callback',
     ));
 
     // Website
@@ -104,6 +126,7 @@ function blog_layouts_custom_author_page($wp_customize)
         'type' => 'checkbox',
         'label' => __('Show author website', 'blog-layouts'),
         'section' => 'custom_author_page',
+        'active_callback' => 'author_header_active_callback',
     ));
 
     // Image size
@@ -122,6 +145,7 @@ function blog_layouts_custom_author_page($wp_customize)
             'max' => 300,
             'step' => 10,
         ),
+        'active_callback' => 'author_header_active_callback',
     ));
 
     // Style

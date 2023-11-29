@@ -42,7 +42,7 @@
 ?>
 
 
-<?php if (!is_author()) { ?>
+<?php if (!is_author() || is_author() && !get_theme_mod('author_header', true)) { ?>
     <section class="blog_layouts_hero">
         <header>
             <h1>
@@ -54,7 +54,7 @@
 
 
 <!-- author header -->
-<?php if (is_author()) {
+<?php if (is_author() && get_theme_mod('author_header', true)) {
     $author_id = get_the_author_meta('ID');
     $author_name = esc_html(get_the_author_meta('display_name'));
     $author_description = esc_html(get_the_author_meta('description'));

@@ -589,6 +589,64 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 #comments.blog_layouts_comments_layout_frameless #submit:hover {
   background-color: var(--blog_layouts_primary_color);
 }
+#comments.blog_layouts_comments_layout_neon {
+  margin: 3em 0 10em 0;
+  font-size: 0.8em;
+}
+#comments.blog_layouts_comments_layout_neon .comment-body {
+  background-color: #000000;
+  border-radius: 12px;
+  box-shadow: inset 0px 0px 30px 0px var(--blog_layouts_primary_color);
+  padding: 1em;
+  border: 2px solid var(--blog_layouts_primary_color);
+}
+#comments.blog_layouts_comments_layout_neon .comment-body:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 0px 30px 0px var(--blog_layouts_primary_color);
+}
+#comments.blog_layouts_comments_layout_neon .avatar {
+  border-radius: 8px;
+}
+#comments.blog_layouts_comments_layout_neon .bypostauthor .url {
+  background-color: var(--blog_layouts_primary_color);
+  border-radius: 8px;
+  padding: 0.2em;
+  color: black;
+}
+#comments.blog_layouts_comments_layout_neon .bypostauthor .url:after {
+  content: " \f4ff";
+  font-family: "Font Awesome Solid";
+}
+#comments.blog_layouts_comments_layout_neon .reply {
+  margin: 0 0.5em;
+  display: flex;
+}
+#comments.blog_layouts_comments_layout_neon .reply a {
+  border-radius: 8px;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  padding: 1em 1em;
+  align-items: center;
+  background-color: var(--blog_layouts_primary_variant_darker);
+  text-decoration: none;
+  color: var(--blog_layouts_font_color);
+}
+#comments.blog_layouts_comments_layout_neon .reply a:hover {
+  background-color: var(--blog_layouts_primary_color);
+}
+#comments.blog_layouts_comments_layout_neon #submit {
+  border-radius: 8px;
+  padding: 1em 1em;
+  font-family: Roboto, sans-serif;
+  background-color: var(--blog_layouts_primary_variant_darker);
+  text-decoration: none;
+  color: var(--blog_layouts_font_color);
+  border: none;
+  cursor: pointer;
+}
+#comments.blog_layouts_comments_layout_neon #submit:hover {
+  background-color: var(--blog_layouts_primary_color);
+}
 
 #blog_layouts_footer {
   background-color: var(--blog_layouts_primary_variant_darker);
@@ -2097,6 +2155,9 @@ blockquote {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.blog_layouts_content_creator_post_list_item .blog_layouts_content_creator_post_list_item_image_container img:hover {
+  opacity: 0.9;
+}
 .blog_layouts_content_creator_post_list_item .blog_layouts_content_creator_post_list_item_icon_row {
   padding: 0.5em 1em;
   display: flex;
@@ -2158,7 +2219,7 @@ blockquote {
 }
 
 .blog_layouts_discover_posts_list {
-  padding: 0 0.5em;
+  padding: 0 1em;
   margin: 0;
   display: flex;
   flex-direction: column;
