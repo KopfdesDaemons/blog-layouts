@@ -381,4 +381,106 @@
             }
         }
     }
+
+    &.blog_layouts_comments_layout_social {
+        margin: 3em 0 10em 0;
+        font-size: 0.8em;
+
+        .comment {
+            position: relative;
+        }
+        
+        .comment-body {
+            background-color: #33343d;
+            border-radius:12px;
+            padding: 1em;
+            border: 1px solid gray;
+        }
+
+        .children {
+            padding: 0;
+            
+            .comment {
+                padding: 1em 0 0 2em;
+                margin-left: 1em;
+            }
+
+            .comment-body::before {
+                content: '';
+                position: absolute;
+                border-left: 1px solid;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+
+            .comment-body::after {
+                content: '';
+                position: absolute;
+                border-bottom: 1px solid;
+                height: 8em;
+                left: 0;
+                top: 0;
+                width: 25px;
+                z-index: -1;
+            }
+
+            .comment:last-child > .comment-body::before {
+                height: 8em;
+            }
+        }
+
+        .avatar {
+            border-radius: 8px;
+        }
+    
+        .bypostauthor {
+            .url {
+                background-color: var(--blog_layouts_primary_color);
+                border-radius: 8px;
+                padding: 0.2em;
+                color: black;
+    
+                &:after {
+                    content: ' \f4ff';
+                    font-family: 'Font Awesome Solid';
+                }
+            }
+        }
+    
+        .reply {
+            margin: 0 0.5em;
+            display: flex;
+    
+            a {
+                border-radius: 8px;
+                font-family: Roboto, sans-serif;
+                display: flex;
+                padding: 1em 1em;
+                align-items: center;
+                background-color: var(--blog_layouts_primary_variant_darker);
+                text-decoration: none;
+                color: var(--blog_layouts_font_color);
+    
+                &:hover {
+                    background-color: var(--blog_layouts_primary_color);
+                }
+            }
+        }
+    
+        #submit {
+            border-radius: 8px;
+            padding: 1em 1em;
+            font-family: Roboto, sans-serif;
+            background-color: var(--blog_layouts_primary_variant_darker);
+            text-decoration: none;
+            color: var(--blog_layouts_font_color);
+            border: none;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: var(--blog_layouts_primary_color);
+            }
+        }
+    }
 }

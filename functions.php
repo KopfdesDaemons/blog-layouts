@@ -199,4 +199,5 @@ $blog_layouts_comments_layouts = array(
     'material2' => 'Material 2',
     'material3' => 'Material 3',
     'neon' => 'Neon',
+    'social' => 'Social',
 );
