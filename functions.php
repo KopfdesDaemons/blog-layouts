@@ -4,34 +4,8 @@ function enqueue_custom_styles()
     $theme_directory = get_stylesheet_directory_uri();
 
     $styles = array(
-        'animations' => "/animations.css",
-        'custom-font' => '/fonts/fonts.css',
-        'custom-styles' => '/style.css',
-        'header-styles' => '/header.css',
-        'footer-styles' => '/footer.css',
-        'sidebar-styles' => '/sidebar.css',
-        'comments-styles' => '/comments.css',
-        'archive-styles' => '/archive.css',
-        'single-styles' => '/single.css',
-        'page-style' => '/page.css',
-        'search-style' => '/search.css',
-        'wp-block-style' => '/wp-block.css',
-        'paginantion-style' => '/pagination.css',
-        '404-styles' => '/404.css',
+        'blog-layouts-styles' => '/style.css',
         'fontawesome' => '/fonts/fontawesome/css/all.min.css',
-
-        //  template-parts
-        'card-posts-list' => '/template-parts/post-list-layouts/cards-posts-list.css',
-        'content-creator-posts-list' => '/template-parts/post-list-layouts/content-creator-posts-list.css',
-        'frameless-post-list' => '/template-parts/post-list-layouts/frameless-posts-list.css',
-        'material2-post-list' => '/template-parts/post-list-layouts/material2-posts-list.css',
-        'material3-post-list' => '/template-parts/post-list-layouts/material3-posts-list.css',
-        'search-engine-post-list' => '/template-parts/post-list-layouts/search-engine-posts-list.css',
-        'social-post-list' => '/template-parts/post-list-layouts/social-posts-list.css',
-
-        'Gradient-header' => '/template-parts/header-layouts/gradient-header.css',
-        'material2-header' => '/template-parts/header-layouts/material2-header.css',
-        'material3-header' => '/template-parts/header-layouts/material3-header.css',
     );
 
     foreach ($styles as $handle => $file) {

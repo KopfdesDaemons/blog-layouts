@@ -13,7 +13,36 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-@use 'mixins' as *;
+@use 'scss/fonts.scss' as *;
+@use 'scss/mixins' as *;
+@use 'scss/404' as *;
+@use 'scss/animations' as *;
+@use 'scss/archive' as *;
+@use 'scss/comments' as *;
+@use 'scss/footer' as *;
+@use 'scss/header' as *;
+@use 'scss/page' as *;
+@use 'scss/pagination' as *;
+@use 'scss/polls-css' as *;
+@use 'scss/search' as *;
+@use 'scss/single' as *;
+@use 'scss/wp-block' as *;
+@use 'scss/sidebar' as *;
+
+@use 'scss/cards-posts-list' as *;
+@use 'scss/content-creator-posts-list' as *;
+@use 'scss/frameless-posts-list' as *;
+@use 'scss/material2-posts-list' as *;
+@use 'scss/material3-posts-list' as *;
+@use 'scss/search-engine-posts-list' as *;
+@use 'scss/social-posts-list' as *;
+
+@use 'scss/gradient-header' as *;
+@use 'scss/material2-header' as *;
+@use 'scss/material3-header' as *;
+
+
+
 
 body {
     margin: 0;
