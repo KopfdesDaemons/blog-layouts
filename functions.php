@@ -187,12 +187,14 @@ $blog_layouts_header_layouts = array(
 );
 
 $blog_layouts_authorbox_layouts = array(
+    'border' => 'Border',
     'neon' => 'Neon',
     'material2' => 'Material 2',
     'material3' => 'Material 3',
 );
 
 $blog_layouts_comments_layouts = array(
+    'frameless' => 'Frameless',
     'material2' => 'Material 2',
     'material3' => 'Material 3',
 );
