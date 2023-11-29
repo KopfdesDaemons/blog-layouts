@@ -731,6 +731,86 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 #comments.blog_layouts_comments_layout_social #submit:hover {
   background-color: var(--blog_layouts_primary_color);
 }
+#comments.blog_layouts_comments_layout_youtube {
+  margin: 3em 0 10em 0;
+  font-size: 0.8em;
+}
+#comments.blog_layouts_comments_layout_youtube .comment-body:hover {
+  filter: brightness(1.1);
+}
+#comments.blog_layouts_comments_layout_youtube .comment-meta, #comments.blog_layouts_comments_layout_youtube .vcard {
+  display: contents;
+}
+#comments.blog_layouts_comments_layout_youtube .comment-metadata {
+  padding-left: 0;
+  display: contents;
+}
+#comments.blog_layouts_comments_layout_youtube .comment-metadata a {
+  text-decoration: none;
+}
+#comments.blog_layouts_comments_layout_youtube .comment-metadata span {
+  float: right;
+}
+#comments.blog_layouts_comments_layout_youtube .url {
+  font-size: 1em;
+}
+#comments.blog_layouts_comments_layout_youtube .url:before {
+  content: "@";
+}
+#comments.blog_layouts_comments_layout_youtube .avatar {
+  border-radius: 5em;
+  float: left;
+  margin-right: 0.5em;
+}
+#comments.blog_layouts_comments_layout_youtube .bypostauthor .url {
+  background-color: #888888;
+  border-radius: 12px;
+  height: 0 6px;
+  padding: 0.2em;
+  color: black;
+}
+#comments.blog_layouts_comments_layout_youtube .bypostauthor .url:after {
+  content: " \f4ff";
+  font-family: "Font Awesome Solid";
+}
+#comments.blog_layouts_comments_layout_youtube .comment-content {
+  margin: 0;
+  padding-left: 0;
+}
+#comments.blog_layouts_comments_layout_youtube .reply {
+  margin-left: 3em;
+  display: flex;
+}
+#comments.blog_layouts_comments_layout_youtube .reply a {
+  border-radius: 5em;
+  font-family: Roboto, sans-serif;
+  height: 36px;
+  font-size: 12px;
+  display: flex;
+  padding: 0 1em;
+  align-items: center;
+  text-decoration: none;
+  color: var(--blog_layouts_font_color);
+}
+#comments.blog_layouts_comments_layout_youtube .reply a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+}
+#comments.blog_layouts_comments_layout_youtube #submit {
+  border-radius: 5em;
+  padding: 0 1em;
+  font-family: Roboto, sans-serif;
+  height: 36px;
+  font-size: 14px;
+  background-color: var(--blog_layouts_primary_variant_darker);
+  text-decoration: none;
+  color: var(--blog_layouts_font_color);
+  border: none;
+  cursor: pointer;
+}
+#comments.blog_layouts_comments_layout_youtube #submit:hover {
+  background-color: var(--blog_layouts_primary_color);
+}
 
 #blog_layouts_footer {
   background-color: var(--blog_layouts_primary_variant_darker);

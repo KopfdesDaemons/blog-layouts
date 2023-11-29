@@ -178,7 +178,7 @@ $blog_layouts_chips_layouts = array(
     'reddit' => 'Reddit',
     'social' => 'Social',
     'the-hub' => 'The Hub',
-    'youtube-music' => 'Youtube Music',
+    'youtube-music' => 'YouTube Music',
 );
 
 $blog_layouts_header_layouts = array(
@@ -200,4 +200,5 @@ $blog_layouts_comments_layouts = array(
     'material3' => 'Material 3',
     'neon' => 'Neon',
     'social' => 'Social',
+    'youtube' => 'YouTube',
 );
