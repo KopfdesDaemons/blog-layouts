@@ -2389,6 +2389,8 @@ blockquote {
   flex-direction: column;
   gap: 2em;
   margin-bottom: 2em;
+  width: 100%;
+  align-items: center;
 }
 .blog_layouts_discover_posts_list li {
   list-style: none;
@@ -2404,6 +2406,12 @@ blockquote {
   flex-direction: column;
   max-width: 50em;
   gap: 0.5em;
+  width: 100%;
+}
+@media only screen and (min-width: 1100px) {
+  .blog_layouts_discover_post_list_item {
+    min-width: 45em;
+  }
 }
 .blog_layouts_discover_post_list_item a {
   text-decoration: none;
@@ -2438,6 +2446,12 @@ blockquote {
 }
 .blog_layouts_discover_post_list_item .blog_layouts_discover_post_list_item_last_row .blog_layouts_discover_post_list_item_date {
   margin-right: auto;
+}
+.blog_layouts_discover_post_list_item .blog_layouts_discover_post_list_item_sticky_pin {
+  display: none;
+}
+.blog_layouts_discover_post_list_item.blog_layouts_sticky_post .blog_layouts_discover_post_list_item_sticky_pin {
+  display: block;
 }
 
 .blog_layouts_frameless_posts_list {
@@ -2536,7 +2550,7 @@ blockquote {
 }
 
 .blog_layouts_material2_post_list_item {
-  max-width: 30em;
+  max-width: 40em;
   background-color: var(--blog_layouts_material2_post_list_color);
   border-radius: 4px;
   overflow: hidden;
@@ -2652,7 +2666,7 @@ blockquote {
 }
 
 .blog_layouts_material3_post_list_item {
-  max-width: 30em;
+  max-width: 40em;
   background-color: var(--blog_layouts_material3_post_list_color);
   border-radius: 16px;
   overflow: hidden;

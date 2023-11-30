@@ -22,6 +22,7 @@ function blog_layouts_display_discover_posts_list($show_sticky)
                 <?php echo get_the_author(); ?>
             </a>
             <span class="blog_layouts_discover_post_list_item_date"><?php echo get_the_date() ?></span>
+            <i class="blog_layouts_discover_post_list_item_sticky_pin fa-solid fa-thumbtack"></i>
             <a href="<?php comments_link(); ?>">
                 <?php echo get_comments_number(); ?>
                 <i class="fa-regular fa-comment"></i>

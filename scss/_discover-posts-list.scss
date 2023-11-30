@@ -5,11 +5,13 @@
     flex-direction: column;
     gap: 2em;
     margin-bottom: 2em;
+    width: 100%;
+    align-items: center;
     
     li {
         list-style: none;
     }
-    
+
     @media only screen and (min-width: 800px) {
         padding: 0 2vw;
     }
@@ -20,6 +22,11 @@
     flex-direction: column;
     max-width: 50em;
     gap: 0.5em;
+    width: 100%;
+
+    @media only screen and (min-width: 1100px) {
+        min-width: 45em;
+    }
 
     a {
         text-decoration: none;
@@ -59,6 +66,16 @@
 
         .blog_layouts_discover_post_list_item_date {
             margin-right: auto;
+        }
+    }
+
+    .blog_layouts_discover_post_list_item_sticky_pin {
+        display: none;
+    }
+
+    &.blog_layouts_sticky_post {
+        .blog_layouts_discover_post_list_item_sticky_pin {
+            display: block;
         }
     }
 }
