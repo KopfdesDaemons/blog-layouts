@@ -87,6 +87,11 @@ function blog_layouts_header($wp_customize)
         return $control->manager->get_setting('header_layout', 'gradient')->value() == 'gradient';
     }
 
+    function stackoverflow_header_active_callback($control)
+    {
+        return $control->manager->get_setting('header_layout', 'gradient')->value() == 'stackoverflow';
+    }
+
     // Title size setting
     $wp_customize->add_setting('header_menu_font_size_setting', array(
         'default' => '14',
@@ -116,5 +121,109 @@ function blog_layouts_header($wp_customize)
     {
         return $control->manager->get_setting('header_menu')->value();
     }
+
+    // Stackoverflow Icon
+    $wp_customize->add_setting('stackoverflow_icon_1', array(
+        'default'           => 'fa-solid fa-inbox',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('stackoverflow_icon_1', array(
+        'label'    => __('Icon 1 Font Awesome Icon Class', 'theme-text-domain'),
+        'section'  => 'custom_theme_header',
+        'type'     => 'text',
+        'active_callback' => 'stackoverflow_header_active_callback'
+    ));
+
+    // Stackoverflow Icon Link
+    $wp_customize->add_setting('stackoverflow_icon_1_link', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('stackoverflow_icon_1_link', array(
+        'label'    => __('Icon 1 Link', 'theme-text-domain'),
+        'section'  => 'custom_theme_header',
+        'type'     => 'text',
+        'active_callback' => 'stackoverflow_header_active_callback'
+    ));
+
+    // Stackoverflow Icon
+    $wp_customize->add_setting('stackoverflow_icon_2', array(
+        'default'           => 'fa-solid fa-trophy',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('stackoverflow_icon_2', array(
+        'label'    => __('Icon 2 Font Awesome Icon Class', 'theme-text-domain'),
+        'section'  => 'custom_theme_header',
+        'type'     => 'text',
+        'active_callback' => 'stackoverflow_header_active_callback'
+    ));
+
+    // Stackoverflow Icon Link
+    $wp_customize->add_setting('stackoverflow_icon_2_link', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('stackoverflow_icon_2_link', array(
+        'label'    => __('Icon 2 Link', 'theme-text-domain'),
+        'section'  => 'custom_theme_header',
+        'type'     => 'text',
+        'active_callback' => 'stackoverflow_header_active_callback'
+    ));
+
+    // Stackoverflow Icon
+    $wp_customize->add_setting('stackoverflow_icon_3', array(
+        'default'           => 'fa-solid fa-circle-question',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('stackoverflow_icon_3', array(
+        'label'    => __('Icon 3 Font Awesome Icon Class', 'theme-text-domain'),
+        'section'  => 'custom_theme_header',
+        'type'     => 'text',
+        'active_callback' => 'stackoverflow_header_active_callback'
+    ));
+
+    // Stackoverflow Icon Link
+    $wp_customize->add_setting('stackoverflow_icon_3_link', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('stackoverflow_icon_3_link', array(
+        'label'    => __('Icon 3 Link', 'theme-text-domain'),
+        'section'  => 'custom_theme_header',
+        'type'     => 'text',
+        'active_callback' => 'stackoverflow_header_active_callback'
+    ));
+
+    // Stackoverflow Icon
+    $wp_customize->add_setting('stackoverflow_icon_4', array(
+        'default'           => 'fa-regular fa-message',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('stackoverflow_icon_4', array(
+        'label'    => __('Icon 4 Font Awesome Icon Class', 'theme-text-domain'),
+        'section'  => 'custom_theme_header',
+        'type'     => 'text',
+        'active_callback' => 'stackoverflow_header_active_callback'
+    ));
+
+    // Stackoverflow Icon Link
+    $wp_customize->add_setting('stackoverflow_icon_4_link', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('stackoverflow_icon_4_link', array(
+        'label'    => __('Icon 4 Link', 'theme-text-domain'),
+        'section'  => 'custom_theme_header',
+        'type'     => 'text',
+        'active_callback' => 'stackoverflow_header_active_callback'
+    ));
 }
 add_action('customize_register', 'blog_layouts_header');

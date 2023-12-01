@@ -40,7 +40,9 @@ function blog_layouts_display_material2_header()
             <button id="blog_layouts_header_search_icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <?php get_search_form(array('button_text' => 's')); ?>
+            <div id="blog_layouts_expandable_search_field">
+                <?php get_search_form(array('button_text' => 's')); ?>
+            </div>
         </div>
     </div>
 <?php

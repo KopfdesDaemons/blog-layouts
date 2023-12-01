@@ -185,6 +185,7 @@ $blog_layouts_header_layouts = array(
     'gradient' => 'Gradient',
     'material2' => 'Material 2',
     'material3' => 'Material 3',
+    'stackoverflow' => 'Stack Overflow',
 );
 
 $blog_layouts_authorbox_layouts = array(

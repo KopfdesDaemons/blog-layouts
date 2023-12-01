@@ -213,6 +213,15 @@
             align-items: center;
             margin: 0 1em;
             gap: 0.5em;
+            
+            #blog_layouts_expandable_search_field {
+                transition: all 200ms;
+                width: 0;
+
+                &.blog_layouts_header_search_open {
+                    width: 10em;
+                }
+            }
 
             #blog_layouts_header_search_icon {
                 all: revert;
@@ -235,9 +244,7 @@
 
             form {
                 display: flex;
-                width: 0;
                 overflow: hidden;
-                transition: all 200ms;
 
                 label {
                     display: flex;
@@ -253,12 +260,6 @@
 
                 .search-submit {
                     display: none;
-                }
-            }
-
-            &.blog_layouts_header_search_open {
-                form {
-                    width: 10em;
                 }
             }
         }

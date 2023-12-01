@@ -37,7 +37,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
     const headerSearchIcon = document.querySelector('#blog_layouts_header_search_icon');
 
-    if (headerSearchIcon) {
+    const expandableSeachfield = this.document.querySelector('#blog_layouts_expandable_search_field')
+    if (headerSearchIcon && expandableSeachfield) {
         headerSearchIcon.addEventListener('click', toggleSearch);
         headerSearchIcon.addEventListener('keydown', (event) => {
             if (event.key === 'Enter') {
@@ -51,12 +52,12 @@ window.addEventListener("DOMContentLoaded", function () {
     let searchOpen = false;
 
     function toggleSearch(event) {
-        const parent = headerSearchIcon.parentElement;
-        parent.classList.toggle('blog_layouts_header_search_open');
-        const input = parent.querySelector('.search-field');
+        if(event.target === expandableSeachfield || expandableSeachfield.contains(event.target)) return;
+        expandableSeachfield.classList.toggle('blog_layouts_header_search_open');
         searchOpen = !searchOpen;
         if (searchOpen) {
-            input.focus();
+            const searchfield = expandableSeachfield.querySelector('.search-field');
+            searchfield.focus();
             event.preventDefault();
         }
     }
@@ -79,7 +80,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (searchOpen) {
             const isInSearch = headerSearchIcon.parentElement.contains(event.target);
             if (!isInSearch && headerSearchIcon && searchOpen) {
-                toggleSearch();
+                toggleSearch(event);
             }
         }
 

@@ -3413,6 +3413,13 @@ blockquote {
   margin: 0 1em;
   gap: 0.5em;
 }
+.blog_layouts_material2_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div #blog_layouts_expandable_search_field {
+  transition: all 200ms;
+  width: 0;
+}
+.blog_layouts_material2_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div #blog_layouts_expandable_search_field.blog_layouts_header_search_open {
+  width: 10em;
+}
 .blog_layouts_material2_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div #blog_layouts_header_search_icon {
   all: revert;
   font-size: 1.2em;
@@ -3432,9 +3439,7 @@ blockquote {
 }
 .blog_layouts_material2_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div form {
   display: flex;
-  width: 0;
   overflow: hidden;
-  transition: all 200ms;
 }
 .blog_layouts_material2_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div form label {
   display: flex;
@@ -3448,9 +3453,6 @@ blockquote {
 }
 .blog_layouts_material2_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div form .search-submit {
   display: none;
-}
-.blog_layouts_material2_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div.blog_layouts_header_search_open form {
-  width: 10em;
 }
 
 .blog_layouts_material3_header {
@@ -3634,6 +3636,13 @@ blockquote {
   margin: 0 1em;
   gap: 0.5em;
 }
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div #blog_layouts_expandable_search_field {
+  transition: all 200ms;
+  width: 0;
+}
+.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div #blog_layouts_expandable_search_field.blog_layouts_header_search_open {
+  width: 10em;
+}
 .blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div #blog_layouts_header_search_icon {
   all: revert;
   font-size: 1.2em;
@@ -3653,7 +3662,6 @@ blockquote {
 }
 .blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div form {
   display: flex;
-  width: 0;
   overflow: hidden;
   transition: all 200ms;
 }
@@ -3670,8 +3678,108 @@ blockquote {
 .blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div form .search-submit {
   display: none;
 }
-.blog_layouts_material3_header .blog_layouts_material_header_content .blog_layouts_material_header_search_div.blog_layouts_header_search_open form {
-  width: 10em;
+
+.blog_layouts_stackoverflow_header {
+  border-top: 2px solid var(--blog_layouts_primary_color);
+  border-bottom: 1px solid gray;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  width: 80%;
+  max-width: 70em;
+}
+@media screen and (max-width: 650px) {
+  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content {
+    width: 90%;
+  }
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_website_name {
+  text-decoration: none;
+  color: var(--blog_layouts_font_color);
+  font-weight: bold;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div {
+  display: flex;
+  flex: 1;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div .search-form {
+  flex: 1;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div .search-form label {
+  flex: 1;
+}
+@media screen and (max-width: 650px) {
+  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div .search-form .search-field {
+    display: none;
+  }
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div #blog_layouts_header_search_icon {
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 650px) {
+  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div #blog_layouts_header_search_icon {
+    display: block;
+  }
+}
+@media screen and (max-width: 650px) {
+  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div {
+    justify-content: flex-end;
+  }
+  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div .search-form {
+    flex: none;
+  }
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_icons {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_icons li {
+  list-style: none;
+  display: flex;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_icons li a {
+  text-decoration: none;
+  padding: 1em 0.7em;
+  color: var(--blog_layouts_font_color);
+  font-size: 1.2em;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_icons li a:hover {
+  background-color: rgba(0, 0, 0, 0.356);
+}
+.blog_layouts_stackoverflow_header #blog_layouts_expandable_search_field {
+  display: none;
+  padding: 0.5em;
+}
+@media screen and (max-width: 650px) {
+  .blog_layouts_stackoverflow_header #blog_layouts_expandable_search_field.blog_layouts_header_search_open {
+    display: flex;
+    width: 90%;
+  }
+}
+.blog_layouts_stackoverflow_header #blog_layouts_expandable_search_field form {
+  flex: 1;
+}
+.blog_layouts_stackoverflow_header .search-field {
+  border: 1px solid gray;
+  border-radius: 4px;
+  height: 2.5em;
+  background-color: transparent;
+  padding-left: 1em;
+  width: 100%;
+  display: block;
+}
+.blog_layouts_stackoverflow_header .search-field:focus {
+  outline: none;
+  box-shadow: 0px 0px 3px 3px var(--blog_layouts_primary_color), 0 0 0px 1000px black inset;
+}
+.blog_layouts_stackoverflow_header .search-submit {
+  display: none;
 }
 
 body {
@@ -3909,6 +4017,7 @@ hr {
 input:not([type=submit], [type=checkbox]),
 textarea,
 input:-webkit-autofill,
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
