@@ -1011,7 +1011,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   padding: 0 0.1em;
 }
 
-.wp-polls-paging a, .wp-polls-paging span,
+#blog_layouts_main_content .wp-polls-paging a,
+#blog_layouts_main_content .wp-polls-paging span,
 .wp-block-query-pagination-next,
 .wp-block-query-pagination-previous,
 .blog_layouts_pagination_controls a,
@@ -1027,9 +1028,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
           user-select: none;
 }
 
-.wp-polls-paging .current,
+#blog_layouts_main_content .wp-polls-paging .current,
 .current {
   background-color: var(--blog_layouts_primary_variant_darker);
+  color: var(--blog_layouts_font_color);
 }
 
 .wp-block-query-pagination-next:hover,
@@ -1054,7 +1056,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   overflow-x: auto;
 }
 
-.wp-polls-paging {
+#blog_layouts_main_content .wp-polls-paging {
   display: flex;
   justify-content: center;
   gap: 0.5em;
@@ -1062,63 +1064,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   overflow-x: auto;
 }
 
-/*
-    For WP-Polls plugin
-*/
-h1 + p:has(+ .wp-polls-archive) code {
-  display: none;
-}
-
-.wp-polls-archive h1 + p code {
-  background-color: unset;
-}
-.wp-polls-archive > code {
-  font-family: inherit;
-  background-color: unset;
-  padding: 0;
-}
-.wp-polls-archive .wp-polls-ans {
-  background-color: black;
-  padding: 1em;
-  border: 1px solid var(--blog_layouts_primary_color);
-  border-radius: 8px;
-}
-.wp-polls-archive .wp-polls-ans + p {
-  font-size: 0.8em;
-  margin-bottom: 3em;
-  background-color: var(--blog_layouts_tag_color);
-  border: 1px solid gray;
-  padding: 0.5em;
-}
-.wp-polls-archive .wp-polls-ans ul {
-  padding: 0;
-}
-.wp-polls-archive .wp-polls-ans ul li {
-  list-style: none;
-  margin: 0.5em 0;
-}
-.wp-polls-archive + code {
-  background-color: unset;
-}
-
-.widget_polls-widget ul {
-  padding: 1em;
-  background-color: black;
-}
-.widget_polls-widget ul li {
-  list-style: none;
-  margin: 0.5em 0;
-}
-.widget_polls-widget .wp-polls-loading {
-  display: none;
-}
-.widget_polls-widget .wp-polls-ul input {
-  background-color: var(--blog_layouts_primary_variant_darker);
-  box-shadow: 0 0 0px 1000px var(--blog_layouts_primary_variant_darker) inset;
-}
-.widget_polls-widget .wp-polls-ul input:checked {
-  background-color: var(--blog_layouts_primary_color);
-  box-shadow: 0 0 0px 1000px var(--blog_layouts_primary_color) inset;
+#blog_layouts_main_content .wp-polls-paging a, #blog_layouts_main_content .wp-polls-paging span {
+  color: var(--blog_layouts_font_color);
 }
 
 .search .blog_layouts_search_container {
@@ -1732,6 +1679,7 @@ blockquote {
 @media only screen and (max-width: 800px) {
   #blog_layouts_sidebar {
     width: unset;
+    margin: 1em;
   }
 }
 #blog_layouts_sidebar .widget-title {
@@ -2189,6 +2137,66 @@ blockquote {
 }
 .blog_layouts_authorbox_layout_material3:hover {
   background-color: #292929;
+}
+
+/*
+    For WP-Polls plugin
+*/
+h1 + p:has(+ .wp-polls-archive) code {
+  display: none;
+}
+
+.wp-polls-archive h1 + p code {
+  background-color: unset;
+}
+.wp-polls-archive > code {
+  font-family: inherit;
+  background-color: unset;
+  padding: 0;
+}
+.wp-polls-archive .wp-polls-ans {
+  background-color: black;
+  padding: 1em;
+  border: 1px solid var(--blog_layouts_primary_color);
+  border-radius: 8px;
+  width: auto;
+}
+.wp-polls-archive .wp-polls-ans + p {
+  font-size: 0.8em;
+  margin-bottom: 3em;
+  background-color: var(--blog_layouts_tag_color);
+  border: 1px solid gray;
+  padding: 0.5em;
+}
+.wp-polls-archive .wp-polls-ans ul {
+  padding: 0;
+}
+.wp-polls-archive .wp-polls-ans ul li {
+  list-style: none;
+  margin: 0.5em 0;
+}
+.wp-polls-archive + code {
+  background-color: unset;
+}
+
+.widget_polls-widget ul {
+  padding: 1em;
+  background-color: black;
+}
+.widget_polls-widget ul li {
+  list-style: none;
+  margin: 0.5em 0;
+}
+.widget_polls-widget .wp-polls-loading {
+  display: none;
+}
+.widget_polls-widget .wp-polls-ul input {
+  background-color: var(--blog_layouts_primary_variant_darker);
+  box-shadow: 0 0 0px 1000px var(--blog_layouts_primary_variant_darker) inset;
+}
+.widget_polls-widget .wp-polls-ul input:checked {
+  background-color: var(--blog_layouts_primary_color);
+  box-shadow: 0 0 0px 1000px var(--blog_layouts_primary_color) inset;
 }
 
 .blog_layouts_cards_posts_list {
@@ -2863,7 +2871,7 @@ blockquote {
 
 .blog_layouts_search_engine_posts_list {
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 1em 0 1em 0;
   max-width: 80em;
 }
 .blog_layouts_search_engine_posts_list > .blog_layouts_searchresult {
@@ -3682,11 +3690,12 @@ blockquote {
 .blog_layouts_stackoverflow_header {
   border-top: 2px solid var(--blog_layouts_primary_color);
   border-bottom: 1px solid gray;
+  background-color: inherit;
 }
 .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content {
   display: flex;
   gap: 0.5em;
-  align-items: center;
+  align-items: stretch;
   width: 80%;
   max-width: 70em;
 }
@@ -3695,14 +3704,90 @@ blockquote {
     width: 90%;
   }
 }
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container {
+  position: relative;
+  display: flex;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_mobile_menu_toggle_button {
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+  font-size: 1.2em;
+  width: 3em;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu {
+  position: absolute;
+  top: 100%;
+  background-color: var(--blog_layouts_background_color);
+  width: 20em;
+  padding: 0.5em;
+  border: 1px solid gray;
+  border-top: none;
+  max-height: 80vh;
+  display: flex;
+  height: 0;
+  visibility: hidden;
+  flex-direction: column;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_stackoverflow_header_mobile_icons {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_stackoverflow_header_mobile_icons li {
+  list-style: none;
+  display: flex;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_stackoverflow_header_mobile_icons li a {
+  color: var(--blog_layouts_font_color);
+  height: 3em;
+  width: 3em;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_stackoverflow_header_mobile_icons li a:hover {
+  background-color: rgba(0, 0, 0, 0.356);
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu {
+  overflow-y: auto;
+  height: 100%;
+  padding: 0;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu a {
+  color: var(--blog_layouts_font_color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8em;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu a:hover {
+  background-color: rgba(0, 0, 0, 0.356);
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu li ul {
+  padding-left: 0.5em;
+}
+.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu li ul a {
+  font-weight: unset;
+}
 .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_website_name {
   text-decoration: none;
   color: var(--blog_layouts_font_color);
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div {
   display: flex;
   flex: 1;
+  align-items: center;
 }
 .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div .search-form {
   flex: 1;
@@ -3720,6 +3805,8 @@ blockquote {
   border: none;
   cursor: pointer;
   display: none;
+  font-size: 1.2em;
+  padding: 1em 0.7em;
 }
 @media screen and (max-width: 650px) {
   .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div #blog_layouts_header_search_icon {
@@ -3738,6 +3825,11 @@ blockquote {
   padding: 0;
   margin: 0;
   display: flex;
+}
+@media screen and (max-width: 650px) {
+  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_icons {
+    display: none;
+  }
 }
 .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_icons li {
   list-style: none;
@@ -3780,6 +3872,10 @@ blockquote {
 }
 .blog_layouts_stackoverflow_header .search-submit {
   display: none;
+}
+.blog_layouts_stackoverflow_header.blog_layouts_header_menu_open .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu {
+  height: auto;
+  visibility: visible;
 }
 
 body {

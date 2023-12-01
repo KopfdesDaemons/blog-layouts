@@ -1,11 +1,12 @@
 .blog_layouts_stackoverflow_header {
     border-top: 2px solid var(--blog_layouts_primary_color);
     border-bottom: 1px solid gray;
+    background-color: inherit;
 
     .blog_layouts_stackoverflow_header_content {
         display: flex;
         gap: 0.5em;
-        align-items: center;
+        align-items: stretch;
         width: 80%;
         max-width: 70em;
 
@@ -13,15 +14,104 @@
             width: 90%;
         }
 
+        .blog_layouts_stackoverflow_mobile_toggle_button_container {
+            position: relative;
+            display: flex;
+
+            #blog_layouts_mobile_menu_toggle_button {
+                background-color: unset;
+                border: unset;
+                cursor: pointer;
+                font-size: 1.2em;
+                width: 3em;
+            }
+            
+            #blog_layouts_header_mobile_menu {
+                position: absolute;
+                top: 100%;
+                background-color: var(--blog_layouts_background_color);
+                width: 20em;
+                padding: 0.5em;
+                border: 1px solid gray;
+                border-top: none;
+                max-height: 80vh;
+                display: flex;
+                height: 0;
+                visibility: hidden;
+                flex-direction: column;
+                
+                .blog_layouts_stackoverflow_header_mobile_icons {
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    justify-content: space-evenly;
+                    
+                    li {
+                        list-style: none;
+                        display: flex;
+                        
+                        a {
+                            color: var(--blog_layouts_font_color);
+                            height: 3em;
+                            width: 3em;
+                            font-size: 1.2em;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-decoration: none;
+                            
+                            &:hover {
+                                background-color: rgba(0, 0, 0, 0.356);
+                            }
+                        }
+                    }
+                }
+                
+                .blog_layouts_header_menu {
+                    overflow-y: auto;
+                    height: 100%;
+                    padding: 0;
+
+                    a {
+                        color: var(--blog_layouts_font_color);
+                        text-decoration: none;
+                        font-weight: bold;
+                        padding: 0.8em;
+
+                        &:hover {
+                            background-color: rgba(0, 0, 0, 0.356);
+                        }
+                    }
+
+                    li {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        
+                        ul {
+                            padding-left: 0.5em;
+
+                            a {
+                                font-weight: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .blog_layouts_stackoverflow_website_name {
             text-decoration: none;
             color: var(--blog_layouts_font_color);
             font-weight: bold;
+            display: flex;
+            align-items: center;
         }
 
         .blog_layouts_stackoverflow_header_search_div {
             display: flex;
             flex: 1;
+            align-items: center;
 
             .search-form {
                 flex: 1;
@@ -42,6 +132,8 @@
                 border: none;
                 cursor: pointer;
                 display: none;
+                font-size: 1.2em;
+                padding: 1em 0.7em;
 
                 @media screen and (max-width: 650px) {
                     display: block;
@@ -61,6 +153,10 @@
             padding: 0;
             margin: 0;
             display: flex;
+
+            @media screen and (max-width: 650px) {                
+                display: none;
+            }
 
             li {
                 list-style: none;
@@ -114,5 +210,10 @@
 
     .search-submit {
         display: none;
+    }
+
+    &.blog_layouts_header_menu_open .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu {
+        height: auto;
+        visibility: visible;
     }
 }

@@ -39,7 +39,8 @@ $font-size: clamp(12px, 1.5vw, 16px);
 }
 
 // basic pagination layout for all elements (Numbers + Buttons)
-.wp-polls-paging a, .wp-polls-paging span,
+#blog_layouts_main_content .wp-polls-paging a, 
+#blog_layouts_main_content .wp-polls-paging span,
 .wp-block-query-pagination-next,
 .wp-block-query-pagination-previous,
 .blog_layouts_pagination_controls a,
@@ -54,9 +55,10 @@ $font-size: clamp(12px, 1.5vw, 16px);
 }
 
 // pagination current page
-.wp-polls-paging .current,
+#blog_layouts_main_content .wp-polls-paging .current,
 .current {
     background-color: var(--blog_layouts_primary_variant_darker);
+    color: var(--blog_layouts_font_color);
 }
 
 // pagination hover
@@ -82,10 +84,16 @@ $font-size: clamp(12px, 1.5vw, 16px);
     overflow-x: auto;
 }
 
-.wp-polls-paging {
+#blog_layouts_main_content .wp-polls-paging {
     display: flex;
     justify-content: center;
     gap: 0.5em;
     font-size: $font-size;
     overflow-x: auto;
+}
+
+#blog_layouts_main_content .wp-polls-paging {
+    a, span {
+        color: var(--blog_layouts_font_color);
+    }
 }

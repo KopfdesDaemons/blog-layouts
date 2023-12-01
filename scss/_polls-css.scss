@@ -25,6 +25,7 @@ h1+p:has(+ .wp-polls-archive) {
         padding: 1em;
         border: 1px solid var(--blog_layouts_primary_color);
         border-radius: 8px;
+        width: auto;
 
         // Dates
         &+p {
