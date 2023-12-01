@@ -78,7 +78,7 @@ function blog_layouts_global($wp_customize)
 
     // Comments Layout
     $wp_customize->add_setting('comments_layout', array(
-        'default' => 'material3',
+        'default' => 'dark-cards',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));

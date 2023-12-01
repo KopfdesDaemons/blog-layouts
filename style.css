@@ -96,18 +96,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-weight: 400;
   src: url("fonts/googlefonts/poppins-v20-latin-regular.woff2") format("woff2"), url("fonts/googlefonts/poppins-v20-latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
-@font-face {
-  font-family: "Font Awesome Regular";
-  src: url("fontawesome/webfonts/fa-regular-400.woff2") format("woff2"), url("fontawesome/webfonts/fa-regular-400.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Font Awesome Brands";
-  src: url("fontawesome/webfonts/fa-brands-400.woff2") format("woff2"), url("fontawesome/webfonts/fa-brands-400.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Font Awesome Solid";
-  src: url("fontawesome/webfonts/fa-solid-900.woff2") format("woff2"), url("fontawesome/webfonts/fa-solid-900.ttf") format("truetype");
-}
 .error404 .blog_layouts_content_spacer {
   min-height: 70vh;
 }
@@ -416,7 +404,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 #comments .comment-content {
   padding: 1em;
-  margin: 1em 0.5em;
+  margin: 0.5em;
   border-radius: 4px;
   overflow-wrap: break-word;
   max-height: 40em;
@@ -489,7 +477,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 #comments.blog_layouts_comments_layout_material2 .bypostauthor .url {
   background-color: var(--blog_layouts_primary_color);
-  border-radius: 8px;
+  border-radius: 12px;
+  height: 0 6px;
   padding: 0.2em;
   color: black;
 }
@@ -539,6 +528,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 #comments.blog_layouts_comments_layout_frameless .comment-body {
   padding: 1em;
   border-radius: 4px;
+  background-color: rgba(33, 33, 33, 0.3411764706);
 }
 #comments.blog_layouts_comments_layout_frameless .comment-body:hover {
   background-color: #212121;
@@ -809,6 +799,110 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   cursor: pointer;
 }
 #comments.blog_layouts_comments_layout_youtube #submit:hover {
+  background-color: var(--blog_layouts_primary_color);
+}
+#comments.blog_layouts_comments_layout_dark_cards {
+  margin: 3em 0 10em 0;
+  font-size: 0.8em;
+}
+#comments.blog_layouts_comments_layout_dark_cards .comment {
+  position: relative;
+}
+#comments.blog_layouts_comments_layout_dark_cards .comment-body {
+  border-radius: 4px;
+  padding: 1em;
+  border: 1px solid gray;
+  background-color: #232327;
+}
+#comments.blog_layouts_comments_layout_dark_cards .comment-meta, #comments.blog_layouts_comments_layout_dark_cards .vcard {
+  display: contents;
+}
+#comments.blog_layouts_comments_layout_dark_cards .comment-metadata {
+  padding-left: 0;
+}
+#comments.blog_layouts_comments_layout_dark_cards .comment-metadata a {
+  text-decoration: none;
+}
+#comments.blog_layouts_comments_layout_dark_cards .comment-metadata span {
+  float: right;
+}
+#comments.blog_layouts_comments_layout_dark_cards .comment-metadata .comment-edit {
+  text-decoration: none;
+  color: var(--blog_layouts_primary_color);
+}
+#comments.blog_layouts_comments_layout_dark_cards .comment-metadata .comment-edit:hover {
+  font-weight: bold;
+}
+#comments.blog_layouts_comments_layout_dark_cards .url {
+  font-size: 1em;
+}
+#comments.blog_layouts_comments_layout_dark_cards .avatar {
+  border-radius: 4px;
+  float: left;
+  margin-right: 0.5em;
+}
+#comments.blog_layouts_comments_layout_dark_cards .comment-content {
+  clear: both;
+}
+#comments.blog_layouts_comments_layout_dark_cards .children {
+  padding: 0;
+}
+#comments.blog_layouts_comments_layout_dark_cards .children .comment {
+  padding: 1em 0 0 2em;
+  margin-left: 1em;
+}
+#comments.blog_layouts_comments_layout_dark_cards .children .comment-body::before {
+  content: "";
+  position: absolute;
+  border-left: 2px solid var(--blog_layouts_primary_color);
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+#comments.blog_layouts_comments_layout_dark_cards .children .comment-body::after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid var(--blog_layouts_primary_color);
+  height: 8em;
+  left: 0;
+  top: 0;
+  width: 25px;
+  z-index: -1;
+}
+#comments.blog_layouts_comments_layout_dark_cards .children .comment:last-child > .comment-body::before {
+  height: 8em;
+}
+#comments.blog_layouts_comments_layout_dark_cards .bypostauthor .url {
+  background-color: var(--blog_layouts_primary_color);
+  border-radius: 8px;
+  padding: 0.2em;
+  color: black;
+}
+#comments.blog_layouts_comments_layout_dark_cards .bypostauthor .url:after {
+  content: " \f4ff";
+  font-family: "Font Awesome Solid";
+}
+#comments.blog_layouts_comments_layout_dark_cards .reply {
+  margin: 0 0.5em;
+}
+#comments.blog_layouts_comments_layout_dark_cards .reply a {
+  text-decoration: none;
+  color: var(--blog_layouts_primary_color);
+}
+#comments.blog_layouts_comments_layout_dark_cards .reply a:hover {
+  font-weight: bold;
+}
+#comments.blog_layouts_comments_layout_dark_cards #submit {
+  border-radius: 8px;
+  padding: 1em 1em;
+  font-family: Roboto, sans-serif;
+  background-color: var(--blog_layouts_primary_variant_darker);
+  text-decoration: none;
+  color: var(--blog_layouts_font_color);
+  border: none;
+  cursor: pointer;
+}
+#comments.blog_layouts_comments_layout_dark_cards #submit:hover {
   background-color: var(--blog_layouts_primary_color);
 }
 

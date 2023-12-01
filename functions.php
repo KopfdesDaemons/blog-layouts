@@ -195,6 +195,7 @@ $blog_layouts_authorbox_layouts = array(
 );
 
 $blog_layouts_comments_layouts = array(
+    'dark-cards' => 'Dark Cards',
     'frameless' => 'Frameless',
     'material2' => 'Material 2',
     'material3' => 'Material 3',

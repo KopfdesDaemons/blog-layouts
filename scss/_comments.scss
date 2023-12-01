@@ -96,7 +96,7 @@
 
     .comment-content {
         padding: 1em;
-        margin: 1em 0.5em;
+        margin: 0.5em;
         border-radius: 4px;
         overflow-wrap: break-word;
         max-height: 40em;
@@ -188,7 +188,8 @@
         .bypostauthor {
             .url {
                 background-color: var(--blog_layouts_primary_color);
-                border-radius: 8px;
+                border-radius: 12px;
+                height: 0 6px;
                 padding: 0.2em;
                 color: black;
     
@@ -248,6 +249,7 @@
         .comment-body {
             padding: 1em;
             border-radius: 4px;
+            background-color: #21212157;
             
             &:hover {
                 background-color: #212121;
@@ -573,6 +575,135 @@
             font-family: Roboto, sans-serif;
             height: 36px;
             font-size: 14px;
+            background-color: var(--blog_layouts_primary_variant_darker);
+            text-decoration: none;
+            color: var(--blog_layouts_font_color);
+            border: none;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: var(--blog_layouts_primary_color);
+            }
+        }
+    }
+
+    &.blog_layouts_comments_layout_dark_cards {
+        margin: 3em 0 10em 0;
+        font-size: 0.8em;
+
+        .comment {
+            position: relative;
+        }
+        
+        .comment-body {
+            border-radius: 4px;
+            padding: 1em;
+            border: 1px solid gray;
+            background-color: #232327;
+        }
+
+        .comment-meta, .vcard {
+            display: contents;
+        }
+
+        .comment-metadata {
+            padding-left: 0;
+
+            a {
+                text-decoration: none;
+            }
+            span {
+                float: right;
+            }
+
+            .comment-edit {
+                text-decoration: none;
+                color: var(--blog_layouts_primary_color);    
+                
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .url {
+            font-size: 1em;
+        }
+
+        .avatar {
+            border-radius: 4px;
+            float: left;
+            margin-right: 0.5em;
+        }
+
+        .comment-content {
+            clear: both;
+        }
+
+        .children {
+            padding: 0;
+            
+            .comment {
+                padding: 1em 0 0 2em;
+                margin-left: 1em;
+            }
+
+            .comment-body::before {
+                content: '';
+                position: absolute;
+                border-left: 2px solid var(--blog_layouts_primary_color);
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+
+            .comment-body::after {
+                content: '';
+                position: absolute;
+                border-bottom: 2px solid var(--blog_layouts_primary_color);
+                height: 8em;
+                left: 0;
+                top: 0;
+                width: 25px;
+                z-index: -1;
+            }
+
+            .comment:last-child > .comment-body::before {
+                height: 8em;
+            }
+        }
+    
+        .bypostauthor {
+            .url {
+                background-color: var(--blog_layouts_primary_color);
+                border-radius: 8px;
+                padding: 0.2em;
+                color: black;
+    
+                &:after {
+                    content: ' \f4ff';
+                    font-family: 'Font Awesome Solid';
+                }
+            }
+        }
+    
+        .reply {
+            margin: 0 0.5em;
+    
+            a {
+                text-decoration: none;
+                color: var(--blog_layouts_primary_color);    
+                
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+    
+        #submit {
+            border-radius: 8px;
+            padding: 1em 1em;
+            font-family: Roboto, sans-serif;
             background-color: var(--blog_layouts_primary_variant_darker);
             text-decoration: none;
             color: var(--blog_layouts_font_color);
