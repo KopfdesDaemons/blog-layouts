@@ -3,6 +3,7 @@
     $blog_layouts_side_bar;
     $blog_layouts_archive_title = esc_html__('Archive', 'blog-layouts');
     $blog_layouts_archive_post_list_style = 'cards';
+    $blog_layouts_sidebar_layout_setting = get_theme_mod('search_sidebar_layout', 'social');
 
     if (is_author()) {
         $blog_layouts_side_bar = get_theme_mod('author_page_sidebar', true);
