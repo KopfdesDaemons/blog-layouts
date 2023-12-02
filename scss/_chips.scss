@@ -9,7 +9,7 @@
     white-space: nowrap;
     font-size: 0.8em;
 
-    a, &:visited {
+    a, a:visited {
         color: var(--blog_layouts_font_color);
         text-decoration: none;
         white-space: nowrap;
@@ -17,11 +17,12 @@
     
     &:hover {
         background-color: rgba(128, 128, 128, 0.575);
+        color: var(--blog_layouts_font_color);
     }
 }
 
 .blog_layouts_chips_layout_content_creator {
-    a, &:visited {
+    a, a:visited {
         padding: 3px 6px;
         font-size: 13px;
         line-height: 1.5;
@@ -85,6 +86,7 @@
         
         &:hover {
             background-color: var(--blog_layouts_primary_color);
+            color: var(--blog_layouts_font_color);
         }
     }
 }
@@ -102,6 +104,7 @@
         
         &:hover {
             background-color: var(--blog_layouts_primary_color);
+            color: var(--blog_layouts_font_color);
         }
     }
 }
@@ -118,6 +121,7 @@
 
         &:hover {
             background-color: var(--blog_layouts_primary_variant_darker);
+            color: var(--blog_layouts_font_color);
         }
     }
 }
@@ -138,6 +142,11 @@
         padding: 0.5em;
         border-radius: 4px;
         border: 1px solid gray;
+        color: var(--blog_layouts_font_color);
+
+        &:hover {
+            color: var(--blog_layouts_primary_color);
+        }
     }
 }
 

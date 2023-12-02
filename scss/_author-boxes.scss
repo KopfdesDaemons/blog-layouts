@@ -38,7 +38,7 @@
 }
 
 .blog_layouts_authorbox_layout_border {
-    padding: 2%;
+    padding: 0.5em;
     display: flex;
     flex-wrap: wrap;
     margin: 2em 0 3em 0;
@@ -58,11 +58,11 @@
 
         a {
             img {
-                margin: 1.5em;
+                margin: 0.5em;
                 max-width: 150px;
                 max-height: 150px;
                 border-radius: 0.3em;
-                border: 2px solid var(--blog_layouts_primary_color);
+                border: 3px solid var(--blog_layouts_primary_color);
             }
         }
     }
@@ -102,6 +102,10 @@
                 max-height: 200px;
                 object-fit: cover;
             }
+
+            &:hover {
+                filter: brightness(0.8);
+            }
         }
     }
 
@@ -118,6 +122,10 @@
                 text-decoration: none;
                 font-size: 1.3em;
                 color: var(--blog_layouts_font_color);
+
+                &:hover {
+                    color: var(--blog_layouts_primary_color);
+                }
             }
 
             h3 + a{

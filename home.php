@@ -16,7 +16,7 @@
     </section>
 <?php } ?>
 <main role="main" <?php if (get_theme_mod('feed_sidebar', true)) echo 'class="blog_layouts_has_sidebar"' ?>>
-    <section class="blog_layouts_content_spacer blog_layouts_feed">
+    <section class="blog_layouts_content_spacer blog_layouts_feed" id="blog_layouts_main_content">
     <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $posts_per_page = get_option('posts_per_page');

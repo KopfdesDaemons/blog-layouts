@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-11-29 18:52+0100\n"
-"PO-Revision-Date: 2023-11-29 18:52+0100\n"
+"POT-Creation-Date: 2023-12-02 13:29+0100\n"
+"PO-Revision-Date: 2023-12-02 13:30+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -59,8 +59,8 @@ msgstr "Beiträge"
 #: template-parts/post-list-layouts/frameless-posts-list.php:26
 #: template-parts/post-list-layouts/material2-posts-list.php:47
 #: template-parts/post-list-layouts/material3-posts-list.php:46
-#: template-parts/post-list-layouts/social-posts-list.php:36
-#: template-parts/post-list-layouts/social-posts-list.php:45
+#: template-parts/post-list-layouts/social-posts-list.php:35
+#: template-parts/post-list-layouts/social-posts-list.php:44
 msgid "Comments"
 msgstr "Kommentare"
 
@@ -141,30 +141,34 @@ msgid "Layout Sidebar"
 msgstr "Layout Sidebar"
 
 #: customizer-options/author-page-options.php:53
+msgid "Show author header"
+msgstr "Zeige Autorheader"
+
+#: customizer-options/author-page-options.php:71
 msgid "Show recent comments"
 msgstr "Zeige letzte Kommentare"
 
-#: customizer-options/author-page-options.php:66
+#: customizer-options/author-page-options.php:85
 msgid "Show author role"
 msgstr "Zeige Autorenrolle"
 
-#: customizer-options/author-page-options.php:79
+#: customizer-options/author-page-options.php:99
 msgid "Show registration date"
 msgstr "Zeige Registrierungsdatum"
 
-#: customizer-options/author-page-options.php:92
+#: customizer-options/author-page-options.php:113
 msgid "Show number of posts"
 msgstr "Zeige Anzahl der Beiträge"
 
-#: customizer-options/author-page-options.php:105
+#: customizer-options/author-page-options.php:127
 msgid "Show author website"
 msgstr "Zeige Autorenwebseite"
 
-#: customizer-options/author-page-options.php:118
+#: customizer-options/author-page-options.php:141
 msgid "Image size"
 msgstr "Bildgröße"
 
-#: customizer-options/author-page-options.php:138
+#: customizer-options/author-page-options.php:162
 #: customizer-options/category-list-options.php:22
 #: customizer-options/date-list-options.php:22
 #: customizer-options/feed-options.php:73
@@ -259,9 +263,41 @@ msgstr "Zeige Logo mit Link zur Startseite"
 msgid "Show search bar"
 msgstr "Zeige Suchleiste"
 
-#: customizer-options/header-options.php:99
+#: customizer-options/header-options.php:104
 msgid "Menu font size"
 msgstr "Menü Schriftgröße"
+
+#: customizer-options/header-options.php:132
+msgid "Icon 1 Font Awesome Icon Class"
+msgstr "Icon 1 Font Awesome Icon Class"
+
+#: customizer-options/header-options.php:145
+msgid "Icon 1 Link"
+msgstr "Icon 1 Link"
+
+#: customizer-options/header-options.php:158
+msgid "Icon 2 Font Awesome Icon Class"
+msgstr "Icon 2 Font Awesome Icon Class"
+
+#: customizer-options/header-options.php:171
+msgid "Icon 2 Link"
+msgstr "Icon 2 Link"
+
+#: customizer-options/header-options.php:184
+msgid "Icon 3 Font Awesome Icon Class"
+msgstr "Icon 3 Font Awesome Icon Class"
+
+#: customizer-options/header-options.php:197
+msgid "Icon 3 Link"
+msgstr "Icon 3 Link"
+
+#: customizer-options/header-options.php:210
+msgid "Icon 4 Font Awesome Icon Class"
+msgstr "Icon 4 Font Awesome Icon Class"
+
+#: customizer-options/header-options.php:223
+msgid "Icon 4 Link"
+msgstr "Icon 4 Link"
 
 #: customizer-options/layout-options.php:6
 msgid "Posts List Layouts"
@@ -434,6 +470,7 @@ msgstr "Einstellungen für die Ergebnisse beim Aufruf eines Tags."
 #: footer.php:11 template-parts/header-layouts/gradient-header.php:36
 #: template-parts/header-layouts/material2-header.php:22
 #: template-parts/header-layouts/material2-header.php:36
+#: template-parts/header-layouts/stackoverflow-header.php:42
 msgid "Select a menu in the customizer"
 msgstr "Wähle ein Menü im Customizer"
 
@@ -492,7 +529,7 @@ msgstr "Springe zum Hauptinhalt"
 #: template-parts/post-list-layouts/frameless-posts-list.php:32
 #: template-parts/post-list-layouts/material2-posts-list.php:54
 #: template-parts/post-list-layouts/material3-posts-list.php:52
-#: template-parts/post-list-layouts/social-posts-list.php:51
+#: template-parts/post-list-layouts/social-posts-list.php:50
 msgid "read more"
 msgstr "mehr lesen"
 

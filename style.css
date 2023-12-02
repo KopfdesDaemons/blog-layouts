@@ -1770,16 +1770,17 @@ blockquote {
   white-space: nowrap;
   font-size: 0.8em;
 }
-.blog_layouts_chips_layout_blocks a, .blog_layouts_chips_layout_blocks:visited {
+.blog_layouts_chips_layout_blocks a, .blog_layouts_chips_layout_blocks a:visited {
   color: var(--blog_layouts_font_color);
   text-decoration: none;
   white-space: nowrap;
 }
 .blog_layouts_chips_layout_blocks:hover {
   background-color: rgba(128, 128, 128, 0.575);
+  color: var(--blog_layouts_font_color);
 }
 
-.blog_layouts_chips_layout_content_creator a, .blog_layouts_chips_layout_content_creator:visited {
+.blog_layouts_chips_layout_content_creator a, .blog_layouts_chips_layout_content_creator a:visited {
   padding: 3px 6px;
   font-size: 13px;
   line-height: 1.5;
@@ -1797,7 +1798,7 @@ blockquote {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
 }
-.blog_layouts_chips_layout_content_creator a:hover, .blog_layouts_chips_layout_content_creator:visited:hover {
+.blog_layouts_chips_layout_content_creator a:hover, .blog_layouts_chips_layout_content_creator a:visited:hover {
   background-color: var(--blog_layouts_primary_variant_darker);
 }
 
@@ -1836,6 +1837,7 @@ blockquote {
 }
 .blog_layouts_chips_layout_material2 a:hover, .blog_layouts_chips_layout_material2 a:visited:hover {
   background-color: var(--blog_layouts_primary_color);
+  color: var(--blog_layouts_font_color);
 }
 
 .blog_layouts_chips_layout_color_blocks a, .blog_layouts_chips_layout_color_blocks a:visited {
@@ -1850,6 +1852,7 @@ blockquote {
 }
 .blog_layouts_chips_layout_color_blocks a:hover, .blog_layouts_chips_layout_color_blocks a:visited:hover {
   background-color: var(--blog_layouts_primary_color);
+  color: var(--blog_layouts_font_color);
 }
 
 .blog_layouts_chips_layout_material3 a, .blog_layouts_chips_layout_material3 a:visited {
@@ -1863,6 +1866,7 @@ blockquote {
 }
 .blog_layouts_chips_layout_material3 a:hover, .blog_layouts_chips_layout_material3 a:visited:hover {
   background-color: var(--blog_layouts_primary_variant_darker);
+  color: var(--blog_layouts_font_color);
 }
 
 .blog_layouts_chips_layout_neon a, .blog_layouts_chips_layout_neon a:visited {
@@ -1878,6 +1882,10 @@ blockquote {
   padding: 0.5em;
   border-radius: 4px;
   border: 1px solid gray;
+  color: var(--blog_layouts_font_color);
+}
+.blog_layouts_chips_layout_social a:hover, .blog_layouts_chips_layout_social a:visited:hover {
+  color: var(--blog_layouts_primary_color);
 }
 
 .blog_layouts_chips_layout_github a, .blog_layouts_chips_layout_github a:visited {
@@ -1986,7 +1994,7 @@ blockquote {
 }
 
 .blog_layouts_authorbox_layout_border {
-  padding: 2%;
+  padding: 0.5em;
   display: flex;
   flex-wrap: wrap;
   margin: 2em 0 3em 0;
@@ -2004,11 +2012,11 @@ blockquote {
   justify-content: center;
 }
 .blog_layouts_authorbox_layout_border .blog_layouts_author_avatar a img {
-  margin: 1.5em;
+  margin: 0.5em;
   max-width: 150px;
   max-height: 150px;
   border-radius: 0.3em;
-  border: 2px solid var(--blog_layouts_primary_color);
+  border: 3px solid var(--blog_layouts_primary_color);
 }
 .blog_layouts_authorbox_layout_border .blog_layouts_author_details {
   flex: 1 0 70%;
@@ -2044,6 +2052,9 @@ blockquote {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.blog_layouts_authorbox_layout_material2 .blog_layouts_author_avatar a:hover {
+  filter: brightness(0.8);
+}
 .blog_layouts_authorbox_layout_material2 .blog_layouts_author_details {
   flex: 100 0 60%;
   padding: 3%;
@@ -2057,6 +2068,9 @@ blockquote {
   text-decoration: none;
   font-size: 1.3em;
   color: var(--blog_layouts_font_color);
+}
+.blog_layouts_authorbox_layout_material2 .blog_layouts_author_details .blog_layouts_author_name_row h3 a:hover {
+  color: var(--blog_layouts_primary_color);
 }
 .blog_layouts_authorbox_layout_material2 .blog_layouts_author_details .blog_layouts_author_name_row h3 + a {
   padding: 0.5em;
@@ -2661,6 +2675,9 @@ h1 + p:has(+ .wp-polls-archive) code {
   flex-direction: column;
   width: 100%;
 }
+.blog_layouts_material2_post_list_item:hover {
+  filter: brightness(1.1);
+}
 .blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_image_container {
   display: flex;
   justify-content: center;
@@ -2670,6 +2687,9 @@ h1 + p:has(+ .wp-polls-archive) code {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+}
+.blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_image_container img:hover {
+  filter: saturate(0.5);
 }
 .blog_layouts_material2_post_list_item .blog_layouts_material2_post_list_item_sticky_pin {
   margin: 1em 0 0 1em;

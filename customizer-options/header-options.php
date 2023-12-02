@@ -129,7 +129,7 @@ function blog_layouts_header($wp_customize)
     ));
 
     $wp_customize->add_control('stackoverflow_icon_1', array(
-        'label'    => __('Icon 1 Font Awesome Icon Class', 'theme-text-domain'),
+        'label'    => __('Icon 1 Font Awesome Icon Class', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
         'active_callback' => 'stackoverflow_header_active_callback'
@@ -142,7 +142,7 @@ function blog_layouts_header($wp_customize)
     ));
 
     $wp_customize->add_control('stackoverflow_icon_1_link', array(
-        'label'    => __('Icon 1 Link', 'theme-text-domain'),
+        'label'    => __('Icon 1 Link', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
         'active_callback' => 'stackoverflow_header_active_callback'
@@ -155,7 +155,7 @@ function blog_layouts_header($wp_customize)
     ));
 
     $wp_customize->add_control('stackoverflow_icon_2', array(
-        'label'    => __('Icon 2 Font Awesome Icon Class', 'theme-text-domain'),
+        'label'    => __('Icon 2 Font Awesome Icon Class', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
         'active_callback' => 'stackoverflow_header_active_callback'
@@ -168,7 +168,7 @@ function blog_layouts_header($wp_customize)
     ));
 
     $wp_customize->add_control('stackoverflow_icon_2_link', array(
-        'label'    => __('Icon 2 Link', 'theme-text-domain'),
+        'label'    => __('Icon 2 Link', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
         'active_callback' => 'stackoverflow_header_active_callback'
@@ -181,7 +181,7 @@ function blog_layouts_header($wp_customize)
     ));
 
     $wp_customize->add_control('stackoverflow_icon_3', array(
-        'label'    => __('Icon 3 Font Awesome Icon Class', 'theme-text-domain'),
+        'label'    => __('Icon 3 Font Awesome Icon Class', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
         'active_callback' => 'stackoverflow_header_active_callback'
@@ -194,7 +194,7 @@ function blog_layouts_header($wp_customize)
     ));
 
     $wp_customize->add_control('stackoverflow_icon_3_link', array(
-        'label'    => __('Icon 3 Link', 'theme-text-domain'),
+        'label'    => __('Icon 3 Link', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
         'active_callback' => 'stackoverflow_header_active_callback'
@@ -207,7 +207,7 @@ function blog_layouts_header($wp_customize)
     ));
 
     $wp_customize->add_control('stackoverflow_icon_4', array(
-        'label'    => __('Icon 4 Font Awesome Icon Class', 'theme-text-domain'),
+        'label'    => __('Icon 4 Font Awesome Icon Class', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
         'active_callback' => 'stackoverflow_header_active_callback'
@@ -220,7 +220,7 @@ function blog_layouts_header($wp_customize)
     ));
 
     $wp_customize->add_control('stackoverflow_icon_4_link', array(
-        'label'    => __('Icon 4 Link', 'theme-text-domain'),
+        'label'    => __('Icon 4 Link', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
         'active_callback' => 'stackoverflow_header_active_callback'
