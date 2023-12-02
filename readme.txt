@@ -26,6 +26,9 @@ particularly extensive. There is a landing page with a widget area.
 
 == Changelog ==
 
+    = 1.0.1 =
+        - Fix PHP error "undefined variable"
+
     = 1.0.0 =
         - Initial release
 

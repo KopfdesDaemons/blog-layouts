@@ -74,7 +74,6 @@ $blog_layouts_hero_background = get_theme_mod('hero_background', true);
 
         /* Header Settings */
         --blog_layouts_header_menu_font_size: <?php echo esc_attr(get_theme_mod('header_menu_font_size_setting', '14')) . 'px'; ?>;
-        --blog_layouts_home_margin_to_header: <?php echo $blog_layouts_home_margin_to_header; ?>;
         
         /* Post Settings */
         --blog_layouts_background_color_posts: <?php echo esc_attr(get_theme_mod('background_color_posts', '')); ?>;
