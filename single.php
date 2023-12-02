@@ -70,7 +70,7 @@
                     if ($tags_options & !empty($tags)) {
                         echo '<div class="blog_layouts_post_tags"><ul>';
                         foreach ($tags as $tag) {
-                            echo '<li class="' . 'blog_layouts_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_tags_layout', 'youtube-music')) . '"><a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . $tag->name . '</a></li>';
+                            echo '<li class="' . 'blog_layouts_chips_layout_' . str_replace("-", "_", get_theme_mod('posts_tags_layout', 'portal')) . '"><a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . $tag->name . '</a></li>';
                         }
                         echo '</ul></div>';
                     }

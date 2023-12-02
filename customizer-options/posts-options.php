@@ -180,7 +180,7 @@ function blog_layouts_custom_posts($wp_customize)
 
     // Tags Layout
     $wp_customize->add_setting('posts_tags_layout', array(
-        'default' => 'youtube-music',
+        'default' => 'portal',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));

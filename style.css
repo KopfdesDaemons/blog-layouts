@@ -721,57 +721,57 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 #comments.blog_layouts_comments_layout_social #submit:hover {
   background-color: var(--blog_layouts_primary_color);
 }
-#comments.blog_layouts_comments_layout_youtube {
+#comments.blog_layouts_comments_layout_portal {
   margin: 3em 0 10em 0;
   font-size: 0.8em;
 }
-#comments.blog_layouts_comments_layout_youtube .comment-body:hover {
+#comments.blog_layouts_comments_layout_portal .comment-body:hover {
   filter: brightness(1.1);
 }
-#comments.blog_layouts_comments_layout_youtube .comment-meta, #comments.blog_layouts_comments_layout_youtube .vcard {
+#comments.blog_layouts_comments_layout_portal .comment-meta, #comments.blog_layouts_comments_layout_portal .vcard {
   display: contents;
 }
-#comments.blog_layouts_comments_layout_youtube .comment-metadata {
+#comments.blog_layouts_comments_layout_portal .comment-metadata {
   padding-left: 0;
   display: contents;
 }
-#comments.blog_layouts_comments_layout_youtube .comment-metadata a {
+#comments.blog_layouts_comments_layout_portal .comment-metadata a {
   text-decoration: none;
 }
-#comments.blog_layouts_comments_layout_youtube .comment-metadata span {
+#comments.blog_layouts_comments_layout_portal .comment-metadata span {
   float: right;
 }
-#comments.blog_layouts_comments_layout_youtube .url {
+#comments.blog_layouts_comments_layout_portal .url {
   font-size: 1em;
 }
-#comments.blog_layouts_comments_layout_youtube .url:before {
+#comments.blog_layouts_comments_layout_portal .url:before {
   content: "@";
 }
-#comments.blog_layouts_comments_layout_youtube .avatar {
+#comments.blog_layouts_comments_layout_portal .avatar {
   border-radius: 5em;
   float: left;
   margin-right: 0.5em;
 }
-#comments.blog_layouts_comments_layout_youtube .bypostauthor .url {
+#comments.blog_layouts_comments_layout_portal .bypostauthor .url {
   background-color: #888888;
   border-radius: 12px;
   height: 0 6px;
   padding: 0.2em;
   color: black;
 }
-#comments.blog_layouts_comments_layout_youtube .bypostauthor .url:after {
+#comments.blog_layouts_comments_layout_portal .bypostauthor .url:after {
   content: " \f4ff";
   font-family: "Font Awesome Solid";
 }
-#comments.blog_layouts_comments_layout_youtube .comment-content {
+#comments.blog_layouts_comments_layout_portal .comment-content {
   margin: 0;
   padding-left: 0;
 }
-#comments.blog_layouts_comments_layout_youtube .reply {
+#comments.blog_layouts_comments_layout_portal .reply {
   margin-left: 3em;
   display: flex;
 }
-#comments.blog_layouts_comments_layout_youtube .reply a {
+#comments.blog_layouts_comments_layout_portal .reply a {
   border-radius: 5em;
   font-family: Roboto, sans-serif;
   height: 36px;
@@ -782,11 +782,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   text-decoration: none;
   color: var(--blog_layouts_font_color);
 }
-#comments.blog_layouts_comments_layout_youtube .reply a:hover {
+#comments.blog_layouts_comments_layout_portal .reply a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   border-color: transparent;
 }
-#comments.blog_layouts_comments_layout_youtube #submit {
+#comments.blog_layouts_comments_layout_portal #submit {
   border-radius: 5em;
   padding: 0 1em;
   font-family: Roboto, sans-serif;
@@ -798,7 +798,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   border: none;
   cursor: pointer;
 }
-#comments.blog_layouts_comments_layout_youtube #submit:hover {
+#comments.blog_layouts_comments_layout_portal #submit:hover {
   background-color: var(--blog_layouts_primary_color);
 }
 #comments.blog_layouts_comments_layout_dark_cards {
@@ -1744,16 +1744,16 @@ blockquote {
   margin: -1rem -1rem 0.5rem -1rem;
   background-color: #212121;
 }
-#blog_layouts_sidebar.blog_layouts_sidebar_layout_reddit {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_network {
   color: rgb(255, 255, 255);
 }
-#blog_layouts_sidebar.blog_layouts_sidebar_layout_reddit .widget {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_network .widget {
   background-color: #1a1a1b;
   border: 1px solid #474748;
   border-radius: 5px 5px 4px 4px;
   padding: 12px;
 }
-#blog_layouts_sidebar.blog_layouts_sidebar_layout_reddit .widget .widget-title {
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_network .widget .widget-title {
   text-transform: uppercase;
   text-align: start;
   font-size: 10px;
@@ -1888,7 +1888,7 @@ blockquote {
   color: var(--blog_layouts_primary_color);
 }
 
-.blog_layouts_chips_layout_github a, .blog_layouts_chips_layout_github a:visited {
+.blog_layouts_chips_layout_coder a, .blog_layouts_chips_layout_coder a:visited {
   display: flex;
   padding: 0 7px;
   font-size: 12px;
@@ -1899,12 +1899,12 @@ blockquote {
   background-color: var(--blog_layouts_primary_variant_much_darker);
   text-decoration: none;
 }
-.blog_layouts_chips_layout_github a:hover, .blog_layouts_chips_layout_github a:visited:hover {
+.blog_layouts_chips_layout_coder a:hover, .blog_layouts_chips_layout_coder a:visited:hover {
   background-color: var(--blog_layouts_primary_variant_brighter);
   color: var(--blog_layouts_font_color);
 }
 
-.blog_layouts_chips_layout_reddit a, .blog_layouts_chips_layout_reddit a:visited {
+.blog_layouts_chips_layout_network a, .blog_layouts_chips_layout_network a:visited {
   display: flex;
   font-family: Noto Sans, Arial, sans-serif;
   font-size: 12px;
@@ -1921,11 +1921,11 @@ blockquote {
   border-radius: 9999px;
   align-items: center;
 }
-.blog_layouts_chips_layout_reddit a:hover, .blog_layouts_chips_layout_reddit a:visited:hover {
+.blog_layouts_chips_layout_network a:hover, .blog_layouts_chips_layout_network a:visited:hover {
   filter: brightness(0.9);
 }
 
-.blog_layouts_chips_layout_the_hub a, .blog_layouts_chips_layout_the_hub a:visited {
+.blog_layouts_chips_layout_hub a, .blog_layouts_chips_layout_hub a:visited {
   display: flex;
   padding: 8px 18px;
   background-color: #1b1b1b;
@@ -1938,11 +1938,11 @@ blockquote {
   text-decoration: none;
   border-radius: 8px;
 }
-.blog_layouts_chips_layout_the_hub a:hover, .blog_layouts_chips_layout_the_hub a:visited:hover {
+.blog_layouts_chips_layout_hub a:hover, .blog_layouts_chips_layout_hub a:visited:hover {
   background-color: #2f2f2f;
 }
 
-.blog_layouts_chips_layout_youtube_music a, .blog_layouts_chips_layout_youtube_music a:visited {
+.blog_layouts_chips_layout_portal a, .blog_layouts_chips_layout_portal a:visited {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1957,7 +1957,7 @@ blockquote {
   padding: 0 12px;
   text-decoration: none;
 }
-.blog_layouts_chips_layout_youtube_music a:hover, .blog_layouts_chips_layout_youtube_music a:visited:hover {
+.blog_layouts_chips_layout_portal a:hover, .blog_layouts_chips_layout_portal a:visited:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -3707,12 +3707,12 @@ h1 + p:has(+ .wp-polls-archive) code {
   display: none;
 }
 
-.blog_layouts_stackoverflow_header {
+.blog_layouts_coder_header {
   border-top: 2px solid var(--blog_layouts_primary_color);
   border-bottom: 1px solid gray;
   background-color: inherit;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content {
+.blog_layouts_coder_header .blog_layouts_coder_header_content {
   display: flex;
   gap: 0.5em;
   align-items: stretch;
@@ -3720,22 +3720,22 @@ h1 + p:has(+ .wp-polls-archive) code {
   max-width: 70em;
 }
 @media screen and (max-width: 650px) {
-  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content {
+  .blog_layouts_coder_header .blog_layouts_coder_header_content {
     width: 90%;
   }
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container {
   position: relative;
   display: flex;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_mobile_menu_toggle_button {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_mobile_menu_toggle_button {
   background-color: unset;
   border: unset;
   cursor: pointer;
   font-size: 1.2em;
   width: 3em;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu {
   position: absolute;
   top: 100%;
   background-color: var(--blog_layouts_background_color);
@@ -3749,17 +3749,17 @@ h1 + p:has(+ .wp-polls-archive) code {
   visibility: hidden;
   flex-direction: column;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_stackoverflow_header_mobile_icons {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_coder_header_mobile_icons {
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: space-evenly;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_stackoverflow_header_mobile_icons li {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_coder_header_mobile_icons li {
   list-style: none;
   display: flex;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_stackoverflow_header_mobile_icons li a {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_coder_header_mobile_icons li a {
   color: var(--blog_layouts_font_color);
   height: 3em;
   width: 3em;
@@ -3769,58 +3769,58 @@ h1 + p:has(+ .wp-polls-archive) code {
   align-items: center;
   text-decoration: none;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_stackoverflow_header_mobile_icons li a:hover {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_coder_header_mobile_icons li a:hover {
   background-color: rgba(0, 0, 0, 0.356);
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu {
   overflow-y: auto;
   height: 100%;
   padding: 0;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu a {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu a {
   color: var(--blog_layouts_font_color);
   text-decoration: none;
   font-weight: bold;
   padding: 0.8em;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu a:hover {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu a:hover {
   background-color: rgba(0, 0, 0, 0.356);
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu li {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu li {
   list-style: none;
   display: flex;
   flex-direction: column;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu li ul {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu li ul {
   padding-left: 0.5em;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu li ul a {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu .blog_layouts_header_menu li ul a {
   font-weight: unset;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_website_name {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_website_name {
   text-decoration: none;
   color: var(--blog_layouts_font_color);
   font-weight: bold;
   display: flex;
   align-items: center;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_search_div {
   display: flex;
   flex: 1;
   align-items: center;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div .search-form {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_search_div .search-form {
   flex: 1;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div .search-form label {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_search_div .search-form label {
   flex: 1;
 }
 @media screen and (max-width: 650px) {
-  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div .search-form .search-field {
+  .blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_search_div .search-form .search-field {
     display: none;
   }
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div #blog_layouts_header_search_icon {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_search_div #blog_layouts_header_search_icon {
   background-color: unset;
   border: none;
   cursor: pointer;
@@ -3829,55 +3829,55 @@ h1 + p:has(+ .wp-polls-archive) code {
   padding: 1em 0.7em;
 }
 @media screen and (max-width: 650px) {
-  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div #blog_layouts_header_search_icon {
+  .blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_search_div #blog_layouts_header_search_icon {
     display: block;
   }
 }
 @media screen and (max-width: 650px) {
-  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div {
+  .blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_search_div {
     justify-content: flex-end;
   }
-  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_search_div .search-form {
+  .blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_search_div .search-form {
     flex: none;
   }
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_icons {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_icons {
   padding: 0;
   margin: 0;
   display: flex;
 }
 @media screen and (max-width: 650px) {
-  .blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_icons {
+  .blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_icons {
     display: none;
   }
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_icons li {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_icons li {
   list-style: none;
   display: flex;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_icons li a {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_icons li a {
   text-decoration: none;
   padding: 1em 0.7em;
   color: var(--blog_layouts_font_color);
   font-size: 1.2em;
 }
-.blog_layouts_stackoverflow_header .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_header_icons li a:hover {
+.blog_layouts_coder_header .blog_layouts_coder_header_content .blog_layouts_coder_header_icons li a:hover {
   background-color: rgba(0, 0, 0, 0.356);
 }
-.blog_layouts_stackoverflow_header #blog_layouts_expandable_search_field {
+.blog_layouts_coder_header #blog_layouts_expandable_search_field {
   display: none;
   padding: 0.5em;
 }
 @media screen and (max-width: 650px) {
-  .blog_layouts_stackoverflow_header #blog_layouts_expandable_search_field.blog_layouts_header_search_open {
+  .blog_layouts_coder_header #blog_layouts_expandable_search_field.blog_layouts_header_search_open {
     display: flex;
     width: 90%;
   }
 }
-.blog_layouts_stackoverflow_header #blog_layouts_expandable_search_field form {
+.blog_layouts_coder_header #blog_layouts_expandable_search_field form {
   flex: 1;
 }
-.blog_layouts_stackoverflow_header .search-field {
+.blog_layouts_coder_header .search-field {
   border: 1px solid gray;
   border-radius: 4px;
   height: 2.5em;
@@ -3886,14 +3886,14 @@ h1 + p:has(+ .wp-polls-archive) code {
   width: 100%;
   display: block;
 }
-.blog_layouts_stackoverflow_header .search-field:focus {
+.blog_layouts_coder_header .search-field:focus {
   outline: none;
   box-shadow: 0px 0px 3px 3px var(--blog_layouts_primary_color), 0 0 0px 1000px black inset;
 }
-.blog_layouts_stackoverflow_header .search-submit {
+.blog_layouts_coder_header .search-submit {
   display: none;
 }
-.blog_layouts_stackoverflow_header.blog_layouts_header_menu_open .blog_layouts_stackoverflow_header_content .blog_layouts_stackoverflow_mobile_toggle_button_container #blog_layouts_header_mobile_menu {
+.blog_layouts_coder_header.blog_layouts_header_menu_open .blog_layouts_coder_header_content .blog_layouts_coder_mobile_toggle_button_container #blog_layouts_header_mobile_menu {
   height: auto;
   visibility: visible;
 }

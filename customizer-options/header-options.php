@@ -87,9 +87,9 @@ function blog_layouts_header($wp_customize)
         return $control->manager->get_setting('header_layout', 'gradient')->value() == 'gradient';
     }
 
-    function stackoverflow_header_active_callback($control)
+    function coder_header_active_callback($control)
     {
-        return $control->manager->get_setting('header_layout', 'gradient')->value() == 'stackoverflow';
+        return $control->manager->get_setting('header_layout', 'gradient')->value() == 'coder';
     }
 
     // Title size setting
@@ -122,108 +122,108 @@ function blog_layouts_header($wp_customize)
         return $control->manager->get_setting('header_menu')->value();
     }
 
-    // Stackoverflow Icon
-    $wp_customize->add_setting('stackoverflow_icon_1', array(
+    // coder Icon
+    $wp_customize->add_setting('coder_icon_1', array(
         'default'           => 'fa-solid fa-inbox',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    $wp_customize->add_control('stackoverflow_icon_1', array(
+    $wp_customize->add_control('coder_icon_1', array(
         'label'    => __('Icon 1 Font Awesome Icon Class', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
-        'active_callback' => 'stackoverflow_header_active_callback'
+        'active_callback' => 'coder_header_active_callback'
     ));
 
-    // Stackoverflow Icon Link
-    $wp_customize->add_setting('stackoverflow_icon_1_link', array(
+    // coder Icon Link
+    $wp_customize->add_setting('coder_icon_1_link', array(
         'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    $wp_customize->add_control('stackoverflow_icon_1_link', array(
+    $wp_customize->add_control('coder_icon_1_link', array(
         'label'    => __('Icon 1 Link', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
-        'active_callback' => 'stackoverflow_header_active_callback'
+        'active_callback' => 'coder_header_active_callback'
     ));
 
-    // Stackoverflow Icon
-    $wp_customize->add_setting('stackoverflow_icon_2', array(
+    // coder Icon
+    $wp_customize->add_setting('coder_icon_2', array(
         'default'           => 'fa-solid fa-trophy',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    $wp_customize->add_control('stackoverflow_icon_2', array(
+    $wp_customize->add_control('coder_icon_2', array(
         'label'    => __('Icon 2 Font Awesome Icon Class', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
-        'active_callback' => 'stackoverflow_header_active_callback'
+        'active_callback' => 'coder_header_active_callback'
     ));
 
-    // Stackoverflow Icon Link
-    $wp_customize->add_setting('stackoverflow_icon_2_link', array(
+    // coder Icon Link
+    $wp_customize->add_setting('coder_icon_2_link', array(
         'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    $wp_customize->add_control('stackoverflow_icon_2_link', array(
+    $wp_customize->add_control('coder_icon_2_link', array(
         'label'    => __('Icon 2 Link', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
-        'active_callback' => 'stackoverflow_header_active_callback'
+        'active_callback' => 'coder_header_active_callback'
     ));
 
-    // Stackoverflow Icon
-    $wp_customize->add_setting('stackoverflow_icon_3', array(
+    // coder Icon
+    $wp_customize->add_setting('coder_icon_3', array(
         'default'           => 'fa-solid fa-circle-question',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    $wp_customize->add_control('stackoverflow_icon_3', array(
+    $wp_customize->add_control('coder_icon_3', array(
         'label'    => __('Icon 3 Font Awesome Icon Class', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
-        'active_callback' => 'stackoverflow_header_active_callback'
+        'active_callback' => 'coder_header_active_callback'
     ));
 
-    // Stackoverflow Icon Link
-    $wp_customize->add_setting('stackoverflow_icon_3_link', array(
+    // coder Icon Link
+    $wp_customize->add_setting('coder_icon_3_link', array(
         'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    $wp_customize->add_control('stackoverflow_icon_3_link', array(
+    $wp_customize->add_control('coder_icon_3_link', array(
         'label'    => __('Icon 3 Link', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
-        'active_callback' => 'stackoverflow_header_active_callback'
+        'active_callback' => 'coder_header_active_callback'
     ));
 
-    // Stackoverflow Icon
-    $wp_customize->add_setting('stackoverflow_icon_4', array(
+    // coder Icon
+    $wp_customize->add_setting('coder_icon_4', array(
         'default'           => 'fa-regular fa-message',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    $wp_customize->add_control('stackoverflow_icon_4', array(
+    $wp_customize->add_control('coder_icon_4', array(
         'label'    => __('Icon 4 Font Awesome Icon Class', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
-        'active_callback' => 'stackoverflow_header_active_callback'
+        'active_callback' => 'coder_header_active_callback'
     ));
 
-    // Stackoverflow Icon Link
-    $wp_customize->add_setting('stackoverflow_icon_4_link', array(
+    // coder Icon Link
+    $wp_customize->add_setting('coder_icon_4_link', array(
         'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
-    $wp_customize->add_control('stackoverflow_icon_4_link', array(
+    $wp_customize->add_control('coder_icon_4_link', array(
         'label'    => __('Icon 4 Link', 'blog-layouts'),
         'section'  => 'custom_theme_header',
         'type'     => 'text',
-        'active_callback' => 'stackoverflow_header_active_callback'
+        'active_callback' => 'coder_header_active_callback'
     ));
 }
 add_action('customize_register', 'blog_layouts_header');

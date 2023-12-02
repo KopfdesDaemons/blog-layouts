@@ -160,32 +160,32 @@ $blog_layouts_sidebar_layouts = array(
     'material2' => 'Material 2',
     'material3' => 'Material 3',
     'neon' => 'Neon',
-    'reddit' => 'Reddit',
+    'network' => 'Network',
     'social' => 'Social',
 );
 
 $blog_layouts_chips_layouts = array(
     'blocks' => 'Blocks',
+    'coder' => 'Coder',
     'color-blocks' => 'Color Blocks',
     'content-creator' => 'Content Creator',
-    'github' => 'Github',
     'hashtag' => 'Hashtag',
+    'hub' => 'Hub',
     'frames' => 'Frames',
     'links' => 'Links',
     'material2' => 'Material 2',
     'material3' => 'Material 3',
     'neon' => 'Neon',
-    'reddit' => 'Reddit',
+    'network' => 'Network',
+    'portal' => 'Portal',
     'social' => 'Social',
-    'the-hub' => 'The Hub',
-    'youtube-music' => 'YouTube Music',
 );
 
 $blog_layouts_header_layouts = array(
+    'coder' => 'Coder',
     'gradient' => 'Gradient',
     'material2' => 'Material 2',
     'material3' => 'Material 3',
-    'stackoverflow' => 'Stack Overflow',
 );
 
 $blog_layouts_authorbox_layouts = array(
@@ -201,6 +201,6 @@ $blog_layouts_comments_layouts = array(
     'material2' => 'Material 2',
     'material3' => 'Material 3',
     'neon' => 'Neon',
+    'portal' => 'Portal',
     'social' => 'Social',
-    'youtube' => 'YouTube',
 );
