@@ -219,7 +219,7 @@ function blog_layouts_custom_posts($wp_customize)
 
     // Authorbox Layout
     $wp_customize->add_setting('posts_authorbox_layout', array(
-        'default' => 'neon',
+        'default' => 'material2',
         'transport' => 'refresh',
         'sanitize_callback' => 'sanitize_text_field',
     ));

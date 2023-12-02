@@ -1,7 +1,12 @@
 <?php
 get_header();
 ?>
-<main>
+<section class="blog_layouts_hero">
+    <header>
+        <h1 class="title"><?php the_title(); ?></h1>
+    </header>
+</section>
+<main <?php if (get_theme_mod('pages_sidebar', true)) echo 'class="blog_layouts_has_sidebar"' ?>>
     <section class="blog_layouts_content_spacer">
         <div class="blog_layouts_content" id="blog_layouts_main_content">
             <?php
@@ -9,7 +14,6 @@ get_header();
                 the_post();
             ?>
                 <article id="post-<?php the_ID(); ?>" <?php post_class('blog_layouts_user_content_container'); ?>>
-                    <h1><?php the_title(); ?></h1>
                     <?php the_content(); ?>
                 </article>
                 <footer class="blog_layouts_post_footer">

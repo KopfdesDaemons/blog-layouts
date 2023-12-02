@@ -914,7 +914,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 1em;
+  margin-top: auto;
 }
 #blog_layouts_footer .footer-menu {
   padding: clamp(0em, 5vw, 5em);
@@ -976,6 +976,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 .page .blog_layouts_content_spacer {
   max-width: var(--blog_layouts_max_page_width);
+}
+.page .blog_layouts_hero {
+  min-height: unset;
 }
 
 /*
@@ -1077,6 +1080,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 .search h1 {
   text-align: center;
+  margin-bottom: 1em;
 }
 .search .blog_layouts_feed {
   margin-top: 3em;
@@ -1227,6 +1231,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   padding: 1em;
   background-color: var(--blog_layouts_primary_variant_much_darker);
   font-size: clamp(16px, 5vw, 25px);
+  margin: 1em auto;
 }
 .post-password-form p {
   display: flex;
@@ -2660,7 +2665,7 @@ h1 + p:has(+ .wp-polls-archive) code {
 .blog_layouts_frameless_post_list_item .blog_layouts_frameless_post_list_item_content_div p {
   line-height: var(--blog_layouts_frameless_post_list_line_height);
 }
-.blog_layouts_frameless_post_list_item .blog_layouts_tag {
+.blog_layouts_frameless_post_list_item .blog_layouts_tag a {
   border-radius: var(--blog_layouts_frameless_post_list_tags_border_radius);
   border: 1px solid rgb(95, 95, 95);
   padding: 0.8em;
@@ -2670,6 +2675,7 @@ h1 + p:has(+ .wp-polls-archive) code {
   text-decoration: none;
   white-space: nowrap;
   font-size: 0.8em;
+  display: flex;
 }
 .blog_layouts_frameless_post_list_item .blog_layouts_frameless_post_list_item_sticky_pin {
   margin: 0.5em;
@@ -2919,7 +2925,7 @@ h1 + p:has(+ .wp-polls-archive) code {
 }
 .blog_layouts_material3_post_list_item .blog_layouts_materiale_post_list_item_icon_row .blog_layouts_materiale_post_list_item_comments {
   background-color: unset;
-  outline: 1px solid var(--blog_layouts_font_color);
+  outline: 1px solid gray;
   color: var(--blog_layouts_primary_color);
 }
 .blog_layouts_material3_post_list_item.blog_layouts_sticky_post .blog_layouts_material3_post_list_item_sticky_pin {
@@ -3971,11 +3977,13 @@ body {
 }
 
 main {
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   grid-area: main;
   margin-top: 2em;
+  margin-bottom: 2em;
 }
 @media only screen and (min-width: 1570px) {
   main.blog_layouts_has_sidebar {

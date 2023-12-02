@@ -55,11 +55,11 @@ body {
     position: relative;
     align-items: flex-start;
     grid-template-columns: minmax(0, 1fr) auto;
-
+    
     @media only screen and (max-width: 800px) {
         grid-template-areas: "header" "landingpagesection" "main" "sidebar" "footer";
     }
-
+    
     grid-template-areas: "header header" "landingpagesection landingpagesection" "main sidebar" "footer footer";
 }
 
@@ -79,11 +79,13 @@ body {
 }
 
 main {
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-area: main;
     margin-top: 2em;
+    margin-bottom: 2em;
 
     @media only screen and (min-width: 1570px) {
         &.blog_layouts_has_sidebar {

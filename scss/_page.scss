@@ -11,4 +11,8 @@
     .blog_layouts_content_spacer {
         max-width: var(--blog_layouts_max_page_width);
     }
+
+    .blog_layouts_hero {
+        min-height: unset;
+    }
 }

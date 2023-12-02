@@ -84,7 +84,7 @@
                         $author_website = esc_url(get_the_author_meta('user_url'));
                         $author_avatar = get_avatar($author_id, 500);
                     ?>
-                        <div <?php echo 'class="' . 'blog_layouts_authorbox_layout_' . str_replace("-", "_", get_theme_mod('posts_authorbox_layout', 'neon')) . '"'; ?>>
+                        <div <?php echo 'class="' . 'blog_layouts_authorbox_layout_' . str_replace("-", "_", get_theme_mod('posts_authorbox_layout', 'material2')) . '"'; ?>>
                             <div class="blog_layouts_author_avatar">
                                 <a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>">
                                     <?php echo $author_avatar; ?>

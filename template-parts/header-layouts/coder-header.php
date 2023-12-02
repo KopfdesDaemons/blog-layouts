@@ -11,7 +11,7 @@ function blog_layouts_display_coder_header()
             <div id="blog_layouts_header_mobile_menu">
                 <ul class="blog_layouts_coder_header_mobile_icons">
                     <li>
-                        <a href="<?php echo esc_url(get_theme_mod('coder_icon_1_link', 'x')) ?>">
+                        <a href="<?php echo esc_url(get_theme_mod('coder_icon_1_link', '')) ?>">
                             <i class="<?php echo esc_attr(get_theme_mod('coder_icon_1', 'fa-solid fa-inbox')) ?>"></i>
                         </a>
                     </li>

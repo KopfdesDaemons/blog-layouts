@@ -59,7 +59,7 @@
         }
     }
 
-    .blog_layouts_tag {
+    .blog_layouts_tag a{
         border-radius: var(--blog_layouts_frameless_post_list_tags_border_radius);
         border: 1px solid rgb(95, 95, 95);
         padding: 0.8em;
@@ -69,6 +69,7 @@
         text-decoration: none;
         white-space: nowrap;
         font-size: 0.8em;
+        display: flex;
     }
 
     .blog_layouts_frameless_post_list_item_sticky_pin {
