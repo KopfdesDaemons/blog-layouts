@@ -1758,6 +1758,15 @@ blockquote {
   text-align: start;
   font-size: 10px;
 }
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_soft .widget {
+  background-color: unset;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+}
+#blog_layouts_sidebar.blog_layouts_sidebar_layout_soft .widget:hover {
+  border: 1px solid gray;
+}
 
 .blog_layouts_chips_layout_blocks {
   border: 1px solid rgb(95, 95, 95);
@@ -2002,9 +2011,6 @@ blockquote {
   border: 1px solid;
   margin: 0.5em;
 }
-.blog_layouts_authorbox_layout_border::before {
-  border: 1px red;
-}
 .blog_layouts_authorbox_layout_border .blog_layouts_author_avatar {
   flex: 1 0 auto;
   display: flex;
@@ -2153,6 +2159,36 @@ blockquote {
   background-color: #292929;
 }
 
+.blog_layouts_authorbox_layout_frameless {
+  padding: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em 0 3em 0;
+  margin: 0.5em;
+}
+.blog_layouts_authorbox_layout_frameless .blog_layouts_author_avatar {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog_layouts_authorbox_layout_frameless .blog_layouts_author_avatar a img {
+  margin: 0.5em;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 5em;
+}
+.blog_layouts_authorbox_layout_frameless .blog_layouts_author_avatar a img:hover {
+  filter: brightness(0.8);
+}
+.blog_layouts_authorbox_layout_frameless .blog_layouts_author_details {
+  flex: 1 0 70%;
+}
+.blog_layouts_authorbox_layout_frameless .blog_layouts_author_details .blog_layouts_author_name_row {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*
     For WP-Polls plugin
 */
@@ -2252,6 +2288,9 @@ h1 + p:has(+ .wp-polls-archive) code {
      object-fit: cover;
   border-radius: var(--blog_layouts_feed_post_card_border_radius_image);
 }
+.blog_layouts_post_card .blog_layouts_post_card_row_1 .blog_layouts_post_card_image_container img:hover {
+  filter: brightness(0.8);
+}
 .blog_layouts_post_card .blog_layouts_post_card_row_1 .blog_layouts_post_card_content_div {
   flex: 1 0 60%;
   display: flex;
@@ -2296,15 +2335,6 @@ h1 + p:has(+ .wp-polls-archive) code {
 .blog_layouts_post_card .blog_layouts_post_card_row_1 .blog_layouts_post_card_content_div .blog_layouts_post_card_buttom_row .blog_layouts_post_card_link_div .blog_layouts_post_card_read_more:hover {
   border-color: var(--blog_layouts_primary_color);
 }
-.blog_layouts_post_card .blog_layouts_post_card_tags_div ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-  list-style: none;
-  margin: 0.5em;
-  gap: 0.4em;
-}
 .blog_layouts_post_card .blog_layouts_post_card_footer_row {
   display: flex;
   align-items: center;
@@ -2313,7 +2343,16 @@ h1 + p:has(+ .wp-polls-archive) code {
 .blog_layouts_post_card .blog_layouts_post_card_footer_row .blog_layouts_post_card_tags_div {
   flex: 1;
 }
-.blog_layouts_post_card .blog_layouts_post_card_footer_row .blog_layouts_post_card_tags_div .blog_layouts_tag {
+.blog_layouts_post_card .blog_layouts_post_card_footer_row .blog_layouts_post_card_tags_div ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin: 0.5em;
+  gap: 0.4em;
+}
+.blog_layouts_post_card .blog_layouts_post_card_footer_row .blog_layouts_post_card_tags_div .blog_layouts_tag a {
   border-radius: var(--blog_layouts_tags_border_radius);
   border: 1px solid rgb(95, 95, 95);
   padding: 0.8em;
@@ -2323,6 +2362,7 @@ h1 + p:has(+ .wp-polls-archive) code {
   text-decoration: none;
   white-space: nowrap;
   font-size: 0.8em;
+  display: flex;
 }
 .blog_layouts_post_card .blog_layouts_post_card_sticky_pin {
   display: none;

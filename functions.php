@@ -162,6 +162,7 @@ $blog_layouts_sidebar_layouts = array(
     'neon' => 'Neon',
     'network' => 'Network',
     'social' => 'Social',
+    'soft' => 'Soft',
 );
 
 $blog_layouts_chips_layouts = array(
@@ -190,6 +191,7 @@ $blog_layouts_header_layouts = array(
 
 $blog_layouts_authorbox_layouts = array(
     'border' => 'Border',
+    'frameless' => 'Frameless',
     'neon' => 'Neon',
     'material2' => 'Material 2',
     'material3' => 'Material 3',
