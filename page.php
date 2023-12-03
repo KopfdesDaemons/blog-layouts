@@ -42,7 +42,7 @@ get_header();
 </main>
 <?php
 if(get_theme_mod('pages_sidebar', true)){
-    echo '<aside id="blog_layouts_sidebar" class="' . 'blog_layouts_sidebar_layout_' . get_theme_mod('pages_sidebar_layout', 'social') . '">';
+    echo '<aside id="blog_layouts_sidebar" class="' . 'blog_layouts_sidebar_layout_' . esc_attr(get_theme_mod('pages_sidebar_layout', 'social')) . '">';
     get_sidebar();
     echo '</aside>';
 }

@@ -56,25 +56,25 @@
 
 <!-- author header -->
 <?php if (is_author() && get_theme_mod('author_header', true)) {
-    $author_id = get_the_author_meta('ID');
-    $author_name = esc_html(get_the_author_meta('display_name'));
-    $author_description = esc_html(get_the_author_meta('description'));
-    $author_website = esc_url(get_the_author_meta('user_url'));
-    $author_posts_count = count_user_posts($author_id);
-    $author_roles = get_the_author_meta('roles');
+    $blog_layouts_author_id = get_the_author_meta('ID');
+    $blog_layouts_author_name = esc_html(get_the_author_meta('display_name'));
+    $blog_layouts_author_description = esc_html(get_the_author_meta('description'));
+    $blog_layouts_author_website = esc_url(get_the_author_meta('user_url'));
+    $blog_layouts_author_posts_count = count_user_posts($blog_layouts_author_id);
+    $blog_layouts_author_roles = get_the_author_meta('roles');
 
-    $user_registered = get_the_author_meta('user_registered');
-    $timestamp = strtotime($user_registered);
-    $formatted_date = date_i18n(get_option('date_format'), $timestamp);
+    $blog_layouts_user_registered = get_the_author_meta('blog_layouts_user_registered');
+    $blog_layouts_timestamp = strtotime($blog_layouts_user_registered);
+    $blog_layouts_formatted_date = date_i18n(get_option('date_format'), $blog_layouts_timestamp);
 
     // Avatar
-    $image_size = esc_attr(get_theme_mod('image_size_setting', '150'));
-    $author_avatar = get_avatar($author_id, $image_size);
+    $blog_layouts_image_size = esc_attr(get_theme_mod('image_size_setting', '150'));
+    $blog_layouts_author_avatar = get_avatar($blog_layouts_author_id, $blog_layouts_image_size);
 ?>
     <section class="blog_layouts_post_author_headline_section">
         <header>
             <div class="blog_layouts_author_row_1">
-                <?php echo $author_avatar ?>
+                <?php echo $blog_layouts_author_avatar ?>
                 <div class="blog_layouts_author_headline_container">
                     <h1>
                         <?php
@@ -87,7 +87,7 @@
                     <ul class="blog_layouts_author_stats">
                         <?php if (get_theme_mod('author_page_role', true)) { ?>
                             <li>
-                                <div class="blog_layouts_author_stats_data"> <?php echo $author_roles[0] ?></div>
+                                <div class="blog_layouts_author_stats_data"> <?php echo $blog_layouts_author_roles[0] ?></div>
                                 <label class="blog_layouts_author_stats_label"><?php echo esc_html(__('Role', 'blog-layouts')) ?></label>
                             </li>
                         <?php } ?>
@@ -95,10 +95,10 @@
                             <li>
                                 <div class="blog_layouts_author_stats_data">
                                     <?php
-                                    $registration_date = get_the_author_meta('user_registered', $author_id);
-                                    $formatted_date = date_i18n('d.m.Y', strtotime($registration_date));
+                                    $registration_date = get_the_author_meta('blog_layouts_user_registered', $blog_layouts_author_id);
+                                    $blog_layouts_formatted_date = date_i18n('d.m.Y', strtotime($registration_date));
                                     ?>
-                                    <time datetime="<?php echo date('Y-m-d', strtotime($registration_date)); ?>"><?php echo $formatted_date; ?></time>
+                                    <time datetime="<?php echo date('Y-m-d', strtotime($registration_date)); ?>"><?php echo $blog_layouts_formatted_date; ?></time>
                                 </div>
                                 <label class="blog_layouts_author_stats_label">
                                     <?php echo esc_html(__('Registration date', 'blog-layouts')); ?>
@@ -107,7 +107,7 @@
                         <?php } ?>
                         <?php if (get_theme_mod('author_number_of_posts', true)) { ?>
                             <li>
-                                <div class="blog_layouts_author_stats_data"> <?php echo $author_posts_count ?></div>
+                                <div class="blog_layouts_author_stats_data"> <?php echo $blog_layouts_author_posts_count ?></div>
                                 <label class="blog_layouts_author_stats_label"><?php echo esc_html(__('Number of posts', 'blog-layouts')) ?></label>
                             </li>
                         <?php } ?>
@@ -127,13 +127,13 @@
                 <?php } ?>
             </ul>
         </nav>
-        <?php if (!empty($author_description)) : ?>
+        <?php if (!empty($blog_layouts_author_description)) : ?>
             <div class="blog_layouts_author_bio_container">
                 <div class="blog_layouts_author_bio">
                     <h2><?php printf(esc_html__('About %s:', 'blog-layouts'), get_the_author()); ?></h2>
-                    <p><?php echo $author_description; ?></p>
-                    <?php if (get_theme_mod('author_website', true) && $author_website) { ?>
-                        <a class="blog_layouts_author_website" href="<?php echo $author_website; ?>" target="_blank">🌐
+                    <p><?php echo $blog_layouts_author_description; ?></p>
+                    <?php if (get_theme_mod('blog_layouts_author_website', true) && $blog_layouts_author_website) { ?>
+                        <a class="blog_layouts_author_website" href="<?php echo $blog_layouts_author_website; ?>" target="_blank">🌐
                             <?php echo esc_html(__('Website', 'blog-layouts')) ?></a>
                     <?php } ?>
                 </div>
@@ -149,18 +149,18 @@
             <div class="blog_layouts_autor_content">
                 <div class="blog_layouts_author_comments_container">
                     <?php
-                    $args = array(
-                        'user_id' => $author_id,
+                    $blog_layouts_args = array(
+                        'user_id' => $blog_layouts_author_id,
                         'number' => 5, // Number of comments
                     );
-                    $author_comments = get_comments($args);
+                    $blog_layouts_author_comments = get_comments($blog_layouts_args);
                     ?>
                     <h3 class="blog_layouts_author_last_comments_headline">
-                        <?php echo __('Last comments from', 'blog-layouts') . ' ' . $author_name; ?></h3>
+                        <?php echo __('Last comments from', 'blog-layouts') . ' ' . $blog_layouts_author_name; ?></h3>
                     <ol class="has-avatars has-dates has-excerpts wp-block-latest-comments">
                         <?php
-                        if ($author_comments) {
-                            foreach ($author_comments as $comment) {
+                        if ($blog_layouts_author_comments) {
+                            foreach ($blog_layouts_author_comments as $comment) {
                                 echo '<li class="wp-block-latest-comments__comment">';
                                 echo get_avatar($comment->comment_author_email, 48); // Gravatar-Avatar
                                 echo '<article>';
@@ -192,8 +192,8 @@
                     echo blog_layouts_display_posts_list($wp_query, $blog_layouts_archive_post_list_style);
 
                     // Pagination 
-                    $total_pages = $wp_query->max_num_pages;
-                    if ($total_pages > 1) {
+                    $blog_layouts_total_pages = $wp_query->max_num_pages;
+                    if ($blog_layouts_total_pages > 1) {
                         echo '<div class="blog_layouts_pagination blog_layouts_shadow">';
                         echo '<div class="blog_layouts_pagination_content">';
 
@@ -225,7 +225,7 @@
 </main>
 <?php
 if ($blog_layouts_side_bar) {
-    echo '<aside id="blog_layouts_sidebar" class="' . 'blog_layouts_sidebar_layout_' . $blog_layouts_sidebar_layout_setting . '">';
+    echo '<aside id="blog_layouts_sidebar" class="' . 'blog_layouts_sidebar_layout_' . esc_attr($blog_layouts_sidebar_layout_setting) . '">';
     get_sidebar();
     echo '</aside>';
 }

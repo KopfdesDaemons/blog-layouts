@@ -3,21 +3,21 @@
     <section class="blog_layouts_content_spacer">
         <div class="blog_layouts_search_container" id="blog_layouts_main_content">
             <?php
-            $search_query = get_search_query();
+            $blog_layouts_search_query = get_search_query();
 
-            $args = array(
+            $blog_layouts_args = array(
                 'post_type'      => 'post',
                 'posts_per_page' => -1,
-                's'              => $search_query,
+                's'              => $blog_layouts_search_query,
             );
-            $query = new WP_Query($args);
+            $blog_layouts_query = new WP_Query($blog_layouts_args);
 
-            if ($query->have_posts()) {
-                echo '<h1 class="blog_layouts_search_headline">' . sprintf(esc_html__('Search results for "%s"', 'blog-layouts'), esc_html($search_query)) . '</h1>';
+            if ($blog_layouts_query->have_posts()) {
+                echo '<h1 class="blog_layouts_search_headline">' . sprintf(esc_html__('Search results for "%s"', 'blog-layouts'), esc_html($blog_layouts_search_query)) . '</h1>';
 
                 $searchresults_style = get_theme_mod('searchresults_style', 'search-engine');
                 require_once get_template_directory() . '/template-parts/layout-manager.php';
-                echo blog_layouts_display_posts_list($query, $searchresults_style);
+                echo blog_layouts_display_posts_list($blog_layouts_query, $searchresults_style);
 
                 
                 // Pagination only if needed
@@ -55,7 +55,7 @@
 </main>
 <?php
 if(get_theme_mod('searchresults_sidebar', true)) {
-    echo '<aside id="blog_layouts_sidebar" class="' . 'blog_layouts_sidebar_layout_' . get_theme_mod('searchresults_sidebar_layout', 'social') . '">';
+    echo '<aside id="blog_layouts_sidebar" class="' . 'blog_layouts_sidebar_layout_' . esc_attr(get_theme_mod('searchresults_sidebar_layout', 'social')) . '">';
     get_sidebar();
     echo '</aside>';
 }

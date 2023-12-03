@@ -1,18 +1,18 @@
 <?php
-function enqueue_custom_styles()
+function blog_layouts_styles()
 {
     $theme_directory = get_stylesheet_directory_uri();
 
     $styles = array(
         'blog-layouts-styles' => '/style.css',
-        'fontawesome' => '/fonts/fontawesome/css/all.min.css',
+        'blog-layouts-fontawesome' => '/fonts/fontawesome/css/all.min.css',
     );
 
     foreach ($styles as $handle => $file) {
         wp_enqueue_style($handle, $theme_directory . $file, array(), '1', 'all');
     }
 }
-add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
+add_action('wp_enqueue_scripts', 'blog_layouts_styles');
 
 
 // Theme Support
@@ -114,7 +114,7 @@ class blog_layouts_menu_walker extends Walker_Nav_Menu
 }
 
 // customizer settings
-$customizer_options = [
+$blog_layouts_customizer_options = [
     'global-options.php',
     'header-options.php',
     'feed-options.php',
@@ -132,7 +132,7 @@ $customizer_options = [
     'date-list-options.php'
 ];
 
-foreach ($customizer_options as $option) {
+foreach ($blog_layouts_customizer_options as $option) {
     require_once get_template_directory() . '/customizer-options/' . $option;
 }
 

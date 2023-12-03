@@ -39,10 +39,10 @@ function blog_layouts_display_frameless_posts_list($show_sticky)
             <div class="blog_layouts_frameless_post_list_item_tags_div">
                 <?php
                 if (get_theme_mod('frameless_post_list_tags', true)) {
-                    $tags = get_the_tags();
-                    if ($tags) {
+                    $blog_layouts_tags = get_the_tags();
+                    if ($blog_layouts_tags) {
                         echo '<ul>';
-                        foreach ($tags as $tag) {
+                        foreach ($blog_layouts_tags as $tag) {
                             $tag_link = esc_url(get_tag_link($tag->term_id));
                             echo '<li class="blog_layouts_tag"><a href="' . $tag_link . '">' . $tag->name . '</a></li>';
                         }

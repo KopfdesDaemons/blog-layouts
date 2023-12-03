@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-12-02 13:29+0100\n"
-"PO-Revision-Date: 2023-12-02 13:30+0100\n"
+"POT-Creation-Date: 2023-12-02 21:05+0100\n"
+"PO-Revision-Date: 2023-12-02 22:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -467,10 +467,10 @@ msgstr "Tags Ergebnisliste"
 msgid "Settings for the results when calling a tag."
 msgstr "Einstellungen für die Ergebnisse beim Aufruf eines Tags."
 
-#: footer.php:11 template-parts/header-layouts/gradient-header.php:36
+#: footer.php:11 template-parts/header-layouts/coder-header.php:42
+#: template-parts/header-layouts/gradient-header.php:36
 #: template-parts/header-layouts/material2-header.php:22
 #: template-parts/header-layouts/material2-header.php:36
-#: template-parts/header-layouts/stackoverflow-header.php:42
 msgid "Select a menu in the customizer"
 msgstr "Wähle ein Menü im Customizer"
 
@@ -499,7 +499,7 @@ msgstr "Landingpage Widget Area"
 msgid "Fill the landing page in the customizer"
 msgstr "Befülle die Landingpage im Customizer"
 
-#: page.php:20 single.php:58
+#: page.php:24 single.php:58
 msgid "Pages:"
 msgstr "Seiten:"
 

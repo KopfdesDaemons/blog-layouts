@@ -1,16 +1,15 @@
 <?php
 function blog_layouts_display_content_creator_posts_list($show_sticky)
 {
-    $categories = get_the_category();
-    $tags = get_the_tags();
-    $author_id = get_the_author_meta('ID');
-    $author_avatar = get_avatar($author_id, 48);
+    $blog_layouts_tags = get_the_tags();
+    $blog_layouts_author_id = get_the_author_meta('ID');
+    $blog_layouts_author_avatar = get_avatar($blog_layouts_author_id, 48);
     ob_start(); // Start output buffering
 ?>
     <li class="blog_layouts_content_creator_post_list_item <?php if ($show_sticky && is_sticky()) echo 'blog_layouts_sticky_post' ?>">
         <div class="blog_layouts_content_creator_post_list_item_headline_div">
-            <a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>" class="blog_layouts_content_creator_post_list_item_author_image">
-                <?php echo $author_avatar; ?>
+            <a href="<?php echo esc_url(get_author_posts_url($blog_layouts_author_id)); ?>" class="blog_layouts_content_creator_post_list_item_author_image">
+                <?php echo $blog_layouts_author_avatar; ?>
             </a>
             <div class="blog_layouts_content_creator_post_list_item_headline_div_right">
                 <div class="blog_layouts_content_creator_post_list_item_headline_and_name">
@@ -46,9 +45,9 @@ function blog_layouts_display_content_creator_posts_list($show_sticky)
             </a>
         </div>
         <?php
-        if (!empty($tags)) {
+        if (!empty($blog_layouts_tags)) {
             echo '<ul class="blog_layouts_content_creator_post_list_item_tags">';
-            foreach ($tags as $tag) {
+            foreach ($blog_layouts_tags as $tag) {
                 echo '<li><a href="' . esc_url(get_category_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a></li>';
             }
             echo '</ul>';

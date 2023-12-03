@@ -2,13 +2,13 @@
 function blog_layouts_display_social_posts_list($show_sticky)
 {
     ob_start(); // Start output buffering
-    $author_id = get_the_author_meta('ID');
-    $author_avatar = get_avatar($author_id, 100);
+    $blog_layouts_author_id = get_the_author_meta('ID');
+    $blog_layouts_author_avatar = get_avatar($blog_layouts_author_id, 100);
 ?>
     <li class="blog_layouts_social_post_list_item <?php if ($show_sticky && is_sticky()) echo 'blog_layouts_sticky_post' ?>">
         <div class="blog_layouts_social_post_list_item_row_1">
-            <a href="<?php echo esc_url(get_author_posts_url($author_id)); ?>" class="blog_layouts_social_post_list_item_author_image">
-                <?php echo $author_avatar; ?>
+            <a href="<?php echo esc_url(get_author_posts_url($blog_layouts_author_id)); ?>" class="blog_layouts_social_post_list_item_author_image">
+                <?php echo $blog_layouts_author_avatar; ?>
             </a>
             <div class="blog_layouts_social_post_list_item_name_div">
                 <a class="blog_layouts_social_post_list_item_name" href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">

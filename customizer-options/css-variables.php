@@ -42,14 +42,14 @@ function blog_layouts_hex2hsl($hex)
 // Get the primary color from the Customizer
 $blog_layouts_primary_color = esc_attr(get_theme_mod('primary_color', '#1e73be'));
 // Convert the primary color to HSL
-list($primary_hue, $saturation, $lightness) = blog_layouts_hex2hsl($blog_layouts_primary_color);
-$lightness = 50;
+list($blog_layouts_primary_hue, $blog_layouts_saturation, $lightness) = blog_layouts_hex2hsl($blog_layouts_primary_color);
+$blog_layouts_lightness = 50;
 
 // Define other colors based on the primary color
-$blog_layouts_primary_variant_darker = "hsl($primary_hue, " . (max(0, $saturation - 20)) . "%, " . (max(0, $lightness - 20)) . "%)";
-$blog_layouts_primary_variant_much_darker = "hsl($primary_hue, " . (max(0, $saturation - 35)) . "%, " . (max(0, $lightness - 35)) . "%)";
-$blog_layouts_primary_variant_brighter = "hsl($primary_hue, " . (min(100, $saturation + 20)) . "%, " . (min(100, $lightness + 20)) . "%)";
-$blog_layouts_primary_variant_much_brighter = "hsl($primary_hue, " . (min(100, $saturation + 25)) . "%, " . (min(100, $lightness + 25)) . "%)";
+$blog_layouts_primary_variant_darker = "hsl($blog_layouts_primary_hue, " . (max(0, $blog_layouts_saturation - 20)) . "%, " . (max(0, $blog_layouts_lightness - 20)) . "%)";
+$blog_layouts_primary_variant_much_darker = "hsl($blog_layouts_primary_hue, " . (max(0, $blog_layouts_saturation - 35)) . "%, " . (max(0, $blog_layouts_lightness - 35)) . "%)";
+$blog_layouts_primary_variant_brighter = "hsl($blog_layouts_primary_hue, " . (min(100, $blog_layouts_saturation + 20)) . "%, " . (min(100, $blog_layouts_lightness + 20)) . "%)";
+$blog_layouts_primary_variant_much_brighter = "hsl($blog_layouts_primary_hue, " . (min(100, $blog_layouts_saturation + 25)) . "%, " . (min(100, $blog_layouts_lightness + 25)) . "%)";
 
 $blog_layouts_search_row = (get_theme_mod('searchbar', true) || get_theme_mod('logo', true));
 $blog_layouts_header_menu = get_theme_mod('header_menu', true);

@@ -116,13 +116,13 @@ function blog_layouts_custom_author_page($wp_customize)
     ));
 
     // Website
-    $wp_customize->add_setting('author_website', array(
+    $wp_customize->add_setting('blog_layouts_author_website', array(
         'default' => true,
         'transport' => 'refresh',
         'sanitize_callback' => 'blog_layouts_sanitize_checkbox',
     ));
 
-    $wp_customize->add_control('author_website', array(
+    $wp_customize->add_control('blog_layouts_author_website', array(
         'type' => 'checkbox',
         'label' => __('Show author website', 'blog-layouts'),
         'section' => 'custom_author_page',

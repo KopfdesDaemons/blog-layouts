@@ -1,8 +1,8 @@
 <?php
 function blog_layouts_display_material3_posts_list($show_sticky)
 {
-    $categories = get_the_category();
-    $tags = get_the_tags();
+    $blog_layouts_categories = get_the_category();
+    $blog_layouts_tags = get_the_tags();
     ob_start(); // Start output buffering
 ?>
     <li class="blog_layouts_material3_post_list_item <?php if ($show_sticky && is_sticky()) echo 'blog_layouts_sticky_post' ?>">
@@ -20,9 +20,9 @@ function blog_layouts_display_material3_posts_list($show_sticky)
             </div>
         <?php } ?>
         <?php
-        if (get_theme_mod('material3_post_list_categories', true) && !empty($categories)) {
+        if (get_theme_mod('material3_post_list_categories', true) && !empty($blog_layouts_categories)) {
             echo '<ul class="blog_layouts_material3_post_list_item_categories">';
-            foreach ($categories as $category) {
+            foreach ($blog_layouts_categories as $category) {
                 echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
             }
             echo '</ul>';
@@ -31,9 +31,9 @@ function blog_layouts_display_material3_posts_list($show_sticky)
             <?php the_excerpt(); ?>
         </div>
         <?php
-        if (get_theme_mod('material3_post_list_tags', true) && !empty($tags)) {
+        if (get_theme_mod('material3_post_list_tags', true) && !empty($blog_layouts_tags)) {
             echo '<ul class="blog_layouts_material3_post_list_item_tags">';
-            foreach ($categories as $category) {
+            foreach ($blog_layouts_categories as $category) {
                 echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></li>';
             }
             echo '</ul>';

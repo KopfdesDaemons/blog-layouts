@@ -26,6 +26,13 @@ particularly extensive. There is a landing page with a widget area.
 
 == Changelog ==
 
+    = 1.0.3 =
+        - prefixes for variables
+        - customizer-options escaped 
+        - header meta tags removed
+        - new screenshot
+        - fix overlapping with the wp admin bar
+
     = 1.0.2 =
         - Fix PHP error "undefined variable"
 
@@ -39,17 +46,12 @@ particularly extensive. There is a landing page with a widget area.
 
     = Images =
 
-    Profile picture for theme screenshot
-    License: Attribution-NonCommercial 2.0 Generic (CC BY-NC 2.0 DEED)
-    License URL: https://creativecommons.org/licenses/by-nc/2.0/
-    Source: https://www.flickr.com/photos/plasticbag/13183739815/
-
-    Image for theme screenshot (Post 1)
+    Image for theme screenshot (Post Thumbnail)
     License: Attribution 2.0 Generic (CC BY 2.0)
     License URL: https://creativecommons.org/licenses/by/2.0/
     Source: https://www.flickr.com/photos/byrawpixel/39726357210/
 
-    Image for theme screenshot (Post 2)
+    Image for theme screenshot (Latest Posts)
     License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
     License URL: https://creativecommons.org/publicdomain/zero/1.0/
     Source: https://www.flickr.com/photos/jonas-svidras/39608400995/

@@ -5,7 +5,7 @@ Author URI: https://ricoswebsite.com/
 Text Domain: blog-layouts
 Description: Blog Layouts is a modern theme for blogs. A core feature is swapping layouts. The primary color is customizable. It has a tidy, wide layout with a sidebar, which is right at the edge and doesn't get in the way. The author page is particularly extensive. There is a landing page with a widget area.
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
-Version: 1.0.2
+Version: 1.0.3
 Requires at least: 5.0
 Requires PHP: 7.0
 Tested up to: 6.2
@@ -1356,7 +1356,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 .wp-block-table th,
 .wp-block-table td {
-  padding: 1em 1em;
+  padding: 0.5em 0.5em;
   color: var(--blog_layouts_font_color);
   border-color: #555;
   border: 1px solid;
@@ -3950,7 +3950,6 @@ body {
   font-family: var(--blog_layouts_body_font);
   font-size: 14px;
   display: grid;
-  position: relative;
   align-items: flex-start;
   grid-template-columns: minmax(0, 1fr) auto;
   grid-template-areas: "header header" "landingpagesection landingpagesection" "main sidebar" "footer footer";

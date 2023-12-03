@@ -4,17 +4,17 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="comments" <?php echo 'class="' . 'blog_layouts_comments_layout_' . str_replace("-", "_", get_theme_mod('comments_layout', 'dark-cards')) . '"'; ?>>
+<div id="comments" <?php echo 'class="' . 'blog_layouts_comments_layout_' . str_replace("-", "_", esc_attr(get_theme_mod('comments_layout', 'dark-cards'))) . '"'; ?>>
 
     <?php if (have_comments()) : ?>
 
         <h2>
             <?php
-            $comments_number = get_comments_number();
-            if ($comments_number === 1) {
+            $blog_layouts_comments_number = get_comments_number();
+            if ($blog_layouts_comments_number === 1) {
                 printf(__('One Comment', 'blog-layouts'));
             } else {
-                printf(__('%d Comments', 'blog-layouts'), $comments_number);
+                printf(__('%d Comments', 'blog-layouts'), $blog_layouts_comments_number);
             }
             ?>
         </h2>
