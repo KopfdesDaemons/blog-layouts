@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-12-02 21:05+0100\n"
-"PO-Revision-Date: 2023-12-02 22:57+0100\n"
+"POT-Creation-Date: 2023-12-04 18:00+0100\n"
+"PO-Revision-Date: 2023-12-04 19:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
@@ -35,27 +35,27 @@ msgstr "Gehe zur Startseite"
 msgid "Archive"
 msgstr "Archive"
 
-#: archive.php:26 archive.php:28 archive.php:30
+#: archive.php:27 archive.php:29 archive.php:31
 msgid "Archive for"
 msgstr "Archive für"
 
-#: archive.php:90
+#: archive.php:91
 msgid "Role"
 msgstr "Rolle"
 
-#: archive.php:103
+#: archive.php:104
 msgid "Registration date"
 msgstr "Registrierungsdatum"
 
-#: archive.php:110
+#: archive.php:111
 msgid "Number of posts"
 msgstr "Anzahl der Beiträge"
 
-#: archive.php:120 customizer-options/posts-options.php:6
+#: archive.php:121 customizer-options/posts-options.php:6
 msgid "Posts"
 msgstr "Beiträge"
 
-#: archive.php:124 template-parts/post-list-layouts/cards-posts-list.php:25
+#: archive.php:125 template-parts/post-list-layouts/cards-posts-list.php:25
 #: template-parts/post-list-layouts/frameless-posts-list.php:26
 #: template-parts/post-list-layouts/material2-posts-list.php:47
 #: template-parts/post-list-layouts/material3-posts-list.php:46
@@ -64,32 +64,32 @@ msgstr "Beiträge"
 msgid "Comments"
 msgstr "Kommentare"
 
-#: archive.php:132
+#: archive.php:133
 #, php-format
 msgid "About %s:"
 msgstr "Über %s:"
 
-#: archive.php:136
+#: archive.php:137
 msgid "Website"
 msgstr "Webseite"
 
-#: archive.php:158
+#: archive.php:159
 msgid "Last comments from"
 msgstr "Letzte Kommentare von"
 
-#: archive.php:178
+#: archive.php:179
 msgid "No comments found."
 msgstr "Keine Kommentare gefunden."
 
-#: archive.php:200 search.php:29
+#: archive.php:201 search.php:29
 msgid "« Previous"
 msgstr "« Vorherige"
 
-#: archive.php:212 search.php:41
+#: archive.php:213 search.php:41
 msgid "Next »"
 msgstr "Weiter »"
 
-#: archive.php:218 home.php:36 search.php:50
+#: archive.php:219 home.php:36 search.php:50
 msgid "No posts found."
 msgstr "Keine Beiträge gefunden."
 
@@ -495,11 +495,91 @@ msgstr "Sidebar"
 msgid "Landingpage Widget Area"
 msgstr "Landingpage Widget Area"
 
+#: functions.php:146
+msgid "Cards"
+msgstr "Cards"
+
+#: functions.php:147 functions.php:172
+msgid "Content Creator"
+msgstr "Content Creator"
+
+#: functions.php:148
+msgid "Discover"
+msgstr "Entdecker"
+
+#: functions.php:149 functions.php:158 functions.php:194 functions.php:202
+msgid "Frameless"
+msgstr "Rahmenlos"
+
+#: functions.php:152
+msgid "Search Engine"
+msgstr "Suchmaschine"
+
+#: functions.php:153 functions.php:164 functions.php:182 functions.php:207
+msgid "Social"
+msgstr "Social"
+
+#: functions.php:157 functions.php:169
+msgid "Blocks"
+msgstr "Blöcke"
+
+#: functions.php:159 functions.php:175
+msgid "Frames"
+msgstr "Rahmen"
+
+#: functions.php:162 functions.php:179 functions.php:195 functions.php:205
+msgid "Neon"
+msgstr "Neon"
+
+#: functions.php:163 functions.php:180
+msgid "Network"
+msgstr "Netzwerk"
+
+#: functions.php:165
+msgid "Soft"
+msgstr "Soft"
+
+#: functions.php:170 functions.php:186
+msgid "Coder"
+msgstr "Coder"
+
+#: functions.php:171
+msgid "Color Blocks"
+msgstr "Farbblöcke"
+
+#: functions.php:173
+msgid "Hashtag"
+msgstr "Hashtag"
+
+#: functions.php:174
+msgid "Hub"
+msgstr "Hub"
+
+#: functions.php:176
+msgid "Links"
+msgstr "Links"
+
+#: functions.php:181 functions.php:206
+msgid "Portal"
+msgstr "Portal"
+
+#: functions.php:187
+msgid "Gradient"
+msgstr "Frabverlauf"
+
+#: functions.php:193
+msgid "Border"
+msgstr "Rahmen"
+
+#: functions.php:201
+msgid "Dark Cards"
+msgstr "Dunkle Karten"
+
 #: home.php:11
 msgid "Fill the landing page in the customizer"
 msgstr "Befülle die Landingpage im Customizer"
 
-#: page.php:24 single.php:58
+#: index.php:24 page.php:24 single.php:58
 msgid "Pages:"
 msgstr "Seiten:"
 
@@ -525,7 +605,7 @@ msgid "Skip to main content"
 msgstr "Springe zum Hauptinhalt"
 
 #: template-parts/post-list-layouts/cards-posts-list.php:31
-#: template-parts/post-list-layouts/content-creator-posts-list.php:45
+#: template-parts/post-list-layouts/content-creator-posts-list.php:44
 #: template-parts/post-list-layouts/frameless-posts-list.php:32
 #: template-parts/post-list-layouts/material2-posts-list.php:54
 #: template-parts/post-list-layouts/material3-posts-list.php:52
@@ -538,9 +618,6 @@ msgstr "mehr lesen"
 
 #~ msgid "Layouts"
 #~ msgstr "Layouts"
-
-#~ msgid "Colors"
-#~ msgstr "Farben"
 
 #~ msgid "Tags and chips color"
 #~ msgstr "Tags und Chips Farbe"
@@ -562,20 +639,11 @@ msgstr "mehr lesen"
 #~ msgid "Date results style"
 #~ msgstr "Datum Ergebnisliste Style"
 
-#~ msgid "Cards"
-#~ msgstr "Cards"
-
 #~ msgid "Frameless posts list"
 #~ msgstr "Rahmenlose Beitragsliste"
 
-#~ msgid "search engine"
-#~ msgstr "suchmaschine"
-
 #~ msgid "cards"
 #~ msgstr "cards"
-
-#~ msgid "frameless"
-#~ msgstr "rahmenlos"
 
 #~ msgid "Category results style"
 #~ msgstr "Kategorie Ergebnisliste Style"

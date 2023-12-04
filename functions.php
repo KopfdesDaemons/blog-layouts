@@ -53,6 +53,77 @@ function blog_layouts_after_setup_theme()
     load_theme_textdomain('blog-layouts', get_template_directory() . '/languages');
     // defaults to the feed as the homepage
     update_option('show_on_front', 'posts');
+
+    global $blog_layouts_post_list_layouts;
+    $blog_layouts_post_list_layouts = array(
+        'cards' => __('Cards', 'blog-layouts'),
+        'content-creator' => __('Content Creator', 'blog-layouts'),
+        'discover' => __('Discover', 'blog-layouts'),
+        'frameless' => __('Frameless', 'blog-layouts'),
+        'material2' => 'Material 2',
+        'material3' => 'Material 3',
+        'search-engine' => __('Search Engine', 'blog-layouts'),
+        'social' => __('Social', 'blog-layouts'),
+    );
+    
+    global $blog_layouts_sidebar_layouts;
+    $blog_layouts_sidebar_layouts = array(
+        'blocks' => __('Blocks', 'blog-layouts'),
+        'frameless' => __('Frameless', 'blog-layouts'),
+        'frames' => __('Frames', 'blog-layouts'),
+        'material2' => 'Material 2',
+        'material3' => 'Material 3',
+        'neon' => __('Neon', 'blog-layouts'),
+        'network' => __('Network', 'blog-layouts'),
+        'social' => __('Social', 'blog-layouts'),
+        'soft' => __('Soft', 'blog-layouts'),
+    );
+    
+    global $blog_layouts_chips_layouts;
+    $blog_layouts_chips_layouts = array(
+        'blocks' => __('Blocks', 'blog-layouts'),
+        'coder' => __('Coder', 'blog-layouts'),
+        'color-blocks' => __('Color Blocks', 'blog-layouts'),
+        'content-creator' => __('Content Creator', 'blog-layouts'),
+        'hashtag' => __('Hashtag', 'blog-layouts'),
+        'hub' => __('Hub', 'blog-layouts'),
+        'frames' => __('Frames', 'blog-layouts'),
+        'links' => __('Links', 'blog-layouts'),
+        'material2' => 'Material 2',
+        'material3' => 'Material 3',
+        'neon' => __('Neon', 'blog-layouts'),
+        'network' => __('Network', 'blog-layouts'),
+        'portal' => __('Portal', 'blog-layouts'),
+        'social' => __('Social', 'blog-layouts'),
+    );
+    
+    global $blog_layouts_header_layouts;
+    $blog_layouts_header_layouts = array(
+        'coder' => __('Coder', 'blog-layouts'),
+        'gradient' => __('Gradient', 'blog-layouts'),
+        'material2' => 'Material 2',
+        'material3' => 'Material 3',
+    );
+    
+    global $blog_layouts_authorbox_layouts;
+    $blog_layouts_authorbox_layouts = array(
+        'border' => __('Border', 'blog-layouts'),
+        'frameless' => __('Frameless', 'blog-layouts'),
+        'neon' => __('Neon', 'blog-layouts'),
+        'material2' => 'Material 2',
+        'material3' => 'Material 3',
+    );
+    
+    global $blog_layouts_comments_layouts;
+    $blog_layouts_comments_layouts = array(
+        'dark-cards' => __('Dark Cards', 'blog-layouts'),
+        'frameless' => __('Frameless', 'blog-layouts'),
+        'material2' => 'Material 2',
+        'material3' => 'Material 3',
+        'neon' => __('Neon', 'blog-layouts'),
+        'portal' => __('Portal', 'blog-layouts'),
+        'social' => __('Social', 'blog-layouts'),
+    );
 }
 add_action('after_setup_theme', 'blog_layouts_after_setup_theme');
 
@@ -141,68 +212,3 @@ function blog_layouts_sanitize_checkbox($input)
 {
     return (isset($input) && true === $input) ? true : false;
 }
-
-$blog_layouts_post_list_layouts = array(
-    'cards' => 'Cards',
-    'content-creator' => 'Content Creator',
-    'discover' => 'Discover',
-    'frameless' => 'Frameless',
-    'material2' => 'Material 2',
-    'material3' => 'Material 3',
-    'search-engine' => 'Search Engine',
-    'social' => 'Social',
-);
-
-$blog_layouts_sidebar_layouts = array(
-    'blocks' => 'Blocks',
-    'frameless' => 'Frameless',
-    'frames' => 'Frames',
-    'material2' => 'Material 2',
-    'material3' => 'Material 3',
-    'neon' => 'Neon',
-    'network' => 'Network',
-    'social' => 'Social',
-    'soft' => 'Soft',
-);
-
-$blog_layouts_chips_layouts = array(
-    'blocks' => 'Blocks',
-    'coder' => 'Coder',
-    'color-blocks' => 'Color Blocks',
-    'content-creator' => 'Content Creator',
-    'hashtag' => 'Hashtag',
-    'hub' => 'Hub',
-    'frames' => 'Frames',
-    'links' => 'Links',
-    'material2' => 'Material 2',
-    'material3' => 'Material 3',
-    'neon' => 'Neon',
-    'network' => 'Network',
-    'portal' => 'Portal',
-    'social' => 'Social',
-);
-
-$blog_layouts_header_layouts = array(
-    'coder' => 'Coder',
-    'gradient' => 'Gradient',
-    'material2' => 'Material 2',
-    'material3' => 'Material 3',
-);
-
-$blog_layouts_authorbox_layouts = array(
-    'border' => 'Border',
-    'frameless' => 'Frameless',
-    'neon' => 'Neon',
-    'material2' => 'Material 2',
-    'material3' => 'Material 3',
-);
-
-$blog_layouts_comments_layouts = array(
-    'dark-cards' => 'Dark Cards',
-    'frameless' => 'Frameless',
-    'material2' => 'Material 2',
-    'material3' => 'Material 3',
-    'neon' => 'Neon',
-    'portal' => 'Portal',
-    'social' => 'Social',
-);

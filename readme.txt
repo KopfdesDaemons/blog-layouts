@@ -3,10 +3,9 @@ Contributors: Rico
 Tags: blog, one-column, two-columns, right-sidebar, custom-colors, custom-header, custom-menu, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
 Requires at least: 5.0
 Requires PHP: 7.0
-Tested up to: 6.2
+Tested up to: 6.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Copyright: Blog Layouts Theme, Copyright 2023
 
 == Description ==
 
@@ -25,6 +24,11 @@ particularly extensive. There is a landing page with a widget area.
 6. Activate the Blog Layouts theme once the installation is complete.
 
 == Changelog ==
+
+    = 1.0.4 =
+        - Copyright information improved
+        - Customizer Select Choices made translatable
+        - "Tested up to" updated
 
     = 1.0.3 =
         - prefixes for variables
@@ -46,13 +50,13 @@ particularly extensive. There is a landing page with a widget area.
 
     = Images =
 
-    Image for theme screenshot (Post Thumbnail)
+    Image for theme screenshot (Post Thumbnail), Copyright 2018 Rawpixel Ltd
     License: Attribution 2.0 Generic (CC BY 2.0)
     License URL: https://creativecommons.org/licenses/by/2.0/
     Source: https://www.flickr.com/photos/byrawpixel/39726357210/
 
-    Image for theme screenshot (Latest Posts)
-    License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+    Image for theme screenshot (Latest Posts), Copyright 2017 Jonas Svidras
+    License: CC0 1.0 Universal (CC0 1.0)
     License URL: https://creativecommons.org/publicdomain/zero/1.0/
     Source: https://www.flickr.com/photos/jonas-svidras/39608400995/
 
@@ -69,5 +73,5 @@ particularly extensive. There is a landing page with a widget area.
     Source: https://fontawesome.com/start
 
 
-This theme is licensed under the GNU General Public License v2 or later. 
-For more information, see [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html).
+Blog Layouts WordPress Theme, Copyright 2023 Rico Angenvoort
+Blog Layouts is distributed under the terms of the GNU GPL
